@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["generated_at", "datasets"],
+  "properties": {
+    "generated_at": {"type": "string"},
+    "datasets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title_ar", "title_en", "source_name", "cadence", "as_of", "fetched_at", "stale", "rows"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "title_ar": {"type": "string", "minLength": 1},
+          "title_en": {"type": "string", "minLength": 1},
+          "source_name": {"type": "string", "minLength": 1},
+          "cadence": {"enum": ["static", "monthly", "annual"]},
+          "as_of": {"type": "string", "minLength": 1},
+          "fetched_at": {"type": "string", "minLength": 1},
+          "stale": {"type": "boolean"},
+          "rows": {"type": "integer", "minimum": 1}
+        }
+      }
+    }
+  }
+}
