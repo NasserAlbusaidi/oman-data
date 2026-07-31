@@ -1,6 +1,7 @@
 import re
 from pathlib import Path
 
+import pandas as pd
 import pytest
 
 from oman_data.run import _load_callable
@@ -38,5 +39,21 @@ def test_mangled_layout_fails_loudly(tmp_path):
     parse = _load_callable(Path("pipelines/cpi/parse.py"), "parse")
     bad = tmp_path / "mangled.csv"
     bad.write_text("a,b\n1,2\n", encoding="utf-8")
+    with pytest.raises(Exception):
+        parse(bad)
+
+
+def test_mangled_workbook_fails_loudly(tmp_path):
+    """A .csv only trips the suffix guard, one line into parse.
+
+    NSDP serves a workbook, so the failure that will actually happen is a
+    *well-formed* .xlsx whose sheet no longer looks like the export we pinned —
+    a republish under a new layout, not a wrong file type. This one gets past
+    the suffix check and read_excel and has to be caught by the content
+    selectors, which is the path the suffix test never reaches.
+    """
+    parse = _load_callable(Path("pipelines/cpi/parse.py"), "parse")
+    bad = tmp_path / "mangled.xlsx"
+    pd.DataFrame({"a": [1], "b": [2]}).to_excel(bad, index=False)
     with pytest.raises(Exception):
         parse(bad)
