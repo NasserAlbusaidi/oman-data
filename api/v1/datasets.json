@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T19:37:17.770575+00:00",
+  "generated_at": "2026-07-31T19:39:02.019475+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -41,7 +41,7 @@
       "source_name": "NCSI via data.gov.om (Electricity, dataset OMELCT2016)",
       "cadence": "annual",
       "as_of": "2025",
-      "fetched_at": "2026-07-31T17:32:16Z",
+      "fetched_at": "2026-07-31T19:38:59Z",
       "stale": false,
       "rows": 22
     },
@@ -63,7 +63,7 @@
       "source_name": "NCSI — Monthly Statistical Bulletin, Table 1",
       "cadence": "annual",
       "as_of": "2026",
-      "fetched_at": "2026-07-31T15:52:47Z",
+      "fetched_at": "2026-07-31T19:38:50Z",
       "stale": false,
       "rows": 22
     },
@@ -96,7 +96,7 @@
       "source_name": "Royal Oman Police data via NCSI on data.gov.om (Security & Safety, dataset gehye)",
       "cadence": "annual",
       "as_of": "2025",
-      "fetched_at": "2026-07-31T17:43:45Z",
+      "fetched_at": "2026-07-31T19:39:02Z",
       "stale": false,
       "rows": 67
     }
