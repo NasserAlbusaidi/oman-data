@@ -1,0 +1,39 @@
+id: electricity
+title_ar: "الكهرباء — إجمالي الإنتاج والاستهلاك السنوي"
+title_en: "Electricity — annual gross production and consumption"
+source_name: "NCSI via data.gov.om (Electricity, dataset OMELCT2016)"
+source_url: "https://data.gov.om/OMELCT2016"
+license: "Open Government License - Sultanate of Oman"
+cadence: annual
+columns:
+  - {name: year, dtype: int, min: 2000, max: 2035}
+  - {name: production_gwh, dtype: float, min: 5000, max: 200000}
+  - {name: consumption_gwh, dtype: float, min: 1000, max: 200000}
+notes: >
+  Annual gross electricity production and total electric-power consumption for
+  the Sultanate of Oman in gigawatt-hours, from NCSI's Electricity dataset on
+  data.gov.om (upstream: the Electricity Regulatory Authority, now the Authority
+  for Public Services Regulation). Production is the source's "(Total production
+  of electricity (GW/H)" — all generation from every power plant in the country,
+  before the plants' own consumption is deducted; the source's separate "Net
+  production of electricity (GW/H)" series is that figure after the deduction and
+  is not published here, so these numbers are gross, which is what the title
+  says. Consumption is "Consm. of Electric Power (GW/H)", the total across the
+  residential, commercial, industrial, government and other categories the source
+  breaks it into. Values are gigawatt-hours exactly as published (declared unit
+  "Gw/H", scale 1) — no scale factor is applied, and a change of either
+  declaration raises rather than silently shifting every number. Consumption runs
+  from 2002 but production only from 2004, and years missing either series are
+  dropped rather than published with gaps, so the table starts at 2004; 2002 and
+  2003 consumption exist upstream if you need them. Cadence is annual on purpose:
+  the source does carry a monthly production series (2014-01 to 2024-12, and its
+  monthly sums match the annual figures only from 2023 onwards), but it publishes
+  no monthly consumption at all and the monthly production lags the annual series
+  by a full year, so no monthly table could carry both columns. National totals
+  only — the source's breakdowns by governorate, by named power station (~105 of
+  them), by network and by consumption category are out of scope for v1, and the
+  query pins the region and station dimensions to their total members because the
+  unfiltered cube returns 129 series instead of 2. Same caveat as the trade and
+  tourism datasets regarding the portal's public client_id. NCSI restates recent
+  years as the regulator's returns are finalised, so the newest year should be
+  read as provisional.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T17:24:01.871227+00:00",
+  "generated_at": "2026-07-31T17:32:16.875907+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -22,6 +22,17 @@
       "fetched_at": "2026-07-31T16:10:18Z",
       "stale": false,
       "rows": 2093
+    },
+    {
+      "id": "electricity",
+      "title_ar": "الكهرباء — إجمالي الإنتاج والاستهلاك السنوي",
+      "title_en": "Electricity — annual gross production and consumption",
+      "source_name": "NCSI via data.gov.om (Electricity, dataset OMELCT2016)",
+      "cadence": "annual",
+      "as_of": "2025",
+      "fetched_at": "2026-07-31T17:32:16Z",
+      "stale": false,
+      "rows": 22
     },
     {
       "id": "population",

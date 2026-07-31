@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "id": "electricity",
+    "as_of": "2025",
+    "fetched_at": "2026-07-31T17:32:16Z",
+    "source_name": "NCSI via data.gov.om (Electricity, dataset OMELCT2016)",
+    "source_url": "https://data.gov.om/OMELCT2016",
+    "license": "Open Government License - Sultanate of Oman",
+    "rows": 22,
+    "title_ar": "الكهرباء — إجمالي الإنتاج والاستهلاك السنوي",
+    "title_en": "Electricity — annual gross production and consumption",
+    "cadence": "annual",
+    "stale": false
+  },
+  "data": [
+    {
+      "year": 2004,
+      "production_gwh": 11499.3,
+      "consumption_gwh": 8825.0
+    },
+    {
+      "year": 2005,
+      "production_gwh": 12648.3,
+      "consumption_gwh": 8402.0
+    },
+    {
+      "year": 2006,
+      "production_gwh": 13664.5,
+      "consumption_gwh": 10495.0
+    },
+    {
+      "year": 2007,
+      "production_gwh": 14630.3,
+      "consumption_gwh": 11193.0
+    },
+    {
+      "year": 2008,
+      "production_gwh": 16049.4,
+      "consumption_gwh": 12850.0
+    },
+    {
+      "year": 2009,
+      "production_gwh": 18445.3,
+      "consumption_gwh": 14483.0
+    },
+    {
+      "year": 2010,
+      "production_gwh": 17634.5,
+      "consumption_gwh": 16133.0
+    },
+    {
+      "year": 2011,
+      "production_gwh": 21870.9,
+      "consumption_gwh": 18512.0
+    },
+    {
+      "year": 2012,
+      "production_gwh": 25017.3,
+      "consumption_gwh": 20958.2
+    },
+    {
+      "year": 2013,
+      "production_gwh": 26238.1,
+      "consumption_gwh": 22790.7
+    },
+    {
+      "year": 2014,
+      "production_gwh": 29128.0,
+      "consumption_gwh": 25172.1
+    },
+    {
+      "year": 2015,
+      "production_gwh": 32189.0,
+      "consumption_gwh": 28912.0
+    },
+    {
+      "year": 2016,
+      "production_gwh": 33600.0,
+      "consumption_gwh": 30359.0
+    },
+    {
+      "year": 2017,
+      "production_gwh": 35672.58742116,
+      "consumption_gwh": 32349.0
+    },
+    {
+      "year": 2018,
+      "production_gwh": 37191.8558501268,
+      "consumption_gwh": 33547.4893617515
+    },
+    {
+      "year": 2019,
+      "production_gwh": 37533.6246664072,
+      "consumption_gwh": 33796.0432243984
+    },
+    {
+      "year": 2020,
+      "production_gwh": 38321.5491027861,
+      "consumption_gwh": 33156.0
+    },
+    {
+      "year": 2021,
+      "production_gwh": 40992.2744905302,
+      "consumption_gwh": 35661.164
+    },
+    {
+      "year": 2022,
+      "production_gwh": 42510.6205677306,
+      "consumption_gwh": 36178.6
+    },
+    {
+      "year": 2023,
+      "production_gwh": 44965.7384302603,
+      "consumption_gwh": 39296.0
+    },
+    {
+      "year": 2024,
+      "production_gwh": 49131.9855890483,
+      "consumption_gwh": 42156.3
+    },
+    {
+      "year": 2025,
+      "production_gwh": 50973.5,
+      "consumption_gwh": 45033.1
+    }
+  ]
+}
