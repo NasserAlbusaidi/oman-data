@@ -612,10 +612,11 @@ def test_a_lifted_cap_with_no_gap_is_recorded_not_refused(tmp_path):
 
     The auto-extend refuses because it cannot infer *missing* months; it has no
     opinion on the observed one. NSS is the official source and the row is
-    appended with nss.gov.om provenance. The change still surfaces to a human on
-    the next test run, because test_curated_tail_is_flat_at_the_capped_prices
-    goes red the moment an off-cap month lands in the committed CSV — that is
-    the alarm, not a silent parse failure.
+    appended with nss.gov.om provenance. The alarm is
+    test_curated_tail_is_flat_at_the_capped_prices, which goes red the moment an
+    off-cap month lands in the committed CSV — but note it is a delayed alarm:
+    GitHub runs no workflows for pushes made with GITHUB_TOKEN, so the refresh
+    bot's own commit tests nothing and the red waits for the next human push.
     """
     parse = load("parse")
     csv = prices_copy(tmp_path)

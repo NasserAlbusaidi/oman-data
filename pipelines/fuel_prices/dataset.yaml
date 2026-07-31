@@ -104,9 +104,13 @@ notes: >
   filled and the run fails naming the cap: a lifted cap could have moved prices
   anywhere inside the hole, and inventing a flat run through a price change would
   bury the single most newsworthy event this dataset can record. A cap lift in a
-  month that needs no inference is simply recorded from NSS, and surfaces to a
-  human on the next test run instead, because the test that pins the tail flat at
-  the capped prices goes red as soon as an off-cap month lands in the CSV.
+  month that needs no inference is different: NSS is the official source and the
+  new price is simply recorded from it. That one surfaces through the test suite
+  rather than the pipeline — the test pinning the tail flat at the capped prices
+  goes red as soon as an off-cap month lands in the CSV — but not immediately:
+  GitHub does not trigger workflows for pushes made with GITHUB_TOKEN, so the
+  refresh bot's own commit runs no tests and the alarm waits for the next human
+  push. Adding a suite run to the refresh workflows would close that delay.
   UNRESOLVED, and it blocks the automation rather than the data: nss.gov.om is
   not reachable from GitHub-hosted runners. Two refresh-monthly runs on
   2026-07-31 (runs 30659620073 and 30659930540) both died on a TCP connect
