@@ -1,0 +1,30 @@
+id: trade
+title_ar: "التجارة الخارجية السلعية — الواردات والصادرات وإعادة التصدير"
+title_en: "Merchandise foreign trade — imports, exports, re-exports"
+source_name: "NCSI — National Summary Data Page (IMF e-GDDS), Merchandise Trade"
+source_url: "https://nsdp.ncsi.gov.om/MerchandiseTrade.xlsx"
+license: "Open Government License - Sultanate of Oman"
+cadence: monthly
+columns:
+  - {name: month, dtype: str}
+  - {name: flow, dtype: str}
+  - {name: value_omr_mn, dtype: float, min: 0, max: 20000}
+notes: >
+  Monthly merchandise trade for the Sultanate of Oman in millions of Omani
+  Riyals, from NCSI's National Summary Data Page (the IMF e-GDDS national page,
+  linked from https://www.ncsi.gov.om/NationalStatistics). Three flows: imports
+  (total recorded merchandise imports, cif — SDMX TMG_CIF_XDC), exports (total
+  merchandise exports, fob — TXG_FOB_XDC) and re_exports (fob — TRX_FOB_XDC).
+  The source's own hierarchy makes total exports the sum of oil & gas, non-oil
+  and re-exports, so exports already contains re_exports and the two rows must
+  not be added together. Imports are the recorded figure; NCSI's unrecorded
+  imports estimate is annual only and is not included. Series start 2006-07;
+  months the source leaves blank (2016-01/02 for every flow, plus scattered
+  early re-export months) are omitted rather than zero-filled. The workbook
+  declares UNIT_MULT 6 (millions) and the parser refuses to run if that or the
+  monthly frequency changes. The national data portal's Knoema Foreign Trade
+  dataset (data.gov.om/tkjlhlb) was rejected as the source: it publishes total
+  merchandise exports annually only, its monthly coverage (imports, non-oil
+  exports and re-exports by H.S. section) starts 2014-01, and it ships raw
+  riyals under a "Million Omani Riyals" unit label. Country and H.S.-section
+  breakdowns are out of scope for v1.

@@ -1,0 +1,9 @@
+{
+  "id": "trade",
+  "as_of": "2026-04",
+  "fetched_at": "2026-07-31T16:59:15Z",
+  "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Merchandise Trade",
+  "source_url": "https://nsdp.ncsi.gov.om/MerchandiseTrade.xlsx",
+  "license": "Open Government License - Sultanate of Oman",
+  "rows": 702
+}

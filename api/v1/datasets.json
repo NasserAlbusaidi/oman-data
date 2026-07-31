@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T16:10:18.661245+00:00",
+  "generated_at": "2026-07-31T16:59:15.148532+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -33,6 +33,17 @@
       "fetched_at": "2026-07-31T15:52:47Z",
       "stale": false,
       "rows": 22
+    },
+    {
+      "id": "trade",
+      "title_ar": "التجارة الخارجية السلعية — الواردات والصادرات وإعادة التصدير",
+      "title_en": "Merchandise foreign trade — imports, exports, re-exports",
+      "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Merchandise Trade",
+      "cadence": "monthly",
+      "as_of": "2026-04",
+      "fetched_at": "2026-07-31T16:59:15Z",
+      "stale": false,
+      "rows": 702
     }
   ]
 }

@@ -1,0 +1,3527 @@
+{
+  "meta": {
+    "id": "trade",
+    "as_of": "2026-04",
+    "fetched_at": "2026-07-31T16:59:15Z",
+    "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Merchandise Trade",
+    "source_url": "https://nsdp.ncsi.gov.om/MerchandiseTrade.xlsx",
+    "license": "Open Government License - Sultanate of Oman",
+    "rows": 702,
+    "title_ar": "التجارة الخارجية السلعية — الواردات والصادرات وإعادة التصدير",
+    "title_en": "Merchandise foreign trade — imports, exports, re-exports",
+    "cadence": "monthly",
+    "stale": false
+  },
+  "data": [
+    {
+      "month": "2006-07",
+      "flow": "exports",
+      "value_omr_mn": 778.1
+    },
+    {
+      "month": "2006-07",
+      "flow": "imports",
+      "value_omr_mn": 327.2
+    },
+    {
+      "month": "2006-07",
+      "flow": "re_exports",
+      "value_omr_mn": 63.2
+    },
+    {
+      "month": "2006-08",
+      "flow": "exports",
+      "value_omr_mn": 674.0
+    },
+    {
+      "month": "2006-08",
+      "flow": "imports",
+      "value_omr_mn": 381.1
+    },
+    {
+      "month": "2006-08",
+      "flow": "re_exports",
+      "value_omr_mn": 65.2
+    },
+    {
+      "month": "2006-09",
+      "flow": "exports",
+      "value_omr_mn": 665.1
+    },
+    {
+      "month": "2006-09",
+      "flow": "imports",
+      "value_omr_mn": 348.5
+    },
+    {
+      "month": "2006-09",
+      "flow": "re_exports",
+      "value_omr_mn": 66.6
+    },
+    {
+      "month": "2006-10",
+      "flow": "exports",
+      "value_omr_mn": 690.1
+    },
+    {
+      "month": "2006-10",
+      "flow": "imports",
+      "value_omr_mn": 358.6
+    },
+    {
+      "month": "2006-10",
+      "flow": "re_exports",
+      "value_omr_mn": 68.3
+    },
+    {
+      "month": "2006-11",
+      "flow": "exports",
+      "value_omr_mn": 660.7
+    },
+    {
+      "month": "2006-11",
+      "flow": "imports",
+      "value_omr_mn": 418.1
+    },
+    {
+      "month": "2006-11",
+      "flow": "re_exports",
+      "value_omr_mn": 75.9
+    },
+    {
+      "month": "2006-12",
+      "flow": "exports",
+      "value_omr_mn": 746.0
+    },
+    {
+      "month": "2006-12",
+      "flow": "imports",
+      "value_omr_mn": 399.8
+    },
+    {
+      "month": "2006-12",
+      "flow": "re_exports",
+      "value_omr_mn": 72.6
+    },
+    {
+      "month": "2007-01",
+      "flow": "exports",
+      "value_omr_mn": 597.3
+    },
+    {
+      "month": "2007-01",
+      "flow": "imports",
+      "value_omr_mn": 402.8
+    },
+    {
+      "month": "2007-01",
+      "flow": "re_exports",
+      "value_omr_mn": 71.9
+    },
+    {
+      "month": "2007-02",
+      "flow": "exports",
+      "value_omr_mn": 777.4
+    },
+    {
+      "month": "2007-02",
+      "flow": "imports",
+      "value_omr_mn": 470.3
+    },
+    {
+      "month": "2007-02",
+      "flow": "re_exports",
+      "value_omr_mn": 81.6
+    },
+    {
+      "month": "2007-03",
+      "flow": "exports",
+      "value_omr_mn": 686.8
+    },
+    {
+      "month": "2007-03",
+      "flow": "imports",
+      "value_omr_mn": 465.0
+    },
+    {
+      "month": "2007-03",
+      "flow": "re_exports",
+      "value_omr_mn": 82.1
+    },
+    {
+      "month": "2007-04",
+      "flow": "exports",
+      "value_omr_mn": 693.5
+    },
+    {
+      "month": "2007-04",
+      "flow": "imports",
+      "value_omr_mn": 487.5
+    },
+    {
+      "month": "2007-04",
+      "flow": "re_exports",
+      "value_omr_mn": 92.2
+    },
+    {
+      "month": "2007-05",
+      "flow": "exports",
+      "value_omr_mn": 732.1
+    },
+    {
+      "month": "2007-05",
+      "flow": "imports",
+      "value_omr_mn": 547.1
+    },
+    {
+      "month": "2007-05",
+      "flow": "re_exports",
+      "value_omr_mn": 94.3
+    },
+    {
+      "month": "2007-06",
+      "flow": "exports",
+      "value_omr_mn": 690.1
+    },
+    {
+      "month": "2007-06",
+      "flow": "imports",
+      "value_omr_mn": 352.2
+    },
+    {
+      "month": "2007-06",
+      "flow": "re_exports",
+      "value_omr_mn": 63.8
+    },
+    {
+      "month": "2007-07",
+      "flow": "exports",
+      "value_omr_mn": 804.5
+    },
+    {
+      "month": "2007-07",
+      "flow": "imports",
+      "value_omr_mn": 552.3
+    },
+    {
+      "month": "2007-07",
+      "flow": "re_exports",
+      "value_omr_mn": 81.7
+    },
+    {
+      "month": "2007-08",
+      "flow": "exports",
+      "value_omr_mn": 831.6
+    },
+    {
+      "month": "2007-08",
+      "flow": "imports",
+      "value_omr_mn": 566.6
+    },
+    {
+      "month": "2007-08",
+      "flow": "re_exports",
+      "value_omr_mn": 89.0
+    },
+    {
+      "month": "2007-09",
+      "flow": "exports",
+      "value_omr_mn": 770.1
+    },
+    {
+      "month": "2007-09",
+      "flow": "imports",
+      "value_omr_mn": 577.6
+    },
+    {
+      "month": "2007-09",
+      "flow": "re_exports",
+      "value_omr_mn": 73.6
+    },
+    {
+      "month": "2007-10",
+      "flow": "exports",
+      "value_omr_mn": 776.4
+    },
+    {
+      "month": "2007-10",
+      "flow": "imports",
+      "value_omr_mn": 579.3
+    },
+    {
+      "month": "2007-10",
+      "flow": "re_exports",
+      "value_omr_mn": 77.1
+    },
+    {
+      "month": "2007-11",
+      "flow": "exports",
+      "value_omr_mn": 953.4
+    },
+    {
+      "month": "2007-11",
+      "flow": "imports",
+      "value_omr_mn": 546.6
+    },
+    {
+      "month": "2007-11",
+      "flow": "re_exports",
+      "value_omr_mn": 98.0
+    },
+    {
+      "month": "2007-12",
+      "flow": "exports",
+      "value_omr_mn": 989.0
+    },
+    {
+      "month": "2007-12",
+      "flow": "imports",
+      "value_omr_mn": 617.6
+    },
+    {
+      "month": "2007-12",
+      "flow": "re_exports",
+      "value_omr_mn": 98.7
+    },
+    {
+      "month": "2008-01",
+      "flow": "exports",
+      "value_omr_mn": 994.1
+    },
+    {
+      "month": "2008-01",
+      "flow": "imports",
+      "value_omr_mn": 645.5
+    },
+    {
+      "month": "2008-01",
+      "flow": "re_exports",
+      "value_omr_mn": 116.0
+    },
+    {
+      "month": "2008-02",
+      "flow": "exports",
+      "value_omr_mn": 1035.9
+    },
+    {
+      "month": "2008-02",
+      "flow": "imports",
+      "value_omr_mn": 616.4
+    },
+    {
+      "month": "2008-02",
+      "flow": "re_exports",
+      "value_omr_mn": 98.7
+    },
+    {
+      "month": "2008-03",
+      "flow": "exports",
+      "value_omr_mn": 1196.0
+    },
+    {
+      "month": "2008-03",
+      "flow": "imports",
+      "value_omr_mn": 772.7
+    },
+    {
+      "month": "2008-03",
+      "flow": "re_exports",
+      "value_omr_mn": 215.2
+    },
+    {
+      "month": "2008-04",
+      "flow": "exports",
+      "value_omr_mn": 1090.3
+    },
+    {
+      "month": "2008-04",
+      "flow": "imports",
+      "value_omr_mn": 794.1
+    },
+    {
+      "month": "2008-04",
+      "flow": "re_exports",
+      "value_omr_mn": 151.3
+    },
+    {
+      "month": "2008-05",
+      "flow": "exports",
+      "value_omr_mn": 1269.1
+    },
+    {
+      "month": "2008-05",
+      "flow": "imports",
+      "value_omr_mn": 650.9
+    },
+    {
+      "month": "2008-05",
+      "flow": "re_exports",
+      "value_omr_mn": 121.7
+    },
+    {
+      "month": "2008-06",
+      "flow": "exports",
+      "value_omr_mn": 1138.0
+    },
+    {
+      "month": "2008-06",
+      "flow": "imports",
+      "value_omr_mn": 747.8
+    },
+    {
+      "month": "2008-06",
+      "flow": "re_exports",
+      "value_omr_mn": 106.4
+    },
+    {
+      "month": "2008-07",
+      "flow": "exports",
+      "value_omr_mn": 1404.5
+    },
+    {
+      "month": "2008-07",
+      "flow": "imports",
+      "value_omr_mn": 691.7
+    },
+    {
+      "month": "2008-07",
+      "flow": "re_exports",
+      "value_omr_mn": 112.9
+    },
+    {
+      "month": "2008-08",
+      "flow": "exports",
+      "value_omr_mn": 1498.6
+    },
+    {
+      "month": "2008-08",
+      "flow": "imports",
+      "value_omr_mn": 889.7
+    },
+    {
+      "month": "2008-08",
+      "flow": "re_exports",
+      "value_omr_mn": 134.7
+    },
+    {
+      "month": "2008-09",
+      "flow": "exports",
+      "value_omr_mn": 1456.2
+    },
+    {
+      "month": "2008-09",
+      "flow": "imports",
+      "value_omr_mn": 672.6
+    },
+    {
+      "month": "2008-09",
+      "flow": "re_exports",
+      "value_omr_mn": 122.0
+    },
+    {
+      "month": "2008-10",
+      "flow": "exports",
+      "value_omr_mn": 1341.4
+    },
+    {
+      "month": "2008-10",
+      "flow": "imports",
+      "value_omr_mn": 857.5
+    },
+    {
+      "month": "2008-10",
+      "flow": "re_exports",
+      "value_omr_mn": 116.7
+    },
+    {
+      "month": "2008-11",
+      "flow": "exports",
+      "value_omr_mn": 1247.9
+    },
+    {
+      "month": "2008-11",
+      "flow": "imports",
+      "value_omr_mn": 789.8
+    },
+    {
+      "month": "2008-11",
+      "flow": "re_exports",
+      "value_omr_mn": 127.7
+    },
+    {
+      "month": "2008-12",
+      "flow": "exports",
+      "value_omr_mn": 853.2
+    },
+    {
+      "month": "2008-12",
+      "flow": "imports",
+      "value_omr_mn": 769.9
+    },
+    {
+      "month": "2008-12",
+      "flow": "re_exports",
+      "value_omr_mn": 92.4
+    },
+    {
+      "month": "2009-01",
+      "flow": "exports",
+      "value_omr_mn": 844.5
+    },
+    {
+      "month": "2009-01",
+      "flow": "imports",
+      "value_omr_mn": 736.7
+    },
+    {
+      "month": "2009-01",
+      "flow": "re_exports",
+      "value_omr_mn": 162.1
+    },
+    {
+      "month": "2009-02",
+      "flow": "exports",
+      "value_omr_mn": 652.2
+    },
+    {
+      "month": "2009-02",
+      "flow": "imports",
+      "value_omr_mn": 610.9
+    },
+    {
+      "month": "2009-02",
+      "flow": "re_exports",
+      "value_omr_mn": 111.7
+    },
+    {
+      "month": "2009-03",
+      "flow": "exports",
+      "value_omr_mn": 733.7
+    },
+    {
+      "month": "2009-03",
+      "flow": "imports",
+      "value_omr_mn": 607.4
+    },
+    {
+      "month": "2009-03",
+      "flow": "re_exports",
+      "value_omr_mn": 133.7
+    },
+    {
+      "month": "2009-04",
+      "flow": "exports",
+      "value_omr_mn": 716.9
+    },
+    {
+      "month": "2009-04",
+      "flow": "imports",
+      "value_omr_mn": 548.0
+    },
+    {
+      "month": "2009-04",
+      "flow": "re_exports",
+      "value_omr_mn": 143.2
+    },
+    {
+      "month": "2009-05",
+      "flow": "exports",
+      "value_omr_mn": 755.6
+    },
+    {
+      "month": "2009-05",
+      "flow": "imports",
+      "value_omr_mn": 465.4
+    },
+    {
+      "month": "2009-05",
+      "flow": "re_exports",
+      "value_omr_mn": 134.4
+    },
+    {
+      "month": "2009-06",
+      "flow": "exports",
+      "value_omr_mn": 860.2
+    },
+    {
+      "month": "2009-06",
+      "flow": "imports",
+      "value_omr_mn": 538.4
+    },
+    {
+      "month": "2009-06",
+      "flow": "re_exports",
+      "value_omr_mn": 236.5
+    },
+    {
+      "month": "2009-07",
+      "flow": "exports",
+      "value_omr_mn": 877.8
+    },
+    {
+      "month": "2009-07",
+      "flow": "imports",
+      "value_omr_mn": 506.9
+    },
+    {
+      "month": "2009-07",
+      "flow": "re_exports",
+      "value_omr_mn": 166.8
+    },
+    {
+      "month": "2009-08",
+      "flow": "exports",
+      "value_omr_mn": 990.7
+    },
+    {
+      "month": "2009-08",
+      "flow": "imports",
+      "value_omr_mn": 563.4
+    },
+    {
+      "month": "2009-08",
+      "flow": "re_exports",
+      "value_omr_mn": 185.2
+    },
+    {
+      "month": "2009-09",
+      "flow": "exports",
+      "value_omr_mn": 913.0
+    },
+    {
+      "month": "2009-09",
+      "flow": "imports",
+      "value_omr_mn": 445.2
+    },
+    {
+      "month": "2009-09",
+      "flow": "re_exports",
+      "value_omr_mn": 116.0
+    },
+    {
+      "month": "2009-10",
+      "flow": "exports",
+      "value_omr_mn": 1169.2
+    },
+    {
+      "month": "2009-10",
+      "flow": "imports",
+      "value_omr_mn": 634.3
+    },
+    {
+      "month": "2009-10",
+      "flow": "re_exports",
+      "value_omr_mn": 210.2
+    },
+    {
+      "month": "2009-11",
+      "flow": "exports",
+      "value_omr_mn": 1140.6
+    },
+    {
+      "month": "2009-11",
+      "flow": "imports",
+      "value_omr_mn": 582.8
+    },
+    {
+      "month": "2009-11",
+      "flow": "re_exports",
+      "value_omr_mn": 173.7
+    },
+    {
+      "month": "2009-12",
+      "flow": "exports",
+      "value_omr_mn": 1087.1
+    },
+    {
+      "month": "2009-12",
+      "flow": "imports",
+      "value_omr_mn": 627.7
+    },
+    {
+      "month": "2009-12",
+      "flow": "re_exports",
+      "value_omr_mn": 147.7
+    },
+    {
+      "month": "2010-01",
+      "flow": "exports",
+      "value_omr_mn": 1068.9
+    },
+    {
+      "month": "2010-01",
+      "flow": "imports",
+      "value_omr_mn": 575.2
+    },
+    {
+      "month": "2010-01",
+      "flow": "re_exports",
+      "value_omr_mn": 144.2
+    },
+    {
+      "month": "2010-02",
+      "flow": "exports",
+      "value_omr_mn": 1104.6
+    },
+    {
+      "month": "2010-02",
+      "flow": "imports",
+      "value_omr_mn": 547.0
+    },
+    {
+      "month": "2010-02",
+      "flow": "re_exports",
+      "value_omr_mn": 167.4
+    },
+    {
+      "month": "2010-03",
+      "flow": "exports",
+      "value_omr_mn": 1244.5
+    },
+    {
+      "month": "2010-03",
+      "flow": "imports",
+      "value_omr_mn": 737.3
+    },
+    {
+      "month": "2010-03",
+      "flow": "re_exports",
+      "value_omr_mn": 196.4
+    },
+    {
+      "month": "2010-04",
+      "flow": "exports",
+      "value_omr_mn": 1233.4
+    },
+    {
+      "month": "2010-04",
+      "flow": "imports",
+      "value_omr_mn": 613.2
+    },
+    {
+      "month": "2010-04",
+      "flow": "re_exports",
+      "value_omr_mn": 137.0
+    },
+    {
+      "month": "2010-05",
+      "flow": "exports",
+      "value_omr_mn": 1168.2
+    },
+    {
+      "month": "2010-05",
+      "flow": "imports",
+      "value_omr_mn": 618.4
+    },
+    {
+      "month": "2010-05",
+      "flow": "re_exports",
+      "value_omr_mn": 141.2
+    },
+    {
+      "month": "2010-06",
+      "flow": "exports",
+      "value_omr_mn": 1168.7
+    },
+    {
+      "month": "2010-06",
+      "flow": "imports",
+      "value_omr_mn": 620.9
+    },
+    {
+      "month": "2010-06",
+      "flow": "re_exports",
+      "value_omr_mn": 134.2
+    },
+    {
+      "month": "2010-07",
+      "flow": "exports",
+      "value_omr_mn": 1053.8
+    },
+    {
+      "month": "2010-07",
+      "flow": "imports",
+      "value_omr_mn": 744.6
+    },
+    {
+      "month": "2010-07",
+      "flow": "re_exports",
+      "value_omr_mn": 122.5
+    },
+    {
+      "month": "2010-08",
+      "flow": "exports",
+      "value_omr_mn": 1182.9
+    },
+    {
+      "month": "2010-08",
+      "flow": "imports",
+      "value_omr_mn": 656.6
+    },
+    {
+      "month": "2010-08",
+      "flow": "re_exports",
+      "value_omr_mn": 161.6
+    },
+    {
+      "month": "2010-09",
+      "flow": "exports",
+      "value_omr_mn": 1212.0
+    },
+    {
+      "month": "2010-09",
+      "flow": "imports",
+      "value_omr_mn": 570.6
+    },
+    {
+      "month": "2010-09",
+      "flow": "re_exports",
+      "value_omr_mn": 233.5
+    },
+    {
+      "month": "2010-10",
+      "flow": "exports",
+      "value_omr_mn": 1225.1
+    },
+    {
+      "month": "2010-10",
+      "flow": "imports",
+      "value_omr_mn": 673.2
+    },
+    {
+      "month": "2010-10",
+      "flow": "re_exports",
+      "value_omr_mn": 169.7
+    },
+    {
+      "month": "2010-11",
+      "flow": "exports",
+      "value_omr_mn": 1162.1
+    },
+    {
+      "month": "2010-11",
+      "flow": "imports",
+      "value_omr_mn": 625.4
+    },
+    {
+      "month": "2010-11",
+      "flow": "re_exports",
+      "value_omr_mn": 169.4
+    },
+    {
+      "month": "2010-12",
+      "flow": "exports",
+      "value_omr_mn": 1240.8
+    },
+    {
+      "month": "2010-12",
+      "flow": "imports",
+      "value_omr_mn": 620.7
+    },
+    {
+      "month": "2010-12",
+      "flow": "re_exports",
+      "value_omr_mn": 144.5
+    },
+    {
+      "month": "2011-01",
+      "flow": "exports",
+      "value_omr_mn": 1339.3
+    },
+    {
+      "month": "2011-01",
+      "flow": "imports",
+      "value_omr_mn": 773.2
+    },
+    {
+      "month": "2011-01",
+      "flow": "re_exports",
+      "value_omr_mn": 176.7
+    },
+    {
+      "month": "2011-02",
+      "flow": "exports",
+      "value_omr_mn": 1179.4
+    },
+    {
+      "month": "2011-02",
+      "flow": "imports",
+      "value_omr_mn": 689.1
+    },
+    {
+      "month": "2011-02",
+      "flow": "re_exports",
+      "value_omr_mn": 176.1
+    },
+    {
+      "month": "2011-03",
+      "flow": "exports",
+      "value_omr_mn": 1526.2
+    },
+    {
+      "month": "2011-03",
+      "flow": "imports",
+      "value_omr_mn": 803.1
+    },
+    {
+      "month": "2011-03",
+      "flow": "re_exports",
+      "value_omr_mn": 229.8
+    },
+    {
+      "month": "2011-04",
+      "flow": "exports",
+      "value_omr_mn": 1481.7
+    },
+    {
+      "month": "2011-04",
+      "flow": "imports",
+      "value_omr_mn": 695.2
+    },
+    {
+      "month": "2011-04",
+      "flow": "re_exports",
+      "value_omr_mn": 225.8
+    },
+    {
+      "month": "2011-05",
+      "flow": "exports",
+      "value_omr_mn": 1455.4
+    },
+    {
+      "month": "2011-05",
+      "flow": "imports",
+      "value_omr_mn": 789.3
+    },
+    {
+      "month": "2011-05",
+      "flow": "re_exports",
+      "value_omr_mn": 121.8
+    },
+    {
+      "month": "2011-06",
+      "flow": "exports",
+      "value_omr_mn": 1430.6
+    },
+    {
+      "month": "2011-06",
+      "flow": "imports",
+      "value_omr_mn": 710.3
+    },
+    {
+      "month": "2011-07",
+      "flow": "exports",
+      "value_omr_mn": 1670.4
+    },
+    {
+      "month": "2011-07",
+      "flow": "imports",
+      "value_omr_mn": 579.2
+    },
+    {
+      "month": "2011-08",
+      "flow": "exports",
+      "value_omr_mn": 1596.9
+    },
+    {
+      "month": "2011-08",
+      "flow": "imports",
+      "value_omr_mn": 780.4
+    },
+    {
+      "month": "2011-08",
+      "flow": "re_exports",
+      "value_omr_mn": 170.2
+    },
+    {
+      "month": "2011-09",
+      "flow": "exports",
+      "value_omr_mn": 1582.9
+    },
+    {
+      "month": "2011-09",
+      "flow": "imports",
+      "value_omr_mn": 764.7
+    },
+    {
+      "month": "2011-09",
+      "flow": "re_exports",
+      "value_omr_mn": 158.6
+    },
+    {
+      "month": "2011-10",
+      "flow": "exports",
+      "value_omr_mn": 1555.4
+    },
+    {
+      "month": "2011-10",
+      "flow": "imports",
+      "value_omr_mn": 869.7
+    },
+    {
+      "month": "2011-10",
+      "flow": "re_exports",
+      "value_omr_mn": 126.6
+    },
+    {
+      "month": "2011-11",
+      "flow": "exports",
+      "value_omr_mn": 1554.6
+    },
+    {
+      "month": "2011-11",
+      "flow": "imports",
+      "value_omr_mn": 683.6
+    },
+    {
+      "month": "2011-11",
+      "flow": "re_exports",
+      "value_omr_mn": 193.4
+    },
+    {
+      "month": "2011-12",
+      "flow": "exports",
+      "value_omr_mn": 1734.1
+    },
+    {
+      "month": "2011-12",
+      "flow": "imports",
+      "value_omr_mn": 954.2
+    },
+    {
+      "month": "2011-12",
+      "flow": "re_exports",
+      "value_omr_mn": 231.2
+    },
+    {
+      "month": "2012-01",
+      "flow": "exports",
+      "value_omr_mn": 1489.7
+    },
+    {
+      "month": "2012-01",
+      "flow": "imports",
+      "value_omr_mn": 796.2
+    },
+    {
+      "month": "2012-02",
+      "flow": "exports",
+      "value_omr_mn": 1511.2
+    },
+    {
+      "month": "2012-02",
+      "flow": "imports",
+      "value_omr_mn": 819.6
+    },
+    {
+      "month": "2012-02",
+      "flow": "re_exports",
+      "value_omr_mn": 227.3
+    },
+    {
+      "month": "2012-03",
+      "flow": "exports",
+      "value_omr_mn": 1651.7
+    },
+    {
+      "month": "2012-03",
+      "flow": "imports",
+      "value_omr_mn": 911.7
+    },
+    {
+      "month": "2012-03",
+      "flow": "re_exports",
+      "value_omr_mn": 173.4
+    },
+    {
+      "month": "2012-04",
+      "flow": "exports",
+      "value_omr_mn": 1687.4
+    },
+    {
+      "month": "2012-04",
+      "flow": "imports",
+      "value_omr_mn": 900.5
+    },
+    {
+      "month": "2012-04",
+      "flow": "re_exports",
+      "value_omr_mn": 242.5
+    },
+    {
+      "month": "2012-05",
+      "flow": "exports",
+      "value_omr_mn": 1674.0
+    },
+    {
+      "month": "2012-05",
+      "flow": "imports",
+      "value_omr_mn": 887.8
+    },
+    {
+      "month": "2012-06",
+      "flow": "exports",
+      "value_omr_mn": 1664.9
+    },
+    {
+      "month": "2012-06",
+      "flow": "imports",
+      "value_omr_mn": 867.6
+    },
+    {
+      "month": "2012-06",
+      "flow": "re_exports",
+      "value_omr_mn": 233.8
+    },
+    {
+      "month": "2012-07",
+      "flow": "exports",
+      "value_omr_mn": 1691.8
+    },
+    {
+      "month": "2012-07",
+      "flow": "imports",
+      "value_omr_mn": 974.9
+    },
+    {
+      "month": "2012-07",
+      "flow": "re_exports",
+      "value_omr_mn": 254.8
+    },
+    {
+      "month": "2012-08",
+      "flow": "exports",
+      "value_omr_mn": 1580.8
+    },
+    {
+      "month": "2012-08",
+      "flow": "imports",
+      "value_omr_mn": 874.2
+    },
+    {
+      "month": "2012-08",
+      "flow": "re_exports",
+      "value_omr_mn": 203.3
+    },
+    {
+      "month": "2012-09",
+      "flow": "exports",
+      "value_omr_mn": 1686.5
+    },
+    {
+      "month": "2012-09",
+      "flow": "imports",
+      "value_omr_mn": 893.7
+    },
+    {
+      "month": "2012-09",
+      "flow": "re_exports",
+      "value_omr_mn": 537.7
+    },
+    {
+      "month": "2012-10",
+      "flow": "exports",
+      "value_omr_mn": 1709.9
+    },
+    {
+      "month": "2012-10",
+      "flow": "imports",
+      "value_omr_mn": 991.9
+    },
+    {
+      "month": "2012-10",
+      "flow": "re_exports",
+      "value_omr_mn": 177.7
+    },
+    {
+      "month": "2012-11",
+      "flow": "exports",
+      "value_omr_mn": 1846.7
+    },
+    {
+      "month": "2012-11",
+      "flow": "imports",
+      "value_omr_mn": 893.8
+    },
+    {
+      "month": "2012-11",
+      "flow": "re_exports",
+      "value_omr_mn": 199.3
+    },
+    {
+      "month": "2012-12",
+      "flow": "exports",
+      "value_omr_mn": 1860.7
+    },
+    {
+      "month": "2012-12",
+      "flow": "imports",
+      "value_omr_mn": 999.5
+    },
+    {
+      "month": "2012-12",
+      "flow": "re_exports",
+      "value_omr_mn": 228.1
+    },
+    {
+      "month": "2013-01",
+      "flow": "exports",
+      "value_omr_mn": 1909.9
+    },
+    {
+      "month": "2013-01",
+      "flow": "imports",
+      "value_omr_mn": 1012.2
+    },
+    {
+      "month": "2013-02",
+      "flow": "exports",
+      "value_omr_mn": 1869.7
+    },
+    {
+      "month": "2013-02",
+      "flow": "imports",
+      "value_omr_mn": 1057.4
+    },
+    {
+      "month": "2013-03",
+      "flow": "exports",
+      "value_omr_mn": 1800.0
+    },
+    {
+      "month": "2013-03",
+      "flow": "imports",
+      "value_omr_mn": 1166.8
+    },
+    {
+      "month": "2013-03",
+      "flow": "re_exports",
+      "value_omr_mn": 255.3
+    },
+    {
+      "month": "2013-04",
+      "flow": "exports",
+      "value_omr_mn": 1866.7
+    },
+    {
+      "month": "2013-04",
+      "flow": "imports",
+      "value_omr_mn": 1154.8
+    },
+    {
+      "month": "2013-04",
+      "flow": "re_exports",
+      "value_omr_mn": 394.3
+    },
+    {
+      "month": "2013-05",
+      "flow": "exports",
+      "value_omr_mn": 1929.0
+    },
+    {
+      "month": "2013-05",
+      "flow": "imports",
+      "value_omr_mn": 1076.3
+    },
+    {
+      "month": "2013-05",
+      "flow": "re_exports",
+      "value_omr_mn": 244.0
+    },
+    {
+      "month": "2013-06",
+      "flow": "exports",
+      "value_omr_mn": 1767.8
+    },
+    {
+      "month": "2013-06",
+      "flow": "imports",
+      "value_omr_mn": 1053.8
+    },
+    {
+      "month": "2013-06",
+      "flow": "re_exports",
+      "value_omr_mn": 290.5
+    },
+    {
+      "month": "2013-07",
+      "flow": "exports",
+      "value_omr_mn": 1722.3
+    },
+    {
+      "month": "2013-07",
+      "flow": "imports",
+      "value_omr_mn": 1056.6
+    },
+    {
+      "month": "2013-07",
+      "flow": "re_exports",
+      "value_omr_mn": 221.7
+    },
+    {
+      "month": "2013-08",
+      "flow": "exports",
+      "value_omr_mn": 1567.4
+    },
+    {
+      "month": "2013-08",
+      "flow": "imports",
+      "value_omr_mn": 1107.8
+    },
+    {
+      "month": "2013-08",
+      "flow": "re_exports",
+      "value_omr_mn": 191.3
+    },
+    {
+      "month": "2013-09",
+      "flow": "exports",
+      "value_omr_mn": 1943.7
+    },
+    {
+      "month": "2013-09",
+      "flow": "imports",
+      "value_omr_mn": 1392.1
+    },
+    {
+      "month": "2013-09",
+      "flow": "re_exports",
+      "value_omr_mn": 290.1
+    },
+    {
+      "month": "2013-10",
+      "flow": "exports",
+      "value_omr_mn": 1702.2
+    },
+    {
+      "month": "2013-10",
+      "flow": "imports",
+      "value_omr_mn": 1005.6
+    },
+    {
+      "month": "2013-10",
+      "flow": "re_exports",
+      "value_omr_mn": 218.3
+    },
+    {
+      "month": "2013-11",
+      "flow": "exports",
+      "value_omr_mn": 1838.0
+    },
+    {
+      "month": "2013-11",
+      "flow": "imports",
+      "value_omr_mn": 1021.7
+    },
+    {
+      "month": "2013-11",
+      "flow": "re_exports",
+      "value_omr_mn": 355.6
+    },
+    {
+      "month": "2013-12",
+      "flow": "exports",
+      "value_omr_mn": 1851.6
+    },
+    {
+      "month": "2013-12",
+      "flow": "imports",
+      "value_omr_mn": 1178.0
+    },
+    {
+      "month": "2013-12",
+      "flow": "re_exports",
+      "value_omr_mn": 291.3
+    },
+    {
+      "month": "2014-01",
+      "flow": "exports",
+      "value_omr_mn": 1752.2
+    },
+    {
+      "month": "2014-01",
+      "flow": "imports",
+      "value_omr_mn": 943.1
+    },
+    {
+      "month": "2014-01",
+      "flow": "re_exports",
+      "value_omr_mn": 249.7
+    },
+    {
+      "month": "2014-02",
+      "flow": "exports",
+      "value_omr_mn": 1639.5
+    },
+    {
+      "month": "2014-02",
+      "flow": "imports",
+      "value_omr_mn": 904.8
+    },
+    {
+      "month": "2014-02",
+      "flow": "re_exports",
+      "value_omr_mn": 230.0
+    },
+    {
+      "month": "2014-03",
+      "flow": "exports",
+      "value_omr_mn": 1752.3
+    },
+    {
+      "month": "2014-03",
+      "flow": "imports",
+      "value_omr_mn": 945.8
+    },
+    {
+      "month": "2014-03",
+      "flow": "re_exports",
+      "value_omr_mn": 280.9
+    },
+    {
+      "month": "2014-04",
+      "flow": "exports",
+      "value_omr_mn": 1536.2
+    },
+    {
+      "month": "2014-04",
+      "flow": "imports",
+      "value_omr_mn": 922.8
+    },
+    {
+      "month": "2014-04",
+      "flow": "re_exports",
+      "value_omr_mn": 278.9
+    },
+    {
+      "month": "2014-05",
+      "flow": "exports",
+      "value_omr_mn": 1658.0
+    },
+    {
+      "month": "2014-05",
+      "flow": "imports",
+      "value_omr_mn": 905.0
+    },
+    {
+      "month": "2014-05",
+      "flow": "re_exports",
+      "value_omr_mn": 240.1
+    },
+    {
+      "month": "2014-06",
+      "flow": "exports",
+      "value_omr_mn": 1669.4
+    },
+    {
+      "month": "2014-06",
+      "flow": "imports",
+      "value_omr_mn": 965.4
+    },
+    {
+      "month": "2014-06",
+      "flow": "re_exports",
+      "value_omr_mn": 283.5
+    },
+    {
+      "month": "2014-07",
+      "flow": "exports",
+      "value_omr_mn": 1694.8
+    },
+    {
+      "month": "2014-07",
+      "flow": "imports",
+      "value_omr_mn": 947.9
+    },
+    {
+      "month": "2014-07",
+      "flow": "re_exports",
+      "value_omr_mn": 218.3
+    },
+    {
+      "month": "2014-08",
+      "flow": "exports",
+      "value_omr_mn": 1805.1
+    },
+    {
+      "month": "2014-08",
+      "flow": "imports",
+      "value_omr_mn": 945.2
+    },
+    {
+      "month": "2014-08",
+      "flow": "re_exports",
+      "value_omr_mn": 231.0
+    },
+    {
+      "month": "2014-09",
+      "flow": "exports",
+      "value_omr_mn": 1916.8
+    },
+    {
+      "month": "2014-09",
+      "flow": "imports",
+      "value_omr_mn": 942.5
+    },
+    {
+      "month": "2014-09",
+      "flow": "re_exports",
+      "value_omr_mn": 241.3
+    },
+    {
+      "month": "2014-10",
+      "flow": "exports",
+      "value_omr_mn": 1581.5
+    },
+    {
+      "month": "2014-10",
+      "flow": "imports",
+      "value_omr_mn": 945.0
+    },
+    {
+      "month": "2014-10",
+      "flow": "re_exports",
+      "value_omr_mn": 195.3
+    },
+    {
+      "month": "2014-11",
+      "flow": "exports",
+      "value_omr_mn": 1748.0
+    },
+    {
+      "month": "2014-11",
+      "flow": "imports",
+      "value_omr_mn": 956.3
+    },
+    {
+      "month": "2014-11",
+      "flow": "re_exports",
+      "value_omr_mn": 283.9
+    },
+    {
+      "month": "2014-12",
+      "flow": "exports",
+      "value_omr_mn": 1580.0
+    },
+    {
+      "month": "2014-12",
+      "flow": "imports",
+      "value_omr_mn": 946.0
+    },
+    {
+      "month": "2014-12",
+      "flow": "re_exports",
+      "value_omr_mn": 216.8
+    },
+    {
+      "month": "2015-01",
+      "flow": "exports",
+      "value_omr_mn": 1330.6
+    },
+    {
+      "month": "2015-01",
+      "flow": "imports",
+      "value_omr_mn": 889.7
+    },
+    {
+      "month": "2015-01",
+      "flow": "re_exports",
+      "value_omr_mn": 156.8
+    },
+    {
+      "month": "2015-02",
+      "flow": "exports",
+      "value_omr_mn": 1212.3
+    },
+    {
+      "month": "2015-02",
+      "flow": "imports",
+      "value_omr_mn": 883.1
+    },
+    {
+      "month": "2015-02",
+      "flow": "re_exports",
+      "value_omr_mn": 193.2
+    },
+    {
+      "month": "2015-03",
+      "flow": "exports",
+      "value_omr_mn": 988.7
+    },
+    {
+      "month": "2015-03",
+      "flow": "imports",
+      "value_omr_mn": 921.1
+    },
+    {
+      "month": "2015-03",
+      "flow": "re_exports",
+      "value_omr_mn": 189.3
+    },
+    {
+      "month": "2015-04",
+      "flow": "exports",
+      "value_omr_mn": 1015.5
+    },
+    {
+      "month": "2015-04",
+      "flow": "imports",
+      "value_omr_mn": 926.8
+    },
+    {
+      "month": "2015-04",
+      "flow": "re_exports",
+      "value_omr_mn": 155.1
+    },
+    {
+      "month": "2015-05",
+      "flow": "exports",
+      "value_omr_mn": 1084.9
+    },
+    {
+      "month": "2015-05",
+      "flow": "imports",
+      "value_omr_mn": 921.8
+    },
+    {
+      "month": "2015-05",
+      "flow": "re_exports",
+      "value_omr_mn": 185.3
+    },
+    {
+      "month": "2015-06",
+      "flow": "exports",
+      "value_omr_mn": 1193.4
+    },
+    {
+      "month": "2015-06",
+      "flow": "imports",
+      "value_omr_mn": 992.4
+    },
+    {
+      "month": "2015-06",
+      "flow": "re_exports",
+      "value_omr_mn": 177.6
+    },
+    {
+      "month": "2015-07",
+      "flow": "exports",
+      "value_omr_mn": 1254.1
+    },
+    {
+      "month": "2015-07",
+      "flow": "imports",
+      "value_omr_mn": 998.9
+    },
+    {
+      "month": "2015-07",
+      "flow": "re_exports",
+      "value_omr_mn": 311.6
+    },
+    {
+      "month": "2015-08",
+      "flow": "exports",
+      "value_omr_mn": 1167.5
+    },
+    {
+      "month": "2015-08",
+      "flow": "imports",
+      "value_omr_mn": 970.0
+    },
+    {
+      "month": "2015-08",
+      "flow": "re_exports",
+      "value_omr_mn": 190.7
+    },
+    {
+      "month": "2015-09",
+      "flow": "exports",
+      "value_omr_mn": 1201.5
+    },
+    {
+      "month": "2015-09",
+      "flow": "imports",
+      "value_omr_mn": 872.5
+    },
+    {
+      "month": "2015-09",
+      "flow": "re_exports",
+      "value_omr_mn": 326.8
+    },
+    {
+      "month": "2015-10",
+      "flow": "exports",
+      "value_omr_mn": 969.4
+    },
+    {
+      "month": "2015-10",
+      "flow": "imports",
+      "value_omr_mn": 898.5
+    },
+    {
+      "month": "2015-10",
+      "flow": "re_exports",
+      "value_omr_mn": 215.1
+    },
+    {
+      "month": "2015-11",
+      "flow": "exports",
+      "value_omr_mn": 1003.8
+    },
+    {
+      "month": "2015-11",
+      "flow": "imports",
+      "value_omr_mn": 901.3
+    },
+    {
+      "month": "2015-11",
+      "flow": "re_exports",
+      "value_omr_mn": 267.1
+    },
+    {
+      "month": "2015-12",
+      "flow": "exports",
+      "value_omr_mn": 954.1
+    },
+    {
+      "month": "2015-12",
+      "flow": "imports",
+      "value_omr_mn": 999.3
+    },
+    {
+      "month": "2015-12",
+      "flow": "re_exports",
+      "value_omr_mn": 204.9
+    },
+    {
+      "month": "2016-03",
+      "flow": "exports",
+      "value_omr_mn": 741.8
+    },
+    {
+      "month": "2016-03",
+      "flow": "imports",
+      "value_omr_mn": 594.7
+    },
+    {
+      "month": "2016-03",
+      "flow": "re_exports",
+      "value_omr_mn": 200.6
+    },
+    {
+      "month": "2016-04",
+      "flow": "exports",
+      "value_omr_mn": 594.0
+    },
+    {
+      "month": "2016-04",
+      "flow": "imports",
+      "value_omr_mn": 578.4
+    },
+    {
+      "month": "2016-04",
+      "flow": "re_exports",
+      "value_omr_mn": 112.7
+    },
+    {
+      "month": "2016-05",
+      "flow": "exports",
+      "value_omr_mn": 851.8
+    },
+    {
+      "month": "2016-05",
+      "flow": "imports",
+      "value_omr_mn": 829.9
+    },
+    {
+      "month": "2016-05",
+      "flow": "re_exports",
+      "value_omr_mn": 206.8
+    },
+    {
+      "month": "2016-06",
+      "flow": "exports",
+      "value_omr_mn": 922.8
+    },
+    {
+      "month": "2016-06",
+      "flow": "imports",
+      "value_omr_mn": 757.5
+    },
+    {
+      "month": "2016-06",
+      "flow": "re_exports",
+      "value_omr_mn": 196.0
+    },
+    {
+      "month": "2016-07",
+      "flow": "exports",
+      "value_omr_mn": 838.9
+    },
+    {
+      "month": "2016-07",
+      "flow": "imports",
+      "value_omr_mn": 719.7
+    },
+    {
+      "month": "2016-07",
+      "flow": "re_exports",
+      "value_omr_mn": 155.6
+    },
+    {
+      "month": "2016-08",
+      "flow": "exports",
+      "value_omr_mn": 904.0
+    },
+    {
+      "month": "2016-08",
+      "flow": "imports",
+      "value_omr_mn": 895.6
+    },
+    {
+      "month": "2016-08",
+      "flow": "re_exports",
+      "value_omr_mn": 162.5
+    },
+    {
+      "month": "2016-09",
+      "flow": "exports",
+      "value_omr_mn": 807.1
+    },
+    {
+      "month": "2016-09",
+      "flow": "imports",
+      "value_omr_mn": 717.0
+    },
+    {
+      "month": "2016-09",
+      "flow": "re_exports",
+      "value_omr_mn": 135.9
+    },
+    {
+      "month": "2016-10",
+      "flow": "exports",
+      "value_omr_mn": 949.3
+    },
+    {
+      "month": "2016-10",
+      "flow": "imports",
+      "value_omr_mn": 884.2
+    },
+    {
+      "month": "2016-10",
+      "flow": "re_exports",
+      "value_omr_mn": 182.4
+    },
+    {
+      "month": "2016-11",
+      "flow": "exports",
+      "value_omr_mn": 946.9
+    },
+    {
+      "month": "2016-11",
+      "flow": "imports",
+      "value_omr_mn": 741.0
+    },
+    {
+      "month": "2016-11",
+      "flow": "re_exports",
+      "value_omr_mn": 176.2
+    },
+    {
+      "month": "2016-12",
+      "flow": "exports",
+      "value_omr_mn": 894.3
+    },
+    {
+      "month": "2016-12",
+      "flow": "imports",
+      "value_omr_mn": 714.6
+    },
+    {
+      "month": "2016-12",
+      "flow": "re_exports",
+      "value_omr_mn": 155.4
+    },
+    {
+      "month": "2017-01",
+      "flow": "exports",
+      "value_omr_mn": 881.8
+    },
+    {
+      "month": "2017-01",
+      "flow": "imports",
+      "value_omr_mn": 767.1
+    },
+    {
+      "month": "2017-01",
+      "flow": "re_exports",
+      "value_omr_mn": 121.7
+    },
+    {
+      "month": "2017-02",
+      "flow": "exports",
+      "value_omr_mn": 934.1
+    },
+    {
+      "month": "2017-02",
+      "flow": "imports",
+      "value_omr_mn": 593.8
+    },
+    {
+      "month": "2017-02",
+      "flow": "re_exports",
+      "value_omr_mn": 109.6
+    },
+    {
+      "month": "2017-03",
+      "flow": "exports",
+      "value_omr_mn": 1036.5
+    },
+    {
+      "month": "2017-03",
+      "flow": "imports",
+      "value_omr_mn": 999.0
+    },
+    {
+      "month": "2017-03",
+      "flow": "re_exports",
+      "value_omr_mn": 131.1
+    },
+    {
+      "month": "2017-04",
+      "flow": "exports",
+      "value_omr_mn": 1013.4
+    },
+    {
+      "month": "2017-04",
+      "flow": "imports",
+      "value_omr_mn": 829.1
+    },
+    {
+      "month": "2017-04",
+      "flow": "re_exports",
+      "value_omr_mn": 110.0
+    },
+    {
+      "month": "2017-05",
+      "flow": "exports",
+      "value_omr_mn": 1131.6
+    },
+    {
+      "month": "2017-05",
+      "flow": "imports",
+      "value_omr_mn": 969.6
+    },
+    {
+      "month": "2017-05",
+      "flow": "re_exports",
+      "value_omr_mn": 184.0
+    },
+    {
+      "month": "2017-06",
+      "flow": "exports",
+      "value_omr_mn": 836.0
+    },
+    {
+      "month": "2017-06",
+      "flow": "imports",
+      "value_omr_mn": 639.5
+    },
+    {
+      "month": "2017-06",
+      "flow": "re_exports",
+      "value_omr_mn": 129.4
+    },
+    {
+      "month": "2017-07",
+      "flow": "exports",
+      "value_omr_mn": 1051.5
+    },
+    {
+      "month": "2017-07",
+      "flow": "imports",
+      "value_omr_mn": 875.2
+    },
+    {
+      "month": "2017-07",
+      "flow": "re_exports",
+      "value_omr_mn": 203.5
+    },
+    {
+      "month": "2017-08",
+      "flow": "exports",
+      "value_omr_mn": 1067.8
+    },
+    {
+      "month": "2017-08",
+      "flow": "imports",
+      "value_omr_mn": 972.0
+    },
+    {
+      "month": "2017-08",
+      "flow": "re_exports",
+      "value_omr_mn": 207.7
+    },
+    {
+      "month": "2017-09",
+      "flow": "exports",
+      "value_omr_mn": 994.2
+    },
+    {
+      "month": "2017-09",
+      "flow": "imports",
+      "value_omr_mn": 964.5
+    },
+    {
+      "month": "2017-09",
+      "flow": "re_exports",
+      "value_omr_mn": 218.9
+    },
+    {
+      "month": "2017-10",
+      "flow": "exports",
+      "value_omr_mn": 1056.5
+    },
+    {
+      "month": "2017-10",
+      "flow": "imports",
+      "value_omr_mn": 953.0
+    },
+    {
+      "month": "2017-10",
+      "flow": "re_exports",
+      "value_omr_mn": 212.3
+    },
+    {
+      "month": "2017-11",
+      "flow": "exports",
+      "value_omr_mn": 1189.8
+    },
+    {
+      "month": "2017-11",
+      "flow": "imports",
+      "value_omr_mn": 986.6
+    },
+    {
+      "month": "2017-11",
+      "flow": "re_exports",
+      "value_omr_mn": 223.9
+    },
+    {
+      "month": "2017-12",
+      "flow": "exports",
+      "value_omr_mn": 1267.3
+    },
+    {
+      "month": "2017-12",
+      "flow": "imports",
+      "value_omr_mn": 943.5
+    },
+    {
+      "month": "2017-12",
+      "flow": "re_exports",
+      "value_omr_mn": 256.5
+    },
+    {
+      "month": "2018-01",
+      "flow": "exports",
+      "value_omr_mn": 1199.6738670000002
+    },
+    {
+      "month": "2018-01",
+      "flow": "imports",
+      "value_omr_mn": 861.7698410000002
+    },
+    {
+      "month": "2018-01",
+      "flow": "re_exports",
+      "value_omr_mn": 131.29546499999998
+    },
+    {
+      "month": "2018-02",
+      "flow": "exports",
+      "value_omr_mn": 1156.286407
+    },
+    {
+      "month": "2018-02",
+      "flow": "imports",
+      "value_omr_mn": 771.386042
+    },
+    {
+      "month": "2018-02",
+      "flow": "re_exports",
+      "value_omr_mn": 159.02621499999998
+    },
+    {
+      "month": "2018-03",
+      "flow": "exports",
+      "value_omr_mn": 1306.944673
+    },
+    {
+      "month": "2018-03",
+      "flow": "imports",
+      "value_omr_mn": 824.823411
+    },
+    {
+      "month": "2018-03",
+      "flow": "re_exports",
+      "value_omr_mn": 146.023491
+    },
+    {
+      "month": "2018-04",
+      "flow": "exports",
+      "value_omr_mn": 1281.0888900000002
+    },
+    {
+      "month": "2018-04",
+      "flow": "imports",
+      "value_omr_mn": 865.6035629999998
+    },
+    {
+      "month": "2018-04",
+      "flow": "re_exports",
+      "value_omr_mn": 147.00686500000003
+    },
+    {
+      "month": "2018-05",
+      "flow": "exports",
+      "value_omr_mn": 1222.1028890000002
+    },
+    {
+      "month": "2018-05",
+      "flow": "imports",
+      "value_omr_mn": 838.974198
+    },
+    {
+      "month": "2018-05",
+      "flow": "re_exports",
+      "value_omr_mn": 130.891479
+    },
+    {
+      "month": "2018-06",
+      "flow": "exports",
+      "value_omr_mn": 1327.5388790000002
+    },
+    {
+      "month": "2018-06",
+      "flow": "imports",
+      "value_omr_mn": 806.8816929999998
+    },
+    {
+      "month": "2018-06",
+      "flow": "re_exports",
+      "value_omr_mn": 167.109398
+    },
+    {
+      "month": "2018-07",
+      "flow": "exports",
+      "value_omr_mn": 1431.272762
+    },
+    {
+      "month": "2018-07",
+      "flow": "imports",
+      "value_omr_mn": 847.3348709999999
+    },
+    {
+      "month": "2018-07",
+      "flow": "re_exports",
+      "value_omr_mn": 165.71316700000006
+    },
+    {
+      "month": "2018-08",
+      "flow": "exports",
+      "value_omr_mn": 1284.139201
+    },
+    {
+      "month": "2018-08",
+      "flow": "imports",
+      "value_omr_mn": 801.4922889999998
+    },
+    {
+      "month": "2018-08",
+      "flow": "re_exports",
+      "value_omr_mn": 125.86059299999997
+    },
+    {
+      "month": "2018-09",
+      "flow": "exports",
+      "value_omr_mn": 1356.22817
+    },
+    {
+      "month": "2018-09",
+      "flow": "imports",
+      "value_omr_mn": 893.1004690000001
+    },
+    {
+      "month": "2018-09",
+      "flow": "re_exports",
+      "value_omr_mn": 154.40350099999995
+    },
+    {
+      "month": "2018-10",
+      "flow": "exports",
+      "value_omr_mn": 1534.1707310000002
+    },
+    {
+      "month": "2018-10",
+      "flow": "imports",
+      "value_omr_mn": 814.3844290000001
+    },
+    {
+      "month": "2018-10",
+      "flow": "re_exports",
+      "value_omr_mn": 179.03101100000003
+    },
+    {
+      "month": "2018-11",
+      "flow": "exports",
+      "value_omr_mn": 1483.5444690000002
+    },
+    {
+      "month": "2018-11",
+      "flow": "imports",
+      "value_omr_mn": 708.676993
+    },
+    {
+      "month": "2018-11",
+      "flow": "re_exports",
+      "value_omr_mn": 164.940254
+    },
+    {
+      "month": "2018-12",
+      "flow": "exports",
+      "value_omr_mn": 1474.1058400000002
+    },
+    {
+      "month": "2018-12",
+      "flow": "imports",
+      "value_omr_mn": 874.173654
+    },
+    {
+      "month": "2018-12",
+      "flow": "re_exports",
+      "value_omr_mn": 171.84224600000005
+    },
+    {
+      "month": "2019-01",
+      "flow": "exports",
+      "value_omr_mn": 1446.6817019999996
+    },
+    {
+      "month": "2019-01",
+      "flow": "imports",
+      "value_omr_mn": 792.4338640000001
+    },
+    {
+      "month": "2019-01",
+      "flow": "re_exports",
+      "value_omr_mn": 117.89332199999996
+    },
+    {
+      "month": "2019-02",
+      "flow": "exports",
+      "value_omr_mn": 1193.22752
+    },
+    {
+      "month": "2019-02",
+      "flow": "imports",
+      "value_omr_mn": 691.9390539999998
+    },
+    {
+      "month": "2019-02",
+      "flow": "re_exports",
+      "value_omr_mn": 115.814773
+    },
+    {
+      "month": "2019-03",
+      "flow": "exports",
+      "value_omr_mn": 1188.9363809999998
+    },
+    {
+      "month": "2019-03",
+      "flow": "imports",
+      "value_omr_mn": 765.0026480000002
+    },
+    {
+      "month": "2019-03",
+      "flow": "re_exports",
+      "value_omr_mn": 114.825011
+    },
+    {
+      "month": "2019-04",
+      "flow": "exports",
+      "value_omr_mn": 1156.873226
+    },
+    {
+      "month": "2019-04",
+      "flow": "imports",
+      "value_omr_mn": 753.426003
+    },
+    {
+      "month": "2019-04",
+      "flow": "re_exports",
+      "value_omr_mn": 114.85844199999998
+    },
+    {
+      "month": "2019-05",
+      "flow": "exports",
+      "value_omr_mn": 1322.182283
+    },
+    {
+      "month": "2019-05",
+      "flow": "imports",
+      "value_omr_mn": 810.6952190000001
+    },
+    {
+      "month": "2019-05",
+      "flow": "re_exports",
+      "value_omr_mn": 118.96764999999996
+    },
+    {
+      "month": "2019-06",
+      "flow": "exports",
+      "value_omr_mn": 1267.32622
+    },
+    {
+      "month": "2019-06",
+      "flow": "imports",
+      "value_omr_mn": 685.8372229999998
+    },
+    {
+      "month": "2019-06",
+      "flow": "re_exports",
+      "value_omr_mn": 114.033734
+    },
+    {
+      "month": "2019-07",
+      "flow": "exports",
+      "value_omr_mn": 1151.274934
+    },
+    {
+      "month": "2019-07",
+      "flow": "imports",
+      "value_omr_mn": 770.7580429999998
+    },
+    {
+      "month": "2019-07",
+      "flow": "re_exports",
+      "value_omr_mn": 104.54613700000002
+    },
+    {
+      "month": "2019-08",
+      "flow": "exports",
+      "value_omr_mn": 1243.879479
+    },
+    {
+      "month": "2019-08",
+      "flow": "imports",
+      "value_omr_mn": 786.925649
+    },
+    {
+      "month": "2019-08",
+      "flow": "re_exports",
+      "value_omr_mn": 108.435511
+    },
+    {
+      "month": "2019-09",
+      "flow": "exports",
+      "value_omr_mn": 1134.871812
+    },
+    {
+      "month": "2019-09",
+      "flow": "imports",
+      "value_omr_mn": 728.6564699999999
+    },
+    {
+      "month": "2019-09",
+      "flow": "re_exports",
+      "value_omr_mn": 107.604663
+    },
+    {
+      "month": "2019-10",
+      "flow": "exports",
+      "value_omr_mn": 1300.148553
+    },
+    {
+      "month": "2019-10",
+      "flow": "imports",
+      "value_omr_mn": 776.445679
+    },
+    {
+      "month": "2019-10",
+      "flow": "re_exports",
+      "value_omr_mn": 171.619998
+    },
+    {
+      "month": "2019-11",
+      "flow": "exports",
+      "value_omr_mn": 1206.072726
+    },
+    {
+      "month": "2019-11",
+      "flow": "imports",
+      "value_omr_mn": 656.4034310000001
+    },
+    {
+      "month": "2019-11",
+      "flow": "re_exports",
+      "value_omr_mn": 124.25214400000002
+    },
+    {
+      "month": "2019-12",
+      "flow": "exports",
+      "value_omr_mn": 1284.8564009999998
+    },
+    {
+      "month": "2019-12",
+      "flow": "imports",
+      "value_omr_mn": 819.7452050000003
+    },
+    {
+      "month": "2019-12",
+      "flow": "re_exports",
+      "value_omr_mn": 151.33580899999993
+    },
+    {
+      "month": "2020-01",
+      "flow": "exports",
+      "value_omr_mn": 1265.445927
+    },
+    {
+      "month": "2020-01",
+      "flow": "imports",
+      "value_omr_mn": 1032.6422849999997
+    },
+    {
+      "month": "2020-01",
+      "flow": "re_exports",
+      "value_omr_mn": 186.89912900000004
+    },
+    {
+      "month": "2020-02",
+      "flow": "exports",
+      "value_omr_mn": 1272.767473
+    },
+    {
+      "month": "2020-02",
+      "flow": "imports",
+      "value_omr_mn": 971.6169619999998
+    },
+    {
+      "month": "2020-02",
+      "flow": "re_exports",
+      "value_omr_mn": 210.04638900000003
+    },
+    {
+      "month": "2020-03",
+      "flow": "exports",
+      "value_omr_mn": 1194.623746
+    },
+    {
+      "month": "2020-03",
+      "flow": "imports",
+      "value_omr_mn": 1029.516947
+    },
+    {
+      "month": "2020-03",
+      "flow": "re_exports",
+      "value_omr_mn": 157.61868199999998
+    },
+    {
+      "month": "2020-04",
+      "flow": "exports",
+      "value_omr_mn": 1158.240343
+    },
+    {
+      "month": "2020-04",
+      "flow": "imports",
+      "value_omr_mn": 781.2406020000001
+    },
+    {
+      "month": "2020-04",
+      "flow": "re_exports",
+      "value_omr_mn": 130.42408999999998
+    },
+    {
+      "month": "2020-05",
+      "flow": "exports",
+      "value_omr_mn": 766.8920210000001
+    },
+    {
+      "month": "2020-05",
+      "flow": "imports",
+      "value_omr_mn": 687.8475569999999
+    },
+    {
+      "month": "2020-05",
+      "flow": "re_exports",
+      "value_omr_mn": 62.021373
+    },
+    {
+      "month": "2020-06",
+      "flow": "exports",
+      "value_omr_mn": 667.470458
+    },
+    {
+      "month": "2020-06",
+      "flow": "imports",
+      "value_omr_mn": 792.5187040000002
+    },
+    {
+      "month": "2020-06",
+      "flow": "re_exports",
+      "value_omr_mn": 87.49783799999999
+    },
+    {
+      "month": "2020-07",
+      "flow": "exports",
+      "value_omr_mn": 819.6944760000001
+    },
+    {
+      "month": "2020-07",
+      "flow": "imports",
+      "value_omr_mn": 952.711925
+    },
+    {
+      "month": "2020-07",
+      "flow": "re_exports",
+      "value_omr_mn": 121.59600399999997
+    },
+    {
+      "month": "2020-08",
+      "flow": "exports",
+      "value_omr_mn": 845.593475
+    },
+    {
+      "month": "2020-08",
+      "flow": "imports",
+      "value_omr_mn": 831.0193619999999
+    },
+    {
+      "month": "2020-08",
+      "flow": "re_exports",
+      "value_omr_mn": 79.971108
+    },
+    {
+      "month": "2020-09",
+      "flow": "exports",
+      "value_omr_mn": 1029.4356389999998
+    },
+    {
+      "month": "2020-09",
+      "flow": "imports",
+      "value_omr_mn": 861.406581
+    },
+    {
+      "month": "2020-09",
+      "flow": "re_exports",
+      "value_omr_mn": 203.97196899999997
+    },
+    {
+      "month": "2020-10",
+      "flow": "exports",
+      "value_omr_mn": 1015.185733
+    },
+    {
+      "month": "2020-10",
+      "flow": "imports",
+      "value_omr_mn": 827.8957220000001
+    },
+    {
+      "month": "2020-10",
+      "flow": "re_exports",
+      "value_omr_mn": 124.213819
+    },
+    {
+      "month": "2020-11",
+      "flow": "exports",
+      "value_omr_mn": 1026.11628
+    },
+    {
+      "month": "2020-11",
+      "flow": "imports",
+      "value_omr_mn": 976.541998
+    },
+    {
+      "month": "2020-11",
+      "flow": "re_exports",
+      "value_omr_mn": 186.145311
+    },
+    {
+      "month": "2020-12",
+      "flow": "exports",
+      "value_omr_mn": 1168.227933
+    },
+    {
+      "month": "2020-12",
+      "flow": "imports",
+      "value_omr_mn": 994.090944
+    },
+    {
+      "month": "2020-12",
+      "flow": "re_exports",
+      "value_omr_mn": 240.11566
+    },
+    {
+      "month": "2021-01",
+      "flow": "exports",
+      "value_omr_mn": 1167.912185
+    },
+    {
+      "month": "2021-01",
+      "flow": "imports",
+      "value_omr_mn": 945.310516
+    },
+    {
+      "month": "2021-01",
+      "flow": "re_exports",
+      "value_omr_mn": 112.48009
+    },
+    {
+      "month": "2021-02",
+      "flow": "exports",
+      "value_omr_mn": 1064.3835729999998
+    },
+    {
+      "month": "2021-02",
+      "flow": "imports",
+      "value_omr_mn": 1078.814552
+    },
+    {
+      "month": "2021-02",
+      "flow": "re_exports",
+      "value_omr_mn": 150.919162
+    },
+    {
+      "month": "2021-03",
+      "flow": "exports",
+      "value_omr_mn": 1398.038297
+    },
+    {
+      "month": "2021-03",
+      "flow": "imports",
+      "value_omr_mn": 1170.945341
+    },
+    {
+      "month": "2021-03",
+      "flow": "re_exports",
+      "value_omr_mn": 139.89896299999998
+    },
+    {
+      "month": "2021-04",
+      "flow": "exports",
+      "value_omr_mn": 1382.81719
+    },
+    {
+      "month": "2021-04",
+      "flow": "imports",
+      "value_omr_mn": 964.374415
+    },
+    {
+      "month": "2021-04",
+      "flow": "re_exports",
+      "value_omr_mn": 157.247197
+    },
+    {
+      "month": "2021-05",
+      "flow": "exports",
+      "value_omr_mn": 1302.294756
+    },
+    {
+      "month": "2021-05",
+      "flow": "imports",
+      "value_omr_mn": 832.4793209999999
+    },
+    {
+      "month": "2021-05",
+      "flow": "re_exports",
+      "value_omr_mn": 80.58870200000001
+    },
+    {
+      "month": "2021-06",
+      "flow": "exports",
+      "value_omr_mn": 1348.025893
+    },
+    {
+      "month": "2021-06",
+      "flow": "imports",
+      "value_omr_mn": 1023.88016
+    },
+    {
+      "month": "2021-06",
+      "flow": "re_exports",
+      "value_omr_mn": 122.303724
+    },
+    {
+      "month": "2021-07",
+      "flow": "exports",
+      "value_omr_mn": 1336.615184
+    },
+    {
+      "month": "2021-07",
+      "flow": "imports",
+      "value_omr_mn": 843.362849
+    },
+    {
+      "month": "2021-07",
+      "flow": "re_exports",
+      "value_omr_mn": 76.39991799999999
+    },
+    {
+      "month": "2021-08",
+      "flow": "exports",
+      "value_omr_mn": 1457.55288
+    },
+    {
+      "month": "2021-08",
+      "flow": "imports",
+      "value_omr_mn": 1004.668512
+    },
+    {
+      "month": "2021-08",
+      "flow": "re_exports",
+      "value_omr_mn": 83.09558400000002
+    },
+    {
+      "month": "2021-09",
+      "flow": "exports",
+      "value_omr_mn": 1403.388296
+    },
+    {
+      "month": "2021-09",
+      "flow": "imports",
+      "value_omr_mn": 1085.7843499999997
+    },
+    {
+      "month": "2021-09",
+      "flow": "re_exports",
+      "value_omr_mn": 95.498334
+    },
+    {
+      "month": "2021-10",
+      "flow": "exports",
+      "value_omr_mn": 1437.384999
+    },
+    {
+      "month": "2021-10",
+      "flow": "imports",
+      "value_omr_mn": 922.880905
+    },
+    {
+      "month": "2021-10",
+      "flow": "re_exports",
+      "value_omr_mn": 92.014769
+    },
+    {
+      "month": "2021-11",
+      "flow": "exports",
+      "value_omr_mn": 1512.316927
+    },
+    {
+      "month": "2021-11",
+      "flow": "imports",
+      "value_omr_mn": 965.511835
+    },
+    {
+      "month": "2021-11",
+      "flow": "re_exports",
+      "value_omr_mn": 84.74741600000003
+    },
+    {
+      "month": "2021-12",
+      "flow": "exports",
+      "value_omr_mn": 1757.707902
+    },
+    {
+      "month": "2021-12",
+      "flow": "imports",
+      "value_omr_mn": 1050.059186
+    },
+    {
+      "month": "2021-12",
+      "flow": "re_exports",
+      "value_omr_mn": 123.211416
+    },
+    {
+      "month": "2022-01",
+      "flow": "exports",
+      "value_omr_mn": 1909.914247
+    },
+    {
+      "month": "2022-01",
+      "flow": "imports",
+      "value_omr_mn": 1029.0170959999996
+    },
+    {
+      "month": "2022-01",
+      "flow": "re_exports",
+      "value_omr_mn": 101.897506
+    },
+    {
+      "month": "2022-02",
+      "flow": "exports",
+      "value_omr_mn": 1550.617432
+    },
+    {
+      "month": "2022-02",
+      "flow": "imports",
+      "value_omr_mn": 1035.544311
+    },
+    {
+      "month": "2022-02",
+      "flow": "re_exports",
+      "value_omr_mn": 88.15012199999998
+    },
+    {
+      "month": "2022-03",
+      "flow": "exports",
+      "value_omr_mn": 1967.205782
+    },
+    {
+      "month": "2022-03",
+      "flow": "imports",
+      "value_omr_mn": 1306.7575220000003
+    },
+    {
+      "month": "2022-03",
+      "flow": "re_exports",
+      "value_omr_mn": 107.22234
+    },
+    {
+      "month": "2022-04",
+      "flow": "exports",
+      "value_omr_mn": 2044.343174
+    },
+    {
+      "month": "2022-04",
+      "flow": "imports",
+      "value_omr_mn": 1291.387508
+    },
+    {
+      "month": "2022-04",
+      "flow": "re_exports",
+      "value_omr_mn": 121.82992900000002
+    },
+    {
+      "month": "2022-05",
+      "flow": "exports",
+      "value_omr_mn": 2562.666478
+    },
+    {
+      "month": "2022-05",
+      "flow": "imports",
+      "value_omr_mn": 1386.7745310000005
+    },
+    {
+      "month": "2022-05",
+      "flow": "re_exports",
+      "value_omr_mn": 89.19412300000002
+    },
+    {
+      "month": "2022-06",
+      "flow": "exports",
+      "value_omr_mn": 2346.8153190000003
+    },
+    {
+      "month": "2022-06",
+      "flow": "imports",
+      "value_omr_mn": 1539.6828319999995
+    },
+    {
+      "month": "2022-06",
+      "flow": "re_exports",
+      "value_omr_mn": 123.23016300000002
+    },
+    {
+      "month": "2022-07",
+      "flow": "exports",
+      "value_omr_mn": 2286.421158
+    },
+    {
+      "month": "2022-07",
+      "flow": "imports",
+      "value_omr_mn": 1213.3056309999995
+    },
+    {
+      "month": "2022-07",
+      "flow": "re_exports",
+      "value_omr_mn": 93.99198700000002
+    },
+    {
+      "month": "2022-08",
+      "flow": "exports",
+      "value_omr_mn": 2240.916831
+    },
+    {
+      "month": "2022-08",
+      "flow": "imports",
+      "value_omr_mn": 1401.140229
+    },
+    {
+      "month": "2022-08",
+      "flow": "re_exports",
+      "value_omr_mn": 126.17068899999995
+    },
+    {
+      "month": "2022-09",
+      "flow": "exports",
+      "value_omr_mn": 2125.2720749999994
+    },
+    {
+      "month": "2022-09",
+      "flow": "imports",
+      "value_omr_mn": 1082.481969
+    },
+    {
+      "month": "2022-09",
+      "flow": "re_exports",
+      "value_omr_mn": 121.29668100000002
+    },
+    {
+      "month": "2022-10",
+      "flow": "exports",
+      "value_omr_mn": 2154.3289950000003
+    },
+    {
+      "month": "2022-10",
+      "flow": "imports",
+      "value_omr_mn": 1326.926823
+    },
+    {
+      "month": "2022-10",
+      "flow": "re_exports",
+      "value_omr_mn": 101.12283899999998
+    },
+    {
+      "month": "2022-11",
+      "flow": "exports",
+      "value_omr_mn": 2000.43735
+    },
+    {
+      "month": "2022-11",
+      "flow": "imports",
+      "value_omr_mn": 1088.7549890000005
+    },
+    {
+      "month": "2022-11",
+      "flow": "re_exports",
+      "value_omr_mn": 134.82406700000004
+    },
+    {
+      "month": "2022-12",
+      "flow": "exports",
+      "value_omr_mn": 2076.9027960000003
+    },
+    {
+      "month": "2022-12",
+      "flow": "imports",
+      "value_omr_mn": 1129.556534
+    },
+    {
+      "month": "2022-12",
+      "flow": "re_exports",
+      "value_omr_mn": 109.123519
+    },
+    {
+      "month": "2023-01",
+      "flow": "exports",
+      "value_omr_mn": 1968.38628
+    },
+    {
+      "month": "2023-01",
+      "flow": "imports",
+      "value_omr_mn": 1288.4600529999998
+    },
+    {
+      "month": "2023-01",
+      "flow": "re_exports",
+      "value_omr_mn": 111.20522899999996
+    },
+    {
+      "month": "2023-02",
+      "flow": "exports",
+      "value_omr_mn": 1684.052323
+    },
+    {
+      "month": "2023-02",
+      "flow": "imports",
+      "value_omr_mn": 1028.908876
+    },
+    {
+      "month": "2023-02",
+      "flow": "re_exports",
+      "value_omr_mn": 115.83115599999998
+    },
+    {
+      "month": "2023-03",
+      "flow": "exports",
+      "value_omr_mn": 1858.120963
+    },
+    {
+      "month": "2023-03",
+      "flow": "imports",
+      "value_omr_mn": 1322.112931
+    },
+    {
+      "month": "2023-03",
+      "flow": "re_exports",
+      "value_omr_mn": 121.51908500000002
+    },
+    {
+      "month": "2023-04",
+      "flow": "exports",
+      "value_omr_mn": 1773.7700900000002
+    },
+    {
+      "month": "2023-04",
+      "flow": "imports",
+      "value_omr_mn": 1227.129276
+    },
+    {
+      "month": "2023-04",
+      "flow": "re_exports",
+      "value_omr_mn": 115.843071
+    },
+    {
+      "month": "2023-05",
+      "flow": "exports",
+      "value_omr_mn": 1872.743718
+    },
+    {
+      "month": "2023-05",
+      "flow": "imports",
+      "value_omr_mn": 1370.9764889999997
+    },
+    {
+      "month": "2023-05",
+      "flow": "re_exports",
+      "value_omr_mn": 189.430286
+    },
+    {
+      "month": "2023-06",
+      "flow": "exports",
+      "value_omr_mn": 1698.0246570000002
+    },
+    {
+      "month": "2023-06",
+      "flow": "imports",
+      "value_omr_mn": 992.021754
+    },
+    {
+      "month": "2023-06",
+      "flow": "re_exports",
+      "value_omr_mn": 106.93097400000002
+    },
+    {
+      "month": "2023-07",
+      "flow": "exports",
+      "value_omr_mn": 1793.914525
+    },
+    {
+      "month": "2023-07",
+      "flow": "imports",
+      "value_omr_mn": 1197.8231179999998
+    },
+    {
+      "month": "2023-07",
+      "flow": "re_exports",
+      "value_omr_mn": 110.22941
+    },
+    {
+      "month": "2023-08",
+      "flow": "exports",
+      "value_omr_mn": 1896.755616
+    },
+    {
+      "month": "2023-08",
+      "flow": "imports",
+      "value_omr_mn": 1291.4036559999995
+    },
+    {
+      "month": "2023-08",
+      "flow": "re_exports",
+      "value_omr_mn": 121.40052800000002
+    },
+    {
+      "month": "2023-09",
+      "flow": "exports",
+      "value_omr_mn": 2121.676493
+    },
+    {
+      "month": "2023-09",
+      "flow": "imports",
+      "value_omr_mn": 1260.700559
+    },
+    {
+      "month": "2023-09",
+      "flow": "re_exports",
+      "value_omr_mn": 108.32598000000002
+    },
+    {
+      "month": "2023-10",
+      "flow": "exports",
+      "value_omr_mn": 2138.528331
+    },
+    {
+      "month": "2023-10",
+      "flow": "imports",
+      "value_omr_mn": 1369.8934369999995
+    },
+    {
+      "month": "2023-10",
+      "flow": "re_exports",
+      "value_omr_mn": 131.23942800000003
+    },
+    {
+      "month": "2023-11",
+      "flow": "exports",
+      "value_omr_mn": 1990.799671
+    },
+    {
+      "month": "2023-11",
+      "flow": "imports",
+      "value_omr_mn": 1289.5621139999998
+    },
+    {
+      "month": "2023-11",
+      "flow": "re_exports",
+      "value_omr_mn": 111.141728
+    },
+    {
+      "month": "2023-12",
+      "flow": "exports",
+      "value_omr_mn": 2099.19045
+    },
+    {
+      "month": "2023-12",
+      "flow": "imports",
+      "value_omr_mn": 1270.4594589999997
+    },
+    {
+      "month": "2023-12",
+      "flow": "re_exports",
+      "value_omr_mn": 144.078434
+    },
+    {
+      "month": "2024-01",
+      "flow": "exports",
+      "value_omr_mn": 2366.144136
+    },
+    {
+      "month": "2024-01",
+      "flow": "imports",
+      "value_omr_mn": 1425.1036400000005
+    },
+    {
+      "month": "2024-01",
+      "flow": "re_exports",
+      "value_omr_mn": 101.50951
+    },
+    {
+      "month": "2024-02",
+      "flow": "exports",
+      "value_omr_mn": 2015.246788
+    },
+    {
+      "month": "2024-02",
+      "flow": "imports",
+      "value_omr_mn": 1294.5698590000002
+    },
+    {
+      "month": "2024-02",
+      "flow": "re_exports",
+      "value_omr_mn": 140.400249
+    },
+    {
+      "month": "2024-03",
+      "flow": "exports",
+      "value_omr_mn": 2154.454687
+    },
+    {
+      "month": "2024-03",
+      "flow": "imports",
+      "value_omr_mn": 1169.6584249999996
+    },
+    {
+      "month": "2024-03",
+      "flow": "re_exports",
+      "value_omr_mn": 192.467902
+    },
+    {
+      "month": "2024-04",
+      "flow": "exports",
+      "value_omr_mn": 2069.024703
+    },
+    {
+      "month": "2024-04",
+      "flow": "imports",
+      "value_omr_mn": 1299.122489
+    },
+    {
+      "month": "2024-04",
+      "flow": "re_exports",
+      "value_omr_mn": 122.57177700000004
+    },
+    {
+      "month": "2024-05",
+      "flow": "exports",
+      "value_omr_mn": 2054.0168080000003
+    },
+    {
+      "month": "2024-05",
+      "flow": "imports",
+      "value_omr_mn": 1481.783701
+    },
+    {
+      "month": "2024-05",
+      "flow": "re_exports",
+      "value_omr_mn": 137.70522100000002
+    },
+    {
+      "month": "2024-06",
+      "flow": "exports",
+      "value_omr_mn": 2041.962496
+    },
+    {
+      "month": "2024-06",
+      "flow": "imports",
+      "value_omr_mn": 1333.4116250000002
+    },
+    {
+      "month": "2024-06",
+      "flow": "re_exports",
+      "value_omr_mn": 171.922565
+    },
+    {
+      "month": "2024-07",
+      "flow": "exports",
+      "value_omr_mn": 2138.637055
+    },
+    {
+      "month": "2024-07",
+      "flow": "imports",
+      "value_omr_mn": 1403.8073090000005
+    },
+    {
+      "month": "2024-07",
+      "flow": "re_exports",
+      "value_omr_mn": 132.67701899999997
+    },
+    {
+      "month": "2024-08",
+      "flow": "exports",
+      "value_omr_mn": 2086.047686
+    },
+    {
+      "month": "2024-08",
+      "flow": "imports",
+      "value_omr_mn": 1372.916874
+    },
+    {
+      "month": "2024-08",
+      "flow": "re_exports",
+      "value_omr_mn": 131.99343599999995
+    },
+    {
+      "month": "2024-09",
+      "flow": "exports",
+      "value_omr_mn": 1980.281588
+    },
+    {
+      "month": "2024-09",
+      "flow": "imports",
+      "value_omr_mn": 1382.6884130000003
+    },
+    {
+      "month": "2024-09",
+      "flow": "re_exports",
+      "value_omr_mn": 168.93658899999997
+    },
+    {
+      "month": "2024-10",
+      "flow": "exports",
+      "value_omr_mn": 2142.4306129999995
+    },
+    {
+      "month": "2024-10",
+      "flow": "imports",
+      "value_omr_mn": 1578.2048779999998
+    },
+    {
+      "month": "2024-10",
+      "flow": "re_exports",
+      "value_omr_mn": 144.71911799999998
+    },
+    {
+      "month": "2024-11",
+      "flow": "exports",
+      "value_omr_mn": 1973.376287
+    },
+    {
+      "month": "2024-11",
+      "flow": "imports",
+      "value_omr_mn": 1345.8129430000004
+    },
+    {
+      "month": "2024-11",
+      "flow": "re_exports",
+      "value_omr_mn": 144.67967599999997
+    },
+    {
+      "month": "2024-12",
+      "flow": "exports",
+      "value_omr_mn": 2032.344325
+    },
+    {
+      "month": "2024-12",
+      "flow": "imports",
+      "value_omr_mn": 1625.794224
+    },
+    {
+      "month": "2024-12",
+      "flow": "re_exports",
+      "value_omr_mn": 118.766633
+    },
+    {
+      "month": "2025-01",
+      "flow": "exports",
+      "value_omr_mn": 1949.176387
+    },
+    {
+      "month": "2025-01",
+      "flow": "imports",
+      "value_omr_mn": 1419.446922
+    },
+    {
+      "month": "2025-01",
+      "flow": "re_exports",
+      "value_omr_mn": 99.817602
+    },
+    {
+      "month": "2025-02",
+      "flow": "exports",
+      "value_omr_mn": 1713.418442
+    },
+    {
+      "month": "2025-02",
+      "flow": "imports",
+      "value_omr_mn": 1288.0544629999995
+    },
+    {
+      "month": "2025-02",
+      "flow": "re_exports",
+      "value_omr_mn": 123.24753700000002
+    },
+    {
+      "month": "2025-03",
+      "flow": "exports",
+      "value_omr_mn": 2162.352111
+    },
+    {
+      "month": "2025-03",
+      "flow": "imports",
+      "value_omr_mn": 1586.856353
+    },
+    {
+      "month": "2025-03",
+      "flow": "re_exports",
+      "value_omr_mn": 128.32155500000002
+    },
+    {
+      "month": "2025-04",
+      "flow": "exports",
+      "value_omr_mn": 1929.635655
+    },
+    {
+      "month": "2025-04",
+      "flow": "imports",
+      "value_omr_mn": 1353.4288030000002
+    },
+    {
+      "month": "2025-04",
+      "flow": "re_exports",
+      "value_omr_mn": 110.14470199999998
+    },
+    {
+      "month": "2025-05",
+      "flow": "exports",
+      "value_omr_mn": 1865.404601
+    },
+    {
+      "month": "2025-05",
+      "flow": "imports",
+      "value_omr_mn": 1517.2313429999997
+    },
+    {
+      "month": "2025-05",
+      "flow": "re_exports",
+      "value_omr_mn": 161.20713
+    },
+    {
+      "month": "2025-06",
+      "flow": "exports",
+      "value_omr_mn": 1866.250531
+    },
+    {
+      "month": "2025-06",
+      "flow": "imports",
+      "value_omr_mn": 1223.493273
+    },
+    {
+      "month": "2025-06",
+      "flow": "re_exports",
+      "value_omr_mn": 192.413201
+    },
+    {
+      "month": "2025-07",
+      "flow": "exports",
+      "value_omr_mn": 1976.7607730000004
+    },
+    {
+      "month": "2025-07",
+      "flow": "imports",
+      "value_omr_mn": 1509.365922
+    },
+    {
+      "month": "2025-07",
+      "flow": "re_exports",
+      "value_omr_mn": 188.732962
+    },
+    {
+      "month": "2025-08",
+      "flow": "exports",
+      "value_omr_mn": 1832.01579
+    },
+    {
+      "month": "2025-08",
+      "flow": "imports",
+      "value_omr_mn": 1465.489201
+    },
+    {
+      "month": "2025-08",
+      "flow": "re_exports",
+      "value_omr_mn": 118.37499699999996
+    },
+    {
+      "month": "2025-09",
+      "flow": "exports",
+      "value_omr_mn": 1854.848769
+    },
+    {
+      "month": "2025-09",
+      "flow": "imports",
+      "value_omr_mn": 1447.781686
+    },
+    {
+      "month": "2025-09",
+      "flow": "re_exports",
+      "value_omr_mn": 143.87141
+    },
+    {
+      "month": "2025-10",
+      "flow": "exports",
+      "value_omr_mn": 2205.1392490000003
+    },
+    {
+      "month": "2025-10",
+      "flow": "imports",
+      "value_omr_mn": 1480.999217
+    },
+    {
+      "month": "2025-10",
+      "flow": "re_exports",
+      "value_omr_mn": 366.6056750000001
+    },
+    {
+      "month": "2025-11",
+      "flow": "exports",
+      "value_omr_mn": 1909.349075
+    },
+    {
+      "month": "2025-11",
+      "flow": "imports",
+      "value_omr_mn": 1349.378641
+    },
+    {
+      "month": "2025-11",
+      "flow": "re_exports",
+      "value_omr_mn": 197.06004
+    },
+    {
+      "month": "2025-12",
+      "flow": "exports",
+      "value_omr_mn": 2000.044872
+    },
+    {
+      "month": "2025-12",
+      "flow": "imports",
+      "value_omr_mn": 1519.54669
+    },
+    {
+      "month": "2025-12",
+      "flow": "re_exports",
+      "value_omr_mn": 225.969001
+    },
+    {
+      "month": "2026-01",
+      "flow": "exports",
+      "value_omr_mn": 1822.463816
+    },
+    {
+      "month": "2026-01",
+      "flow": "imports",
+      "value_omr_mn": 1491.073987
+    },
+    {
+      "month": "2026-01",
+      "flow": "re_exports",
+      "value_omr_mn": 109.626271
+    },
+    {
+      "month": "2026-02",
+      "flow": "exports",
+      "value_omr_mn": 1678.476633
+    },
+    {
+      "month": "2026-02",
+      "flow": "imports",
+      "value_omr_mn": 1338.197967
+    },
+    {
+      "month": "2026-02",
+      "flow": "re_exports",
+      "value_omr_mn": 132.62826799999996
+    },
+    {
+      "month": "2026-03",
+      "flow": "exports",
+      "value_omr_mn": 1817.774677
+    },
+    {
+      "month": "2026-03",
+      "flow": "imports",
+      "value_omr_mn": 943.9720090000002
+    },
+    {
+      "month": "2026-03",
+      "flow": "re_exports",
+      "value_omr_mn": 123.762887
+    },
+    {
+      "month": "2026-04",
+      "flow": "exports",
+      "value_omr_mn": 2306.1439170000003
+    },
+    {
+      "month": "2026-04",
+      "flow": "imports",
+      "value_omr_mn": 1761.133374
+    },
+    {
+      "month": "2026-04",
+      "flow": "re_exports",
+      "value_omr_mn": 403.77622800000006
+    }
+  ]
+}
