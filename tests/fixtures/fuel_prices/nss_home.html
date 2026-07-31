@@ -1,8 +1,13 @@
 <!-- Test fixture: https://nss.gov.om/site/home?ln=en captured 2026-07-31 by
      pipelines/fuel_prices/fetch.py. Verbatim server-rendered markup except that
      per-session anti-CSRF and captcha token values are replaced with REDACTED;
-     no parsed element is affected. Shows Fuel Price - July'26: M91 229, M95 239,
-     Diesel 258 Baisa/Ltr. -->
+     no parsed element is affected.
+     This annotation must stay unparseable: it is the first thing every regex in
+     parse.py sees, and an earlier wording repeated the panel's heading verbatim,
+     which shadowed the real markup 940 lines below and made every fixture test
+     read the annotation instead. State values only in prose, never in the
+     page's own phrasing. The captured page reports, for the month of July 2026,
+     229 / 239 / 258 baisa per litre for the M91, M95 and diesel grades. -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>

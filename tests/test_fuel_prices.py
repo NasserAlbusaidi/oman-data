@@ -12,9 +12,10 @@ MONTH = re.compile(r"^\d{4}-\d{2}$")
 
 CAP = {"m91": 229, "m95": 239, "diesel": 258}
 
-# Exact markup anchors in the saved fixture; doctoring tests edit these.
+# Exact markup anchor in the saved fixture; doctoring tests edit it.
 MARQUEE = "<li>July 2026 Fuel Prices M95 239Bz, M91 229Bz and Diesel 258Bz</li>"
-WIDGET_HEADING = "<h3> Fuel Price - July'26 <span class=\"ltrb\">Baisa/Ltr</span></h3>"
+
+_COMMENT_RE = re.compile(r"<!--.*?-->", re.S)
 
 
 def load(name: str):
@@ -22,7 +23,12 @@ def load(name: str):
 
 
 def doctored(tmp_path: Path, *replacements: tuple[str, str]) -> Path:
-    """The real fixture with exact substrings swapped, written to a temp file."""
+    """The real fixture with exact substrings swapped, written to a temp file.
+
+    ``str.replace`` hits *every* occurrence, so an anchor that appears twice is
+    doctored in both places — which is why the fixture's own comments must not
+    restate the markup (see test_fixture_comments_are_not_load_bearing).
+    """
     html = FIXTURE.read_text(encoding="utf-8")
     for old, new in replacements:
         assert old in html, f"anchor vanished from fixture: {old!r}"
@@ -91,14 +97,18 @@ def test_every_row_declares_a_known_provenance():
     df = pd.read_csv(PRICES, encoding="utf-8")
     assert set(df["source"]) <= {
         "archive-corroborated", "archive-single-source",
-        "archive-news-resolved", "subsidy-cap-freeze",
+        "archive-news-resolved", "subsidy-cap-freeze", "nss.gov.om",
     }
-    archive = df[df["source"] != "subsidy-cap-freeze"]
-    freeze = df[df["source"] == "subsidy-cap-freeze"]
+    spans = df.groupby("source")["month"].agg(["min", "max"])
+    archive = df[df["source"].str.startswith("archive-")]
     assert archive["month"].min() == "2015-12"
     assert archive["month"].max() == "2023-01"
-    assert freeze["month"].min() == "2023-02"
-    assert freeze["month"].max() == df["month"].max()
+    assert spans.loc["subsidy-cap-freeze", "min"] == "2023-02"
+    # months already observed on the live NSS page are retained here, because
+    # NSS drops them once the month rolls over (see the nss.gov.om note below)
+    observed = df[df["source"] == "nss.gov.om"]
+    assert spans.loc["subsidy-cap-freeze", "max"] < observed["month"].min()
+    assert observed["month"].max() == df["month"].max()
 
 
 def test_disputed_months_keep_their_adjudicated_values():
@@ -153,14 +163,26 @@ def test_months_checked_against_the_press_record_still_match():
         assert set(df[df["month"] == month]["source"]) != {"archive-single-source"}, month
 
 
-def test_only_the_known_months_rest_on_a_single_record():
-    """Six months have one record and no press confirmation. Keep the list
-    short and explicit: it is the weakest part of the dataset, and it should
-    shrink, never grow.
+def test_only_the_known_rows_rest_on_a_single_record():
+    """Eight rows have one record and no press confirmation.
+
+    Provenance is per (month, fuel), not per month, and that matters here: for
+    Feb-Jun 2016 the second compilation does carry M95 and diesel — and agrees —
+    but has no row for the regular grade, because the grade of the day was M-90
+    and it does not list it. So only the m91 column of those months is
+    uncorroborated. Dec 2022 falls after the second compilation stops and is
+    uncorroborated across all three. This list is the weakest part of the
+    dataset; it should shrink, never grow.
     """
     df = pd.read_csv(PRICES, encoding="utf-8")
-    single = sorted(df[df["source"] == "archive-single-source"]["month"].unique())
-    assert single == ["2016-02", "2016-03", "2016-04", "2016-05", "2016-06", "2022-12"]
+    single = sorted(
+        df[df["source"] == "archive-single-source"][["month", "fuel_type"]]
+        .itertuples(index=False, name=None))
+    assert single == [
+        ("2016-02", "m91"), ("2016-03", "m91"), ("2016-04", "m91"),
+        ("2016-05", "m91"), ("2016-06", "m91"),
+        ("2022-12", "diesel"), ("2022-12", "m91"), ("2022-12", "m95"),
+    ]
 
 
 def test_m91_series_splices_the_withdrawn_m90_grade():
@@ -214,6 +236,34 @@ def test_curated_prices_never_move_more_than_a_third_in_a_month():
 # --------------------------------------------------------------------------
 # the NSS scrape: it must read the price panel, not the subsidy-rate table
 # --------------------------------------------------------------------------
+
+def test_fixture_comments_are_not_load_bearing():
+    """No parser anchor may appear inside an HTML comment in the fixture.
+
+    The fixture carries a hand-written provenance header. An earlier wording of
+    it repeated the panel heading verbatim ("Fuel Price - July'26"), and since
+    ``re.search`` returns the *first* match, every fixture-driven test read that
+    annotation instead of the NSS markup 940 lines below. The negative tests
+    could not catch it either, because ``doctored`` rewrites every occurrence,
+    annotation included.
+
+    Note the weak version of this test — strip the comments and check the answer
+    is unchanged — would NOT have caught it, because the annotation quoted the
+    correct month. So assert inertness directly: the parser's own regexes and
+    container markers must find nothing in the commented-out text.
+    """
+    html = FIXTURE.read_text(encoding="utf-8")
+    comments = _COMMENT_RE.findall(html)
+    assert comments, "fixture lost its provenance header"
+    blob = "\n".join(comments)
+    for name in ("_MONTH_RE", "_MARQUEE_MONTH_RE", "_MARQUEE_PRICE_RE"):
+        assert not load(name).search(blob), f"{name} matches inside an HTML comment"
+    for marker in ("fuelpricesubsidytitle", "fuelpricesubsidyvalue", "fuelpricebox"):
+        assert marker not in blob, f"{marker!r} appears inside an HTML comment"
+    # belt and braces: removing the comments must not move the answer either
+    scrape = load("scrape_nss")
+    assert scrape(_COMMENT_RE.sub("", html)) == scrape(html) == ("2026-07", CAP)
+
 
 def test_scrape_ignores_the_subsidised_rate_table(tmp_path):
     """The page also shows the *subsidy* rate -- 180 baisa/ltr, 400 ltrs/month,
@@ -317,12 +367,15 @@ def test_scraped_month_already_curated_is_cross_checked_not_duplicated(tmp_path)
         ("July 2026 Fuel Prices", "June 2026 Fuel Prices"),
     )
     df, as_of = parse(june)
+    curated = pd.read_csv(PRICES, encoding="utf-8")
     assert not df.duplicated(["month", "fuel_type"]).any()
+    assert len(df) == len(curated), "cross-check must not add rows"
     row = df[df["month"] == "2026-06"].set_index("fuel_type")
     assert row["price_baisa"].to_dict() == CAP
     # curated provenance is kept -- the scrape confirmed it, it did not supply it
     assert set(row["source"]) == {"subsidy-cap-freeze"}
-    assert as_of == "2026-06"
+    # as_of tracks the series, not the scraped month: the CSV already runs past it
+    assert as_of == curated["month"].max()
 
 
 def test_nss_disagreeing_with_curated_history_fails_loudly(tmp_path):
@@ -339,7 +392,14 @@ def test_nss_disagreeing_with_curated_history_fails_loudly(tmp_path):
         parse(bad)
 
 
-def test_scraped_current_month_is_appended_with_nss_provenance():
+def test_fixture_month_is_carried_by_the_csv_and_merely_confirmed():
+    """The fixture's own month has since been written into prices.csv.
+
+    NSS drops a month as soon as it rolls over, so a month observed on the live
+    page has to be retained in the CSV or the next run finds a hole. The scrape
+    therefore confirms it rather than supplying it, and the row count does not
+    move.
+    """
     parse = load("parse")
     df, as_of = parse(FIXTURE)
     curated = pd.read_csv(PRICES, encoding="utf-8")
@@ -347,7 +407,34 @@ def test_scraped_current_month_is_appended_with_nss_provenance():
     new = df[df["month"] == "2026-07"]
     assert set(new["source"]) == {"nss.gov.om"}
     assert new.set_index("fuel_type")["price_baisa"].to_dict() == CAP
+    assert len(df) == len(curated)
+
+
+def test_next_months_scrape_appends_with_nss_provenance(tmp_path):
+    """The append path: the month after the CSV's last is added, not rejected.
+
+    This is what actually happens on the first run of a new month, and it is
+    the path that must keep working when prices.csv trails the calendar by one
+    month. Contrast test_stale_prices_csv_fails_loudly...: two months out is a
+    hole and raises; one month out is normal operation.
+    """
+    parse = load("parse")
+    curated = pd.read_csv(PRICES, encoding="utf-8")
+    assert curated["month"].max() == "2026-07", "update this test's next month"
+    august = doctored(
+        tmp_path,
+        ("Fuel Price - July'26", "Fuel Price - August'26"),
+        ("July 2026 Fuel Prices", "August 2026 Fuel Prices"),
+    )
+    df, as_of = parse(august)
+    assert as_of == "2026-08"
     assert len(df) == len(curated) + 3
+    new = df[df["month"] == "2026-08"]
+    assert set(new["source"]) == {"nss.gov.om"}
+    assert new.set_index("fuel_type")["price_baisa"].to_dict() == CAP
+    assert not df.duplicated(["month", "fuel_type"]).any()
+    months = sorted(df["month"].unique())
+    assert months == list(pd.period_range(months[0], months[-1], freq="M").astype(str))
 
 
 def test_stale_prices_csv_fails_loudly_instead_of_publishing_a_gap(tmp_path):

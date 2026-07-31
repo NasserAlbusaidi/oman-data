@@ -2,7 +2,7 @@
   "meta": {
     "id": "fuel_prices",
     "as_of": "2026-07",
-    "fetched_at": "2026-07-31T18:32:43Z",
+    "fetched_at": "2026-07-31T18:51:40Z",
     "source_name": "National Subsidy System (nss.gov.om) + reconciled archive of Ministry of Energy and Minerals monthly announcements",
     "source_url": "https://nss.gov.om/site/home?ln=en",
     "license": "Mixed — see notes",
@@ -53,7 +53,7 @@
       "month": "2016-02",
       "fuel_type": "diesel",
       "price_baisa": 146,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-02",
@@ -65,13 +65,13 @@
       "month": "2016-02",
       "fuel_type": "m95",
       "price_baisa": 153,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-03",
       "fuel_type": "diesel",
       "price_baisa": 146,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-03",
@@ -83,13 +83,13 @@
       "month": "2016-03",
       "fuel_type": "m95",
       "price_baisa": 145,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-04",
       "fuel_type": "diesel",
       "price_baisa": 163,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-04",
@@ -101,13 +101,13 @@
       "month": "2016-04",
       "fuel_type": "m95",
       "price_baisa": 158,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-05",
       "fuel_type": "diesel",
       "price_baisa": 166,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-05",
@@ -119,13 +119,13 @@
       "month": "2016-05",
       "fuel_type": "m95",
       "price_baisa": 161,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-06",
       "fuel_type": "diesel",
       "price_baisa": 185,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-06",
@@ -137,7 +137,7 @@
       "month": "2016-06",
       "fuel_type": "m95",
       "price_baisa": 180,
-      "source": "archive-single-source"
+      "source": "archive-corroborated"
     },
     {
       "month": "2016-07",

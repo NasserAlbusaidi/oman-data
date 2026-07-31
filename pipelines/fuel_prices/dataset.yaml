@@ -25,15 +25,20 @@ notes: >
   compilations of the ministry's monthly announcements — the opendata.om
   community compilation (which credits Omani outlets Atheer and Al-Roya and the
   fuel marketers) and thefuelprice.com's Oman archive.
-  A source of archive-corroborated means at least two independent records agree — both
-  compilations, or one compilation and a dated press report — and covers 76 of
-  the 86 archive months; archive-single-source means only one record was found,
-  which is Feb-Jun 2016 (before thefuelprice.com's Oman series starts) and Dec
-  2022 (after it stops); archive-news-resolved means the compilations disagreed
-  and a dated primary record settled it. Eleven months spread across the span
-  were additionally checked against the original press announcements and all
-  eleven matched the reconciliation exactly, which is the basis for trusting
-  the corroborated rows in between. Do not treat the compilations as
+  Provenance is recorded per row — per month AND per fuel — because coverage
+  differs by grade. A source of archive-corroborated means at least two
+  independent records agree, either both compilations or one compilation and a
+  dated press report, and covers 238 of the 258 archive rows.
+  archive-single-source means no second record was retrievable, and it is down
+  to eight rows: the regular-grade price for Feb-Jun 2016, where
+  thefuelprice.com does carry the month and agrees on M95 and diesel but lists
+  no row for the regular grade at all (the grade of the day was M-90, which it
+  does not publish), and all three grades for Dec 2022, which falls after its
+  Oman series stops. archive-news-resolved means the compilations disagreed and
+  a dated primary record settled it. Fifteen months spread across the span were
+  additionally checked against the original press announcements and every one
+  matched the reconciliation exactly, which is the basis for trusting the
+  corroborated rows in between. Do not treat the compilations as
   interchangeable: reconciling
   them found four wrong months, and neither source was reliably the wrong one.
   opendata.om carries January 2019's prices under December 2018 and repeats
@@ -77,13 +82,20 @@ notes: >
   the series consumers want and the level is continuous across the switch (169
   baisa in Oct 2016, 173 in Nov 2016). Rows before 2016-11 are therefore M-90
   prices; read the series as "the regular grade of the day".
-  The current month is scraped from the official NSS homepage
-  (source=nss.gov.om), which publishes that month only and no history. Two
-  guards matter for maintenance. If NSS ever states a different price for a
-  month prices.csv already covers, the pipeline raises instead of silently
-  preferring either number. And because NSS only ever shows the current month,
-  prices.csv must be extended as months settle — the parser refuses to publish
-  a gapped monthly series and names the missing months instead. The NSS page
+  The current month is scraped from the official NSS homepage, which publishes
+  that month only and no history. source=nss.gov.om therefore marks two things
+  that are really the same thing: the month currently on the page, and months
+  that were on the page during an earlier run and have since been written into
+  prices.csv. They have to be retained, because once a month rolls over NSS
+  drops it and it is not recoverable from any official source.
+  That is the maintenance obligation this dataset carries: prices.csv must be
+  extended as months settle, or the series develops a hole. The parser refuses
+  to publish a gapped monthly series and names the missing months instead, so
+  the failure is loud rather than silent — a run that finds the scraped month
+  two or more months past the end of prices.csv stops the pipeline and leaves
+  the last good data published. A second guard covers the opposite risk: if NSS
+  ever states a different price for a month prices.csv already covers, the
+  pipeline raises instead of silently preferring either number. The NSS page
   states the prices twice, in a structural price panel and in an advisory
   ticker, and the two are cross-checked on every run; the ticker sometimes
   carries maintenance notices instead of prices, so it is optional, but when

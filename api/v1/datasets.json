@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T18:32:43.810117+00:00",
+  "generated_at": "2026-07-31T18:51:40.527158+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -41,7 +41,7 @@
       "source_name": "National Subsidy System (nss.gov.om) + reconciled archive of Ministry of Energy and Minerals monthly announcements",
       "cadence": "monthly",
       "as_of": "2026-07",
-      "fetched_at": "2026-07-31T18:32:43Z",
+      "fetched_at": "2026-07-31T18:51:40Z",
       "stale": false,
       "rows": 384
     },
