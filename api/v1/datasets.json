@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T16:59:15.148532+00:00",
+  "generated_at": "2026-07-31T17:15:11.152643+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -33,6 +33,17 @@
       "fetched_at": "2026-07-31T15:52:47Z",
       "stale": false,
       "rows": 22
+    },
+    {
+      "id": "tourism",
+      "title_ar": "مؤشرات السياحة الشهرية — النزلاء والإشغال والإيرادات",
+      "title_en": "Monthly tourism indicators — guests, occupancy, revenues",
+      "source_name": "NCSI via data.gov.om (Tourism, dataset dedblxg)",
+      "cadence": "monthly",
+      "as_of": "2026-05",
+      "fetched_at": "2026-07-31T17:15:11Z",
+      "stale": false,
+      "rows": 161
     },
     {
       "id": "trade",

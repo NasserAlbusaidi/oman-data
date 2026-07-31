@@ -1,0 +1,38 @@
+id: tourism
+title_ar: "مؤشرات السياحة الشهرية — النزلاء والإشغال والإيرادات"
+title_en: "Monthly tourism indicators — guests, occupancy, revenues"
+source_name: "NCSI via data.gov.om (Tourism, dataset dedblxg)"
+source_url: "https://data.gov.om/dedblxg"
+license: "Open Government License - Sultanate of Oman"
+cadence: monthly
+columns:
+  - {name: month, dtype: str}
+  - {name: guests, dtype: int, min: 0, max: 2000000}
+  - {name: occupancy_pct, dtype: float, min: 0, max: 100}
+  - {name: revenue_omr_mn, dtype: float, min: 0, max: 500}
+notes: >
+  Monthly hotel-sector indicators for the Sultanate of Oman from NCSI's Tourism
+  dataset on data.gov.om: number of hotel guests, room occupancy rate (percent),
+  and hotel revenues in millions of Omani Riyals. Series run from 2012-01 to the
+  latest published month; months missing any of the three indicators are dropped
+  rather than published with gaps, which removes all of 2013 (the source carries
+  occupancy and revenues for that year but no guest counts). Totals only — the
+  source's breakdowns by guest nationality, hotel class and governorate are out
+  of scope for v1, and the query pins those three dimensions to their total
+  members because the unfiltered cube returns 828 series instead of 3. Occupancy
+  is the source's "Room Occupancy Ratio"; its other percentage member,
+  "Occupancy Rate (%)", is the same figure rounded to one decimal, starts
+  2014-01 and exists only under the "HOTELS CLASSIFIED (3 - 5 ) STARS" hotel
+  class, so it is not used. Despite the "total" label, the monthly figures are
+  NCSI's classified three- to five-star hotel universe, not all accommodation:
+  from 2015-01 the total and the 3-5-star series are identical month for month,
+  and the Jan-May 2026 figures published here reproduce NCSI's press release for
+  3-5-star hotels exactly (856,929 guests, 47.9% average occupancy). NCSI
+  revises recent months as late hotel returns arrive — guests for Jan-Feb 2026
+  moved from 439,287 to 447,943 between the February and May releases — so
+  figures for the newest months should be read as provisional. Same caveats as the trade dataset regarding the
+  portal's public client_id and unit-scale metadata: revenues arrive as plain
+  riyals under an empty unit label and scale 1, so the riyals-to-millions factor
+  is pinned in the parser, guarded by the source's declared scale and by a
+  plausibility test. Regional and hotel-class series in the source stop at
+  2014-12 and are another reason the national totals are the only v1 output.

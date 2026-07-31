@@ -1,0 +1,983 @@
+{
+  "meta": {
+    "id": "tourism",
+    "as_of": "2026-05",
+    "fetched_at": "2026-07-31T17:15:11Z",
+    "source_name": "NCSI via data.gov.om (Tourism, dataset dedblxg)",
+    "source_url": "https://data.gov.om/dedblxg",
+    "license": "Open Government License - Sultanate of Oman",
+    "rows": 161,
+    "title_ar": "مؤشرات السياحة الشهرية — النزلاء والإشغال والإيرادات",
+    "title_en": "Monthly tourism indicators — guests, occupancy, revenues",
+    "cadence": "monthly",
+    "stale": false
+  },
+  "data": [
+    {
+      "month": "2012-01",
+      "guests": 158440,
+      "occupancy_pct": 48.0,
+      "revenue_omr_mn": 15.93067
+    },
+    {
+      "month": "2012-02",
+      "guests": 164252,
+      "occupancy_pct": 55.0,
+      "revenue_omr_mn": 17.489414
+    },
+    {
+      "month": "2012-03",
+      "guests": 164191,
+      "occupancy_pct": 53.0,
+      "revenue_omr_mn": 17.781841
+    },
+    {
+      "month": "2012-04",
+      "guests": 160593,
+      "occupancy_pct": 52.0,
+      "revenue_omr_mn": 17.419370999999998
+    },
+    {
+      "month": "2012-05",
+      "guests": 139265,
+      "occupancy_pct": 42.0,
+      "revenue_omr_mn": 12.820361
+    },
+    {
+      "month": "2012-06",
+      "guests": 140040,
+      "occupancy_pct": 41.0,
+      "revenue_omr_mn": 10.97519
+    },
+    {
+      "month": "2012-07",
+      "guests": 125627,
+      "occupancy_pct": 37.0,
+      "revenue_omr_mn": 9.325423
+    },
+    {
+      "month": "2012-08",
+      "guests": 128047,
+      "occupancy_pct": 34.0,
+      "revenue_omr_mn": 9.141333
+    },
+    {
+      "month": "2012-09",
+      "guests": 147074,
+      "occupancy_pct": 46.0,
+      "revenue_omr_mn": 12.947637
+    },
+    {
+      "month": "2012-10",
+      "guests": 184612,
+      "occupancy_pct": 52.0,
+      "revenue_omr_mn": 17.94768
+    },
+    {
+      "month": "2012-11",
+      "guests": 188051,
+      "occupancy_pct": 54.0,
+      "revenue_omr_mn": 18.033776
+    },
+    {
+      "month": "2012-12",
+      "guests": 189515,
+      "occupancy_pct": 53.0,
+      "revenue_omr_mn": 19.289921
+    },
+    {
+      "month": "2014-01",
+      "guests": 223076,
+      "occupancy_pct": 54.0,
+      "revenue_omr_mn": 19.109309
+    },
+    {
+      "month": "2014-02",
+      "guests": 219912,
+      "occupancy_pct": 61.0,
+      "revenue_omr_mn": 20.923493
+    },
+    {
+      "month": "2014-03",
+      "guests": 237941,
+      "occupancy_pct": 58.0,
+      "revenue_omr_mn": 21.814062
+    },
+    {
+      "month": "2014-04",
+      "guests": 214462,
+      "occupancy_pct": 58.0,
+      "revenue_omr_mn": 22.252882
+    },
+    {
+      "month": "2014-05",
+      "guests": 186173,
+      "occupancy_pct": 48.0,
+      "revenue_omr_mn": 15.800986
+    },
+    {
+      "month": "2014-06",
+      "guests": 172381,
+      "occupancy_pct": 43.0,
+      "revenue_omr_mn": 12.473549
+    },
+    {
+      "month": "2014-07",
+      "guests": 128858,
+      "occupancy_pct": 30.0,
+      "revenue_omr_mn": 8.439865
+    },
+    {
+      "month": "2014-08",
+      "guests": 186379,
+      "occupancy_pct": 46.0,
+      "revenue_omr_mn": 14.111333
+    },
+    {
+      "month": "2014-09",
+      "guests": 181250,
+      "occupancy_pct": 50.0,
+      "revenue_omr_mn": 15.582024
+    },
+    {
+      "month": "2014-10",
+      "guests": 234705,
+      "occupancy_pct": 56.0,
+      "revenue_omr_mn": 21.895714
+    },
+    {
+      "month": "2014-11",
+      "guests": 218898,
+      "occupancy_pct": 58.0,
+      "revenue_omr_mn": 21.645187
+    },
+    {
+      "month": "2014-12",
+      "guests": 222462,
+      "occupancy_pct": 55.0,
+      "revenue_omr_mn": 22.477618
+    },
+    {
+      "month": "2015-01",
+      "guests": 116711,
+      "occupancy_pct": 64.1160811992455,
+      "revenue_omr_mn": 18.416764082510294
+    },
+    {
+      "month": "2015-02",
+      "guests": 108751,
+      "occupancy_pct": 69.9954517030546,
+      "revenue_omr_mn": 19.096222778321295
+    },
+    {
+      "month": "2015-03",
+      "guests": 117551,
+      "occupancy_pct": 69.7346373344655,
+      "revenue_omr_mn": 20.433279481156
+    },
+    {
+      "month": "2015-04",
+      "guests": 98032,
+      "occupancy_pct": 63.9241925522505,
+      "revenue_omr_mn": 18.6086264273448
+    },
+    {
+      "month": "2015-05",
+      "guests": 90827,
+      "occupancy_pct": 53.7935620682069,
+      "revenue_omr_mn": 14.0540865639862
+    },
+    {
+      "month": "2015-06",
+      "guests": 62620,
+      "occupancy_pct": 41.2415984631841,
+      "revenue_omr_mn": 9.84504014350019
+    },
+    {
+      "month": "2015-07",
+      "guests": 73590,
+      "occupancy_pct": 34.3499420110508,
+      "revenue_omr_mn": 9.172590760484509
+    },
+    {
+      "month": "2015-08",
+      "guests": 104062,
+      "occupancy_pct": 51.4366668859974,
+      "revenue_omr_mn": 12.9641173944611
+    },
+    {
+      "month": "2015-09",
+      "guests": 100412,
+      "occupancy_pct": 54.5478382074574,
+      "revenue_omr_mn": 13.5735650531302
+    },
+    {
+      "month": "2015-10",
+      "guests": 122186,
+      "occupancy_pct": 66.1099344321844,
+      "revenue_omr_mn": 18.6795535436646
+    },
+    {
+      "month": "2015-11",
+      "guests": 117145,
+      "occupancy_pct": 70.3845395299376,
+      "revenue_omr_mn": 19.1904662693998
+    },
+    {
+      "month": "2015-12",
+      "guests": 126844,
+      "occupancy_pct": 64.149021414781,
+      "revenue_omr_mn": 19.792582744490097
+    },
+    {
+      "month": "2016-01",
+      "guests": 123283,
+      "occupancy_pct": 61.8674513164005,
+      "revenue_omr_mn": 17.5485149246855
+    },
+    {
+      "month": "2016-02",
+      "guests": 128341,
+      "occupancy_pct": 68.9620555250545,
+      "revenue_omr_mn": 18.623463929705096
+    },
+    {
+      "month": "2016-03",
+      "guests": 136911,
+      "occupancy_pct": 68.1704352407026,
+      "revenue_omr_mn": 20.0715985330947
+    },
+    {
+      "month": "2016-04",
+      "guests": 125566,
+      "occupancy_pct": 63.4728698259474,
+      "revenue_omr_mn": 16.953763236955197
+    },
+    {
+      "month": "2016-05",
+      "guests": 128978,
+      "occupancy_pct": 53.4266766269753,
+      "revenue_omr_mn": 13.9010898559024
+    },
+    {
+      "month": "2016-06",
+      "guests": 66002,
+      "occupancy_pct": 30.9041268356882,
+      "revenue_omr_mn": 7.0314943147374
+    },
+    {
+      "month": "2016-07",
+      "guests": 118655,
+      "occupancy_pct": 40.5150933084364,
+      "revenue_omr_mn": 10.8610250410292
+    },
+    {
+      "month": "2016-08",
+      "guests": 159039,
+      "occupancy_pct": 53.1072347663338,
+      "revenue_omr_mn": 14.0432925942578
+    },
+    {
+      "month": "2016-09",
+      "guests": 154523,
+      "occupancy_pct": 55.269323342006,
+      "revenue_omr_mn": 14.2925487642652
+    },
+    {
+      "month": "2016-10",
+      "guests": 146634,
+      "occupancy_pct": 63.8559020965223,
+      "revenue_omr_mn": 17.7789078159731
+    },
+    {
+      "month": "2016-11",
+      "guests": 159455,
+      "occupancy_pct": 70.4548671975493,
+      "revenue_omr_mn": 19.4823800671086
+    },
+    {
+      "month": "2016-12",
+      "guests": 144742,
+      "occupancy_pct": 64.3234908024784,
+      "revenue_omr_mn": 20.333464408780102
+    },
+    {
+      "month": "2017-01",
+      "guests": 118953,
+      "occupancy_pct": 60.3987112743161,
+      "revenue_omr_mn": 17.7323678039682
+    },
+    {
+      "month": "2017-02",
+      "guests": 147864,
+      "occupancy_pct": 69.6944995301162,
+      "revenue_omr_mn": 19.314936735914
+    },
+    {
+      "month": "2017-03",
+      "guests": 165809,
+      "occupancy_pct": 69.9187768603786,
+      "revenue_omr_mn": 20.1221368866675
+    },
+    {
+      "month": "2017-04",
+      "guests": 154162,
+      "occupancy_pct": 65.9486845394788,
+      "revenue_omr_mn": 20.1868982078852
+    },
+    {
+      "month": "2017-05",
+      "guests": 107722,
+      "occupancy_pct": 51.4271586703726,
+      "revenue_omr_mn": 12.5796101428011
+    },
+    {
+      "month": "2017-06",
+      "guests": 65374,
+      "occupancy_pct": 29.0185044228447,
+      "revenue_omr_mn": 7.40622337034522
+    },
+    {
+      "month": "2017-07",
+      "guests": 106136,
+      "occupancy_pct": 42.3553293197186,
+      "revenue_omr_mn": 10.6666643430933
+    },
+    {
+      "month": "2017-08",
+      "guests": 129521,
+      "occupancy_pct": 52.42026037023,
+      "revenue_omr_mn": 13.443371311214
+    },
+    {
+      "month": "2017-09",
+      "guests": 122480,
+      "occupancy_pct": 54.5306912165777,
+      "revenue_omr_mn": 13.6912386796289
+    },
+    {
+      "month": "2017-10",
+      "guests": 133506,
+      "occupancy_pct": 62.0516069761291,
+      "revenue_omr_mn": 18.8831978335143
+    },
+    {
+      "month": "2017-11",
+      "guests": 137244,
+      "occupancy_pct": 69.0254909827318,
+      "revenue_omr_mn": 19.8631763293288
+    },
+    {
+      "month": "2017-12",
+      "guests": 142580,
+      "occupancy_pct": 64.0710623020573,
+      "revenue_omr_mn": 20.7745421036276
+    },
+    {
+      "month": "2018-01",
+      "guests": 135796,
+      "occupancy_pct": 64.1422289607779,
+      "revenue_omr_mn": 19.8204924259456
+    },
+    {
+      "month": "2018-02",
+      "guests": 144478,
+      "occupancy_pct": 72.8051732363627,
+      "revenue_omr_mn": 21.4915219526334
+    },
+    {
+      "month": "2018-03",
+      "guests": 154759,
+      "occupancy_pct": 73.2259438304145,
+      "revenue_omr_mn": 23.3020681534111
+    },
+    {
+      "month": "2018-04",
+      "guests": 134351,
+      "occupancy_pct": 64.0457096245059,
+      "revenue_omr_mn": 20.4980896083422
+    },
+    {
+      "month": "2018-05",
+      "guests": 84057,
+      "occupancy_pct": 43.3060373313949,
+      "revenue_omr_mn": 11.7241077705903
+    },
+    {
+      "month": "2018-06",
+      "guests": 76705,
+      "occupancy_pct": 34.8844447053375,
+      "revenue_omr_mn": 8.54527486596771
+    },
+    {
+      "month": "2018-07",
+      "guests": 98609,
+      "occupancy_pct": 44.2404483402113,
+      "revenue_omr_mn": 11.3892686390299
+    },
+    {
+      "month": "2018-08",
+      "guests": 122106,
+      "occupancy_pct": 48.4757545972494,
+      "revenue_omr_mn": 13.8824037461646
+    },
+    {
+      "month": "2018-09",
+      "guests": 104258,
+      "occupancy_pct": 49.4397883588666,
+      "revenue_omr_mn": 13.0400234183846
+    },
+    {
+      "month": "2018-10",
+      "guests": 137346,
+      "occupancy_pct": 59.3305678052721,
+      "revenue_omr_mn": 21.2442039391177
+    },
+    {
+      "month": "2018-11",
+      "guests": 156900,
+      "occupancy_pct": 67.016284671214,
+      "revenue_omr_mn": 23.5045713901363
+    },
+    {
+      "month": "2018-12",
+      "guests": 150096,
+      "occupancy_pct": 64.2952199505489,
+      "revenue_omr_mn": 25.699853678182095
+    },
+    {
+      "month": "2019-01",
+      "guests": 146261,
+      "occupancy_pct": 62.3848834216926,
+      "revenue_omr_mn": 22.739172330308097
+    },
+    {
+      "month": "2019-02",
+      "guests": 162619,
+      "occupancy_pct": 73.3876824466167,
+      "revenue_omr_mn": 24.1255011439635
+    },
+    {
+      "month": "2019-03",
+      "guests": 175115,
+      "occupancy_pct": 69.8813560641151,
+      "revenue_omr_mn": 24.4815191202159
+    },
+    {
+      "month": "2019-04",
+      "guests": 199171,
+      "occupancy_pct": 63.247496513255,
+      "revenue_omr_mn": 24.1373542870915
+    },
+    {
+      "month": "2019-05",
+      "guests": 73395,
+      "occupancy_pct": 25.9577833098969,
+      "revenue_omr_mn": 8.8369833699669
+    },
+    {
+      "month": "2019-06",
+      "guests": 115034,
+      "occupancy_pct": 36.7277670340451,
+      "revenue_omr_mn": 11.4311155171794
+    },
+    {
+      "month": "2019-07",
+      "guests": 117623,
+      "occupancy_pct": 39.5988847345287,
+      "revenue_omr_mn": 11.8503073857155
+    },
+    {
+      "month": "2019-08",
+      "guests": 142363,
+      "occupancy_pct": 41.3706276227245,
+      "revenue_omr_mn": 13.790809715768498
+    },
+    {
+      "month": "2019-09",
+      "guests": 120582,
+      "occupancy_pct": 46.2146711515455,
+      "revenue_omr_mn": 13.842724004402498
+    },
+    {
+      "month": "2019-10",
+      "guests": 149691,
+      "occupancy_pct": 60.4434372304063,
+      "revenue_omr_mn": 22.491273770462097
+    },
+    {
+      "month": "2019-11",
+      "guests": 188533,
+      "occupancy_pct": 69.053443842599,
+      "revenue_omr_mn": 24.4263163382678
+    },
+    {
+      "month": "2019-12",
+      "guests": 183871,
+      "occupancy_pct": 65.6923584414271,
+      "revenue_omr_mn": 27.378169174973497
+    },
+    {
+      "month": "2020-01",
+      "guests": 155488,
+      "occupancy_pct": 54.4793983302833,
+      "revenue_omr_mn": 21.0257456978696
+    },
+    {
+      "month": "2020-02",
+      "guests": 165328,
+      "occupancy_pct": 67.2196401570126,
+      "revenue_omr_mn": 23.138851386345497
+    },
+    {
+      "month": "2020-03",
+      "guests": 69826,
+      "occupancy_pct": 32.393293530347,
+      "revenue_omr_mn": 9.58243022
+    },
+    {
+      "month": "2020-04",
+      "guests": 11939,
+      "occupancy_pct": 17.2306220642195,
+      "revenue_omr_mn": 1.42666326
+    },
+    {
+      "month": "2020-05",
+      "guests": 6849,
+      "occupancy_pct": 9.66144228229286,
+      "revenue_omr_mn": 0.9088652969147788
+    },
+    {
+      "month": "2020-06",
+      "guests": 16475,
+      "occupancy_pct": 14.9603579850344,
+      "revenue_omr_mn": 1.587828031
+    },
+    {
+      "month": "2020-07",
+      "guests": 36678,
+      "occupancy_pct": 12.216923366012,
+      "revenue_omr_mn": 1.919614515
+    },
+    {
+      "month": "2020-08",
+      "guests": 56286,
+      "occupancy_pct": 15.4624431360019,
+      "revenue_omr_mn": 2.823784869
+    },
+    {
+      "month": "2020-09",
+      "guests": 86071,
+      "occupancy_pct": 20.499161810727,
+      "revenue_omr_mn": 4.72250751088652
+    },
+    {
+      "month": "2020-10",
+      "guests": 77788,
+      "occupancy_pct": 21.172160768283,
+      "revenue_omr_mn": 4.9294860555
+    },
+    {
+      "month": "2020-11",
+      "guests": 84506,
+      "occupancy_pct": 23.7505922214406,
+      "revenue_omr_mn": 6.183323265538459
+    },
+    {
+      "month": "2020-12",
+      "guests": 84523,
+      "occupancy_pct": 26.5804999073426,
+      "revenue_omr_mn": 7.042867572
+    },
+    {
+      "month": "2021-01",
+      "guests": 164025,
+      "occupancy_pct": 23.7909273703538,
+      "revenue_omr_mn": 7.704701146769089
+    },
+    {
+      "month": "2021-02",
+      "guests": 152506,
+      "occupancy_pct": 34.1031000275606,
+      "revenue_omr_mn": 7.91219655556796
+    },
+    {
+      "month": "2021-03",
+      "guests": 239853,
+      "occupancy_pct": 39.7188834142911,
+      "revenue_omr_mn": 10.2687578952183
+    },
+    {
+      "month": "2021-04",
+      "guests": 118398,
+      "occupancy_pct": 36.4081230250034,
+      "revenue_omr_mn": 7.11368574683589
+    },
+    {
+      "month": "2021-05",
+      "guests": 103458,
+      "occupancy_pct": 22.4037950417825,
+      "revenue_omr_mn": 5.051624076879589
+    },
+    {
+      "month": "2021-06",
+      "guests": 147652,
+      "occupancy_pct": 27.4491791380908,
+      "revenue_omr_mn": 7.28831918124458
+    },
+    {
+      "month": "2021-07",
+      "guests": 155427,
+      "occupancy_pct": 24.4663438421284,
+      "revenue_omr_mn": 7.761926497285559
+    },
+    {
+      "month": "2021-08",
+      "guests": 201301,
+      "occupancy_pct": 35.0600980711928,
+      "revenue_omr_mn": 10.3905751208293
+    },
+    {
+      "month": "2021-09",
+      "guests": 167319,
+      "occupancy_pct": 33.1593885094523,
+      "revenue_omr_mn": 9.37415006110029
+    },
+    {
+      "month": "2021-10",
+      "guests": 187005,
+      "occupancy_pct": 36.2717629338078,
+      "revenue_omr_mn": 12.3480362124693
+    },
+    {
+      "month": "2021-11",
+      "guests": 242764,
+      "occupancy_pct": 39.9140343376306,
+      "revenue_omr_mn": 16.8226305623061
+    },
+    {
+      "month": "2021-12",
+      "guests": 266569,
+      "occupancy_pct": 40.3165762104673,
+      "revenue_omr_mn": 20.7957298979115
+    },
+    {
+      "month": "2022-01",
+      "guests": 105043,
+      "occupancy_pct": 40.7266455401294,
+      "revenue_omr_mn": 13.7824175060426
+    },
+    {
+      "month": "2022-02",
+      "guests": 155407,
+      "occupancy_pct": 48.4418882205093,
+      "revenue_omr_mn": 15.6464923085336
+    },
+    {
+      "month": "2022-03",
+      "guests": 155837,
+      "occupancy_pct": 54.2584264813832,
+      "revenue_omr_mn": 19.4748198991904
+    },
+    {
+      "month": "2022-04",
+      "guests": 80695,
+      "occupancy_pct": 30.2492478500312,
+      "revenue_omr_mn": 11.3293340075975
+    },
+    {
+      "month": "2022-05",
+      "guests": 132161,
+      "occupancy_pct": 41.9151707422526,
+      "revenue_omr_mn": 12.8252962606208
+    },
+    {
+      "month": "2022-06",
+      "guests": 110907,
+      "occupancy_pct": 38.4326102196122,
+      "revenue_omr_mn": 10.3006918965704
+    },
+    {
+      "month": "2022-07",
+      "guests": 132746,
+      "occupancy_pct": 37.0769554516592,
+      "revenue_omr_mn": 12.482857108936
+    },
+    {
+      "month": "2022-08",
+      "guests": 141080,
+      "occupancy_pct": 43.2000979316473,
+      "revenue_omr_mn": 13.6931503975711
+    },
+    {
+      "month": "2022-09",
+      "guests": 116793,
+      "occupancy_pct": 42.5661219154603,
+      "revenue_omr_mn": 11.9748446908019
+    },
+    {
+      "month": "2022-10",
+      "guests": 149579,
+      "occupancy_pct": 48.768678952517,
+      "revenue_omr_mn": 18.0350589890639
+    },
+    {
+      "month": "2022-11",
+      "guests": 165941,
+      "occupancy_pct": 56.1652252758127,
+      "revenue_omr_mn": 21.7168386160089
+    },
+    {
+      "month": "2022-12",
+      "guests": 183016,
+      "occupancy_pct": 52.5404937848791,
+      "revenue_omr_mn": 24.5101526160459
+    },
+    {
+      "month": "2023-01",
+      "guests": 178945,
+      "occupancy_pct": 51.4537239857184,
+      "revenue_omr_mn": 21.1394608641866
+    },
+    {
+      "month": "2023-02",
+      "guests": 188024,
+      "occupancy_pct": 60.0421996267841,
+      "revenue_omr_mn": 23.275541037101
+    },
+    {
+      "month": "2023-03",
+      "guests": 166821,
+      "occupancy_pct": 53.0421955830719,
+      "revenue_omr_mn": 21.9798454862225
+    },
+    {
+      "month": "2023-04",
+      "guests": 134378,
+      "occupancy_pct": 38.9666467177616,
+      "revenue_omr_mn": 17.664336058240497
+    },
+    {
+      "month": "2023-05",
+      "guests": 135274,
+      "occupancy_pct": 41.2954257298579,
+      "revenue_omr_mn": 14.2809186173692
+    },
+    {
+      "month": "2023-06",
+      "guests": 140826,
+      "occupancy_pct": 36.5609530197055,
+      "revenue_omr_mn": 11.7279525672593
+    },
+    {
+      "month": "2023-07",
+      "guests": 158046,
+      "occupancy_pct": 39.292104063014,
+      "revenue_omr_mn": 12.5597207596
+    },
+    {
+      "month": "2023-08",
+      "guests": 190195,
+      "occupancy_pct": 47.0406548525313,
+      "revenue_omr_mn": 16.0217762854191
+    },
+    {
+      "month": "2023-09",
+      "guests": 153291,
+      "occupancy_pct": 45.6088905888103,
+      "revenue_omr_mn": 15.2666505052279
+    },
+    {
+      "month": "2023-10",
+      "guests": 189241,
+      "occupancy_pct": 53.70795774162,
+      "revenue_omr_mn": 23.2659873897765
+    },
+    {
+      "month": "2023-11",
+      "guests": 222688,
+      "occupancy_pct": 61.1738931386739,
+      "revenue_omr_mn": 25.3202349661072
+    },
+    {
+      "month": "2023-12",
+      "guests": 213440,
+      "occupancy_pct": 59.4876941746714,
+      "revenue_omr_mn": 26.75329351924
+    },
+    {
+      "month": "2024-01",
+      "guests": 218097,
+      "occupancy_pct": 57.6715513267579,
+      "revenue_omr_mn": 24.7714529757247
+    },
+    {
+      "month": "2024-02",
+      "guests": 224371,
+      "occupancy_pct": 64.9832114149842,
+      "revenue_omr_mn": 27.6331548268376
+    },
+    {
+      "month": "2024-03",
+      "guests": 153898,
+      "occupancy_pct": 43.7974139698761,
+      "revenue_omr_mn": 19.3995695671785
+    },
+    {
+      "month": "2024-04",
+      "guests": 169787,
+      "occupancy_pct": 49.3182687689765,
+      "revenue_omr_mn": 21.289835534015
+    },
+    {
+      "month": "2024-05",
+      "guests": 145677,
+      "occupancy_pct": 40.562435396838,
+      "revenue_omr_mn": 15.2850927069498
+    },
+    {
+      "month": "2024-06",
+      "guests": 134393,
+      "occupancy_pct": 32.9178878471792,
+      "revenue_omr_mn": 11.1220342560635
+    },
+    {
+      "month": "2024-07",
+      "guests": 160407,
+      "occupancy_pct": 39.9642583915081,
+      "revenue_omr_mn": 13.0518469784977
+    },
+    {
+      "month": "2024-08",
+      "guests": 194104,
+      "occupancy_pct": 47.1187527554006,
+      "revenue_omr_mn": 16.8928353719067
+    },
+    {
+      "month": "2024-09",
+      "guests": 146789,
+      "occupancy_pct": 44.2966061224826,
+      "revenue_omr_mn": 14.1876463706391
+    },
+    {
+      "month": "2024-10",
+      "guests": 170015,
+      "occupancy_pct": 52.4190838282988,
+      "revenue_omr_mn": 22.46417932584
+    },
+    {
+      "month": "2024-11",
+      "guests": 211957,
+      "occupancy_pct": 63.2264097547771,
+      "revenue_omr_mn": 26.2741366833674
+    },
+    {
+      "month": "2024-12",
+      "guests": 216085,
+      "occupancy_pct": 64.0314857590388,
+      "revenue_omr_mn": 30.9839396678
+    },
+    {
+      "month": "2025-01",
+      "guests": 228183,
+      "occupancy_pct": 62.8742570700499,
+      "revenue_omr_mn": 27.84677618
+    },
+    {
+      "month": "2025-02",
+      "guests": 227550,
+      "occupancy_pct": 73.0806991994306,
+      "revenue_omr_mn": 30.53271529223
+    },
+    {
+      "month": "2025-03",
+      "guests": 151743,
+      "occupancy_pct": 42.9188785385542,
+      "revenue_omr_mn": 20.3930832171733
+    },
+    {
+      "month": "2025-04",
+      "guests": 221575,
+      "occupancy_pct": 66.1761296616539,
+      "revenue_omr_mn": 30.7119185382945
+    },
+    {
+      "month": "2025-05",
+      "guests": 158598,
+      "occupancy_pct": 47.8055693703328,
+      "revenue_omr_mn": 19.3050848387416
+    },
+    {
+      "month": "2025-06",
+      "guests": 152436,
+      "occupancy_pct": 36.5286375970166,
+      "revenue_omr_mn": 12.7307989789694
+    },
+    {
+      "month": "2025-07",
+      "guests": 169706,
+      "occupancy_pct": 41.9934612875511,
+      "revenue_omr_mn": 14.5155815121649
+    },
+    {
+      "month": "2025-08",
+      "guests": 205680,
+      "occupancy_pct": 51.9808673709583,
+      "revenue_omr_mn": 19.8053583749296
+    },
+    {
+      "month": "2025-09",
+      "guests": 171012,
+      "occupancy_pct": 51.8851587188831,
+      "revenue_omr_mn": 18.004163282021796
+    },
+    {
+      "month": "2025-10",
+      "guests": 210041,
+      "occupancy_pct": 61.6394960239213,
+      "revenue_omr_mn": 28.8267859875662
+    },
+    {
+      "month": "2025-11",
+      "guests": 242775,
+      "occupancy_pct": 74.2049531004382,
+      "revenue_omr_mn": 35.226523856309896
+    },
+    {
+      "month": "2025-12",
+      "guests": 237655,
+      "occupancy_pct": 70.8521751375929,
+      "revenue_omr_mn": 39.4167641537684
+    },
+    {
+      "month": "2026-01",
+      "guests": 246728,
+      "occupancy_pct": 69.95718929806,
+      "revenue_omr_mn": 37.255078452694
+    },
+    {
+      "month": "2026-02",
+      "guests": 201215,
+      "occupancy_pct": 67.5610200109227,
+      "revenue_omr_mn": 34.3771683601562
+    },
+    {
+      "month": "2026-03",
+      "guests": 128982,
+      "occupancy_pct": 31.1918860637494,
+      "revenue_omr_mn": 16.9396293305061
+    },
+    {
+      "month": "2026-04",
+      "guests": 125624,
+      "occupancy_pct": 32.1692554506289,
+      "revenue_omr_mn": 10.90439007034
+    },
+    {
+      "month": "2026-05",
+      "guests": 154380,
+      "occupancy_pct": 38.6754919926402,
+      "revenue_omr_mn": 13.9272362772395
+    }
+  ]
+}
