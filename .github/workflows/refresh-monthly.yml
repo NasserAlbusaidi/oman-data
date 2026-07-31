@@ -65,8 +65,16 @@ jobs:
           DEPLOY_HOOK: ${{ secrets.CF_PAGES_DEPLOY_HOOK }}
         run: |
           if [ -n "$DEPLOY_HOOK" ]; then
-            curl -fsS -X POST "$DEPLOY_HOOK" > /dev/null
-            echo "site redeploy triggered"
+            # The deploy plane must not redden the data plane: the refresh has
+            # already committed and pushed by here, so a dead hook is a warning
+            # and a late site rebuild, not a failed refresh filing an issue that
+            # blames the datasets.
+            if curl -fsS --retry 3 --retry-all-errors --max-time 30 \
+                 -X POST "$DEPLOY_HOOK" > /dev/null; then
+              echo "site redeploy triggered"
+            else
+              echo "::warning::site redeploy hook failed — data refresh itself succeeded"
+            fi
           else
             echo "CF_PAGES_DEPLOY_HOOK not set — skipping site redeploy"
           fi
