@@ -38,7 +38,7 @@ notes: >
   wilayat (83 regions), by accident cause (13), by nationality, by gender and by
   road-user type are out of scope for v1 and a planned follow-up, and the query
   pins those dimensions to their total members because the unfiltered cube
-  returns 555 series instead of 3. Same caveat as the trade, tourism and
-  electricity datasets regarding the portal's public client_id. NCSI and ROP
+  returns 555 series instead of 3. Same caveat as the tourism dataset regarding
+  the portal's public client_id. NCSI and ROP
   restate recent years as returns are finalised, so the newest year of each
   series should be read as provisional.

@@ -33,7 +33,7 @@ notes: >
   only — the source's breakdowns by governorate, by named power station (~105 of
   them), by network and by consumption category are out of scope for v1, and the
   query pins the region and station dimensions to their total members because the
-  unfiltered cube returns 129 series instead of 2. Same caveat as the trade and
-  tourism datasets regarding the portal's public client_id. NCSI restates recent
+  unfiltered cube returns 129 series instead of 2. Same caveat as the tourism
+  dataset regarding the portal's public client_id. NCSI restates recent
   years as the regulator's returns are finalised, so the newest year should be
   read as provisional.

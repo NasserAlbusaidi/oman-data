@@ -346,13 +346,16 @@ def test_missing_month_fails_loudly(tmp_path):
 
 
 def test_crlf_stations_csv_still_parses(tmp_path):
-    """The repo has ``core.autocrlf=true`` and no ``.gitattributes``.
+    """``.gitattributes`` pins ``*.csv text eol=lf``, and the parser still must
+    not depend on it.
 
-    So a fresh Windows checkout hands the parser a CRLF stations.csv while CI
-    on Linux sees LF, and the last field of every row would pick up a trailing
-    ``\\r`` if the file were opened carelessly. Asserting the committed bytes
-    are LF would just be testing git; this asserts the thing that matters —
-    the same normals come out either way.
+    That line normalises checkouts made after it landed; it does nothing for a
+    working tree cloned before it, for a stations.csv pulled out of a zip or a
+    GitHub archive, or for one round-tripped through a Windows editor. Any of
+    those hands the parser CRLF while CI on Linux sees LF, and the last field
+    of every row would pick up a trailing ``\\r`` if the file were opened
+    carelessly. Asserting the committed bytes are LF would just be testing git;
+    this asserts the thing that matters — the same normals come out either way.
     """
     parse = load("parse")
     expected, _ = parsed()

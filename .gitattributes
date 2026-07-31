@@ -1,7 +1,7 @@
 # Line endings are part of this repo's contract, not a local preference.
 #
 # The fuel pipeline rewrites pipelines/fuel_prices/prices.csv byte for byte
-# every time it learns a month (parse.py::_persist), and a test pins that the
+# every time it learns a month (parse.py::persist), and a test pins that the
 # rewrite reproduces the committed file exactly. With the common Windows
 # core.autocrlf=true, a fresh clone would hand pandas a CRLF file, the test
 # would go red and the first CI refresh would land a 385-line diff instead of

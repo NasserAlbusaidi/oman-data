@@ -287,8 +287,9 @@ def parse(raw_path: Path, prices_csv: Path | None = None) -> tuple[pd.DataFrame,
     month to the curated file is ``persist``'s job, which the runner calls only
     once the frame has passed validation.
 
-    ``prices_csv`` overrides the curated file so tests can exercise the append
-    and auto-extend paths against a copy.
+    ``prices_csv`` redirects that read at a stand-in for the curated file, so
+    tests can drive the cross-check, append and auto-extend branches off a
+    doctored copy without the committed file being read at all.
     """
     raw_path = Path(raw_path)
     prices_csv = Path(prices_csv) if prices_csv is not None else PRICES_CSV
