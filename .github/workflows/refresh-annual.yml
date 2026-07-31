@@ -43,6 +43,18 @@ jobs:
           git add raw data api
           git diff --cached --quiet || git commit -m "data: annual refresh $(date -u +%Y-%m)"
           git push
+      # Fires before the outcome gate on purpose; see refresh-monthly.yml.
+      - name: Trigger site redeploy
+        if: success()
+        env:
+          DEPLOY_HOOK: ${{ secrets.CF_PAGES_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$DEPLOY_HOOK" ]; then
+            curl -fsS -X POST "$DEPLOY_HOOK" > /dev/null
+            echo "site redeploy triggered"
+          else
+            echo "CF_PAGES_DEPLOY_HOOK not set — skipping site redeploy"
+          fi
       - name: Fail if any dataset failed
         env:
           OUTCOMES: >-
