@@ -1,0 +1,9 @@
+{
+  "id": "climate_normals",
+  "as_of": "1991-2020",
+  "fetched_at": "2026-07-31T19:12:22Z",
+  "source_name": "Open-Meteo historical archive (ERA5, Copernicus)",
+  "source_url": "https://archive-api.open-meteo.com/v1/archive",
+  "license": "CC BY 4.0 (Open-Meteo); contains modified Copernicus ERA5 data",
+  "rows": 216
+}

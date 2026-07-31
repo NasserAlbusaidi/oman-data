@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T18:51:40.527158+00:00",
+  "generated_at": "2026-07-31T19:12:22.682789+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -11,6 +11,17 @@
       "fetched_at": "2026-07-31T16:07:58Z",
       "stale": false,
       "rows": 63
+    },
+    {
+      "id": "climate_normals",
+      "title_ar": "المعدلات المناخية الشهرية ١٩٩١–٢٠٢٠ — ست محطات",
+      "title_en": "Monthly climate normals 1991-2020 — six stations",
+      "source_name": "Open-Meteo historical archive (ERA5, Copernicus)",
+      "cadence": "static",
+      "as_of": "1991-2020",
+      "fetched_at": "2026-07-31T19:12:22Z",
+      "stale": false,
+      "rows": 216
     },
     {
       "id": "cpi",
