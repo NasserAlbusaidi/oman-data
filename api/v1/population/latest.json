@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "id": "population",
+    "as_of": "2026",
+    "fetched_at": "2026-07-31T15:52:47Z",
+    "source_name": "NCSI — Monthly Statistical Bulletin, Table 1",
+    "source_url": "https://api.ncsi.gov.om/uploads/xls/monthly_statistical_bulletin___july_2026_1784800254.xlsx",
+    "license": "Open Government License - Sultanate of Oman",
+    "rows": 22,
+    "title_ar": "السكان حسب المحافظة",
+    "title_en": "Population by governorate",
+    "cadence": "annual",
+    "stale": false
+  },
+  "data": [
+    {
+      "year": 2025,
+      "governorate_code": "OM-BJ",
+      "population": 573363
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-BS",
+      "population": 928756
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-BU",
+      "population": 136683
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-DA",
+      "population": 560763
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-MA",
+      "population": 1516550
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-MU",
+      "population": 54993
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-SJ",
+      "population": 372224
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-SS",
+      "population": 321697
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-WU",
+      "population": 66959
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-ZA",
+      "population": 245493
+    },
+    {
+      "year": 2025,
+      "governorate_code": "OM-ZU",
+      "population": 529495
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-BJ",
+      "population": 590160
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-BS",
+      "population": 947147
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-BU",
+      "population": 135797
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-DA",
+      "population": 575096
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-MA",
+      "population": 1542619
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-MU",
+      "population": 55806
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-SJ",
+      "population": 378335
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-SS",
+      "population": 323473
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-WU",
+      "population": 64815
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-ZA",
+      "population": 249095
+    },
+    {
+      "year": 2026,
+      "governorate_code": "OM-ZU",
+      "population": 536302
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+id: population
+title_ar: "السكان حسب المحافظة"
+title_en: "Population by governorate"
+source_name: "NCSI — Monthly Statistical Bulletin, Table 1"
+source_url: "https://api.ncsi.gov.om/uploads/xls/monthly_statistical_bulletin___july_2026_1784800254.xlsx"
+license: "Open Government License - Sultanate of Oman"
+cadence: annual
+columns:
+  - {name: year, dtype: int, min: 2010, max: 2035}
+  - {name: governorate_code, dtype: str}
+  - {name: population, dtype: int, min: 1, max: 5000000}
+notes: >
+  Total registered population (Omani + expatriate) by governorate, from Table 1
+  "Total Population Registered By Governorates" of the NCSI Monthly Statistical
+  Bulletin workbook. Listing page: https://www.ncsi.gov.om/publications — NCSI
+  republishes the workbook monthly under a new timestamped filename, so fetch.py
+  resolves the newest English workbook from that page and falls back to source_url.
+  Coverage is the two snapshots the bulletin prints side by side: the current month
+  and the same month a year earlier (July 2026 issue -> June 2026 and June 2025).
+  It is therefore a same-month year-on-year pair, not a full annual back series;
+  the July 2026 issue does not restate the 2020 census. Where a year appears in
+  more than one column the leftmost (most recent month) is kept. Governorate totals
+  reconcile to the workbook's own "Total Population" row: 5,398,645 for 2026 and
+  5,306,976 for 2025. Definition is administrative (Royal Oman Police records:
+  Omanis on the National Civil System, expatriates on valid residence visas), not a
+  census enumeration.

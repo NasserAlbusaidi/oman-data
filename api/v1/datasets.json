@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T15:34:23.715521+00:00",
+  "generated_at": "2026-07-31T15:52:47.978124+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -11,6 +11,17 @@
       "fetched_at": "2026-07-31T15:34:23Z",
       "stale": false,
       "rows": 63
+    },
+    {
+      "id": "population",
+      "title_ar": "السكان حسب المحافظة",
+      "title_en": "Population by governorate",
+      "source_name": "NCSI — Monthly Statistical Bulletin, Table 1",
+      "cadence": "annual",
+      "as_of": "2026",
+      "fetched_at": "2026-07-31T15:52:47Z",
+      "stale": false,
+      "rows": 22
     }
   ]
 }
