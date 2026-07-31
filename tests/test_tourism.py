@@ -1,3 +1,4 @@
+import json
 import re
 from pathlib import Path
 
@@ -34,6 +35,37 @@ def test_values_in_plausible_bands():
     recent = df[df["month"] >= "2019-01"]
     assert 1 <= recent["revenue_omr_mn"].median() <= 200, "revenue scale wrong?"
     assert len(df) >= 60, "expected years of monthly history"
+
+
+def doctored(tmp_path: Path, mutate) -> Path:
+    """The golden fixture with one series row edited, written to a temp file."""
+    payload = json.loads(fixture_path().read_text(encoding="utf-8"))
+    mutate(payload["data"][0])
+    out = tmp_path / "doctored.json"
+    out.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+    return out
+
+
+def test_non_monthly_frequency_fails_loudly(tmp_path):
+    parse = _load_callable(Path("pipelines/tourism/parse.py"), "parse")
+
+    def to_quarterly(row):
+        row["frequency"] = "Q"
+
+    with pytest.raises(ValueError, match="frequency"):
+        parse(doctored(tmp_path, to_quarterly))
+
+
+def test_truncated_series_fails_loudly(tmp_path):
+    """Dropping leading observations shifts every month label by that many
+    months; the row's own endDate no longer matches and must catch it."""
+    parse = _load_callable(Path("pipelines/tourism/parse.py"), "parse")
+
+    def drop_leading(row):
+        row["values"] = row["values"][6:]
+
+    with pytest.raises(ValueError, match="endDate"):
+        parse(doctored(tmp_path, drop_leading))
 
 
 def test_mangled_layout_fails_loudly(tmp_path):

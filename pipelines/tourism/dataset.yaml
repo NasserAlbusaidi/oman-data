@@ -1,6 +1,6 @@
 id: tourism
-title_ar: "مؤشرات السياحة الشهرية — النزلاء والإشغال والإيرادات"
-title_en: "Monthly tourism indicators — guests, occupancy, revenues"
+title_ar: "مؤشرات السياحة الشهرية — نزلاء الفنادق المصنفة (٣-٥ نجوم) والإشغال والإيرادات"
+title_en: "Monthly tourism indicators — 3-5 star hotel guests, occupancy, revenues"
 source_name: "NCSI via data.gov.om (Tourism, dataset dedblxg)"
 source_url: "https://data.gov.om/dedblxg"
 license: "Open Government License - Sultanate of Oman"
@@ -23,8 +23,9 @@ notes: >
   is the source's "Room Occupancy Ratio"; its other percentage member,
   "Occupancy Rate (%)", is the same figure rounded to one decimal, starts
   2014-01 and exists only under the "HOTELS CLASSIFIED (3 - 5 ) STARS" hotel
-  class, so it is not used. Despite the "total" label, the monthly figures are
-  NCSI's classified three- to five-star hotel universe, not all accommodation:
+  class, so it is not used. Despite the source's "total" hotel-class label, the
+  monthly figures are NCSI's classified three- to five-star hotel universe, not
+  all accommodation — which is why the titles say so:
   from 2015-01 the total and the 3-5-star series are identical month for month,
   and the Jan-May 2026 figures published here reproduce NCSI's press release for
   3-5-star hotels exactly (856,929 guests, 47.9% average occupancy). NCSI

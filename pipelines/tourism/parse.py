@@ -21,6 +21,11 @@ Source quirks pinned at discovery (2026-07-31, dataset dedblxg):
 * ``Hotels Revenues`` carries an empty ``unit`` and ``scale: 1``; the values
   are plain riyals (~1.4e7/month), hence ``REVENUE_SCALE``. Rows arriving with
   any other ``scale`` raise, because that pinned constant would be wrong.
+* Observations are a bare array with no per-point dates, so the month labels
+  are walked forward from ``startDate``. Both of the row's own declarations —
+  ``frequency`` and ``endDate`` — are checked against that walk, so a series
+  that changes frequency or loses leading points fails loudly instead of
+  publishing every value under a shifted month.
 """
 from __future__ import annotations
 
@@ -32,6 +37,7 @@ import pandas as pd
 from oman_data import knoema
 
 REVENUE_SCALE = 1e-6  # riyals -> millions OMR; pinned at discovery
+FREQUENCY_MONTHLY = "M"
 
 # normalized member name -> output column; exact names pinned at discovery
 _INDICATORS = {
@@ -43,6 +49,33 @@ _INDICATORS = {
 
 def _norm(name: str) -> str:
     return " ".join(name.lower().split())
+
+
+def _months_for(name: str, row: dict) -> list[str]:
+    """Label a series' observations, checked against the row's own declarations.
+
+    ``monthly_periods`` just walks forward from ``startDate``, so a series that
+    switched frequency or lost leading observations would be relabelled silently
+    and published under confidently wrong dates. The payload states both
+    ``frequency`` and ``endDate``; both must agree with the walk.
+    """
+    if row.get("frequency") != FREQUENCY_MONTHLY:
+        raise ValueError(
+            f"indicator {name!r} declares frequency {row.get('frequency')!r}, "
+            f"expected {FREQUENCY_MONTHLY!r} — month labels would be wrong"
+        )
+    values = row["values"]
+    if not values:
+        raise ValueError(f"indicator {name!r} carries no observations")
+    months = knoema.monthly_periods(row["startDate"], len(values))
+    declared_end = str(row["endDate"])[:7]
+    if months[-1] != declared_end:
+        raise ValueError(
+            f"indicator {name!r} spans {months[0]}..{months[-1]} from "
+            f"{len(values)} values but declares endDate {declared_end} — "
+            f"the series is truncated or misaligned"
+        )
+    return months
 
 
 def parse(raw_path: Path):
@@ -64,7 +97,7 @@ def parse(raw_path: Path):
                 f"indicator {name!r} has scale {row.get('scale')!r}, expected 1 "
                 f"— the pinned unit scaling no longer holds"
             )
-        months = knoema.monthly_periods(row["startDate"], len(row["values"]))
+        months = _months_for(name, row)
         series: dict[str, float] = {}
         frames[col] = series
         for month, value in zip(months, row["values"]):
