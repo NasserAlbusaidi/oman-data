@@ -10,8 +10,6 @@ FIXTURE = Path("tests/fixtures/fuel_prices/nss_home.html")
 PRICES = Path("pipelines/fuel_prices/prices.csv")
 MONTH = re.compile(r"^\d{4}-\d{2}$")
 
-CAP = {"m91": 229, "m95": 239, "diesel": 258}
-
 # Exact markup anchor in the saved fixture; doctoring tests edit it.
 MARQUEE = "<li>July 2026 Fuel Prices M95 239Bz, M91 229Bz and Diesel 258Bz</li>"
 
@@ -20,6 +18,23 @@ _COMMENT_RE = re.compile(r"<!--.*?-->", re.S)
 
 def load(name: str):
     return _load_callable(Path("pipelines/fuel_prices/parse.py"), name)
+
+
+# The cap lives in the pipeline, not here — restating 229/239/258 in the tests
+# would let the two drift apart and still go green.
+CAP = load("SUBSIDY_CAP")
+
+
+def prices_copy(tmp_path: Path) -> Path:
+    """A writable copy of the curated CSV.
+
+    ``parse`` persists newly learnt months (see parse._persist), so every test
+    that exercises the append or auto-extend path must point it at a copy or it
+    would edit the repo's prices.csv as a side effect of running the suite.
+    """
+    out = tmp_path / "prices.csv"
+    out.write_bytes(PRICES.read_bytes())
+    return out
 
 
 def doctored(tmp_path: Path, *replacements: tuple[str, str]) -> Path:
@@ -41,6 +56,18 @@ def doctored(tmp_path: Path, *replacements: tuple[str, str]) -> Path:
 # --------------------------------------------------------------------------
 # contract tests (per the task brief)
 # --------------------------------------------------------------------------
+
+def test_curated_csv_round_trips_byte_for_byte():
+    """pandas must reproduce the committed file exactly.
+
+    ``parse`` rewrites the whole CSV when it learns a month, so any formatting
+    difference between what pandas writes and what is committed would show up as
+    a 385-line diff on the first CI refresh, burying the one real change.
+    """
+    df = pd.read_csv(PRICES, encoding="utf-8")
+    rewritten = df.to_csv(index=False, lineterminator="\n").encode("utf-8")
+    assert rewritten == PRICES.read_bytes()
+
 
 def test_curated_csv_is_complete_and_sane():
     df = pd.read_csv(PRICES, encoding="utf-8")
@@ -92,7 +119,11 @@ def test_every_row_declares_a_known_provenance():
     """``source`` is a closed vocabulary, and the archive ends where the
     freeze-fill begins (2023-01 / 2023-02) with no overlap.
 
-    The current month is never in the CSV — it comes from NSS at parse time.
+    Past that boundary the two live labels interleave rather than succeed one
+    another: months the pipeline observed on NSS carry nss.gov.om and are
+    retained here (NSS drops a month once it rolls over), while months a missed
+    refresh skipped are filled from the cap and carry subsidy-cap-freeze. So the
+    tail is asserted as a set membership, not as an ordering.
     """
     df = pd.read_csv(PRICES, encoding="utf-8")
     assert set(df["source"]) <= {
@@ -104,11 +135,10 @@ def test_every_row_declares_a_known_provenance():
     assert archive["month"].min() == "2015-12"
     assert archive["month"].max() == "2023-01"
     assert spans.loc["subsidy-cap-freeze", "min"] == "2023-02"
-    # months already observed on the live NSS page are retained here, because
-    # NSS drops them once the month rolls over (see the nss.gov.om note below)
-    observed = df[df["source"] == "nss.gov.om"]
-    assert spans.loc["subsidy-cap-freeze", "max"] < observed["month"].min()
-    assert observed["month"].max() == df["month"].max()
+    assert set(df[df["month"] >= "2023-02"]["source"]) <= {
+        "subsidy-cap-freeze", "nss.gov.om"}
+    # the series must end on an observed month, never on an invented one
+    assert set(df[df["month"] == df["month"].max()]["source"]) == {"nss.gov.om"}
 
 
 def test_disputed_months_keep_their_adjudicated_values():
@@ -415,10 +445,10 @@ def test_next_months_scrape_appends_with_nss_provenance(tmp_path):
 
     This is what actually happens on the first run of a new month, and it is
     the path that must keep working when prices.csv trails the calendar by one
-    month. Contrast test_stale_prices_csv_fails_loudly...: two months out is a
-    hole and raises; one month out is normal operation.
+    month.
     """
     parse = load("parse")
+    csv = prices_copy(tmp_path)
     curated = pd.read_csv(PRICES, encoding="utf-8")
     assert curated["month"].max() == "2026-07", "update this test's next month"
     august = doctored(
@@ -426,7 +456,7 @@ def test_next_months_scrape_appends_with_nss_provenance(tmp_path):
         ("Fuel Price - July'26", "Fuel Price - August'26"),
         ("July 2026 Fuel Prices", "August 2026 Fuel Prices"),
     )
-    df, as_of = parse(august)
+    df, as_of = parse(august, prices_csv=csv)
     assert as_of == "2026-08"
     assert len(df) == len(curated) + 3
     new = df[df["month"] == "2026-08"]
@@ -437,19 +467,205 @@ def test_next_months_scrape_appends_with_nss_provenance(tmp_path):
     assert months == list(pd.period_range(months[0], months[-1], freq="M").astype(str))
 
 
-def test_stale_prices_csv_fails_loudly_instead_of_publishing_a_gap(tmp_path):
-    """The CSV stops at the last settled month and NSS only ever publishes the
-    current one, so an unmaintained CSV would silently punch a hole in a
-    monthly series. Nothing downstream validates continuity -- this does.
+# --------------------------------------------------------------------------
+# persistence and the cap-freeze auto-extend: what keeps the monthly refresh
+# running without a human editing prices.csv every month
+# --------------------------------------------------------------------------
+
+def test_scraped_month_is_written_back_to_the_csv(tmp_path):
+    """NSS forgets a month the instant it rolls over.
+
+    A month held only in the returned frame is gone by the next run, which
+    would then find a hole. So the merge is persisted, and the CSV's own
+    tail — not the returned frame — is what proves it.
     """
     parse = load("parse")
-    ahead = doctored(
+    csv = prices_copy(tmp_path)
+    before = pd.read_csv(csv, encoding="utf-8")
+    august = doctored(
+        tmp_path,
+        ("Fuel Price - July'26", "Fuel Price - August'26"),
+        ("July 2026 Fuel Prices", "August 2026 Fuel Prices"),
+    )
+    parse(august, prices_csv=csv)
+    after = pd.read_csv(csv, encoding="utf-8")
+    assert after["month"].max() == "2026-08"
+    assert len(after) == len(before) + 3
+    assert set(after[after["month"] == "2026-08"]["source"]) == {"nss.gov.om"}
+    # untouched rows must be untouched, byte for byte
+    assert csv.read_bytes().startswith(PRICES.read_bytes())
+
+
+def test_persisting_is_idempotent(tmp_path):
+    """Re-running the same month must cross-check, not append a second time."""
+    parse = load("parse")
+    csv = prices_copy(tmp_path)
+    august = doctored(
+        tmp_path,
+        ("Fuel Price - July'26", "Fuel Price - August'26"),
+        ("July 2026 Fuel Prices", "August 2026 Fuel Prices"),
+    )
+    df1, _ = parse(august, prices_csv=csv)
+    first = csv.read_bytes()
+    df2, _ = parse(august, prices_csv=csv)
+    assert csv.read_bytes() == first
+    assert df2.equals(df1)
+
+
+def test_confirming_an_already_curated_month_does_not_rewrite_the_csv(tmp_path):
+    """No new months, no write — a no-op run leaves the file's mtime story clean."""
+    parse = load("parse")
+    csv = prices_copy(tmp_path)
+    before = csv.read_bytes()
+    parse(FIXTURE, prices_csv=csv)   # 2026-07, already curated
+    assert csv.read_bytes() == before
+
+
+def test_one_skipped_month_is_auto_extended_from_the_cap(tmp_path):
+    """The case that used to break the pipeline outright.
+
+    prices.csv ends 2026-07; if the September refresh is the next one to run
+    (August's never did, or ran before the announcement), 2026-08 exists in no
+    source anywhere. It is still knowable: the cap held on both sides of it. So
+    it is filled from the cap constants and labelled subsidy-cap-freeze — the
+    same provenance the hand-curated 2023-02+ tail carries — never nss.gov.om,
+    because nobody saw it.
+    """
+    parse = load("parse")
+    csv = prices_copy(tmp_path)
+    september = doctored(
+        tmp_path,
+        ("Fuel Price - July'26", "Fuel Price - September'26"),
+        ("July 2026 Fuel Prices", "September 2026 Fuel Prices"),
+    )
+    df, as_of = parse(september, prices_csv=csv)
+    assert as_of == "2026-09"
+    filled = df[df["month"] == "2026-08"]
+    assert set(filled["source"]) == {"subsidy-cap-freeze"}
+    assert filled.set_index("fuel_type")["price_baisa"].to_dict() == CAP
+    assert set(df[df["month"] == "2026-09"]["source"]) == {"nss.gov.om"}
+    months = sorted(df["month"].unique())
+    assert months == list(pd.period_range(months[0], months[-1], freq="M").astype(str))
+    # and it is persisted, so the next run starts from a continuous CSV
+    assert pd.read_csv(csv, encoding="utf-8")["month"].max() == "2026-09"
+
+
+def test_auto_extend_stops_at_its_declared_bound(tmp_path):
+    """Three invented months is the ceiling; the fourth demands a human.
+
+    A quarter of missed refreshes is a broken pipeline, not a late one, and the
+    cap inference gets weaker the wider the interval it spans — verify those
+    months against archived price boards instead.
+    """
+    parse = load("parse")
+    assert load("MAX_AUTO_EXTEND_MONTHS") == 3, "update this test's months"
+
+    # Nov'26: 2026-08, -09, -10 missing — exactly three, allowed
+    november = doctored(
+        tmp_path,
+        ("Fuel Price - July'26", "Fuel Price - November'26"),
+        ("July 2026 Fuel Prices", "November 2026 Fuel Prices"),
+    )
+    df, as_of = parse(november, prices_csv=prices_copy(tmp_path))
+    assert as_of == "2026-11"
+    invented = df[df["month"].between("2026-08", "2026-10")]
+    assert set(invented["source"]) == {"subsidy-cap-freeze"}
+    assert len(invented) == 9
+
+    # Dec'26: four missing — refuse
+    december = doctored(
         tmp_path,
         ("Fuel Price - July'26", "Fuel Price - December'26"),
-        (MARQUEE, ""),
+        ("July 2026 Fuel Prices", "December 2026 Fuel Prices"),
     )
-    with pytest.raises(ValueError, match="gap"):
-        parse(ahead)
+    csv = prices_copy(tmp_path)
+    before = csv.read_bytes()
+    with pytest.raises(ValueError, match="gap needs a human"):
+        parse(december, prices_csv=csv)
+    assert csv.read_bytes() == before, "a refused run must not touch the CSV"
+
+
+def test_a_lifted_cap_blocks_the_backfill_instead_of_inventing_months(tmp_path):
+    """The one failure this whole mechanism exists to avoid.
+
+    If NSS shows a price that is not the cap and months are missing, those
+    months could be anywhere between the old level and the new one — the cap
+    constants are no longer evidence about them. Inventing them would fabricate
+    a flat run through a price change and bury the most newsworthy event this
+    dataset can record. Refuse, and name the cap in the message.
+    """
+    parse = load("parse")
+    csv = prices_copy(tmp_path)
+    lifted = doctored(
+        tmp_path,
+        ("Fuel Price - July'26", "Fuel Price - September'26"),
+        (MARQUEE, ""),
+        ("<p>229</p>", "<p>259</p>"),
+    )
+    with pytest.raises(ValueError, match="cap looks lifted"):
+        parse(lifted, prices_csv=csv)
+    assert csv.read_bytes() == PRICES.read_bytes(), "a refused run must not backfill"
+
+
+def test_a_lifted_cap_with_no_gap_is_recorded_not_refused(tmp_path):
+    """A real price change in a month that needs no inference is just data.
+
+    The auto-extend refuses because it cannot infer *missing* months; it has no
+    opinion on the observed one. NSS is the official source and the row is
+    appended with nss.gov.om provenance. The change still surfaces to a human on
+    the next test run, because test_curated_tail_is_flat_at_the_capped_prices
+    goes red the moment an off-cap month lands in the committed CSV — that is
+    the alarm, not a silent parse failure.
+    """
+    parse = load("parse")
+    csv = prices_copy(tmp_path)
+    lifted = doctored(
+        tmp_path,
+        ("Fuel Price - July'26", "Fuel Price - August'26"),
+        (MARQUEE, ""),
+        ("<p>229</p>", "<p>259</p>"),
+    )
+    df, as_of = parse(lifted, prices_csv=csv)
+    assert as_of == "2026-08"
+    row = df[df["month"] == "2026-08"].set_index("fuel_type")
+    assert row["price_baisa"]["m91"] == 259
+    assert set(row["source"]) == {"nss.gov.om"}
+
+
+def test_auto_extend_refuses_when_the_csv_tail_is_off_cap(tmp_path):
+    """The other endpoint of the inference.
+
+    If the CSV already ends on an off-cap month, the freeze narrative no longer
+    describes the tail and cap constants are not the right filler either, even
+    though today's page happens to match them.
+    """
+    parse = load("parse")
+    csv = prices_copy(tmp_path)
+    df = pd.read_csv(csv, encoding="utf-8")
+    df.loc[(df["month"] == "2026-07") & (df["fuel_type"] == "m91"), "price_baisa"] = 249
+    df.to_csv(csv, index=False, encoding="utf-8", lineterminator="\n")
+    september = doctored(
+        tmp_path,
+        ("Fuel Price - July'26", "Fuel Price - September'26"),
+        ("July 2026 Fuel Prices", "September 2026 Fuel Prices"),
+    )
+    with pytest.raises(ValueError, match="off the subsidy cap"):
+        parse(september, prices_csv=csv)
+
+
+def test_a_hole_inside_the_curated_csv_still_fails_loudly(tmp_path):
+    """The auto-extend only closes gaps at the *end* of the series.
+
+    A month deleted from the middle of prices.csv is a curation accident, not a
+    missed refresh, and no constant can be trusted to fill it.
+    """
+    parse = load("parse")
+    csv = prices_copy(tmp_path)
+    df = pd.read_csv(csv, encoding="utf-8")
+    df[df["month"] != "2020-05"].to_csv(
+        csv, index=False, encoding="utf-8", lineterminator="\n")
+    with pytest.raises(ValueError, match="hole in it"):
+        parse(FIXTURE, prices_csv=csv)
 
 
 def test_parse_output_is_sorted_and_typed():

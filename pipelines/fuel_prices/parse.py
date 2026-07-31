@@ -30,6 +30,10 @@ Source quirks pinned at discovery (2026-07-31, nss.gov.om/site/home?ln=en):
 
 If NSS redesigns, every one of these lookups raises rather than guessing, and
 the runner leaves the last-good published data in place.
+
+Because NSS drops a month the moment it rolls over, ``parse`` also *writes* the
+months it learns back into ``prices.csv`` -- see ``_persist`` for why that side
+effect lives here and what bounds it.
 """
 from __future__ import annotations
 
@@ -43,6 +47,22 @@ PRICES_CSV = Path(__file__).parent / "prices.csv"
 COLUMNS = ["month", "fuel_type", "price_baisa", "source"]
 FUELS = ("m91", "m95", "diesel")
 NSS_SOURCE = "nss.gov.om"
+
+# The subsidy price cap, and the only definition of it in the repo: Sultan
+# Haitham bin Tariq's decision of 9 Nov 2021 pegged the three grades to their
+# October 2021 average with effect from 1 Dec 2021, and it has held since (see
+# dataset.yaml notes). The curated tail from 2023-02 is generated from these
+# three numbers, the auto-extend below reuses them, and the tests import them
+# from here rather than restating them.
+SUBSIDY_CAP = {"m91": 229, "m95": 239, "diesel": 258}
+CAP_SOURCE = "subsidy-cap-freeze"
+
+# How many skipped months the auto-extend is willing to invent from the cap
+# before it demands a human. One is normal operation (a refresh that ran a day
+# late); a whole quarter of silence means CI has been broken long enough that
+# the interval deserves checking against archived price boards rather than
+# being papered over with constants.
+MAX_AUTO_EXTEND_MONTHS = 3
 
 # "Fuel Price - July'26"
 _MONTH_RE = re.compile(r"Fuel\s*Price\s*-\s*([A-Za-z]+)\s*'\s*(\d{2})")
@@ -141,24 +161,119 @@ def scrape_nss(html: str) -> tuple[str, dict[str, int]]:
 
 
 def _check_continuous(df: pd.DataFrame) -> None:
+    """Last line of defence: a monthly series must have no holes.
+
+    A hole at the *end* -- prices.csv trailing the month NSS is showing -- is
+    handled upstream by ``_auto_extend``, which either fills it from the cap or
+    refuses loudly. Anything reaching here is a hole in the middle of the
+    curated file, i.e. someone deleted or mistyped a month.
+    """
     months = sorted(set(df["month"]))
     expected = pd.period_range(months[0], months[-1], freq="M").astype(str).tolist()
     if months != expected:
         missing = sorted(set(expected) - set(months))
         raise ValueError(
             f"month gap in the merged series: {missing[:6]}"
-            f"{'...' if len(missing) > 6 else ''} — prices.csv is stale, "
-            f"backfill it up to the month before {months[-1]}")
+            f"{'...' if len(missing) > 6 else ''} — prices.csv has a hole in it, "
+            f"backfill those months")
 
 
-def parse(raw_path: Path) -> tuple[pd.DataFrame, str]:
+def _months_between(last: str, scraped: str) -> list[str]:
+    """Months strictly between ``last`` and ``scraped`` (empty if adjacent)."""
+    if scraped <= last:
+        return []
+    return pd.period_range(last, scraped, freq="M").astype(str).tolist()[1:-1]
+
+
+def _auto_extend(df: pd.DataFrame, month: str, prices: dict[str, int]) -> pd.DataFrame:
+    """Fill months a missed refresh skipped -- but only while the cap holds.
+
+    NSS publishes one month and forgets it, so a refresh that does not run in
+    August leaves a hole no source can fill afterwards. For the capped era that
+    hole is nonetheless *knowable*: if the price was at the cap before the gap
+    and is still at the cap after it, the months in between were at the cap too,
+    which is exactly the reasoning behind the hand-curated ``subsidy-cap-freeze``
+    tail. So fill them, and label them with that same provenance -- never with
+    ``nss.gov.om``, because nobody observed them.
+
+    The inference dies the moment either endpoint is off the cap:
+
+    * scraped prices != the cap -> the cap has been lifted (or restated), and
+      the missing months could be anywhere between the old and new level. Refuse
+      to guess. A lifted cap is a human decision, not a silent backfill.
+    * the CSV's last month is off the cap -> the freeze narrative no longer
+      describes the tail, so cap constants are not the right filler either.
+    * more than ``MAX_AUTO_EXTEND_MONTHS`` missing -> see that constant.
+    """
+    last = df["month"].max()
+    missing = _months_between(last, month)
+    if not missing:
+        return df
+
+    if prices != SUBSIDY_CAP:
+        raise ValueError(
+            f"NSS {month} prices {prices} differ from the subsidy cap "
+            f"{SUBSIDY_CAP} and prices.csv is missing {missing} — the cap looks "
+            f"lifted, so the missing months cannot be inferred from it. Backfill "
+            f"prices.csv by hand from the monthly announcements, and re-check the "
+            f"cap notes in dataset.yaml.")
+
+    tail = {fuel: int(price) for fuel, price in
+            df[df["month"] == last].set_index("fuel_type")["price_baisa"].items()}
+    if tail != SUBSIDY_CAP:
+        raise ValueError(
+            f"prices.csv ends at {last} with {tail}, which is off the subsidy cap "
+            f"{SUBSIDY_CAP} — refusing to auto-extend {missing} from cap "
+            f"constants. Backfill prices.csv by hand.")
+
+    if len(missing) > MAX_AUTO_EXTEND_MONTHS:
+        raise ValueError(
+            f"NSS is showing {month} but prices.csv ends at {last}: {len(missing)} "
+            f"months missing ({missing[0]}..{missing[-1]}), more than the "
+            f"{MAX_AUTO_EXTEND_MONTHS} the cap-freeze auto-extend will invent. "
+            f"This gap needs a human — verify each month against an archived "
+            f"price board and backfill prices.csv.")
+
+    filled = pd.DataFrame(
+        [(m, fuel, price, CAP_SOURCE)
+         for m in missing for fuel, price in SUBSIDY_CAP.items()],
+        columns=COLUMNS)
+    return pd.concat([df, filled], ignore_index=True)
+
+
+def _persist(df: pd.DataFrame, prices_csv: Path) -> None:
+    """Write the merged series back over the curated CSV.
+
+    NSS drops a month as soon as it rolls over, so a month that is only ever
+    held in memory is lost: next month's run finds a hole and the continuity
+    guard stops the pipeline. Persisting here is what keeps the CSV's last month
+    one step behind the calendar, which is the state every other guard in this
+    file assumes.
+
+    Only ever an append -- ``parse`` calls this only when new months appeared,
+    and the merge never rewrites an existing row (a scraped month the CSV
+    already covers takes the cross-check branch instead). The frame is the CSV
+    plus those rows in the same sort order, so the rewrite is byte-stable for
+    the untouched rows; ``test_curated_csv_round_trips_byte_for_byte`` pins that.
+    """
+    df.to_csv(prices_csv, index=False, encoding="utf-8", lineterminator="\n")
+
+
+def parse(raw_path: Path, prices_csv: Path | None = None) -> tuple[pd.DataFrame, str]:
+    """Merge the curated history with the month NSS is showing.
+
+    ``prices_csv`` overrides the curated file, so tests can exercise the append
+    and auto-extend paths against a copy instead of mutating the repo's CSV.
+    """
     raw_path = Path(raw_path)
+    prices_csv = Path(prices_csv) if prices_csv is not None else PRICES_CSV
     month, prices = scrape_nss(raw_path.read_text(encoding="utf-8"))
-    df = pd.read_csv(PRICES_CSV, encoding="utf-8")
+    df = pd.read_csv(prices_csv, encoding="utf-8")
     if list(df.columns) != COLUMNS or df.empty:
-        raise ValueError(f"unexpected layout in {PRICES_CSV.name}")
+        raise ValueError(f"unexpected layout in {prices_csv.name}")
+    known = set(df["month"])
 
-    if month in set(df["month"]):
+    if month in known:
         # curation already covers this month — cross-check, don't duplicate
         curated = df[df["month"] == month].set_index("fuel_type")["price_baisa"]
         for fuel, price in prices.items():
@@ -169,6 +284,7 @@ def parse(raw_path: Path) -> tuple[pd.DataFrame, str]:
                     f"NSS {month} {fuel}={price} disagrees with curated "
                     f"{int(curated[fuel])} — fix prices.csv")
     else:
+        df = _auto_extend(df, month, prices)
         new = pd.DataFrame(
             [(month, fuel, price, NSS_SOURCE) for fuel, price in prices.items()],
             columns=COLUMNS)
@@ -180,4 +296,6 @@ def parse(raw_path: Path) -> tuple[pd.DataFrame, str]:
     if list(df.columns) != COLUMNS or df.empty:
         raise ValueError(f"unexpected layout in {raw_path.name}")
     _check_continuous(df)
+    if set(df["month"]) != known:
+        _persist(df, prices_csv)
     return df, df["month"].max()

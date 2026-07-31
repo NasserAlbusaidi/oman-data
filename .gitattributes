@@ -1,0 +1,15 @@
+# Line endings are part of this repo's contract, not a local preference.
+#
+# The fuel pipeline rewrites pipelines/fuel_prices/prices.csv byte for byte
+# every time it learns a month (parse.py::_persist), and a test pins that the
+# rewrite reproduces the committed file exactly. With the common Windows
+# core.autocrlf=true, a fresh clone would hand pandas a CRLF file, the test
+# would go red and the first CI refresh would land a 385-line diff instead of
+# three appended rows. Pin the working-tree ending instead of asking every
+# clone to configure itself.
+*.csv text eol=lf
+
+# Published data and the saved source snapshots are binary; keep git's
+# heuristics out of them entirely.
+*.parquet binary
+*.xlsx binary

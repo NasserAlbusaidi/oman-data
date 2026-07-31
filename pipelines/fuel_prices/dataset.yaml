@@ -87,13 +87,27 @@ notes: >
   that are really the same thing: the month currently on the page, and months
   that were on the page during an earlier run and have since been written into
   prices.csv. They have to be retained, because once a month rolls over NSS
-  drops it and it is not recoverable from any official source.
-  That is the maintenance obligation this dataset carries: prices.csv must be
-  extended as months settle, or the series develops a hole. The parser refuses
-  to publish a gapped monthly series and names the missing months instead, so
-  the failure is loud rather than silent — a run that finds the scraped month
-  two or more months past the end of prices.csv stops the pipeline and leaves
-  the last good data published. A second guard covers the opposite risk: if NSS
+  drops it and it is not recoverable from any official source — so the pipeline
+  writes each newly scraped month straight back into prices.csv, and the monthly
+  refresh commits that file alongside the published data.
+  That write-back is what keeps the series continuous while the refresh runs on
+  schedule. When it does not run, the month it missed exists in no source at all,
+  and the pipeline fills it from the price cap under a narrow, stated condition:
+  the cap must hold on both sides of the hole — the month before it in the CSV
+  and the month NSS is showing must both be exactly 229/239/258 — and at most
+  three consecutive months may be filled this way. Those rows are labelled
+  subsidy-cap-freeze, the same provenance as the hand-curated 2023-02 tail and
+  for the same reason: they were derived from the cap, not observed. Beyond three
+  months the pipeline stops and asks for the interval to be checked against
+  archived price boards, because the inference gets weaker the wider it spans.
+  If NSS shows anything other than the cap while months are missing, nothing is
+  filled and the run fails naming the cap: a lifted cap could have moved prices
+  anywhere inside the hole, and inventing a flat run through a price change would
+  bury the single most newsworthy event this dataset can record. A cap lift in a
+  month that needs no inference is simply recorded from NSS, and surfaces to a
+  human on the next test run instead, because the test that pins the tail flat at
+  the capped prices goes red as soon as an off-cap month lands in the CSV.
+  A second guard covers the opposite risk: if NSS
   ever states a different price for a month prices.csv already covers, the
   pipeline raises instead of silently preferring either number. The NSS page
   states the prices twice, in a structural price panel and in an advisory
