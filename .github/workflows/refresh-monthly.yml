@@ -1,0 +1,36 @@
+name: refresh-monthly
+on:
+  schedule:
+    - cron: "0 3 5 * *"   # 05th monthly, 03:00 UTC (07:00 Muscat)
+  workflow_dispatch:
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e .
+      - name: Refresh monthly datasets
+        id: refresh
+        run: python -m oman_data.run cpi
+      - name: Commit refreshed data
+        if: success()
+        run: |
+          git config user.name "oman-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add raw data api
+          git diff --cached --quiet || git commit -m "data: monthly refresh $(date -u +%Y-%m)"
+          git push
+      - name: File issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Monthly refresh failed $(date -u +%Y-%m-%d)" \
+            --body "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — last-good data remains published."
