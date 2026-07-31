@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T17:32:16.875907+00:00",
+  "generated_at": "2026-07-31T17:43:45.858863+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -66,6 +66,17 @@
       "fetched_at": "2026-07-31T16:59:15Z",
       "stale": false,
       "rows": 702
+    },
+    {
+      "id": "traffic_accidents",
+      "title_ar": "حوادث المرور — الحوادث والوفيات والإصابات سنويًا على مستوى السلطنة",
+      "title_en": "Traffic accidents — annual national accidents, deaths and injuries",
+      "source_name": "Royal Oman Police data via NCSI on data.gov.om (Security & Safety, dataset gehye)",
+      "cadence": "annual",
+      "as_of": "2025",
+      "fetched_at": "2026-07-31T17:43:45Z",
+      "stale": false,
+      "rows": 67
     }
   ]
 }

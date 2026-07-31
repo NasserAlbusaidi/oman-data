@@ -1,0 +1,9 @@
+{
+  "id": "traffic_accidents",
+  "as_of": "2025",
+  "fetched_at": "2026-07-31T17:43:45Z",
+  "source_name": "Royal Oman Police data via NCSI on data.gov.om (Security & Safety, dataset gehye)",
+  "source_url": "https://data.gov.om/gehye",
+  "license": "Open Government License - Sultanate of Oman",
+  "rows": 67
+}

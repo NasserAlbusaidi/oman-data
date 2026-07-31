@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "id": "traffic_accidents",
+    "as_of": "2025",
+    "fetched_at": "2026-07-31T17:43:45Z",
+    "source_name": "Royal Oman Police data via NCSI on data.gov.om (Security & Safety, dataset gehye)",
+    "source_url": "https://data.gov.om/gehye",
+    "license": "Open Government License - Sultanate of Oman",
+    "rows": 67,
+    "title_ar": "حوادث المرور — الحوادث والوفيات والإصابات سنويًا على مستوى السلطنة",
+    "title_en": "Traffic accidents — annual national accidents, deaths and injuries",
+    "cadence": "annual",
+    "stale": false
+  },
+  "data": [
+    {
+      "year": 2002,
+      "metric": "accidents",
+      "count": 9107
+    },
+    {
+      "year": 2002,
+      "metric": "deaths",
+      "count": 580
+    },
+    {
+      "year": 2002,
+      "metric": "injuries",
+      "count": 7907
+    },
+    {
+      "year": 2003,
+      "metric": "accidents",
+      "count": 10197
+    },
+    {
+      "year": 2003,
+      "metric": "deaths",
+      "count": 578
+    },
+    {
+      "year": 2003,
+      "metric": "injuries",
+      "count": 6735
+    },
+    {
+      "year": 2004,
+      "metric": "accidents",
+      "count": 9460
+    },
+    {
+      "year": 2004,
+      "metric": "deaths",
+      "count": 637
+    },
+    {
+      "year": 2004,
+      "metric": "injuries",
+      "count": 6636
+    },
+    {
+      "year": 2005,
+      "metric": "accidents",
+      "count": 9247
+    },
+    {
+      "year": 2005,
+      "metric": "deaths",
+      "count": 689
+    },
+    {
+      "year": 2005,
+      "metric": "injuries",
+      "count": 6658
+    },
+    {
+      "year": 2006,
+      "metric": "accidents",
+      "count": 9869
+    },
+    {
+      "year": 2006,
+      "metric": "deaths",
+      "count": 681
+    },
+    {
+      "year": 2006,
+      "metric": "injuries",
+      "count": 7548
+    },
+    {
+      "year": 2007,
+      "metric": "accidents",
+      "count": 8816
+    },
+    {
+      "year": 2007,
+      "metric": "deaths",
+      "count": 798
+    },
+    {
+      "year": 2007,
+      "metric": "injuries",
+      "count": 8531
+    },
+    {
+      "year": 2008,
+      "metric": "accidents",
+      "count": 7982
+    },
+    {
+      "year": 2008,
+      "metric": "deaths",
+      "count": 951
+    },
+    {
+      "year": 2008,
+      "metric": "injuries",
+      "count": 10558
+    },
+    {
+      "year": 2009,
+      "metric": "accidents",
+      "count": 7253
+    },
+    {
+      "year": 2009,
+      "metric": "deaths",
+      "count": 953
+    },
+    {
+      "year": 2009,
+      "metric": "injuries",
+      "count": 9783
+    },
+    {
+      "year": 2010,
+      "metric": "accidents",
+      "count": 7571
+    },
+    {
+      "year": 2010,
+      "metric": "deaths",
+      "count": 820
+    },
+    {
+      "year": 2010,
+      "metric": "injuries",
+      "count": 10066
+    },
+    {
+      "year": 2011,
+      "metric": "accidents",
+      "count": 7719
+    },
+    {
+      "year": 2011,
+      "metric": "deaths",
+      "count": 1056
+    },
+    {
+      "year": 2011,
+      "metric": "injuries",
+      "count": 11437
+    },
+    {
+      "year": 2012,
+      "metric": "accidents",
+      "count": 8209
+    },
+    {
+      "year": 2012,
+      "metric": "deaths",
+      "count": 1139
+    },
+    {
+      "year": 2012,
+      "metric": "injuries",
+      "count": 11618
+    },
+    {
+      "year": 2013,
+      "metric": "accidents",
+      "count": 7829
+    },
+    {
+      "year": 2013,
+      "metric": "deaths",
+      "count": 913
+    },
+    {
+      "year": 2013,
+      "metric": "injuries",
+      "count": 10802
+    },
+    {
+      "year": 2014,
+      "metric": "accidents",
+      "count": 6717
+    },
+    {
+      "year": 2014,
+      "metric": "deaths",
+      "count": 816
+    },
+    {
+      "year": 2014,
+      "metric": "injuries",
+      "count": 3835
+    },
+    {
+      "year": 2015,
+      "metric": "accidents",
+      "count": 6279
+    },
+    {
+      "year": 2015,
+      "metric": "deaths",
+      "count": 675
+    },
+    {
+      "year": 2015,
+      "metric": "injuries",
+      "count": 3624
+    },
+    {
+      "year": 2016,
+      "metric": "accidents",
+      "count": 4721
+    },
+    {
+      "year": 2016,
+      "metric": "deaths",
+      "count": 692
+    },
+    {
+      "year": 2016,
+      "metric": "injuries",
+      "count": 3261
+    },
+    {
+      "year": 2017,
+      "metric": "accidents",
+      "count": 3845
+    },
+    {
+      "year": 2017,
+      "metric": "deaths",
+      "count": 640
+    },
+    {
+      "year": 2017,
+      "metric": "injuries",
+      "count": 3134
+    },
+    {
+      "year": 2018,
+      "metric": "accidents",
+      "count": 2802
+    },
+    {
+      "year": 2018,
+      "metric": "deaths",
+      "count": 637
+    },
+    {
+      "year": 2018,
+      "metric": "injuries",
+      "count": 2815
+    },
+    {
+      "year": 2019,
+      "metric": "accidents",
+      "count": 2120
+    },
+    {
+      "year": 2019,
+      "metric": "deaths",
+      "count": 511
+    },
+    {
+      "year": 2019,
+      "metric": "injuries",
+      "count": 2442
+    },
+    {
+      "year": 2020,
+      "metric": "accidents",
+      "count": 1341
+    },
+    {
+      "year": 2020,
+      "metric": "deaths",
+      "count": 371
+    },
+    {
+      "year": 2020,
+      "metric": "injuries",
+      "count": 1365
+    },
+    {
+      "year": 2021,
+      "metric": "accidents",
+      "count": 1539
+    },
+    {
+      "year": 2021,
+      "metric": "deaths",
+      "count": 434
+    },
+    {
+      "year": 2021,
+      "metric": "injuries",
+      "count": 1621
+    },
+    {
+      "year": 2022,
+      "metric": "accidents",
+      "count": 1877
+    },
+    {
+      "year": 2022,
+      "metric": "deaths",
+      "count": 532
+    },
+    {
+      "year": 2023,
+      "metric": "accidents",
+      "count": 2040
+    },
+    {
+      "year": 2023,
+      "metric": "deaths",
+      "count": 595
+    },
+    {
+      "year": 2024,
+      "metric": "accidents",
+      "count": 1854
+    },
+    {
+      "year": 2024,
+      "metric": "deaths",
+      "count": 586
+    },
+    {
+      "year": 2025,
+      "metric": "deaths",
+      "count": 595
+    }
+  ]
+}
