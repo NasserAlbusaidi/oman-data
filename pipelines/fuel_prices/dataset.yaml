@@ -1,0 +1,90 @@
+id: fuel_prices
+title_ar: "أسعار الوقود الشهرية — بنزين ٩١ و٩٥ والديزل"
+title_en: "Monthly fuel prices — M91, M95 petrol and diesel"
+source_name: "National Subsidy System (nss.gov.om) + reconciled archive of Ministry of Energy and Minerals monthly announcements"
+source_url: "https://nss.gov.om/site/home?ln=en"
+license: "Mixed — see notes"
+cadence: monthly
+columns:
+  - {name: month, dtype: str}
+  - {name: fuel_type, dtype: str}
+  - {name: price_baisa, dtype: int, min: 100, max: 1000}
+  - {name: source, dtype: str}
+notes: >
+  Monthly retail fuel prices for the Sultanate of Oman in baisa per litre
+  (1000 baisa = 1 OMR), inclusive of VAT per the National Subsidy System's own
+  footnote. These are pump prices, not the subsidised rate: the NSS scheme pays
+  part of the bill for registered low-income Omani nationals, whose M91 rate is
+  180 baisa/litre for up to 400 litres a month, and quoting that 180 as "the
+  price of petrol in Oman" understates the pump price by a fifth.
+  fuel_type is one of m91, m95, diesel. Mogas 98 (Ultimax) is deliberately out
+  of scope: only the three subsidised grades are announced as national prices.
+  No official machine-readable archive of these announcements exists, so the
+  history is curated in prices.csv and every row declares its own provenance in
+  the source column. Dec 2015 - Jan 2023 is reconciled from two independent
+  compilations of the ministry's monthly announcements — the opendata.om
+  community compilation (which credits Omani outlets Atheer and Al-Roya and the
+  fuel marketers) and thefuelprice.com's Oman archive.
+  A source of archive-corroborated means at least two independent records agree — both
+  compilations, or one compilation and a dated press report — and covers 76 of
+  the 86 archive months; archive-single-source means only one record was found,
+  which is Feb-Jun 2016 (before thefuelprice.com's Oman series starts) and Dec
+  2022 (after it stops); archive-news-resolved means the compilations disagreed
+  and a dated primary record settled it. Eleven months spread across the span
+  were additionally checked against the original press announcements and all
+  eleven matched the reconciliation exactly, which is the basis for trusting
+  the corroborated rows in between. Do not treat the compilations as
+  interchangeable: reconciling
+  them found four wrong months, and neither source was reliably the wrong one.
+  opendata.om carries January 2019's prices under December 2018 and repeats
+  autumn-2020 prices under October and November 2019; thefuelprice.com is wrong
+  for November 2018. The adjudicated values are M91/M95/diesel 222/233/261 for
+  2018-11 and 211/223/251 for 2018-12, both stated in the Times of Oman
+  announcement of 1 December 2018 (archived at
+  https://web.archive.org/web/20181203182757/https://timesofoman.com/article/521272/Oman/Fuel-prices-for-December-2018-announced-in-Oman
+  which gives December's prices and November's in the same sentences); and
+  207/217/245 for 2019-10 and 203/216/240 for 2019-11, read off Oman Oil
+  Marketing's own retail board archived at
+  https://web.archive.org/web/20191020004201/https://www.oomco.com/ and
+  https://web.archive.org/web/20191112230923/https://www.oomco.com/ .
+  Two caveats about the opening of the series, both from the same press record.
+  Oman only deregulated fuel prices in January 2016, so the Dec 2015 row
+  (114/120/146) is the long-standing administered price rather than a monthly
+  announcement — the regular grade had reportedly not moved since at least
+  1998. And the Jan 2016 row (140/160/160) is the first deregulated price,
+  which took effect on 15 January 2016 and ran to the end of the month; the
+  first fortnight of January was still at the December level. A month-keyed
+  table cannot express that, so Jan 2016 carries the announced new price and
+  this note carries the qualification.
+  Feb 2023 onward (source=subsidy-cap-freeze) is generated from the price cap
+  rather than observed month by month. Sultan Haitham bin Tariq announced the
+  cap on 9 November 2021; it took effect on 1 December 2021, pegs the three
+  grades to their October 2021 average — M91 229, M95 239, diesel 258 baisa —
+  and was originally to run to the end of 2022 but has been maintained since,
+  with the government absorbing the difference. That is why the series goes
+  flat from 2021-12 and why November 2021 (233/242/275) is the last month above
+  the cap. The generated span was spot-verified against Oman Oil Marketing's
+  archived monthly boards for 2023-06, 2024-11, 2025-08 and 2026-01, all
+  229/239/258, and no announcement of a change was found anywhere between them.
+  A useful integrity check on those boards: Mogas 98, which is not capped, moves
+  from month to month on the same board (335 in Jun 2023, 329 in Nov 2024, 327
+  in Aug 2025, 399 in 2026), so the flat 229/239/258 is a real standing price
+  and not a stale page.
+  The m91 series splices a grade change. Oman withdrew Mogas 90 and replaced it
+  with Mogas 91 in Nov 2016, and the compilations carry the two as strictly
+  complementary columns that are never both populated. This dataset publishes
+  their union as one continuous regular-grade series named m91, because that is
+  the series consumers want and the level is continuous across the switch (169
+  baisa in Oct 2016, 173 in Nov 2016). Rows before 2016-11 are therefore M-90
+  prices; read the series as "the regular grade of the day".
+  The current month is scraped from the official NSS homepage
+  (source=nss.gov.om), which publishes that month only and no history. Two
+  guards matter for maintenance. If NSS ever states a different price for a
+  month prices.csv already covers, the pipeline raises instead of silently
+  preferring either number. And because NSS only ever shows the current month,
+  prices.csv must be extended as months settle — the parser refuses to publish
+  a gapped monthly series and names the missing months instead. The NSS page
+  states the prices twice, in a structural price panel and in an advisory
+  ticker, and the two are cross-checked on every run; the ticker sometimes
+  carries maintenance notices instead of prices, so it is optional, but when
+  present it must agree.

@@ -1,0 +1,2321 @@
+{
+  "meta": {
+    "id": "fuel_prices",
+    "as_of": "2026-07",
+    "fetched_at": "2026-07-31T18:32:43Z",
+    "source_name": "National Subsidy System (nss.gov.om) + reconciled archive of Ministry of Energy and Minerals monthly announcements",
+    "source_url": "https://nss.gov.om/site/home?ln=en",
+    "license": "Mixed — see notes",
+    "rows": 384,
+    "title_ar": "أسعار الوقود الشهرية — بنزين ٩١ و٩٥ والديزل",
+    "title_en": "Monthly fuel prices — M91, M95 petrol and diesel",
+    "cadence": "monthly",
+    "stale": false
+  },
+  "data": [
+    {
+      "month": "2015-12",
+      "fuel_type": "diesel",
+      "price_baisa": 146,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2015-12",
+      "fuel_type": "m91",
+      "price_baisa": 114,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2015-12",
+      "fuel_type": "m95",
+      "price_baisa": 120,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-01",
+      "fuel_type": "diesel",
+      "price_baisa": 160,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-01",
+      "fuel_type": "m91",
+      "price_baisa": 140,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-01",
+      "fuel_type": "m95",
+      "price_baisa": 160,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-02",
+      "fuel_type": "diesel",
+      "price_baisa": 146,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-02",
+      "fuel_type": "m91",
+      "price_baisa": 137,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-02",
+      "fuel_type": "m95",
+      "price_baisa": 153,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-03",
+      "fuel_type": "diesel",
+      "price_baisa": 146,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-03",
+      "fuel_type": "m91",
+      "price_baisa": 130,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-03",
+      "fuel_type": "m95",
+      "price_baisa": 145,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-04",
+      "fuel_type": "diesel",
+      "price_baisa": 163,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-04",
+      "fuel_type": "m91",
+      "price_baisa": 145,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-04",
+      "fuel_type": "m95",
+      "price_baisa": 158,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-05",
+      "fuel_type": "diesel",
+      "price_baisa": 166,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-05",
+      "fuel_type": "m91",
+      "price_baisa": 149,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-05",
+      "fuel_type": "m95",
+      "price_baisa": 161,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-06",
+      "fuel_type": "diesel",
+      "price_baisa": 185,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-06",
+      "fuel_type": "m91",
+      "price_baisa": 170,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-06",
+      "fuel_type": "m95",
+      "price_baisa": 180,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2016-07",
+      "fuel_type": "diesel",
+      "price_baisa": 188,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-07",
+      "fuel_type": "m91",
+      "price_baisa": 170,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-07",
+      "fuel_type": "m95",
+      "price_baisa": 180,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-08",
+      "fuel_type": "diesel",
+      "price_baisa": 178,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-08",
+      "fuel_type": "m91",
+      "price_baisa": 156,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-08",
+      "fuel_type": "m95",
+      "price_baisa": 166,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-09",
+      "fuel_type": "diesel",
+      "price_baisa": 176,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-09",
+      "fuel_type": "m91",
+      "price_baisa": 161,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-09",
+      "fuel_type": "m95",
+      "price_baisa": 170,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-10",
+      "fuel_type": "diesel",
+      "price_baisa": 185,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-10",
+      "fuel_type": "m91",
+      "price_baisa": 169,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-10",
+      "fuel_type": "m95",
+      "price_baisa": 179,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-11",
+      "fuel_type": "diesel",
+      "price_baisa": 187,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-11",
+      "fuel_type": "m91",
+      "price_baisa": 173,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-11",
+      "fuel_type": "m95",
+      "price_baisa": 183,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-12",
+      "fuel_type": "diesel",
+      "price_baisa": 177,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-12",
+      "fuel_type": "m91",
+      "price_baisa": 165,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2016-12",
+      "fuel_type": "m95",
+      "price_baisa": 176,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-01",
+      "fuel_type": "diesel",
+      "price_baisa": 195,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-01",
+      "fuel_type": "m91",
+      "price_baisa": 176,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-01",
+      "fuel_type": "m95",
+      "price_baisa": 186,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-02",
+      "fuel_type": "diesel",
+      "price_baisa": 205,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-02",
+      "fuel_type": "m91",
+      "price_baisa": 186,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-02",
+      "fuel_type": "m95",
+      "price_baisa": 196,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-03",
+      "fuel_type": "diesel",
+      "price_baisa": 208,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-03",
+      "fuel_type": "m91",
+      "price_baisa": 186,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-03",
+      "fuel_type": "m95",
+      "price_baisa": 198,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-04",
+      "fuel_type": "diesel",
+      "price_baisa": 200,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-04",
+      "fuel_type": "m91",
+      "price_baisa": 180,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-04",
+      "fuel_type": "m95",
+      "price_baisa": 192,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-05",
+      "fuel_type": "diesel",
+      "price_baisa": 204,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-05",
+      "fuel_type": "m91",
+      "price_baisa": 186,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-05",
+      "fuel_type": "m95",
+      "price_baisa": 199,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-06",
+      "fuel_type": "diesel",
+      "price_baisa": 197,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-06",
+      "fuel_type": "m91",
+      "price_baisa": 180,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-06",
+      "fuel_type": "m95",
+      "price_baisa": 191,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-07",
+      "fuel_type": "diesel",
+      "price_baisa": 192,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-07",
+      "fuel_type": "m91",
+      "price_baisa": 175,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-07",
+      "fuel_type": "m95",
+      "price_baisa": 183,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-08",
+      "fuel_type": "diesel",
+      "price_baisa": 196,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-08",
+      "fuel_type": "m91",
+      "price_baisa": 178,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-08",
+      "fuel_type": "m95",
+      "price_baisa": 186,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-09",
+      "fuel_type": "diesel",
+      "price_baisa": 201,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-09",
+      "fuel_type": "m91",
+      "price_baisa": 186,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-09",
+      "fuel_type": "m95",
+      "price_baisa": 196,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-10",
+      "fuel_type": "diesel",
+      "price_baisa": 211,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-10",
+      "fuel_type": "m91",
+      "price_baisa": 186,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-10",
+      "fuel_type": "m95",
+      "price_baisa": 205,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-11",
+      "fuel_type": "diesel",
+      "price_baisa": 213,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-11",
+      "fuel_type": "m91",
+      "price_baisa": 186,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-11",
+      "fuel_type": "m95",
+      "price_baisa": 201,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-12",
+      "fuel_type": "diesel",
+      "price_baisa": 219,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-12",
+      "fuel_type": "m91",
+      "price_baisa": 186,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2017-12",
+      "fuel_type": "m95",
+      "price_baisa": 209,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-01",
+      "fuel_type": "diesel",
+      "price_baisa": 230,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-01",
+      "fuel_type": "m91",
+      "price_baisa": 199,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-01",
+      "fuel_type": "m95",
+      "price_baisa": 213,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-02",
+      "fuel_type": "diesel",
+      "price_baisa": 244,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-02",
+      "fuel_type": "m91",
+      "price_baisa": 207,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-02",
+      "fuel_type": "m95",
+      "price_baisa": 218,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-03",
+      "fuel_type": "diesel",
+      "price_baisa": 238,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-03",
+      "fuel_type": "m91",
+      "price_baisa": 205,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-03",
+      "fuel_type": "m95",
+      "price_baisa": 216,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-04",
+      "fuel_type": "diesel",
+      "price_baisa": 238,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-04",
+      "fuel_type": "m91",
+      "price_baisa": 205,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-04",
+      "fuel_type": "m95",
+      "price_baisa": 216,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-05",
+      "fuel_type": "diesel",
+      "price_baisa": 245,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-05",
+      "fuel_type": "m91",
+      "price_baisa": 212,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-05",
+      "fuel_type": "m95",
+      "price_baisa": 222,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-06",
+      "fuel_type": "diesel",
+      "price_baisa": 249,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-06",
+      "fuel_type": "m91",
+      "price_baisa": 215,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-06",
+      "fuel_type": "m95",
+      "price_baisa": 226,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-07",
+      "fuel_type": "diesel",
+      "price_baisa": 245,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-07",
+      "fuel_type": "m91",
+      "price_baisa": 214,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-07",
+      "fuel_type": "m95",
+      "price_baisa": 225,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-08",
+      "fuel_type": "diesel",
+      "price_baisa": 245,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-08",
+      "fuel_type": "m91",
+      "price_baisa": 214,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-08",
+      "fuel_type": "m95",
+      "price_baisa": 225,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-09",
+      "fuel_type": "diesel",
+      "price_baisa": 252,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-09",
+      "fuel_type": "m91",
+      "price_baisa": 218,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-09",
+      "fuel_type": "m95",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-10",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-10",
+      "fuel_type": "m91",
+      "price_baisa": 222,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-10",
+      "fuel_type": "m95",
+      "price_baisa": 233,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2018-11",
+      "fuel_type": "diesel",
+      "price_baisa": 261,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2018-11",
+      "fuel_type": "m91",
+      "price_baisa": 222,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2018-11",
+      "fuel_type": "m95",
+      "price_baisa": 233,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2018-12",
+      "fuel_type": "diesel",
+      "price_baisa": 251,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2018-12",
+      "fuel_type": "m91",
+      "price_baisa": 211,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2018-12",
+      "fuel_type": "m95",
+      "price_baisa": 223,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2019-01",
+      "fuel_type": "diesel",
+      "price_baisa": 238,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-01",
+      "fuel_type": "m91",
+      "price_baisa": 198,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-01",
+      "fuel_type": "m95",
+      "price_baisa": 209,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-02",
+      "fuel_type": "diesel",
+      "price_baisa": 238,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-02",
+      "fuel_type": "m91",
+      "price_baisa": 198,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-02",
+      "fuel_type": "m95",
+      "price_baisa": 209,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-03",
+      "fuel_type": "diesel",
+      "price_baisa": 238,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-03",
+      "fuel_type": "m91",
+      "price_baisa": 198,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-03",
+      "fuel_type": "m95",
+      "price_baisa": 209,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-04",
+      "fuel_type": "diesel",
+      "price_baisa": 245,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-04",
+      "fuel_type": "m91",
+      "price_baisa": 203,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-04",
+      "fuel_type": "m95",
+      "price_baisa": 214,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-05",
+      "fuel_type": "diesel",
+      "price_baisa": 251,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-05",
+      "fuel_type": "m91",
+      "price_baisa": 210,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-05",
+      "fuel_type": "m95",
+      "price_baisa": 221,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-06",
+      "fuel_type": "diesel",
+      "price_baisa": 251,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-06",
+      "fuel_type": "m91",
+      "price_baisa": 210,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-06",
+      "fuel_type": "m95",
+      "price_baisa": 221,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-07",
+      "fuel_type": "diesel",
+      "price_baisa": 245,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-07",
+      "fuel_type": "m91",
+      "price_baisa": 205,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-07",
+      "fuel_type": "m95",
+      "price_baisa": 215,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-08",
+      "fuel_type": "diesel",
+      "price_baisa": 250,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-08",
+      "fuel_type": "m91",
+      "price_baisa": 210,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-08",
+      "fuel_type": "m95",
+      "price_baisa": 220,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-09",
+      "fuel_type": "diesel",
+      "price_baisa": 241,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-09",
+      "fuel_type": "m91",
+      "price_baisa": 201,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-09",
+      "fuel_type": "m95",
+      "price_baisa": 211,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-10",
+      "fuel_type": "diesel",
+      "price_baisa": 245,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2019-10",
+      "fuel_type": "m91",
+      "price_baisa": 207,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2019-10",
+      "fuel_type": "m95",
+      "price_baisa": 217,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2019-11",
+      "fuel_type": "diesel",
+      "price_baisa": 240,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2019-11",
+      "fuel_type": "m91",
+      "price_baisa": 203,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2019-11",
+      "fuel_type": "m95",
+      "price_baisa": 216,
+      "source": "archive-news-resolved"
+    },
+    {
+      "month": "2019-12",
+      "fuel_type": "diesel",
+      "price_baisa": 240,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-12",
+      "fuel_type": "m91",
+      "price_baisa": 211,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2019-12",
+      "fuel_type": "m95",
+      "price_baisa": 222,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-01",
+      "fuel_type": "diesel",
+      "price_baisa": 240,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-01",
+      "fuel_type": "m91",
+      "price_baisa": 211,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-01",
+      "fuel_type": "m95",
+      "price_baisa": 222,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-02",
+      "fuel_type": "diesel",
+      "price_baisa": 235,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-02",
+      "fuel_type": "m91",
+      "price_baisa": 205,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-02",
+      "fuel_type": "m95",
+      "price_baisa": 215,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-03",
+      "fuel_type": "diesel",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-03",
+      "fuel_type": "m91",
+      "price_baisa": 200,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-03",
+      "fuel_type": "m95",
+      "price_baisa": 210,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-04",
+      "fuel_type": "diesel",
+      "price_baisa": 217,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-04",
+      "fuel_type": "m91",
+      "price_baisa": 180,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-04",
+      "fuel_type": "m95",
+      "price_baisa": 192,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-05",
+      "fuel_type": "diesel",
+      "price_baisa": 217,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-05",
+      "fuel_type": "m91",
+      "price_baisa": 180,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-05",
+      "fuel_type": "m95",
+      "price_baisa": 192,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-06",
+      "fuel_type": "diesel",
+      "price_baisa": 217,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-06",
+      "fuel_type": "m91",
+      "price_baisa": 180,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-06",
+      "fuel_type": "m95",
+      "price_baisa": 192,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-07",
+      "fuel_type": "diesel",
+      "price_baisa": 225,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-07",
+      "fuel_type": "m91",
+      "price_baisa": 189,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-07",
+      "fuel_type": "m95",
+      "price_baisa": 200,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-08",
+      "fuel_type": "diesel",
+      "price_baisa": 225,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-08",
+      "fuel_type": "m91",
+      "price_baisa": 189,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-08",
+      "fuel_type": "m95",
+      "price_baisa": 200,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-09",
+      "fuel_type": "diesel",
+      "price_baisa": 214,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-09",
+      "fuel_type": "m91",
+      "price_baisa": 183,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-09",
+      "fuel_type": "m95",
+      "price_baisa": 194,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-10",
+      "fuel_type": "diesel",
+      "price_baisa": 209,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-10",
+      "fuel_type": "m91",
+      "price_baisa": 183,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-10",
+      "fuel_type": "m95",
+      "price_baisa": 194,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-11",
+      "fuel_type": "diesel",
+      "price_baisa": 209,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-11",
+      "fuel_type": "m91",
+      "price_baisa": 183,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-11",
+      "fuel_type": "m95",
+      "price_baisa": 194,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-12",
+      "fuel_type": "diesel",
+      "price_baisa": 209,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-12",
+      "fuel_type": "m91",
+      "price_baisa": 180,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2020-12",
+      "fuel_type": "m95",
+      "price_baisa": 194,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-01",
+      "fuel_type": "diesel",
+      "price_baisa": 209,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-01",
+      "fuel_type": "m91",
+      "price_baisa": 180,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-01",
+      "fuel_type": "m95",
+      "price_baisa": 194,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-02",
+      "fuel_type": "diesel",
+      "price_baisa": 209,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-02",
+      "fuel_type": "m91",
+      "price_baisa": 188,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-02",
+      "fuel_type": "m95",
+      "price_baisa": 202,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-03",
+      "fuel_type": "diesel",
+      "price_baisa": 222,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-03",
+      "fuel_type": "m91",
+      "price_baisa": 200,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-03",
+      "fuel_type": "m95",
+      "price_baisa": 214,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-04",
+      "fuel_type": "diesel",
+      "price_baisa": 222,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-04",
+      "fuel_type": "m91",
+      "price_baisa": 205,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-04",
+      "fuel_type": "m95",
+      "price_baisa": 216,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-05",
+      "fuel_type": "diesel",
+      "price_baisa": 228,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-05",
+      "fuel_type": "m91",
+      "price_baisa": 215,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-05",
+      "fuel_type": "m95",
+      "price_baisa": 227,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-06",
+      "fuel_type": "diesel",
+      "price_baisa": 234,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-06",
+      "fuel_type": "m91",
+      "price_baisa": 215,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-06",
+      "fuel_type": "m95",
+      "price_baisa": 227,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-07",
+      "fuel_type": "diesel",
+      "price_baisa": 247,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-07",
+      "fuel_type": "m91",
+      "price_baisa": 227,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-07",
+      "fuel_type": "m95",
+      "price_baisa": 237,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-08",
+      "fuel_type": "diesel",
+      "price_baisa": 247,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-08",
+      "fuel_type": "m91",
+      "price_baisa": 227,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-08",
+      "fuel_type": "m95",
+      "price_baisa": 237,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-09",
+      "fuel_type": "diesel",
+      "price_baisa": 247,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-09",
+      "fuel_type": "m91",
+      "price_baisa": 226,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-09",
+      "fuel_type": "m95",
+      "price_baisa": 237,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-10",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-10",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-10",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-11",
+      "fuel_type": "diesel",
+      "price_baisa": 275,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-11",
+      "fuel_type": "m91",
+      "price_baisa": 233,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-11",
+      "fuel_type": "m95",
+      "price_baisa": 242,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-12",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-12",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2021-12",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-01",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-01",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-01",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-02",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-02",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-02",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-03",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-03",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-03",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-04",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-04",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-04",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-05",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-05",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-05",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-06",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-06",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-06",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-07",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-07",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-07",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-08",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-08",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-08",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-09",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-09",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-09",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-10",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-10",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-10",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-11",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-11",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-11",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2022-12",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2022-12",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2022-12",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-single-source"
+    },
+    {
+      "month": "2023-01",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2023-01",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2023-01",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "archive-corroborated"
+    },
+    {
+      "month": "2023-02",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-02",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-02",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-03",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-03",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-03",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-04",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-04",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-04",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-05",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-05",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-05",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-06",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-06",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-06",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-07",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-07",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-07",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-08",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-08",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-08",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-09",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-09",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-09",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-10",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-10",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-10",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-11",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-11",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-11",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-12",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-12",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2023-12",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-01",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-01",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-01",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-02",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-02",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-02",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-03",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-03",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-03",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-04",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-04",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-04",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-05",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-05",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-05",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-06",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-06",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-06",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-07",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-07",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-07",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-08",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-08",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-08",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-09",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-09",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-09",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-10",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-10",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-10",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-11",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-11",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-11",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-12",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-12",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2024-12",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-01",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-01",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-01",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-02",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-02",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-02",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-03",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-03",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-03",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-04",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-04",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-04",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-05",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-05",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-05",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-06",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-06",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-06",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-07",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-07",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-07",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-08",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-08",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-08",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-09",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-09",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-09",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-10",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-10",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-10",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-11",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-11",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-11",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-12",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-12",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2025-12",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-01",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-01",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-01",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-02",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-02",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-02",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-03",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-03",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-03",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-04",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-04",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-04",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-05",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-05",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-05",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-06",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-06",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-06",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "subsidy-cap-freeze"
+    },
+    {
+      "month": "2026-07",
+      "fuel_type": "diesel",
+      "price_baisa": 258,
+      "source": "nss.gov.om"
+    },
+    {
+      "month": "2026-07",
+      "fuel_type": "m91",
+      "price_baisa": 229,
+      "source": "nss.gov.om"
+    },
+    {
+      "month": "2026-07",
+      "fuel_type": "m95",
+      "price_baisa": 239,
+      "source": "nss.gov.om"
+    }
+  ]
+}

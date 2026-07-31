@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T17:43:45.858863+00:00",
+  "generated_at": "2026-07-31T18:32:43.810117+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -33,6 +33,17 @@
       "fetched_at": "2026-07-31T17:32:16Z",
       "stale": false,
       "rows": 22
+    },
+    {
+      "id": "fuel_prices",
+      "title_ar": "أسعار الوقود الشهرية — بنزين ٩١ و٩٥ والديزل",
+      "title_en": "Monthly fuel prices — M91, M95 petrol and diesel",
+      "source_name": "National Subsidy System (nss.gov.om) + reconciled archive of Ministry of Energy and Minerals monthly announcements",
+      "cadence": "monthly",
+      "as_of": "2026-07",
+      "fetched_at": "2026-07-31T18:32:43Z",
+      "stale": false,
+      "rows": 384
     },
     {
       "id": "population",
