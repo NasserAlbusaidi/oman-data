@@ -23,10 +23,10 @@ Source quirks pinned at discovery (2026-07-31, dataset gehye):
   ``deceased-and-injuries`` to their totals, which brings it back to exactly
   three. One series row per metric is therefore expected here, and a second
   row for the same metric raises instead of silently blending two breakdowns.
-  Every non-indicator dimension on the row is checked for a total-shaped
-  member anyway, so a drift on a dimension nobody pinned (the fire and
-  ambulance dimensions, or one added upstream later) fails loudly rather
-  than publishing a slice as the national total.
+  ``knoema.check_totals`` then requires every dimension the payload declares
+  to be present *and* on its total member, so a drift on a dimension nobody
+  pinned (the fire and ambulance dimensions, or one added upstream later)
+  fails loudly rather than publishing a slice as the national total.
 * The national member of ``regions`` is named ``Oman``; the dimension's
   separate ``Total`` member carries no data for these indicators. Same
   quirk as the Electricity dataset.
@@ -35,9 +35,14 @@ Source quirks pinned at discovery (2026-07-31, dataset gehye):
   ``count`` column would then be a different quantity entirely.
 * Observations are a bare array with no per-point dates, so the year labels
   are walked forward from ``startDate``. Both of the row's own declarations —
-  ``frequency`` and ``endDate`` — are checked against that walk, so a series
-  that changes frequency or loses leading points fails loudly instead of
-  publishing every value under a shifted year.
+  ``frequency`` and ``endDate`` — are checked against that walk by
+  ``knoema.periods_for``, so a series that changes frequency or loses leading
+  points fails loudly instead of publishing every value under a shifted year.
+
+The guards themselves live in ``oman_data.knoema`` and are shared with the
+Tourism and Electricity pipelines; see ``check_totals`` for the two holes the
+private copies used to share (string members skipping the check, and a
+dimension going missing unnoticed).
 """
 from __future__ import annotations
 
@@ -61,68 +66,19 @@ _METRICS = {
 
 # "oman" is this dataset's national member; "total" is how every other
 # dimension names its own aggregate
-_TOTAL_OK = {"total", "oman", "sultanate of oman"}
+_TOTAL_OK = frozenset({"total", "oman", "sultanate of oman"})
 
 _INDICATOR_DIM = "indicators"
-
-
-def _norm(name: str) -> str:
-    return " ".join(name.lower().split())
-
-
-def _check_totals(row: dict) -> None:
-    """Every dimension other than the indicator must sit on its total member.
-
-    ``fetch.py`` pins the five dimensions that actually fan out; this catches
-    the rest — including a dimension added upstream after this was written —
-    so a governorate, an accident cause or a gender slice can never be
-    published as the national total.
-    """
-    for dim, member in row.items():
-        if dim == _INDICATOR_DIM or not isinstance(member, dict):
-            continue
-        name = _norm(knoema.dim_name(row, dim))
-        if name not in _TOTAL_OK:
-            raise ValueError(
-                f"dimension {dim!r} is on member {name!r}, not a total — "
-                f"the fetch filter drifted and this is a breakdown, not Oman"
-            )
-
-
-def _years_for(name: str, row: dict) -> list[int]:
-    """Label a series' observations, checked against the row's own declarations.
-
-    ``annual_periods`` just walks forward from ``startDate``, so a series that
-    switched frequency or lost leading observations would be relabelled
-    silently and published under confidently wrong years. The payload states
-    both ``frequency`` and ``endDate``; both must agree with the walk.
-    """
-    if row.get("frequency") != FREQUENCY_ANNUAL:
-        raise ValueError(
-            f"metric {name!r} declares frequency {row.get('frequency')!r}, "
-            f"expected {FREQUENCY_ANNUAL!r} — year labels would be wrong"
-        )
-    values = row["values"]
-    if not values:
-        raise ValueError(f"metric {name!r} carries no observations")
-    years = knoema.annual_periods(row["startDate"], len(values))
-    declared_end = int(str(row["endDate"])[:4])
-    if years[-1] != declared_end:
-        raise ValueError(
-            f"metric {name!r} spans {years[0]}..{years[-1]} from "
-            f"{len(values)} values but declares endDate {declared_end} — "
-            f"the series is truncated or misaligned"
-        )
-    return years
 
 
 def parse(raw_path: Path) -> tuple[pd.DataFrame, str]:
     raw_path = Path(raw_path)
     payload = json.loads(raw_path.read_text(encoding="utf-8"))
+    expected_dims = knoema.dimension_ids(payload)
     records: list[tuple[int, str, int]] = []
     seen: set[str] = set()
     for row in knoema.iter_series(payload):
-        name = _norm(knoema.dim_name(row, _INDICATOR_DIM))
+        name = knoema.norm_name(knoema.dim_name(row, _INDICATOR_DIM))
         if name not in _METRICS:
             raise ValueError(f"unexpected indicator {name!r} in accidents payload")
         metric = _METRICS[name]
@@ -132,14 +88,16 @@ def parse(raw_path: Path) -> tuple[pd.DataFrame, str]:
                 f"breakdowns, not totals; fix the filter in fetch.py"
             )
         seen.add(metric)
-        _check_totals(row)
-        if _norm(str(row.get("unit"))) != EXPECTED_UNIT or row.get("scale") != EXPECTED_SCALE:
+        knoema.check_totals(row, _INDICATOR_DIM, expected_dims, _TOTAL_OK)
+        if (knoema.norm_name(row.get("unit")) != EXPECTED_UNIT
+                or row.get("scale") != EXPECTED_SCALE):
             raise ValueError(
                 f"metric {name!r} publishes unit {row.get('unit')!r} at scale "
                 f"{row.get('scale')!r}, expected plain counts at scale "
                 f"{EXPECTED_SCALE} — the 'count' column would be wrong"
             )
-        for year, value in zip(_years_for(name, row), row["values"]):
+        years = knoema.periods_for(row, FREQUENCY_ANNUAL, label=name)
+        for year, value in zip(years, row["values"]):
             if value is not None:
                 records.append((year, metric, int(round(float(value)))))
     if seen != set(_METRICS.values()):

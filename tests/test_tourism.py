@@ -68,6 +68,24 @@ def test_truncated_series_fails_loudly(tmp_path):
         parse(doctored(tmp_path, drop_leading))
 
 
+def test_non_total_breakdown_fails_loudly(tmp_path):
+    """``dedblxg`` fans out twelve ways; only the all-totals slice is national.
+
+    ``fetch.py`` pins three of the twelve dimensions, so drift on any of the
+    other nine — or on one added upstream later — would publish a governorate,
+    nationality or hotel-class slice as the national hotel figures.
+    """
+    parse = _load_callable(Path("pipelines/tourism/parse.py"), "parse")
+
+    def to_three_star(row):
+        row["classification-of-hotels"] = {
+            "key": 1000010, "name": "HOTELS CLASSIFIED (3 - 5 ) STARS",
+        }
+
+    with pytest.raises(ValueError, match="classification-of-hotels"):
+        parse(doctored(tmp_path, to_three_star))
+
+
 def test_mangled_layout_fails_loudly(tmp_path):
     parse = _load_callable(Path("pipelines/tourism/parse.py"), "parse")
     bad = tmp_path / "mangled.json"

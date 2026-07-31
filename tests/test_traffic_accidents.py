@@ -161,6 +161,38 @@ def test_unpinned_dimension_breakdown_fails_loudly(tmp_path):
         parse(doctored(tmp_path, to_male))
 
 
+def test_string_member_breakdown_fails_loudly(tmp_path):
+    """A bare-string member must be checked, not skipped.
+
+    ``knoema.dim_name`` accepts ``"regions": "Muscat"`` as a member, but the
+    old per-pipeline guard skipped anything that was not a ``dict`` — so this
+    payload would have published Muscat's accidents as the national total.
+    """
+    parse = _load_callable(Path("pipelines/traffic_accidents/parse.py"), "parse")
+
+    def to_string_governorate(row):
+        row["regions"] = "Muscat"
+
+    with pytest.raises(ValueError, match="regions"):
+        parse(doctored(tmp_path, to_string_governorate))
+
+
+def test_dimension_missing_from_row_fails_loudly(tmp_path):
+    """A dimension the payload declares but the row omits must be noticed.
+
+    The old guard asked "is any *present* member a non-total", so a row that
+    dropped ``accidents-by-causes`` entirely passed — leaving the series an
+    unverified slice.
+    """
+    parse = _load_callable(Path("pipelines/traffic_accidents/parse.py"), "parse")
+
+    def drop_dimension(row):
+        del row["accidents-by-causes"]
+
+    with pytest.raises(ValueError, match="accidents-by-causes"):
+        parse(doctored(tmp_path, drop_dimension))
+
+
 def test_unexpected_indicator_fails_loudly(tmp_path):
     """``Fatalities`` is a different series; it must never be silently absorbed."""
     parse = _load_callable(Path("pipelines/traffic_accidents/parse.py"), "parse")

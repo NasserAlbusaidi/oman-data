@@ -13,6 +13,11 @@ Source quirks pinned at discovery (2026-07-31, dataset dedblxg):
   per guest nationality, per hotel class). One series row per indicator is
   therefore expected here, and a second row for the same indicator raises
   instead of silently blending two breakdowns into one column.
+  ``knoema.check_totals`` then requires every one of the twelve declared
+  dimensions to be present *and* on its total member, so a filter drift on a
+  dimension nobody pinned — or one added upstream later — fails loudly rather
+  than publishing a governorate, nationality or hotel-class slice as the
+  national figure.
 * The occupancy series is ``Room Occupancy Ratio`` (Oman/Total, monthly from
   2012-01, unrounded). The dataset's other percentage member, ``Occupancy
   Rate (%)``, is the same figure rounded to one decimal, exists only under the
@@ -23,9 +28,14 @@ Source quirks pinned at discovery (2026-07-31, dataset dedblxg):
   any other ``scale`` raise, because that pinned constant would be wrong.
 * Observations are a bare array with no per-point dates, so the month labels
   are walked forward from ``startDate``. Both of the row's own declarations —
-  ``frequency`` and ``endDate`` — are checked against that walk, so a series
-  that changes frequency or loses leading points fails loudly instead of
-  publishing every value under a shifted month.
+  ``frequency`` and ``endDate`` — are checked against that walk by
+  ``knoema.periods_for``, so a series that changes frequency or loses leading
+  points fails loudly instead of publishing every value under a shifted month.
+
+The guards themselves live in ``oman_data.knoema`` and are shared with the
+Electricity and Traffic-accidents pipelines; see ``check_totals`` for the two
+holes the private copies used to share (string members skipping the check,
+and a dimension going missing unnoticed).
 """
 from __future__ import annotations
 
@@ -46,44 +56,20 @@ _INDICATORS = {
     "hotels revenues": "revenue_omr_mn",
 }
 
+# "oman" is this dataset's national member of ``regions``; "total" is how the
+# other eleven dimensions name their own aggregate
+_TOTAL_OK = frozenset({"total", "oman", "sultanate of oman"})
 
-def _norm(name: str) -> str:
-    return " ".join(name.lower().split())
-
-
-def _months_for(name: str, row: dict) -> list[str]:
-    """Label a series' observations, checked against the row's own declarations.
-
-    ``monthly_periods`` just walks forward from ``startDate``, so a series that
-    switched frequency or lost leading observations would be relabelled silently
-    and published under confidently wrong dates. The payload states both
-    ``frequency`` and ``endDate``; both must agree with the walk.
-    """
-    if row.get("frequency") != FREQUENCY_MONTHLY:
-        raise ValueError(
-            f"indicator {name!r} declares frequency {row.get('frequency')!r}, "
-            f"expected {FREQUENCY_MONTHLY!r} — month labels would be wrong"
-        )
-    values = row["values"]
-    if not values:
-        raise ValueError(f"indicator {name!r} carries no observations")
-    months = knoema.monthly_periods(row["startDate"], len(values))
-    declared_end = str(row["endDate"])[:7]
-    if months[-1] != declared_end:
-        raise ValueError(
-            f"indicator {name!r} spans {months[0]}..{months[-1]} from "
-            f"{len(values)} values but declares endDate {declared_end} — "
-            f"the series is truncated or misaligned"
-        )
-    return months
+_INDICATOR_DIM = "indicators"
 
 
 def parse(raw_path: Path):
     raw_path = Path(raw_path)
     payload = json.loads(raw_path.read_text(encoding="utf-8"))
+    expected_dims = knoema.dimension_ids(payload)
     frames: dict[str, dict[str, float]] = {}
     for row in knoema.iter_series(payload):
-        name = _norm(knoema.dim_name(row, "indicators"))
+        name = knoema.norm_name(knoema.dim_name(row, _INDICATOR_DIM))
         if name not in _INDICATORS:
             raise ValueError(f"unexpected indicator {name!r} in tourism payload")
         col = _INDICATORS[name]
@@ -92,12 +78,13 @@ def parse(raw_path: Path):
                 f"indicator {name!r} arrived twice — the payload carries "
                 f"breakdowns, not totals; fix the filter in fetch.py"
             )
+        knoema.check_totals(row, _INDICATOR_DIM, expected_dims, _TOTAL_OK)
         if row.get("scale") != 1:
             raise ValueError(
                 f"indicator {name!r} has scale {row.get('scale')!r}, expected 1 "
                 f"— the pinned unit scaling no longer holds"
             )
-        months = _months_for(name, row)
+        months = knoema.periods_for(row, FREQUENCY_MONTHLY, label=name)
         series: dict[str, float] = {}
         frames[col] = series
         for month, value in zip(months, row["values"]):

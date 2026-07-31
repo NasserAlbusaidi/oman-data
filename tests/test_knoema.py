@@ -98,3 +98,145 @@ def test_dim_name_handles_both_member_shapes():
 ])
 def test_periods(fn, start, n, expect):
     assert fn(start, n) == expect
+
+
+# --- shared guards -------------------------------------------------------
+#
+# The three Knoema pipelines used to carry private copies of these; both of
+# the holes the copies shared are pinned here.
+
+TOTALS = frozenset({"total", "oman", "sultanate of oman"})
+
+# shape copied from the real fixtures: dimension id -> member-field descriptors
+SYNTH_PAYLOAD = {
+    "continuationToken": None,
+    "dimensionFields": {
+        "regions": [{"key": 1, "name": "id", "displayName": "Id"}],
+        "indicators": [{"key": 2, "name": "id", "displayName": "Id"}],
+        "gender": [{"key": 3, "name": "id", "displayName": "Id"}],
+    },
+    "data": [{
+        "regions": {"key": 1000000, "name": "Oman"},
+        "indicators": {"key": 1000030, "name": "Accidents"},
+        "gender": {"key": 1000000, "name": "Total"},
+        "startDate": "2002-01-01T00:00:00",
+        "endDate": "2004-01-01T00:00:00",
+        "frequency": "A",
+        "values": [1.0, 2.0, 3.0],
+    }],
+}
+
+
+def synth_row(**overrides) -> dict:
+    row = json.loads(json.dumps(SYNTH_PAYLOAD["data"][0]))
+    row.update(overrides)
+    return row
+
+
+def test_norm_name_lowercases_and_collapses_whitespace():
+    assert knoema.norm_name("  Sultanate   OF\tOman\n") == "sultanate of oman"
+
+
+def test_dimension_ids_reads_the_payloads_own_declaration():
+    assert knoema.dimension_ids(SYNTH_PAYLOAD) == {"regions", "indicators", "gender"}
+
+
+@pytest.mark.parametrize("payload", [{}, {"dimensionFields": {}},
+                                     {"dimensionFields": None},
+                                     {"dimensionFields": []}])
+def test_dimension_ids_without_declaration_is_loud(payload):
+    with pytest.raises(knoema.KnoemaError, match="dimensionFields"):
+        knoema.dimension_ids(payload)
+
+
+def test_check_totals_passes_when_every_dimension_is_on_its_total():
+    knoema.check_totals(synth_row(), "indicators",
+                        {"regions", "indicators", "gender"}, TOTALS)
+
+
+def test_check_totals_ignores_the_indicator_dimension():
+    """The indicator is the series' identity, never a total."""
+    knoema.check_totals(synth_row(), "indicators", {"indicators"}, TOTALS)
+
+
+def test_check_totals_rejects_a_dict_breakdown_member():
+    row = synth_row(gender={"key": 1000010, "name": "Male"})
+    with pytest.raises(knoema.KnoemaError, match="gender"):
+        knoema.check_totals(row, "indicators",
+                            {"regions", "indicators", "gender"}, TOTALS)
+
+
+def test_check_totals_rejects_a_string_breakdown_member():
+    """Hole 1: bare-string members used to skip the guard entirely.
+
+    ``dim_name`` accepts a plain string member, so a payload encoding
+    ``"regions": "Muscat"`` would have published a governorate as the national
+    total under the old ``isinstance(member, dict)`` skip.
+    """
+    row = synth_row(regions="Muscat")
+    with pytest.raises(knoema.KnoemaError, match="Muscat|muscat"):
+        knoema.check_totals(row, "indicators",
+                            {"regions", "indicators", "gender"}, TOTALS)
+
+
+def test_check_totals_accepts_a_string_total_member():
+    """String members are checked, not rejected — a string total still passes."""
+    knoema.check_totals(synth_row(regions="Oman"), "indicators",
+                        {"regions", "indicators", "gender"}, TOTALS)
+
+
+def test_check_totals_rejects_a_missing_dimension():
+    """Hole 2: a dimension absent from the row used to go unnoticed.
+
+    The old guard asked "is any present member a non-total", so a row that
+    simply dropped ``gender`` passed — even though the series is then an
+    unknown slice.
+    """
+    row = synth_row()
+    del row["gender"]
+    with pytest.raises(knoema.KnoemaError, match="gender"):
+        knoema.check_totals(row, "indicators",
+                            {"regions", "indicators", "gender"}, TOTALS)
+
+
+def test_periods_for_annual_happy_path():
+    assert knoema.periods_for(synth_row(), "A", label="accidents") == [2002, 2003, 2004]
+
+
+def test_periods_for_monthly_happy_path():
+    row = synth_row(frequency="M", endDate="2002-03-01T00:00:00")
+    assert knoema.periods_for(row, "M") == ["2002-01", "2002-02", "2002-03"]
+
+
+def test_periods_for_rejects_a_frequency_mismatch():
+    with pytest.raises(knoema.KnoemaError, match="frequency"):
+        knoema.periods_for(synth_row(frequency="M"), "A", label="accidents")
+
+
+def test_periods_for_rejects_an_enddate_mismatch():
+    """Losing leading observations shifts every label; endDate catches it."""
+    with pytest.raises(knoema.KnoemaError, match="endDate"):
+        knoema.periods_for(synth_row(values=[2.0, 3.0]), "A")
+
+
+def test_periods_for_names_the_series_in_errors():
+    with pytest.raises(knoema.KnoemaError, match="injuries"):
+        knoema.periods_for(synth_row(values=[]), "A", label="injuries")
+
+
+@pytest.mark.parametrize("key", ["values", "startDate", "endDate"])
+def test_periods_for_missing_key_is_a_knoema_error(key):
+    row = synth_row()
+    del row[key]
+    with pytest.raises(knoema.KnoemaError, match=key):
+        knoema.periods_for(row, "A", label="accidents")
+
+
+def test_periods_for_rejects_an_unsupported_frequency():
+    with pytest.raises(knoema.KnoemaError, match="[Qq]"):
+        knoema.periods_for(synth_row(frequency="Q"), "Q")
+
+
+def test_knoema_error_is_a_value_error():
+    """Pipelines surface guard failures as ValueError; keep that contract."""
+    assert issubclass(knoema.KnoemaError, ValueError)
