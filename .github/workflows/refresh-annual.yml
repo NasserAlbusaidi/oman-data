@@ -38,7 +38,9 @@ jobs:
         run: |
           git config user.name "oman-data-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add raw data api pipelines
+          # Outputs only. No annual pipeline curates an input file of its own,
+          # so nothing under pipelines/ is ever staged here.
+          git add raw data api
           git diff --cached --quiet || git commit -m "data: annual refresh $(date -u +%Y-%m)"
           git push
       - name: Fail if any dataset failed

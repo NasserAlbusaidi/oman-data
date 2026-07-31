@@ -36,14 +36,27 @@ def parse(raw_path: Path):
     return df, str(df["month"].max())
 """
 
+# Same parse plus the runner's optional post-validation hook. It records that it
+# ran, next to the pipeline, so a test can tell "never called" from "called".
+PARSE_WITH_PERSIST_PY = PARSE_PY + """
+CURATED = Path(__file__).parent / "curated.txt"
+def persist(df):
+    CURATED.write_text(",".join(map(str, df["value"])), encoding="utf-8")
+    return list(df["month"])
+"""
 
-def make_repo(tmp_path: Path, value: str = "1.5") -> Path:
+
+def make_repo(tmp_path: Path, value: str = "1.5", parse_py: str = PARSE_PY) -> Path:
     p = tmp_path / "pipelines" / "fake"
     p.mkdir(parents=True)
     (p / "dataset.yaml").write_text(CFG_YAML, encoding="utf-8")
     (p / "fetch.py").write_text(FETCH_PY.replace("{V}", value), encoding="utf-8")
-    (p / "parse.py").write_text(PARSE_PY, encoding="utf-8")
+    (p / "parse.py").write_text(parse_py, encoding="utf-8")
     return tmp_path
+
+
+def curated(repo: Path) -> Path:
+    return repo / "pipelines" / "fake" / "curated.txt"
 
 
 def test_happy_path_publishes_and_builds_api(tmp_path):
@@ -59,6 +72,35 @@ def test_validation_failure_publishes_nothing(tmp_path):
     repo = make_repo(tmp_path, value="-5")  # below min: 0
     assert run_dataset("fake", repo, NOW) is False
     assert not (repo / "data" / "fake").exists()
+
+
+def test_persist_hook_runs_only_after_validation_passes(tmp_path):
+    """The hook writes a pipeline's own curated input — a file no source can
+    regenerate. It must run on the happy path...
+    """
+    repo = make_repo(tmp_path, parse_py=PARSE_WITH_PERSIST_PY)
+    assert run_dataset("fake", repo, NOW) is True
+    assert curated(repo).read_text(encoding="utf-8") == "1.5"
+
+
+def test_validation_failure_never_invokes_the_persist_hook(tmp_path):
+    """...and must NOT run when validation rejects the frame.
+
+    Otherwise a bad reading becomes the curated truth every later run
+    cross-checks against, while the runner prints "last-good preserved" — the
+    published data would indeed be untouched, but the pipeline's own history
+    would already be poisoned, and the *correct* later reading is then the one
+    that gets rejected for disagreeing with it.
+    """
+    repo = make_repo(tmp_path, value="-5", parse_py=PARSE_WITH_PERSIST_PY)
+    assert run_dataset("fake", repo, NOW) is False
+    assert not curated(repo).exists(), "persist ran on a validation-failed run"
+
+
+def test_persist_hook_is_optional(tmp_path):
+    """Pipelines with nothing to curate omit it; the runner must not care."""
+    repo = make_repo(tmp_path)  # PARSE_PY defines no persist
+    assert run_dataset("fake", repo, NOW) is True
 
 
 def test_failure_preserves_last_good(tmp_path):

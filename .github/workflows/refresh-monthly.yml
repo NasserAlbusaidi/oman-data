@@ -38,15 +38,21 @@ jobs:
         id: tourism
         continue-on-error: true
         run: python -m oman_data.run tourism
-      # `pipelines` is staged because fuel_prices writes back the month it
-      # scraped: NSS publishes one month and drops it on rollover, so a month
-      # that is not committed here is lost for good (see
-      # pipelines/fuel_prices/parse.py::_persist).
       - name: Commit refreshed data
+        env:
+          FUEL_OUTCOME: ${{ steps.fuel_prices.outcome }}
         run: |
           git config user.name "oman-data-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add raw data api pipelines
+          git add raw data api
+          # prices.csv is the one file under pipelines/ that a run may rewrite:
+          # fuel_prices curates the months NSS drops on rollover, so a month not
+          # committed here is lost for good (parse.py::persist). Staged by exact
+          # path and only when that dataset succeeded — a blanket `git add
+          # pipelines` would commit whatever a half-failed run left behind.
+          if [ "$FUEL_OUTCOME" = "success" ]; then
+            git add pipelines/fuel_prices/prices.csv
+          fi
           git diff --cached --quiet || git commit -m "data: monthly refresh $(date -u +%Y-%m)"
           git push
       - name: Fail if any dataset failed

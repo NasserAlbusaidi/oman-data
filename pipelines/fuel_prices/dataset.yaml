@@ -88,8 +88,15 @@ notes: >
   that were on the page during an earlier run and have since been written into
   prices.csv. They have to be retained, because once a month rolls over NSS
   drops it and it is not recoverable from any official source — so the pipeline
-  writes each newly scraped month straight back into prices.csv, and the monthly
-  refresh commits that file alongside the published data.
+  writes each newly scraped month back into prices.csv, and the monthly refresh
+  commits that file alongside the published data.
+  The write happens only after the run's validation gate has accepted the frame,
+  and it is a separate step from parsing for exactly that reason: prices.csv is
+  what every later run cross-checks against, so a bad reading written there would
+  become the truth and the correct reading, arriving later, would be the thing
+  rejected for disagreeing with it. A validation-failed run leaves prices.csv
+  untouched, and the refresh workflow stages that file only when this dataset
+  succeeded.
   That write-back is what keeps the series continuous while the refresh runs on
   schedule. When it does not run, the month it missed exists in no source at all,
   and the pipeline fills it from the price cap under a narrow, stated condition:

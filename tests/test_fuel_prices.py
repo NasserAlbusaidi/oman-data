@@ -25,12 +25,30 @@ def load(name: str):
 CAP = load("SUBSIDY_CAP")
 
 
+@pytest.fixture(autouse=True)
+def curated_csv_is_never_touched_by_the_suite():
+    """No test may edit the committed prices.csv, ever.
+
+    That file is the only record of months NSS has already dropped: nothing can
+    regenerate it, so a test that rewrites it destroys data permanently and the
+    damage arrives as a plausible-looking diff nobody reads. The exposure is not
+    hypothetical — tests call ``parse``/``persist`` with the real path and stay
+    no-op only because the fixture's month happens to be curated already. The
+    first time the fixture is refreshed to an uncurated month, this fixture is
+    what stops the suite from quietly curating it.
+    """
+    before = PRICES.read_bytes()
+    yield
+    assert PRICES.read_bytes() == before, (
+        f"{PRICES} was modified while the suite ran — pass prices_csv=prices_copy"
+        f"(tmp_path) to any parse/persist call that can write")
+
+
 def prices_copy(tmp_path: Path) -> Path:
     """A writable copy of the curated CSV.
 
-    ``parse`` persists newly learnt months (see parse._persist), so every test
-    that exercises the append or auto-extend path must point it at a copy or it
-    would edit the repo's prices.csv as a side effect of running the suite.
+    ``persist`` writes newly learnt months, so every test that exercises it must
+    point it at a copy rather than the repo's file.
     """
     out = tmp_path / "prices.csv"
     out.write_bytes(PRICES.read_bytes())
@@ -472,14 +490,34 @@ def test_next_months_scrape_appends_with_nss_provenance(tmp_path):
 # running without a human editing prices.csv every month
 # --------------------------------------------------------------------------
 
-def test_scraped_month_is_written_back_to_the_csv(tmp_path):
+def test_parse_never_writes_the_curated_csv(tmp_path):
+    """parse is pure. The write is persist's, and only after validation.
+
+    A frame that trips the validator must not have already been curated: the
+    curated file is what every later run cross-checks against, so a bad month
+    written there makes the *correct* later reading the thing that gets
+    rejected. Keeping parse read-only is what makes that ordering possible.
+    """
+    parse = load("parse")
+    csv = prices_copy(tmp_path)
+    before = csv.read_bytes()
+    august = doctored(
+        tmp_path,
+        ("Fuel Price - July'26", "Fuel Price - August'26"),
+        ("July 2026 Fuel Prices", "August 2026 Fuel Prices"),
+    )
+    df, as_of = parse(august, prices_csv=csv)
+    assert as_of == "2026-08"           # the month is in the frame
+    assert csv.read_bytes() == before   # and nowhere near the file
+
+
+def test_persist_writes_the_new_month_back(tmp_path):
     """NSS forgets a month the instant it rolls over.
 
     A month held only in the returned frame is gone by the next run, which
-    would then find a hole. So the merge is persisted, and the CSV's own
-    tail — not the returned frame — is what proves it.
+    would then find a hole. persist is what makes it permanent.
     """
-    parse = load("parse")
+    parse, persist = load("parse"), load("persist")
     csv = prices_copy(tmp_path)
     before = pd.read_csv(csv, encoding="utf-8")
     august = doctored(
@@ -487,7 +525,8 @@ def test_scraped_month_is_written_back_to_the_csv(tmp_path):
         ("Fuel Price - July'26", "Fuel Price - August'26"),
         ("July 2026 Fuel Prices", "August 2026 Fuel Prices"),
     )
-    parse(august, prices_csv=csv)
+    df, _ = parse(august, prices_csv=csv)
+    assert persist(df, prices_csv=csv) == ["2026-08"]
     after = pd.read_csv(csv, encoding="utf-8")
     assert after["month"].max() == "2026-08"
     assert len(after) == len(before) + 3
@@ -498,7 +537,7 @@ def test_scraped_month_is_written_back_to_the_csv(tmp_path):
 
 def test_persisting_is_idempotent(tmp_path):
     """Re-running the same month must cross-check, not append a second time."""
-    parse = load("parse")
+    parse, persist = load("parse"), load("persist")
     csv = prices_copy(tmp_path)
     august = doctored(
         tmp_path,
@@ -506,18 +545,42 @@ def test_persisting_is_idempotent(tmp_path):
         ("July 2026 Fuel Prices", "August 2026 Fuel Prices"),
     )
     df1, _ = parse(august, prices_csv=csv)
+    persist(df1, prices_csv=csv)
     first = csv.read_bytes()
     df2, _ = parse(august, prices_csv=csv)
+    assert persist(df2, prices_csv=csv) == []
     assert csv.read_bytes() == first
     assert df2.equals(df1)
 
 
-def test_confirming_an_already_curated_month_does_not_rewrite_the_csv(tmp_path):
+def test_persisting_an_already_curated_month_does_not_rewrite_the_csv(tmp_path):
     """No new months, no write — a no-op run leaves the file's mtime story clean."""
-    parse = load("parse")
+    parse, persist = load("parse"), load("persist")
     csv = prices_copy(tmp_path)
     before = csv.read_bytes()
-    parse(FIXTURE, prices_csv=csv)   # 2026-07, already curated
+    df, _ = parse(FIXTURE, prices_csv=csv)   # 2026-07, already curated
+    assert persist(df, prices_csv=csv) == []
+    assert csv.read_bytes() == before
+
+
+def test_persist_refuses_a_frame_that_would_drop_curated_history(tmp_path):
+    """The write is a whole-file rewrite, so a short frame would delete months.
+
+    Nothing can regenerate them — NSS publishes one month and keeps no archive.
+    A frame that is not a superset of what is curated is a bug somewhere
+    upstream, and the right response is to write nothing.
+    """
+    persist = load("persist")
+    csv = prices_copy(tmp_path)
+    before = csv.read_bytes()
+    df = pd.read_csv(csv, encoding="utf-8")
+    truncated = pd.concat([
+        df[df["month"] > "2016-06"],
+        pd.DataFrame([("2026-08", f, p, "nss.gov.om")
+                      for f, p in CAP.items()], columns=list(df.columns)),
+    ], ignore_index=True)
+    with pytest.raises(ValueError, match="delete history"):
+        persist(truncated, prices_csv=csv)
     assert csv.read_bytes() == before
 
 
@@ -531,7 +594,7 @@ def test_one_skipped_month_is_auto_extended_from_the_cap(tmp_path):
     same provenance the hand-curated 2023-02+ tail carries — never nss.gov.om,
     because nobody saw it.
     """
-    parse = load("parse")
+    parse, persist = load("parse"), load("persist")
     csv = prices_copy(tmp_path)
     september = doctored(
         tmp_path,
@@ -546,7 +609,9 @@ def test_one_skipped_month_is_auto_extended_from_the_cap(tmp_path):
     assert set(df[df["month"] == "2026-09"]["source"]) == {"nss.gov.om"}
     months = sorted(df["month"].unique())
     assert months == list(pd.period_range(months[0], months[-1], freq="M").astype(str))
-    # and it is persisted, so the next run starts from a continuous CSV
+    # once validation accepts it, both months persist, so the next run starts
+    # from a continuous CSV
+    assert persist(df, prices_csv=csv) == ["2026-08", "2026-09"]
     assert pd.read_csv(csv, encoding="utf-8")["month"].max() == "2026-09"
 
 

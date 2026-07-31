@@ -31,9 +31,10 @@ Source quirks pinned at discovery (2026-07-31, nss.gov.om/site/home?ln=en):
 If NSS redesigns, every one of these lookups raises rather than guessing, and
 the runner leaves the last-good published data in place.
 
-Because NSS drops a month the moment it rolls over, ``parse`` also *writes* the
-months it learns back into ``prices.csv`` -- see ``_persist`` for why that side
-effect lives here and what bounds it.
+Because NSS drops a month the moment it rolls over, the months learnt here have
+to be written back into ``prices.csv`` or they are lost. That write is
+``persist``, the runner's post-validation hook -- not part of ``parse``, which
+stays pure. See ``persist`` for why the ordering matters.
 """
 from __future__ import annotations
 
@@ -241,29 +242,53 @@ def _auto_extend(df: pd.DataFrame, month: str, prices: dict[str, int]) -> pd.Dat
     return pd.concat([df, filled], ignore_index=True)
 
 
-def _persist(df: pd.DataFrame, prices_csv: Path) -> None:
-    """Write the merged series back over the curated CSV.
+def persist(df: pd.DataFrame, prices_csv: Path | None = None) -> list[str]:
+    """Write months the curated CSV does not yet carry back into it.
 
-    NSS drops a month as soon as it rolls over, so a month that is only ever
-    held in memory is lost: next month's run finds a hole and the continuity
-    guard stops the pipeline. Persisting here is what keeps the CSV's last month
-    one step behind the calendar, which is the state every other guard in this
-    file assumes.
+    The runner's optional post-validation hook (see oman_data.run.run_dataset),
+    and deliberately *not* something ``parse`` does. NSS drops a month as soon as
+    it rolls over, so a month held only in the returned frame is gone by the next
+    run — but a month written into prices.csv is permanent, and prices.csv is the
+    only record of it that will ever exist. So the write happens strictly after
+    validation has accepted the frame: a scrape defect that slips past the panel
+    and marquee cross-checks but trips the validator must not become the curated
+    truth that every later run compares against.
 
-    Only ever an append -- ``parse`` calls this only when new months appeared,
-    and the merge never rewrites an existing row (a scraped month the CSV
-    already covers takes the cross-check branch instead). The frame is the CSV
-    plus those rows in the same sort order, so the rewrite is byte-stable for
-    the untouched rows; ``test_curated_csv_round_trips_byte_for_byte`` pins that.
+    Returns the months added, for the runner to log. Rewrites the whole file
+    rather than appending so the sort order stays canonical, and refuses to
+    write a frame that is not a superset of what is already curated — this file
+    is irreplaceable and a truncating write would be unrecoverable.
     """
-    df.to_csv(prices_csv, index=False, encoding="utf-8", lineterminator="\n")
+    prices_csv = Path(prices_csv) if prices_csv is not None else PRICES_CSV
+    curated = pd.read_csv(prices_csv, encoding="utf-8")
+    added = sorted(set(df["month"]) - set(curated["month"]))
+    if not added:
+        return []
+
+    have = set(map(tuple, curated[["month", "fuel_type"]].to_numpy().tolist()))
+    keep = set(map(tuple, df[["month", "fuel_type"]].to_numpy().tolist()))
+    if not have <= keep:
+        raise ValueError(
+            f"refusing to write {prices_csv.name}: the frame is missing "
+            f"{sorted(have - keep)[:6]} that the curated file already carries — "
+            f"this would delete history no source can return")
+
+    out = (df.astype({"month": str, "fuel_type": str,
+                      "price_baisa": int, "source": str})
+             .sort_values(["month", "fuel_type"], ignore_index=True))
+    out.to_csv(prices_csv, index=False, encoding="utf-8", lineterminator="\n")
+    return added
 
 
 def parse(raw_path: Path, prices_csv: Path | None = None) -> tuple[pd.DataFrame, str]:
     """Merge the curated history with the month NSS is showing.
 
-    ``prices_csv`` overrides the curated file, so tests can exercise the append
-    and auto-extend paths against a copy instead of mutating the repo's CSV.
+    Pure: it reads prices.csv and never writes it. Committing a newly learnt
+    month to the curated file is ``persist``'s job, which the runner calls only
+    once the frame has passed validation.
+
+    ``prices_csv`` overrides the curated file so tests can exercise the append
+    and auto-extend paths against a copy.
     """
     raw_path = Path(raw_path)
     prices_csv = Path(prices_csv) if prices_csv is not None else PRICES_CSV
@@ -296,6 +321,4 @@ def parse(raw_path: Path, prices_csv: Path | None = None) -> tuple[pd.DataFrame,
     if list(df.columns) != COLUMNS or df.empty:
         raise ValueError(f"unexpected layout in {raw_path.name}")
     _check_continuous(df)
-    if set(df["month"]) != known:
-        _persist(df, prices_csv)
     return df, df["month"].max()
