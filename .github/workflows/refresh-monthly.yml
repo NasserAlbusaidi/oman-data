@@ -1,4 +1,9 @@
 name: refresh-monthly
+# Datasets with cadence: monthly. The static ones (admin_geography,
+# climate_normals) are deliberately on no schedule at all — a 1991-2020 climate
+# normal and a wilayat list have no upstream to poll, so a cron would only churn
+# fetched_at. tests/test_repo_guards.py pins that split, so adding a pipeline
+# without wiring it in here fails the suite.
 on:
   schedule:
     - cron: "0 3 5 * *"   # 05th monthly, 03:00 UTC (07:00 Muscat)
@@ -15,22 +20,55 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -e .
-      - name: Refresh monthly datasets
-        id: refresh
+      # Each dataset gets its own step: one dead upstream must not skip the
+      # others, nor the commit of whatever did succeed.
+      - name: Refresh cpi
+        id: cpi
+        continue-on-error: true
         run: python -m oman_data.run cpi
+      - name: Refresh fuel_prices
+        id: fuel_prices
+        continue-on-error: true
+        run: python -m oman_data.run fuel_prices
+      - name: Refresh trade
+        id: trade
+        continue-on-error: true
+        run: python -m oman_data.run trade
+      - name: Refresh tourism
+        id: tourism
+        continue-on-error: true
+        run: python -m oman_data.run tourism
+      # `pipelines` is staged because fuel_prices writes back the month it
+      # scraped: NSS publishes one month and drops it on rollover, so a month
+      # that is not committed here is lost for good (see
+      # pipelines/fuel_prices/parse.py::_persist).
       - name: Commit refreshed data
-        if: success()
         run: |
           git config user.name "oman-data-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add raw data api
+          git add raw data api pipelines
           git diff --cached --quiet || git commit -m "data: monthly refresh $(date -u +%Y-%m)"
           git push
+      - name: Fail if any dataset failed
+        env:
+          OUTCOMES: >-
+            cpi=${{ steps.cpi.outcome }}
+            fuel_prices=${{ steps.fuel_prices.outcome }}
+            trade=${{ steps.trade.outcome }}
+            tourism=${{ steps.tourism.outcome }}
+        run: |
+          echo "$OUTCOMES"
+          echo "$OUTCOMES" | grep -q failure && exit 1 || exit 0
       - name: File issue on failure
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
+          OUTCOMES: >-
+            cpi=${{ steps.cpi.outcome }}
+            fuel_prices=${{ steps.fuel_prices.outcome }}
+            trade=${{ steps.trade.outcome }}
+            tourism=${{ steps.tourism.outcome }}
         run: |
           gh issue create \
             --title "Monthly refresh failed $(date -u +%Y-%m-%d)" \
-            --body "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — last-good data remains published."
+            --body "Outcomes: $OUTCOMES — run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — successes were committed; failed datasets keep last-good data."

@@ -1,0 +1,64 @@
+name: refresh-annual
+# Datasets with cadence: annual. Quarterly cron rather than yearly — the annual
+# sources publish at unpredictable times during the year, so polling four times
+# catches a release within ~90 days while keeping raw-snapshot churn low.
+# The static datasets (admin_geography, climate_normals) are deliberately on no
+# schedule at all; see the note in refresh-monthly.yml.
+on:
+  schedule:
+    - cron: "0 4 10 1,4,7,10 *"   # 10th of Jan/Apr/Jul/Oct, 04:00 UTC
+  workflow_dispatch:
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e .
+      # Each dataset gets its own step: one dead upstream must not skip the
+      # others, nor the commit of whatever did succeed.
+      - name: Refresh population
+        id: population
+        continue-on-error: true
+        run: python -m oman_data.run population
+      - name: Refresh electricity
+        id: electricity
+        continue-on-error: true
+        run: python -m oman_data.run electricity
+      - name: Refresh traffic_accidents
+        id: traffic_accidents
+        continue-on-error: true
+        run: python -m oman_data.run traffic_accidents
+      - name: Commit refreshed data
+        run: |
+          git config user.name "oman-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add raw data api pipelines
+          git diff --cached --quiet || git commit -m "data: annual refresh $(date -u +%Y-%m)"
+          git push
+      - name: Fail if any dataset failed
+        env:
+          OUTCOMES: >-
+            population=${{ steps.population.outcome }}
+            electricity=${{ steps.electricity.outcome }}
+            traffic_accidents=${{ steps.traffic_accidents.outcome }}
+        run: |
+          echo "$OUTCOMES"
+          echo "$OUTCOMES" | grep -q failure && exit 1 || exit 0
+      - name: File issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUTCOMES: >-
+            population=${{ steps.population.outcome }}
+            electricity=${{ steps.electricity.outcome }}
+            traffic_accidents=${{ steps.traffic_accidents.outcome }}
+        run: |
+          gh issue create \
+            --title "Annual refresh failed $(date -u +%Y-%m-%d)" \
+            --body "Outcomes: $OUTCOMES — run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — successes were committed; failed datasets keep last-good data."
