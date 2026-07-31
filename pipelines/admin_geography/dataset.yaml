@@ -1,9 +1,9 @@
 id: admin_geography
 title_ar: "التقسيم الإداري — المحافظات والولايات"
 title_en: "Administrative divisions — governorates and wilayats"
-source_name: "Royal Decree 36/2022 (System of Governorates), Official Gazette 1446 — names; geoBoundaries gbOpen OMN ADM2 — boundaries"
-source_url: "https://www.geoboundaries.org/"
-license: "Names: Royal Decree 36/2022, Official Gazette 1446 (public legal text). Boundaries: geoBoundaries gbOpen OMN ADM2, boundaryLicense 'Other - Direct Permission', sourced from Oman National Geographic Structure (NCSI NSDI)."
+source_name: "Royal Decree 36/2022 (System of Governorates), Official Gazette 1446"
+source_url: "https://decree.om/2022/rd20220036/"
+license: "Royal Decree 36/2022, Official Gazette 1446 — public legal text. This dataset publishes names and codes only; no boundary geometry is redistributed."
 cadence: static
 columns:
   - {name: governorate_code, dtype: str}
@@ -13,16 +13,21 @@ columns:
   - {name: wilayat_en, dtype: str}
   - {name: wilayat_ar, dtype: str}
 notes: >
-  Reference dataset; the join key for all others. names.csv is curated in-repo.
+  Reference dataset; the join key for all others. names.csv is curated in-repo
+  and archived per run under raw/admin_geography/<date>/.
   Rows: 11 governorates, 63 wilayats, per Article 2 of Royal Decree 36/2022
   (which raised Al Jabal Al Akhdar and Sinaw to wilayat level, 61 -> 63).
   Arabic names are the decree's official spellings, not transliterations.
   governorate_code is ISO 3166-2:OM. wilayat_code is a lowercase ASCII slug of
-  wilayat_en. wilayat_en follows the ADM2 shapeName spellings in the published
-  boundaries.geojson (NCSI NSDI transliteration) so the table joins to the
-  geometry: feature shapeName "WILAYAT AS SEEB" -> strip the "WILAYAT " prefix,
+  wilayat_en.
+  Boundary geometry is NOT bundled: geoBoundaries gbOpen OMN ADM2 carries
+  boundaryLicense "Other - Direct Permission", so it is linked, not
+  redistributed. Fetch it yourself from
+  https://www.geoboundaries.org/api/current/gbOpen/OMN/ADM2/ (follow the
+  gjDownloadURL field) and use it under geoBoundaries' terms; that endpoint
+  responded normally on 2026-07-31. wilayat_en follows the ADM2 shapeName
+  spellings (NCSI NSDI transliteration) so the table joins to that geometry:
+  feature shapeName "WILAYAT AS SEEB" -> strip the "WILAYAT " prefix,
   title-case, slugify -> wilayat_code "as-seeb". Al Jabal Al Akhdar and Sinaw
-  post-date the 2020 boundary vintage, so 61 of the 63 rows have geometry; their
-  areas are still inside the Nizwa and Al Mudaybi polygons.
-  The geoBoundaries endpoint https://www.geoboundaries.org/api/current/gbOpen/OMN/ADM2/
-  responded normally on 2026-07-31 (no endpoint change was needed).
+  post-date the 2020 boundary vintage, so 61 of the 63 rows have geometry;
+  their areas are still inside the Nizwa and Al Mudaybi polygons.

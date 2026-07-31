@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-31T16:02:31.133446+00:00",
+  "generated_at": "2026-07-31T16:07:58.659351+00:00",
   "datasets": [
     {
       "id": "admin_geography",
       "title_ar": "التقسيم الإداري — المحافظات والولايات",
       "title_en": "Administrative divisions — governorates and wilayats",
-      "source_name": "Royal Decree 36/2022 (System of Governorates), Official Gazette 1446 — names; geoBoundaries gbOpen OMN ADM2 — boundaries",
+      "source_name": "Royal Decree 36/2022 (System of Governorates), Official Gazette 1446",
       "cadence": "static",
       "as_of": "2026-07",
-      "fetched_at": "2026-07-31T15:34:23Z",
+      "fetched_at": "2026-07-31T16:07:58Z",
       "stale": false,
       "rows": 63
     },

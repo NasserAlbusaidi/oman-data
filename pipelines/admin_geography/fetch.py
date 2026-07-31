@@ -1,17 +1,16 @@
+import shutil
 from pathlib import Path
 
-import requests
+NAMES_CSV = Path(__file__).parent / "names.csv"
 
-ADM2_API = "https://www.geoboundaries.org/api/current/gbOpen/OMN/ADM2/"
+# Boundary geometry is NOT redistributed: geoBoundaries gbOpen OMN ADM2 carries
+# boundaryLicense "Other - Direct Permission", which is not ours to re-publish.
+# Consumers fetch it themselves from the endpoint recorded in dataset.yaml.
 
 
 def fetch(raw_dir: Path) -> Path:
+    """Archive the curated source table. Static dataset — no network."""
     raw_dir.mkdir(parents=True, exist_ok=True)
-    meta = requests.get(ADM2_API, timeout=60)
-    meta.raise_for_status()
-    gj_url = meta.json()["gjDownloadURL"]
-    gj = requests.get(gj_url, timeout=120)
-    gj.raise_for_status()
-    out = raw_dir / "omn_adm2.geojson"
-    out.write_bytes(gj.content)
+    out = raw_dir / "names.csv"
+    shutil.copyfile(NAMES_CSV, out)
     return out

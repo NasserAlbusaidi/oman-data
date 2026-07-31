@@ -1,9 +1,9 @@
 {
   "id": "admin_geography",
   "as_of": "2026-07",
-  "fetched_at": "2026-07-31T15:34:23Z",
-  "source_name": "Royal Decree 36/2022 (System of Governorates), Official Gazette 1446 — names; geoBoundaries gbOpen OMN ADM2 — boundaries",
-  "source_url": "https://www.geoboundaries.org/",
-  "license": "Names: Royal Decree 36/2022, Official Gazette 1446 (public legal text). Boundaries: geoBoundaries gbOpen OMN ADM2, boundaryLicense 'Other - Direct Permission', sourced from Oman National Geographic Structure (NCSI NSDI).",
+  "fetched_at": "2026-07-31T16:07:58Z",
+  "source_name": "Royal Decree 36/2022 (System of Governorates), Official Gazette 1446",
+  "source_url": "https://decree.om/2022/rd20220036/",
+  "license": "Royal Decree 36/2022, Official Gazette 1446 — public legal text. This dataset publishes names and codes only; no boundary geometry is redistributed.",
   "rows": 63
 }

@@ -1,0 +1,64 @@
+governorate_code,governorate_en,governorate_ar,wilayat_code,wilayat_en,wilayat_ar
+OM-MA,Muscat,مسقط,muscat,Muscat,مسقط
+OM-MA,Muscat,مسقط,mutrah,Mutrah,مطرح
+OM-MA,Muscat,مسقط,al-amrat,Al Amrat,العامرات
+OM-MA,Muscat,مسقط,bawshar,Bawshar,بوشر
+OM-MA,Muscat,مسقط,as-seeb,As Seeb,السيب
+OM-MA,Muscat,مسقط,qurayyat,Qurayyat,قريات
+OM-ZU,Dhofar,ظفار,salalah,Salalah,صلالة
+OM-ZU,Dhofar,ظفار,taqah,Taqah,طاقة
+OM-ZU,Dhofar,ظفار,mirbat,Mirbat,مرباط
+OM-ZU,Dhofar,ظفار,rakhyut,Rakhyut,رخيوت
+OM-ZU,Dhofar,ظفار,thumrayt,Thumrayt,ثمريت
+OM-ZU,Dhofar,ظفار,dalkut,Dalkut,ضلكوت
+OM-ZU,Dhofar,ظفار,al-mazyunah,Al Mazyunah,المزيونة
+OM-ZU,Dhofar,ظفار,muqshin,Muqshin,مقشن
+OM-ZU,Dhofar,ظفار,shalim-wa-juzor-al-hallaniyat,Shalim Wa Juzor Al Hallaniyat,شليم وجزر الحلانيات
+OM-ZU,Dhofar,ظفار,sadah,Sadah,سدح
+OM-MU,Musandam,مسندم,khasab,Khasab,خصب
+OM-MU,Musandam,مسندم,daba,Daba,دبا
+OM-MU,Musandam,مسندم,bukha,Bukha,بخاء
+OM-MU,Musandam,مسندم,madha,Madha,مدحاء
+OM-BU,Al Buraimi,البريمي,al-buraymi,Al Buraymi,البريمي
+OM-BU,Al Buraimi,البريمي,mahadah,Mahadah,محضة
+OM-BU,Al Buraimi,البريمي,as-sunaynah,As Sunaynah,السنينة
+OM-DA,Ad Dakhiliyah,الداخلية,nizwa,Nizwa,نزوى
+OM-DA,Ad Dakhiliyah,الداخلية,bahla,Bahla,بهلاء
+OM-DA,Ad Dakhiliyah,الداخلية,manah,Manah,منح
+OM-DA,Ad Dakhiliyah,الداخلية,al-hamra,Al Hamra,الحمراء
+OM-DA,Ad Dakhiliyah,الداخلية,adam,Adam,أدم
+OM-DA,Ad Dakhiliyah,الداخلية,izki,Izki,إزكي
+OM-DA,Ad Dakhiliyah,الداخلية,samail,Samail,سمائل
+OM-DA,Ad Dakhiliyah,الداخلية,bidbid,Bidbid,بدبد
+OM-DA,Ad Dakhiliyah,الداخلية,al-jabal-al-akhdar,Al Jabal Al Akhdar,الجبل الأخضر
+OM-BS,North Al Batinah,شمال الباطنة,sohar,Sohar,صحار
+OM-BS,North Al Batinah,شمال الباطنة,shinas,Shinas,شناص
+OM-BS,North Al Batinah,شمال الباطنة,liwa,Liwa,لوى
+OM-BS,North Al Batinah,شمال الباطنة,saham,Saham,صحم
+OM-BS,North Al Batinah,شمال الباطنة,al-khaburah,Al Khaburah,الخابورة
+OM-BS,North Al Batinah,شمال الباطنة,as-suwayq,As Suwayq,السويق
+OM-BJ,South Al Batinah,جنوب الباطنة,ar-rustaq,Ar Rustaq,الرستاق
+OM-BJ,South Al Batinah,جنوب الباطنة,al-awabi,Al Awabi,العوابي
+OM-BJ,South Al Batinah,جنوب الباطنة,nakhal,Nakhal,نخل
+OM-BJ,South Al Batinah,جنوب الباطنة,wadi-al-maawil,Wadi Al Maawil,وادي المعاول
+OM-BJ,South Al Batinah,جنوب الباطنة,barka,Barka,بركاء
+OM-BJ,South Al Batinah,جنوب الباطنة,al-musanaah,Al Musanaah,المصنعة
+OM-SJ,South Ash Sharqiyah,جنوب الشرقية,sur,Sur,صور
+OM-SJ,South Ash Sharqiyah,جنوب الشرقية,al-kamil-wa-al-wafi,Al Kamil Wa Al Wafi,الكامل والوافي
+OM-SJ,South Ash Sharqiyah,جنوب الشرقية,jaalan-bani-bu-hasan,Jaalan Bani Bu Hasan,جعلان بني بو حسن
+OM-SJ,South Ash Sharqiyah,جنوب الشرقية,jaalan-bani-bu-ali,Jaalan Bani Bu Ali,جعلان بني بو علي
+OM-SJ,South Ash Sharqiyah,جنوب الشرقية,masirah,Masirah,مصيرة
+OM-SS,North Ash Sharqiyah,شمال الشرقية,ibra,Ibra,إبراء
+OM-SS,North Ash Sharqiyah,شمال الشرقية,al-mudaybi,Al Mudaybi,المضيبي
+OM-SS,North Ash Sharqiyah,شمال الشرقية,bidiyah,Bidiyah,بدية
+OM-SS,North Ash Sharqiyah,شمال الشرقية,al-qabil,Al Qabil,القابل
+OM-SS,North Ash Sharqiyah,شمال الشرقية,wadi-bani-khalid,Wadi Bani Khalid,وادي بني خالد
+OM-SS,North Ash Sharqiyah,شمال الشرقية,dama-wa-at-taiyin,Dama Wa At Taiyin,دماء والطائيين
+OM-SS,North Ash Sharqiyah,شمال الشرقية,sinaw,Sinaw,سناو
+OM-ZA,Adh Dhahirah,الظاهرة,ibri,Ibri,عبري
+OM-ZA,Adh Dhahirah,الظاهرة,yanqul,Yanqul,ينقل
+OM-ZA,Adh Dhahirah,الظاهرة,dank,Dank,ضنك
+OM-WU,Al Wusta,الوسطى,hayma,Hayma,هيماء
+OM-WU,Al Wusta,الوسطى,mahawt,Mahawt,محوت
+OM-WU,Al Wusta,الوسطى,ad-duqm,Ad Duqm,الدقم
+OM-WU,Al Wusta,الوسطى,al-jazir,Al Jazir,الجازر
