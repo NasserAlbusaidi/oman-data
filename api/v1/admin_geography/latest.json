@@ -1,0 +1,521 @@
+{
+  "meta": {
+    "id": "admin_geography",
+    "as_of": "2026-07",
+    "fetched_at": "2026-07-31T15:34:23Z",
+    "source_name": "Royal Decree 36/2022 (System of Governorates), Official Gazette 1446 — names; geoBoundaries gbOpen OMN ADM2 — boundaries",
+    "source_url": "https://www.geoboundaries.org/",
+    "license": "Names: Royal Decree 36/2022, Official Gazette 1446 (public legal text). Boundaries: geoBoundaries gbOpen OMN ADM2, boundaryLicense 'Other - Direct Permission', sourced from Oman National Geographic Structure (NCSI NSDI).",
+    "rows": 63,
+    "title_ar": "التقسيم الإداري — المحافظات والولايات",
+    "title_en": "Administrative divisions — governorates and wilayats",
+    "cadence": "static",
+    "stale": false
+  },
+  "data": [
+    {
+      "governorate_code": "OM-MA",
+      "governorate_en": "Muscat",
+      "governorate_ar": "مسقط",
+      "wilayat_code": "muscat",
+      "wilayat_en": "Muscat",
+      "wilayat_ar": "مسقط"
+    },
+    {
+      "governorate_code": "OM-MA",
+      "governorate_en": "Muscat",
+      "governorate_ar": "مسقط",
+      "wilayat_code": "mutrah",
+      "wilayat_en": "Mutrah",
+      "wilayat_ar": "مطرح"
+    },
+    {
+      "governorate_code": "OM-MA",
+      "governorate_en": "Muscat",
+      "governorate_ar": "مسقط",
+      "wilayat_code": "al-amrat",
+      "wilayat_en": "Al Amrat",
+      "wilayat_ar": "العامرات"
+    },
+    {
+      "governorate_code": "OM-MA",
+      "governorate_en": "Muscat",
+      "governorate_ar": "مسقط",
+      "wilayat_code": "bawshar",
+      "wilayat_en": "Bawshar",
+      "wilayat_ar": "بوشر"
+    },
+    {
+      "governorate_code": "OM-MA",
+      "governorate_en": "Muscat",
+      "governorate_ar": "مسقط",
+      "wilayat_code": "as-seeb",
+      "wilayat_en": "As Seeb",
+      "wilayat_ar": "السيب"
+    },
+    {
+      "governorate_code": "OM-MA",
+      "governorate_en": "Muscat",
+      "governorate_ar": "مسقط",
+      "wilayat_code": "qurayyat",
+      "wilayat_en": "Qurayyat",
+      "wilayat_ar": "قريات"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "salalah",
+      "wilayat_en": "Salalah",
+      "wilayat_ar": "صلالة"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "taqah",
+      "wilayat_en": "Taqah",
+      "wilayat_ar": "طاقة"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "mirbat",
+      "wilayat_en": "Mirbat",
+      "wilayat_ar": "مرباط"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "rakhyut",
+      "wilayat_en": "Rakhyut",
+      "wilayat_ar": "رخيوت"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "thumrayt",
+      "wilayat_en": "Thumrayt",
+      "wilayat_ar": "ثمريت"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "dalkut",
+      "wilayat_en": "Dalkut",
+      "wilayat_ar": "ضلكوت"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "al-mazyunah",
+      "wilayat_en": "Al Mazyunah",
+      "wilayat_ar": "المزيونة"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "muqshin",
+      "wilayat_en": "Muqshin",
+      "wilayat_ar": "مقشن"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "shalim-wa-juzor-al-hallaniyat",
+      "wilayat_en": "Shalim Wa Juzor Al Hallaniyat",
+      "wilayat_ar": "شليم وجزر الحلانيات"
+    },
+    {
+      "governorate_code": "OM-ZU",
+      "governorate_en": "Dhofar",
+      "governorate_ar": "ظفار",
+      "wilayat_code": "sadah",
+      "wilayat_en": "Sadah",
+      "wilayat_ar": "سدح"
+    },
+    {
+      "governorate_code": "OM-MU",
+      "governorate_en": "Musandam",
+      "governorate_ar": "مسندم",
+      "wilayat_code": "khasab",
+      "wilayat_en": "Khasab",
+      "wilayat_ar": "خصب"
+    },
+    {
+      "governorate_code": "OM-MU",
+      "governorate_en": "Musandam",
+      "governorate_ar": "مسندم",
+      "wilayat_code": "daba",
+      "wilayat_en": "Daba",
+      "wilayat_ar": "دبا"
+    },
+    {
+      "governorate_code": "OM-MU",
+      "governorate_en": "Musandam",
+      "governorate_ar": "مسندم",
+      "wilayat_code": "bukha",
+      "wilayat_en": "Bukha",
+      "wilayat_ar": "بخاء"
+    },
+    {
+      "governorate_code": "OM-MU",
+      "governorate_en": "Musandam",
+      "governorate_ar": "مسندم",
+      "wilayat_code": "madha",
+      "wilayat_en": "Madha",
+      "wilayat_ar": "مدحاء"
+    },
+    {
+      "governorate_code": "OM-BU",
+      "governorate_en": "Al Buraimi",
+      "governorate_ar": "البريمي",
+      "wilayat_code": "al-buraymi",
+      "wilayat_en": "Al Buraymi",
+      "wilayat_ar": "البريمي"
+    },
+    {
+      "governorate_code": "OM-BU",
+      "governorate_en": "Al Buraimi",
+      "governorate_ar": "البريمي",
+      "wilayat_code": "mahadah",
+      "wilayat_en": "Mahadah",
+      "wilayat_ar": "محضة"
+    },
+    {
+      "governorate_code": "OM-BU",
+      "governorate_en": "Al Buraimi",
+      "governorate_ar": "البريمي",
+      "wilayat_code": "as-sunaynah",
+      "wilayat_en": "As Sunaynah",
+      "wilayat_ar": "السنينة"
+    },
+    {
+      "governorate_code": "OM-DA",
+      "governorate_en": "Ad Dakhiliyah",
+      "governorate_ar": "الداخلية",
+      "wilayat_code": "nizwa",
+      "wilayat_en": "Nizwa",
+      "wilayat_ar": "نزوى"
+    },
+    {
+      "governorate_code": "OM-DA",
+      "governorate_en": "Ad Dakhiliyah",
+      "governorate_ar": "الداخلية",
+      "wilayat_code": "bahla",
+      "wilayat_en": "Bahla",
+      "wilayat_ar": "بهلاء"
+    },
+    {
+      "governorate_code": "OM-DA",
+      "governorate_en": "Ad Dakhiliyah",
+      "governorate_ar": "الداخلية",
+      "wilayat_code": "manah",
+      "wilayat_en": "Manah",
+      "wilayat_ar": "منح"
+    },
+    {
+      "governorate_code": "OM-DA",
+      "governorate_en": "Ad Dakhiliyah",
+      "governorate_ar": "الداخلية",
+      "wilayat_code": "al-hamra",
+      "wilayat_en": "Al Hamra",
+      "wilayat_ar": "الحمراء"
+    },
+    {
+      "governorate_code": "OM-DA",
+      "governorate_en": "Ad Dakhiliyah",
+      "governorate_ar": "الداخلية",
+      "wilayat_code": "adam",
+      "wilayat_en": "Adam",
+      "wilayat_ar": "أدم"
+    },
+    {
+      "governorate_code": "OM-DA",
+      "governorate_en": "Ad Dakhiliyah",
+      "governorate_ar": "الداخلية",
+      "wilayat_code": "izki",
+      "wilayat_en": "Izki",
+      "wilayat_ar": "إزكي"
+    },
+    {
+      "governorate_code": "OM-DA",
+      "governorate_en": "Ad Dakhiliyah",
+      "governorate_ar": "الداخلية",
+      "wilayat_code": "samail",
+      "wilayat_en": "Samail",
+      "wilayat_ar": "سمائل"
+    },
+    {
+      "governorate_code": "OM-DA",
+      "governorate_en": "Ad Dakhiliyah",
+      "governorate_ar": "الداخلية",
+      "wilayat_code": "bidbid",
+      "wilayat_en": "Bidbid",
+      "wilayat_ar": "بدبد"
+    },
+    {
+      "governorate_code": "OM-DA",
+      "governorate_en": "Ad Dakhiliyah",
+      "governorate_ar": "الداخلية",
+      "wilayat_code": "al-jabal-al-akhdar",
+      "wilayat_en": "Al Jabal Al Akhdar",
+      "wilayat_ar": "الجبل الأخضر"
+    },
+    {
+      "governorate_code": "OM-BS",
+      "governorate_en": "North Al Batinah",
+      "governorate_ar": "شمال الباطنة",
+      "wilayat_code": "sohar",
+      "wilayat_en": "Sohar",
+      "wilayat_ar": "صحار"
+    },
+    {
+      "governorate_code": "OM-BS",
+      "governorate_en": "North Al Batinah",
+      "governorate_ar": "شمال الباطنة",
+      "wilayat_code": "shinas",
+      "wilayat_en": "Shinas",
+      "wilayat_ar": "شناص"
+    },
+    {
+      "governorate_code": "OM-BS",
+      "governorate_en": "North Al Batinah",
+      "governorate_ar": "شمال الباطنة",
+      "wilayat_code": "liwa",
+      "wilayat_en": "Liwa",
+      "wilayat_ar": "لوى"
+    },
+    {
+      "governorate_code": "OM-BS",
+      "governorate_en": "North Al Batinah",
+      "governorate_ar": "شمال الباطنة",
+      "wilayat_code": "saham",
+      "wilayat_en": "Saham",
+      "wilayat_ar": "صحم"
+    },
+    {
+      "governorate_code": "OM-BS",
+      "governorate_en": "North Al Batinah",
+      "governorate_ar": "شمال الباطنة",
+      "wilayat_code": "al-khaburah",
+      "wilayat_en": "Al Khaburah",
+      "wilayat_ar": "الخابورة"
+    },
+    {
+      "governorate_code": "OM-BS",
+      "governorate_en": "North Al Batinah",
+      "governorate_ar": "شمال الباطنة",
+      "wilayat_code": "as-suwayq",
+      "wilayat_en": "As Suwayq",
+      "wilayat_ar": "السويق"
+    },
+    {
+      "governorate_code": "OM-BJ",
+      "governorate_en": "South Al Batinah",
+      "governorate_ar": "جنوب الباطنة",
+      "wilayat_code": "ar-rustaq",
+      "wilayat_en": "Ar Rustaq",
+      "wilayat_ar": "الرستاق"
+    },
+    {
+      "governorate_code": "OM-BJ",
+      "governorate_en": "South Al Batinah",
+      "governorate_ar": "جنوب الباطنة",
+      "wilayat_code": "al-awabi",
+      "wilayat_en": "Al Awabi",
+      "wilayat_ar": "العوابي"
+    },
+    {
+      "governorate_code": "OM-BJ",
+      "governorate_en": "South Al Batinah",
+      "governorate_ar": "جنوب الباطنة",
+      "wilayat_code": "nakhal",
+      "wilayat_en": "Nakhal",
+      "wilayat_ar": "نخل"
+    },
+    {
+      "governorate_code": "OM-BJ",
+      "governorate_en": "South Al Batinah",
+      "governorate_ar": "جنوب الباطنة",
+      "wilayat_code": "wadi-al-maawil",
+      "wilayat_en": "Wadi Al Maawil",
+      "wilayat_ar": "وادي المعاول"
+    },
+    {
+      "governorate_code": "OM-BJ",
+      "governorate_en": "South Al Batinah",
+      "governorate_ar": "جنوب الباطنة",
+      "wilayat_code": "barka",
+      "wilayat_en": "Barka",
+      "wilayat_ar": "بركاء"
+    },
+    {
+      "governorate_code": "OM-BJ",
+      "governorate_en": "South Al Batinah",
+      "governorate_ar": "جنوب الباطنة",
+      "wilayat_code": "al-musanaah",
+      "wilayat_en": "Al Musanaah",
+      "wilayat_ar": "المصنعة"
+    },
+    {
+      "governorate_code": "OM-SJ",
+      "governorate_en": "South Ash Sharqiyah",
+      "governorate_ar": "جنوب الشرقية",
+      "wilayat_code": "sur",
+      "wilayat_en": "Sur",
+      "wilayat_ar": "صور"
+    },
+    {
+      "governorate_code": "OM-SJ",
+      "governorate_en": "South Ash Sharqiyah",
+      "governorate_ar": "جنوب الشرقية",
+      "wilayat_code": "al-kamil-wa-al-wafi",
+      "wilayat_en": "Al Kamil Wa Al Wafi",
+      "wilayat_ar": "الكامل والوافي"
+    },
+    {
+      "governorate_code": "OM-SJ",
+      "governorate_en": "South Ash Sharqiyah",
+      "governorate_ar": "جنوب الشرقية",
+      "wilayat_code": "jaalan-bani-bu-hasan",
+      "wilayat_en": "Jaalan Bani Bu Hasan",
+      "wilayat_ar": "جعلان بني بو حسن"
+    },
+    {
+      "governorate_code": "OM-SJ",
+      "governorate_en": "South Ash Sharqiyah",
+      "governorate_ar": "جنوب الشرقية",
+      "wilayat_code": "jaalan-bani-bu-ali",
+      "wilayat_en": "Jaalan Bani Bu Ali",
+      "wilayat_ar": "جعلان بني بو علي"
+    },
+    {
+      "governorate_code": "OM-SJ",
+      "governorate_en": "South Ash Sharqiyah",
+      "governorate_ar": "جنوب الشرقية",
+      "wilayat_code": "masirah",
+      "wilayat_en": "Masirah",
+      "wilayat_ar": "مصيرة"
+    },
+    {
+      "governorate_code": "OM-SS",
+      "governorate_en": "North Ash Sharqiyah",
+      "governorate_ar": "شمال الشرقية",
+      "wilayat_code": "ibra",
+      "wilayat_en": "Ibra",
+      "wilayat_ar": "إبراء"
+    },
+    {
+      "governorate_code": "OM-SS",
+      "governorate_en": "North Ash Sharqiyah",
+      "governorate_ar": "شمال الشرقية",
+      "wilayat_code": "al-mudaybi",
+      "wilayat_en": "Al Mudaybi",
+      "wilayat_ar": "المضيبي"
+    },
+    {
+      "governorate_code": "OM-SS",
+      "governorate_en": "North Ash Sharqiyah",
+      "governorate_ar": "شمال الشرقية",
+      "wilayat_code": "bidiyah",
+      "wilayat_en": "Bidiyah",
+      "wilayat_ar": "بدية"
+    },
+    {
+      "governorate_code": "OM-SS",
+      "governorate_en": "North Ash Sharqiyah",
+      "governorate_ar": "شمال الشرقية",
+      "wilayat_code": "al-qabil",
+      "wilayat_en": "Al Qabil",
+      "wilayat_ar": "القابل"
+    },
+    {
+      "governorate_code": "OM-SS",
+      "governorate_en": "North Ash Sharqiyah",
+      "governorate_ar": "شمال الشرقية",
+      "wilayat_code": "wadi-bani-khalid",
+      "wilayat_en": "Wadi Bani Khalid",
+      "wilayat_ar": "وادي بني خالد"
+    },
+    {
+      "governorate_code": "OM-SS",
+      "governorate_en": "North Ash Sharqiyah",
+      "governorate_ar": "شمال الشرقية",
+      "wilayat_code": "dama-wa-at-taiyin",
+      "wilayat_en": "Dama Wa At Taiyin",
+      "wilayat_ar": "دماء والطائيين"
+    },
+    {
+      "governorate_code": "OM-SS",
+      "governorate_en": "North Ash Sharqiyah",
+      "governorate_ar": "شمال الشرقية",
+      "wilayat_code": "sinaw",
+      "wilayat_en": "Sinaw",
+      "wilayat_ar": "سناو"
+    },
+    {
+      "governorate_code": "OM-ZA",
+      "governorate_en": "Adh Dhahirah",
+      "governorate_ar": "الظاهرة",
+      "wilayat_code": "ibri",
+      "wilayat_en": "Ibri",
+      "wilayat_ar": "عبري"
+    },
+    {
+      "governorate_code": "OM-ZA",
+      "governorate_en": "Adh Dhahirah",
+      "governorate_ar": "الظاهرة",
+      "wilayat_code": "yanqul",
+      "wilayat_en": "Yanqul",
+      "wilayat_ar": "ينقل"
+    },
+    {
+      "governorate_code": "OM-ZA",
+      "governorate_en": "Adh Dhahirah",
+      "governorate_ar": "الظاهرة",
+      "wilayat_code": "dank",
+      "wilayat_en": "Dank",
+      "wilayat_ar": "ضنك"
+    },
+    {
+      "governorate_code": "OM-WU",
+      "governorate_en": "Al Wusta",
+      "governorate_ar": "الوسطى",
+      "wilayat_code": "hayma",
+      "wilayat_en": "Hayma",
+      "wilayat_ar": "هيماء"
+    },
+    {
+      "governorate_code": "OM-WU",
+      "governorate_en": "Al Wusta",
+      "governorate_ar": "الوسطى",
+      "wilayat_code": "mahawt",
+      "wilayat_en": "Mahawt",
+      "wilayat_ar": "محوت"
+    },
+    {
+      "governorate_code": "OM-WU",
+      "governorate_en": "Al Wusta",
+      "governorate_ar": "الوسطى",
+      "wilayat_code": "ad-duqm",
+      "wilayat_en": "Ad Duqm",
+      "wilayat_ar": "الدقم"
+    },
+    {
+      "governorate_code": "OM-WU",
+      "governorate_en": "Al Wusta",
+      "governorate_ar": "الوسطى",
+      "wilayat_code": "al-jazir",
+      "wilayat_en": "Al Jazir",
+      "wilayat_ar": "الجازر"
+    }
+  ]
+}
