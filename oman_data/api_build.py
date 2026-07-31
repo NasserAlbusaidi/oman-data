@@ -42,6 +42,11 @@ def build_api(repo_root: Path, out_root: Path, now: datetime) -> list[Path]:
             "title_en": config.title_en,
             "cadence": config.cadence,
             "stale": stale,
+            "columns": [
+                {"name": c.name, "dtype": c.dtype, "min": c.min, "max": c.max}
+                for c in config.columns
+            ],
+            "notes": config.notes,
         }
         df = pd.read_csv(ddir / f"{config.id}.csv", encoding="utf-8")
         written.append(_write_json(

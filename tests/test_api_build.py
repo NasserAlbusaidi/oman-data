@@ -47,6 +47,11 @@ def test_builds_catalog_and_latest(tmp_path):
     latest = json.loads((repo / "api" / "v1" / "cpi" / "latest.json").read_text(encoding="utf-8"))
     assert latest["meta"]["stale"] is False
     assert latest["data"] == [{"month": "2026-06", "index": 104.2}]
+    assert latest["meta"]["columns"] == [
+        {"name": "month", "dtype": "str", "min": None, "max": None},
+        {"name": "index", "dtype": "float", "min": None, "max": None},
+    ]
+    assert latest["meta"]["notes"] == ""
     assert len(written) == 2
 
 

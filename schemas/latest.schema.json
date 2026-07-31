@@ -5,7 +5,22 @@
   "properties": {
     "meta": {
       "type": "object",
-      "required": ["id", "as_of", "fetched_at", "source_name", "source_url", "license", "rows", "title_ar", "title_en", "cadence", "stale"]
+      "required": ["id", "as_of", "fetched_at", "source_name", "source_url", "license", "rows", "title_ar", "title_en", "cadence", "stale", "columns", "notes"],
+      "properties": {
+        "columns": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["name", "dtype"],
+            "properties": {
+              "name": {"type": "string", "minLength": 1},
+              "dtype": {"enum": ["int", "float", "str"]}
+            }
+          }
+        },
+        "notes": {"type": "string"}
+      }
     },
     "data": {"type": "array", "minItems": 1, "items": {"type": "object"}}
   }

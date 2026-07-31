@@ -10,7 +10,28 @@
     "title_ar": "الرقم القياسي لأسعار المستهلك حسب مجموعة الإنفاق",
     "title_en": "Consumer Price Index by expenditure group",
     "cadence": "monthly",
-    "stale": false
+    "stale": false,
+    "columns": [
+      {
+        "name": "month",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "group",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "index",
+        "dtype": "float",
+        "min": 30,
+        "max": 300
+      }
+    ],
+    "notes": "Monthly Consumer Price Index for the Sultanate of Oman, all items plus the twelve COICOP expenditure divisions, from NCSI's National Summary Data Page (the IMF e-GDDS national page, linked from https://www.ncsi.gov.om/NationalStatistics). Base year 2018 = 100 (base price = average price of January–December 2018). Series start 2013-01 and run to the latest published month; 13 series x every month, no gaps. The all-items series (SDMX indicator PCPI_IX) is labelled \"general\"; the divisions (PCPI_CP_nn_IX) are lowercased slugs of the source's own English descriptors. The workbook's PCPI*_WT rows are basket weights, not indices, and are dropped. NSDP serves a fixed, unversioned filename that is overwritten each month, so source_url is always current and there is no listing page to resolve. The same figures appear in Table 13 of the NCSI Monthly Statistical Bulletin, which carries the full group breakdown but only three months at a time.\n"
   },
   "data": [
     {

@@ -10,7 +10,28 @@
     "title_ar": "حوادث المرور — الحوادث والوفيات والإصابات سنويًا على مستوى السلطنة",
     "title_en": "Traffic accidents — annual national accidents, deaths and injuries",
     "cadence": "annual",
-    "stale": false
+    "stale": false,
+    "columns": [
+      {
+        "name": "year",
+        "dtype": "int",
+        "min": 2000,
+        "max": 2035
+      },
+      {
+        "name": "metric",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "count",
+        "dtype": "int",
+        "min": 0,
+        "max": 50000
+      }
+    ],
+    "notes": "Annual national totals of road traffic accidents, deaths and injuries for the Sultanate of Oman, originating from Royal Oman Police statistics as published in NCSI's Security & Safety dataset on data.gov.om. Long format (year, metric, count) rather than one column per metric, because the three series end in different years: accidents run 2002-2024 and deaths 2002-2025, while the injuries series stopped updating upstream after 2021. That is real — the source simply has not published injuries since — and it is preserved as-is rather than truncated to the shortest series or extrapolated to the longest; a wide layout would have needed exactly the nulls the validation gate refuses. Consumers wanting a single series should filter on metric. \"deaths\" is the source's \"Deaths\" member, the number of people killed, and deliberately not its \"Fatalities\" member, which counts accidents in which someone died: the two differ by around 14% (371 deaths versus 320 fatal accidents in 2020, the latter being 23.9% of that year's 1,341 accidents, exactly as the source's own \"% Accidents Fatalities\" series reports). Values are plain counts as published (declared unit \"Number\", scale 1) — no scale factor is applied, and a change of either declaration raises rather than silently restating every number. The headline story in the data is a sustained decline in recorded accidents, from 10,197 in 2003 to 1,854 in 2024, while deaths over the same span did not fall at all (578 in 2003, 586 in 2024, 595 in 2025) — read the two together rather than the accident count alone. The injuries series also has a break the source does not explain: it drops from 10,802 in 2013 to 3,835 in 2014, far more than the 14% fall in accidents that year, so pre- and post-2014 injuries are probably not a like-for-like series and are published here unadjusted. National level only: the source's breakdowns by governorate and wilayat (83 regions), by accident cause (13), by nationality, by gender and by road-user type are out of scope for v1 and a planned follow-up, and the query pins those dimensions to their total members because the unfiltered cube returns 555 series instead of 3. Same caveat as the tourism dataset regarding the portal's public client_id. NCSI and ROP restate recent years as returns are finalised, so the newest year of each series should be read as provisional.\n"
   },
   "data": [
     {

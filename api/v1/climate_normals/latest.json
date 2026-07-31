@@ -10,7 +10,46 @@
     "title_ar": "المعدلات المناخية الشهرية ١٩٩١–٢٠٢٠ — ست محطات",
     "title_en": "Monthly climate normals 1991-2020 — six stations",
     "cadence": "static",
-    "stale": false
+    "stale": false,
+    "columns": [
+      {
+        "name": "station",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "station_ar",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "station_en",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "month",
+        "dtype": "int",
+        "min": 1,
+        "max": 12
+      },
+      {
+        "name": "variable",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "value",
+        "dtype": "float",
+        "min": -50,
+        "max": 2000
+      }
+    ],
+    "notes": "WMO-style 1991-2020 monthly climate normals for six Omani stations (Muscat/Seeb, Salalah, Sohar, Sur, Nizwa, Saiq), computed from daily ERA5-backed reanalysis served by the free Open-Meteo historical archive. Variables: mean daily maximum temperature (tmax_c, deg C), mean daily minimum (tmin_c, deg C), and mean monthly precipitation total (rain_mm). Station catalog and coordinates inherited from the OmanClimate project; Arabic names curated in-repo in stations.csv. This is reanalysis, not official DGMET station observations — the spec's original plan to port normals from OmanClimate was impossible (that project holds annual temperature metrics only, no monthly climatology, no rainfall); DGMET/CAA records remain the higher-authority upgrade path if access is ever granted. The value column's wide validation range spans deg C and mm; per-variable physical sanity is enforced by the dataset's tests instead. The record behind these numbers is complete: 10,958 days per station, 1991-01-01 to 2020-12-31, with no nulls in any variable at any station. API contract, verified live on 2026-07-31: the parameter names in the pipeline are the current documented ones (https://open-meteo.com/en/docs/historical-weather-api) and needed no correction — latitude, longitude, start_date, end_date, daily and timezone, with daily=temperature_2m_max,temperature_2m_min,precipitation_sum. One correction was needed elsewhere: the free tier's quota is weighted by the size of the window requested, not counted one unit per request, so six thirty-year three-variable calls back to back trip the *minutely* limit — observed as HTTP 429 with reason \"Minutely API request limit exceeded\" on the fourth station. fetch.py therefore paces itself between stations and retries a 429 after the minute the API asks for, and raises rather than writing a partial snapshot. timezone=Asia/Muscat is load-bearing for a daily aggregation: without it the API buckets days on UTC and cuts Omani days four hours early, shifting each daily max/min into the wrong day. Read these as reanalysis-grid values, not gauge values. Coordinates are snapped to the nearest ERA5/ERA5-Land cell and the cell's own elevation is what drives its temperatures: Muscat 22 m, Sur 5 m, Salalah 12 m, Sohar 15 m, Nizwa 510 m and Saiq 1919 m. Saiq's cell keeps essentially all of Jebel Akhdar's height, so the mountain station does read as a mountain station — 4.4 to 7.9 deg C cooler than Muscat in every month of the year. ERA5 runs slightly cool against gauge data at the coast: Seeb's June mean daily max is 37.5 here against a published station normal near 38.6. Rainfall totals are closer — Muscat 98 mm/yr against a published Seeb normal near 100 mm. Two rainfall caveats matter more than the temperature bias. First, the khareef is under-resolved. Salalah's monsoon rain is largely orographic fog-drizzle at scales finer than the reanalysis grid, so the June-September total comes out near 33 mm/yr where gauges record several times that. July at Salalah (6.3 mm) does still exceed July at Muscat (4.2 mm), so the khareef signal survives, but with far less margin than the real climate has. Anyone needing khareef amounts specifically should treat this dataset as a lower bound and go to DGMET. Second, and consequently, Salalah's wettest normal month is May rather than a khareef month. That is arithmetically correct and deliberately left alone: a normal is a thirty-year mean, and three of the thirty Mays carry a landfalling Arabian Sea system — 2018 (Cyclone Mekunu, 214 mm on 25 May alone), a late-May 2020 system, and 2002 — which between them supply about 90% of all the May rain in the record. The median May total is under 2 mm. Substituting a median or a trimmed mean would make the series read more intuitively and would stop it being a WMO normal, so the mean stands and the tests pin the anomaly so it is not silently \"fixed\" later. cadence is static: the 1991-2020 normal period is closed by definition, so this dataset is computed once and never refreshed by the scheduled runs. The next normal period, 2001-2030, cannot be computed before 2031.\n"
   },
   "data": [
     {
