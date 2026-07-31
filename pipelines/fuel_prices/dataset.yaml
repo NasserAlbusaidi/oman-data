@@ -107,6 +107,18 @@ notes: >
   month that needs no inference is simply recorded from NSS, and surfaces to a
   human on the next test run instead, because the test that pins the tail flat at
   the capped prices goes red as soon as an off-cap month lands in the CSV.
+  UNRESOLVED, and it blocks the automation rather than the data: nss.gov.om is
+  not reachable from GitHub-hosted runners. Two refresh-monthly runs on
+  2026-07-31 (runs 30659620073 and 30659930540) both died on a TCP connect
+  timeout to 77.83.62.111:443 after 120s, while the same request from a
+  Muscat connection returned 200 with the price panel intact in 0.8s. A dropped
+  SYN rather than an HTTP 403 means it is network-level — a geo-fence or
+  source-IP filter, not a user-agent block — so retries and header changes will
+  not help. Until it is resolved (an Oman-side self-hosted runner, an egress
+  proxy, or accepting a manual monthly run) this dataset fails every scheduled
+  refresh, the other three monthly datasets still publish, and the last-good
+  fuel data stays up. The three-month auto-extend bound above is what stops that
+  outage from quietly turning into invented data.
   A second guard covers the opposite risk: if NSS
   ever states a different price for a month prices.csv already covers, the
   pipeline raises instead of silently preferring either number. The NSS page

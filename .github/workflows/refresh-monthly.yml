@@ -59,16 +59,25 @@ jobs:
         run: |
           echo "$OUTCOMES"
           echo "$OUTCOMES" | grep -q failure && exit 1 || exit 0
+      # One open issue per outage, not one per run. A source that stays
+      # unreachable for months would otherwise file an identical issue every
+      # month until nobody reads any of them.
       - name: File issue on failure
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
+          TITLE_PREFIX: "Monthly refresh failed"
           OUTCOMES: >-
             cpi=${{ steps.cpi.outcome }}
             fuel_prices=${{ steps.fuel_prices.outcome }}
             trade=${{ steps.trade.outcome }}
             tourism=${{ steps.tourism.outcome }}
         run: |
-          gh issue create \
-            --title "Monthly refresh failed $(date -u +%Y-%m-%d)" \
-            --body "Outcomes: $OUTCOMES — run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — successes were committed; failed datasets keep last-good data."
+          body="Outcomes: $OUTCOMES — run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — successes were committed; failed datasets keep last-good data."
+          open=$(gh issue list --state open --limit 100 --json number,title \
+            --jq "[.[] | select(.title | startswith(\"$TITLE_PREFIX\"))][0].number // empty")
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body "$body"
+          else
+            gh issue create --title "$TITLE_PREFIX $(date -u +%Y-%m-%d)" --body "$body"
+          fi

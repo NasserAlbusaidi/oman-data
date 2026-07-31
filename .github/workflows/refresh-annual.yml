@@ -50,15 +50,22 @@ jobs:
         run: |
           echo "$OUTCOMES"
           echo "$OUTCOMES" | grep -q failure && exit 1 || exit 0
+      # One open issue per outage, not one per run; see refresh-monthly.yml.
       - name: File issue on failure
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
+          TITLE_PREFIX: "Annual refresh failed"
           OUTCOMES: >-
             population=${{ steps.population.outcome }}
             electricity=${{ steps.electricity.outcome }}
             traffic_accidents=${{ steps.traffic_accidents.outcome }}
         run: |
-          gh issue create \
-            --title "Annual refresh failed $(date -u +%Y-%m-%d)" \
-            --body "Outcomes: $OUTCOMES — run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — successes were committed; failed datasets keep last-good data."
+          body="Outcomes: $OUTCOMES — run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — successes were committed; failed datasets keep last-good data."
+          open=$(gh issue list --state open --limit 100 --json number,title \
+            --jq "[.[] | select(.title | startswith(\"$TITLE_PREFIX\"))][0].number // empty")
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body "$body"
+          else
+            gh issue create --title "$TITLE_PREFIX $(date -u +%Y-%m-%d)" --body "$body"
+          fi
