@@ -140,6 +140,22 @@ def test_missing_indicator_dimension_fails_loudly(tmp_path):
         parser()(doctored(tmp_path, drop_declaration))
 
 
+def test_missing_price_type_dimension_fails_loudly(tmp_path):
+    """The fan-out dimension is exempted from ``check_totals``, so its absence
+    is invisible to the shared guard and needs its own declaration check.
+
+    Without it a payload that simply stopped declaring ``price-type`` parses
+    clean: ``dim_name`` still reads the member off each row, and the exempt
+    dimension is never checked against ``dimension_ids``. Backported from the
+    ppi pipeline, which introduced the pattern.
+    """
+    def drop_declaration(payload):
+        del payload["dimensionFields"]["price-type"]
+
+    with pytest.raises(ValueError, match="declares no 'price-type' dimension"):
+        parser()(doctored(tmp_path, drop_declaration))
+
+
 def test_unit_change_fails_loudly(tmp_path):
     def to_plain_riyals(payload):
         payload["data"][0]["unit"] = "R.O"

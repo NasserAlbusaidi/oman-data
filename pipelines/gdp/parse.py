@@ -26,7 +26,11 @@ Source quirks pinned at discovery (2026-08-05, dataset zoangf):
   while every fixture-bound test stayed green. See ``agreeing_years``.
 * ``check_totals`` is called with ``price-type`` as the exempt dimension,
   because here it is ``price-type`` that fans out — the reverse of the
-  Electricity and Tourism pipelines, where the indicator dimension does.
+  Electricity and Tourism pipelines, where the indicator dimension does. Being
+  exempt means ``check_totals`` never looks at it, so a payload that stopped
+  *declaring* it would parse clean — every row would still name a member.
+  Both the exempted dimension and the pinned ``indicators`` therefore get their
+  own declaration guard below.
   ``indicators`` is pinned by ``fetch.py`` to a single non-total member, so it
   is removed from the set handed to ``check_totals`` (which would otherwise,
   correctly, reject "GDP at Market Prices" for not being a total) and checked
@@ -118,6 +122,13 @@ def parse(raw_path: Path) -> tuple[pd.DataFrame, str]:
             f"payload declares no {_INDICATOR_DIM!r} dimension — the fetch pins "
             f"this dataset to one of its 39 members, so without it these rows "
             f"are an unknown national-accounts aggregate"
+        )
+    if _PRICE_DIM not in expected_dims:
+        raise ValueError(
+            f"payload declares no {_PRICE_DIM!r} dimension — that is the "
+            f"dimension the 'price_basis' column is built from, and it is the "
+            f"one exempted from check_totals, so its absence would otherwise "
+            f"go unnoticed: every row would still name a member and parse"
         )
     records: list[dict] = []
     seen: set[str] = set()
