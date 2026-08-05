@@ -15,7 +15,9 @@ _RUN_RE = re.compile(r"python -m oman_data\.run\s+(\w+)")
 # every path a workflow hands to `git add`, one token per staged path
 _GIT_ADD_RE = re.compile(r"git add ([^\n]*)")
 # which workflow owns which cadence
-REFRESH_WORKFLOWS = {"monthly": "refresh-monthly.yml", "annual": "refresh-annual.yml"}
+REFRESH_WORKFLOWS = {"monthly": "refresh-monthly.yml",
+                     "quarterly": "refresh-quarterly.yml",
+                     "annual": "refresh-annual.yml"}
 
 
 def all_configs():
@@ -54,8 +56,8 @@ def defines_persist(parse_py: Path) -> bool:
     return False
 
 
-def test_at_least_eleven_pipelines_exist():
-    assert len(all_configs()) >= 11
+def test_at_least_twelve_pipelines_exist():
+    assert len(all_configs()) >= 12
 
 
 def test_every_config_loads_and_is_bilingual():
@@ -82,6 +84,12 @@ def test_no_dataset_is_silently_unscheduled():
     for cfg_path in all_configs():
         cfg = load_dataset_config(cfg_path)
         by_cadence.setdefault(cfg.cadence, set()).add(cfg.id)
+
+    # The loop below iterates REFRESH_WORKFLOWS, so a cadence missing from that
+    # map is checked by nothing — which is the original bug wearing a new hat.
+    # Adding a third cadence made that reachable by omission, so the map is
+    # itself pinned to the cadences actually in use.
+    assert set(by_cadence) - {"static"} <= set(REFRESH_WORKFLOWS), sorted(by_cadence)
 
     for cadence, workflow in REFRESH_WORKFLOWS.items():
         assert scheduled_ids(workflow) == by_cadence.get(cadence, set()), workflow

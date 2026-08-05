@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T03:57:56.950929+00:00",
+  "generated_at": "2026-08-05T04:14:33.202712+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -88,6 +88,17 @@
       "fetched_at": "2026-07-31T19:38:50Z",
       "stale": false,
       "rows": 22
+    },
+    {
+      "id": "ppi",
+      "title_ar": "الرقم القياسي لأسعار المنتجين غير النفطية — ربع سنوي، حسب الأقسام، سنة الأساس ٢٠١٨ = ١٠٠",
+      "title_en": "Non-oil Producer Price Index — quarterly, by section, base year 2018 = 100",
+      "source_name": "NCSI via data.gov.om (Producer Price Index Base Year 2018, dataset jhmydsg)",
+      "cadence": "quarterly",
+      "as_of": "2026Q1",
+      "fetched_at": "2026-08-05T04:14:33Z",
+      "stale": false,
+      "rows": 165
     },
     {
       "id": "tourism",

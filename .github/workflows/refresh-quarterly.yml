@@ -1,0 +1,89 @@
+name: refresh-quarterly
+# Datasets with cadence: quarterly.
+#
+# Monthly cron, not quarterly. NCSI publishes the quarterly PPI roughly one
+# quarter in arrears (2026Q1 was already live on the portal when this dataset
+# was built, on 2026-08-05), and the exact release date moves. A four-times-a-
+# year cron lined up against a moving release date can miss it by days and then
+# wait a full quarter — the site would show a quarter-old headline while the
+# portal had the new one. Polling monthly bounds that delay to ~31 days for the
+# cost of one API call a month, and keeps `fetched_at` fresh enough that the
+# 140-day staleness window in api_build.py works as a dead-workflow detector
+# rather than firing every publication cycle.
+#
+# 15th at 05:00 UTC, offset from refresh-monthly (5th, 03:00) and refresh-annual
+# (10th, 04:00): the three never share a window, so a failure and the issue it
+# files belong to exactly one workflow.
+on:
+  schedule:
+    - cron: "0 5 15 * *"   # 15th monthly, 05:00 UTC (09:00 Muscat)
+  workflow_dispatch:
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e .
+      # Each dataset gets its own step: one dead upstream must not skip the
+      # others, nor the commit of whatever did succeed.
+      - name: Refresh ppi
+        id: ppi
+        continue-on-error: true
+        run: python -m oman_data.run ppi
+      - name: Commit refreshed data
+        run: |
+          git config user.name "oman-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          # Outputs only. No quarterly pipeline curates an input file of its
+          # own, so nothing under pipelines/ is ever staged here.
+          git add raw data api
+          git diff --cached --quiet || git commit -m "data: quarterly refresh $(date -u +%Y-%m)"
+          git push
+      # Fires before the outcome gate on purpose; see refresh-monthly.yml.
+      - name: Trigger site redeploy
+        if: success()
+        env:
+          DEPLOY_HOOK: ${{ secrets.CF_PAGES_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$DEPLOY_HOOK" ]; then
+            # See refresh-monthly.yml: a dead deploy hook must not fail a refresh
+            # that has already committed and pushed its data.
+            if curl -fsS --retry 3 --retry-all-errors --max-time 30 \
+                 -X POST "$DEPLOY_HOOK" > /dev/null; then
+              echo "site redeploy triggered"
+            else
+              echo "::warning::site redeploy hook failed — data refresh itself succeeded"
+            fi
+          else
+            echo "CF_PAGES_DEPLOY_HOOK not set — skipping site redeploy"
+          fi
+      - name: Fail if any dataset failed
+        env:
+          OUTCOMES: >-
+            ppi=${{ steps.ppi.outcome }}
+        run: |
+          echo "$OUTCOMES"
+          echo "$OUTCOMES" | grep -q failure && exit 1 || exit 0
+      # One open issue per outage, not one per run; see refresh-monthly.yml.
+      - name: File issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE_PREFIX: "Quarterly refresh failed"
+          OUTCOMES: >-
+            ppi=${{ steps.ppi.outcome }}
+        run: |
+          body="Outcomes: $OUTCOMES — run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — successes were committed; failed datasets keep last-good data."
+          open=$(gh issue list --state open --limit 100 --json number,title \
+            --jq "[.[] | select(.title | startswith(\"$TITLE_PREFIX\"))][0].number // empty")
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body "$body"
+          else
+            gh issue create --title "$TITLE_PREFIX $(date -u +%Y-%m-%d)" --body "$body"
+          fi

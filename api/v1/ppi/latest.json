@@ -1,0 +1,863 @@
+{
+  "meta": {
+    "id": "ppi",
+    "as_of": "2026Q1",
+    "fetched_at": "2026-08-05T04:14:33Z",
+    "source_name": "NCSI via data.gov.om (Producer Price Index Base Year 2018, dataset jhmydsg)",
+    "source_url": "https://data.gov.om/jhmydsg",
+    "license": "Open Government License - Sultanate of Oman",
+    "rows": 165,
+    "title_ar": "الرقم القياسي لأسعار المنتجين غير النفطية — ربع سنوي، حسب الأقسام، سنة الأساس ٢٠١٨ = ١٠٠",
+    "title_en": "Non-oil Producer Price Index — quarterly, by section, base year 2018 = 100",
+    "cadence": "quarterly",
+    "stale": false,
+    "columns": [
+      {
+        "name": "quarter",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "group",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "index",
+        "dtype": "float",
+        "min": 40,
+        "max": 250
+      }
+    ],
+    "notes": "Quarterly Producer Price Index for the Sultanate of Oman's non-oil economy, from NCSI's \"Producer Price Index Base Year 2018\" database on data.gov.om. It measures the average change in the prices producers receive for non-oil goods they make and sell, collected quarterly from producing companies. One row per quarter and group: group \"general_nonoil\" is the all-items non-oil index, and the other four are the sections beneath it — \"mining_quarrying\", \"manufacturing\", \"electrical_energy\" and \"water\". The four sections are exhaustive rather than a selection: the source's own basket weights for them are 55.57, 37.372, 5.78 and 1.278, which sum to exactly 100 (read live 2026-08-05 from the same cube's \"Weight\" series, which is not part of the committed raw snapshot). Base year 2018 = 100 — the cube is named for it, its description repeats it, and its Weight series carries it as a unit. The data agrees: each group's four 2018 quarters average within 1.14 index points of 100. That is checked arithmetically on every refresh, so a silent NCSI rebase stops the pipeline rather than republishing these titles against a different base. Series start 2018Q1. All five run to the same quarter with no gaps — 165 rows over 33 quarters as published on 2026-08-05. Cadence is quarterly and the publication lag is roughly one quarter. On 2026-08-05 the newest published quarter was 2026Q1: that quarter ended 2026-03-31 and the cube's own last-data-changed timestamp was 2026-07-09, about 100 days later, while 2026Q2 had ended 36 days earlier and was not out. The refresh workflow therefore polls monthly rather than quarterly, so a release is picked up within about a month of appearing. Values are index points, not percentages, despite the source declaring the unit as \"%\" on every row and \"percentage\" in its Arabic indicator metadata. That is source sloppiness: the numbers run from 67 to 140 and sit at 100 in the base year, which is an index level and not a rate of change. The wrong declaration is pinned exactly as it arrives rather than corrected, so a change to it still stops the pipeline. National totals only. The cube also publishes governorate-level estimates of this index (Muscat and Dhofar both carry the full series), and the query pins the region to Oman precisely because a drift onto one of them would look entirely plausible. Out of scope alongside them: the 25 subgroup commodities nested inside the four sections, the basket weights, and the source's own \"Inflation (%)\" indicator — that one is the year-on-year change of exactly the series published here, so it is derivable from these numbers, and it starts four quarters later at 2019Q1. Same caveat as the tourism dataset regarding the portal's public client_id. NCSI revises recent quarters as survey returns are finalised, so the newest quarter should be read as provisional.\n"
+  },
+  "data": [
+    {
+      "quarter": "2018Q1",
+      "group": "electrical_energy",
+      "index": 91.8709021665151
+    },
+    {
+      "quarter": "2018Q1",
+      "group": "general_nonoil",
+      "index": 97.451387988434
+    },
+    {
+      "quarter": "2018Q1",
+      "group": "manufacturing",
+      "index": 97.0446932955331
+    },
+    {
+      "quarter": "2018Q1",
+      "group": "mining_quarrying",
+      "index": 92.3118330776812
+    },
+    {
+      "quarter": "2018Q1",
+      "group": "water",
+      "index": 106.000710794243
+    },
+    {
+      "quarter": "2018Q2",
+      "group": "electrical_energy",
+      "index": 116.503892934479
+    },
+    {
+      "quarter": "2018Q2",
+      "group": "general_nonoil",
+      "index": 103.788051339843
+    },
+    {
+      "quarter": "2018Q2",
+      "group": "manufacturing",
+      "index": 100.80590622111
+    },
+    {
+      "quarter": "2018Q2",
+      "group": "mining_quarrying",
+      "index": 95.8366156684765
+    },
+    {
+      "quarter": "2018Q2",
+      "group": "water",
+      "index": 108.815610266165
+    },
+    {
+      "quarter": "2018Q3",
+      "group": "electrical_energy",
+      "index": 113.3248047571
+    },
+    {
+      "quarter": "2018Q3",
+      "group": "general_nonoil",
+      "index": 102.62548155055
+    },
+    {
+      "quarter": "2018Q3",
+      "group": "manufacturing",
+      "index": 102.110080244726
+    },
+    {
+      "quarter": "2018Q3",
+      "group": "mining_quarrying",
+      "index": 104.117367844563
+    },
+    {
+      "quarter": "2018Q3",
+      "group": "water",
+      "index": 88.9721081404645
+    },
+    {
+      "quarter": "2018Q4",
+      "group": "electrical_energy",
+      "index": 77.0746656929306
+    },
+    {
+      "quarter": "2018Q4",
+      "group": "general_nonoil",
+      "index": 95.5446231386146
+    },
+    {
+      "quarter": "2018Q4",
+      "group": "manufacturing",
+      "index": 99.792644335474
+    },
+    {
+      "quarter": "2018Q4",
+      "group": "mining_quarrying",
+      "index": 107.445165578123
+    },
+    {
+      "quarter": "2018Q4",
+      "group": "water",
+      "index": 91.6676905021919
+    },
+    {
+      "quarter": "2019Q1",
+      "group": "electrical_energy",
+      "index": 86.7546691061453
+    },
+    {
+      "quarter": "2019Q1",
+      "group": "general_nonoil",
+      "index": 94.6028392795371
+    },
+    {
+      "quarter": "2019Q1",
+      "group": "manufacturing",
+      "index": 94.7021228911076
+    },
+    {
+      "quarter": "2019Q1",
+      "group": "mining_quarrying",
+      "index": 92.613819616976
+    },
+    {
+      "quarter": "2019Q1",
+      "group": "water",
+      "index": 92.6566858810586
+    },
+    {
+      "quarter": "2019Q2",
+      "group": "electrical_energy",
+      "index": 119.466671776207
+    },
+    {
+      "quarter": "2019Q2",
+      "group": "general_nonoil",
+      "index": 99.5535177129687
+    },
+    {
+      "quarter": "2019Q2",
+      "group": "manufacturing",
+      "index": 95.3960651855774
+    },
+    {
+      "quarter": "2019Q2",
+      "group": "mining_quarrying",
+      "index": 97.3851187133229
+    },
+    {
+      "quarter": "2019Q2",
+      "group": "water",
+      "index": 96.3298704738621
+    },
+    {
+      "quarter": "2019Q3",
+      "group": "electrical_energy",
+      "index": 114.470530025889
+    },
+    {
+      "quarter": "2019Q3",
+      "group": "general_nonoil",
+      "index": 96.9312091970772
+    },
+    {
+      "quarter": "2019Q3",
+      "group": "manufacturing",
+      "index": 94.1263351140102
+    },
+    {
+      "quarter": "2019Q3",
+      "group": "mining_quarrying",
+      "index": 96.3715073292368
+    },
+    {
+      "quarter": "2019Q3",
+      "group": "water",
+      "index": 78.3522833293104
+    },
+    {
+      "quarter": "2019Q4",
+      "group": "electrical_energy",
+      "index": 82.6160515505497
+    },
+    {
+      "quarter": "2019Q4",
+      "group": "general_nonoil",
+      "index": 89.9620890067878
+    },
+    {
+      "quarter": "2019Q4",
+      "group": "manufacturing",
+      "index": 91.0601350078648
+    },
+    {
+      "quarter": "2019Q4",
+      "group": "mining_quarrying",
+      "index": 92.1554269080511
+    },
+    {
+      "quarter": "2019Q4",
+      "group": "water",
+      "index": 88.9373920665211
+    },
+    {
+      "quarter": "2020Q1",
+      "group": "electrical_energy",
+      "index": 88.3821650035761
+    },
+    {
+      "quarter": "2020Q1",
+      "group": "general_nonoil",
+      "index": 91.2811027679483
+    },
+    {
+      "quarter": "2020Q1",
+      "group": "manufacturing",
+      "index": 89.2736508953451
+    },
+    {
+      "quarter": "2020Q1",
+      "group": "mining_quarrying",
+      "index": 93.6968488517582
+    },
+    {
+      "quarter": "2020Q1",
+      "group": "water",
+      "index": 96.0582351056088
+    },
+    {
+      "quarter": "2020Q2",
+      "group": "electrical_energy",
+      "index": 118.079871612753
+    },
+    {
+      "quarter": "2020Q2",
+      "group": "general_nonoil",
+      "index": 95.0932337069948
+    },
+    {
+      "quarter": "2020Q2",
+      "group": "manufacturing",
+      "index": 78.0320284404115
+    },
+    {
+      "quarter": "2020Q2",
+      "group": "mining_quarrying",
+      "index": 68.5046125532448
+    },
+    {
+      "quarter": "2020Q2",
+      "group": "water",
+      "index": 91.0902640751818
+    },
+    {
+      "quarter": "2020Q3",
+      "group": "electrical_energy",
+      "index": 115.620658494077
+    },
+    {
+      "quarter": "2020Q3",
+      "group": "general_nonoil",
+      "index": 94.6821574151839
+    },
+    {
+      "quarter": "2020Q3",
+      "group": "manufacturing",
+      "index": 82.3588577081418
+    },
+    {
+      "quarter": "2020Q3",
+      "group": "mining_quarrying",
+      "index": 67.1702107996235
+    },
+    {
+      "quarter": "2020Q3",
+      "group": "water",
+      "index": 90.6514250018536
+    },
+    {
+      "quarter": "2020Q4",
+      "group": "electrical_energy",
+      "index": 82.0621488576896
+    },
+    {
+      "quarter": "2020Q4",
+      "group": "general_nonoil",
+      "index": 89.8792170229908
+    },
+    {
+      "quarter": "2020Q4",
+      "group": "manufacturing",
+      "index": 83.9435609956131
+    },
+    {
+      "quarter": "2020Q4",
+      "group": "mining_quarrying",
+      "index": 70.7282431225402
+    },
+    {
+      "quarter": "2020Q4",
+      "group": "water",
+      "index": 83.5032688215463
+    },
+    {
+      "quarter": "2021Q1",
+      "group": "electrical_energy",
+      "index": 89.1797558575384
+    },
+    {
+      "quarter": "2021Q1",
+      "group": "general_nonoil",
+      "index": 95.5496579436995
+    },
+    {
+      "quarter": "2021Q1",
+      "group": "manufacturing",
+      "index": 92.482317017712
+    },
+    {
+      "quarter": "2021Q1",
+      "group": "mining_quarrying",
+      "index": 77.6621416729936
+    },
+    {
+      "quarter": "2021Q1",
+      "group": "water",
+      "index": 85.9861724310045
+    },
+    {
+      "quarter": "2021Q2",
+      "group": "electrical_energy",
+      "index": 112.24932733711
+    },
+    {
+      "quarter": "2021Q2",
+      "group": "general_nonoil",
+      "index": 105.498713189589
+    },
+    {
+      "quarter": "2021Q2",
+      "group": "manufacturing",
+      "index": 99.6807277059624
+    },
+    {
+      "quarter": "2021Q2",
+      "group": "mining_quarrying",
+      "index": 92.3061544313936
+    },
+    {
+      "quarter": "2021Q2",
+      "group": "water",
+      "index": 96.5669455770919
+    },
+    {
+      "quarter": "2021Q3",
+      "group": "electrical_energy",
+      "index": 118.961782603251
+    },
+    {
+      "quarter": "2021Q3",
+      "group": "general_nonoil",
+      "index": 109.734491017157
+    },
+    {
+      "quarter": "2021Q3",
+      "group": "manufacturing",
+      "index": 105.721314907099
+    },
+    {
+      "quarter": "2021Q3",
+      "group": "mining_quarrying",
+      "index": 100.48922973956
+    },
+    {
+      "quarter": "2021Q3",
+      "group": "water",
+      "index": 95.3280021322993
+    },
+    {
+      "quarter": "2021Q4",
+      "group": "electrical_energy",
+      "index": 90.3993862649361
+    },
+    {
+      "quarter": "2021Q4",
+      "group": "general_nonoil",
+      "index": 111.093249313729
+    },
+    {
+      "quarter": "2021Q4",
+      "group": "manufacturing",
+      "index": 114.135678439867
+    },
+    {
+      "quarter": "2021Q4",
+      "group": "mining_quarrying",
+      "index": 105.461708307653
+    },
+    {
+      "quarter": "2021Q4",
+      "group": "water",
+      "index": 117.497805069983
+    },
+    {
+      "quarter": "2022Q1",
+      "group": "electrical_energy",
+      "index": 97.2846060922468
+    },
+    {
+      "quarter": "2022Q1",
+      "group": "general_nonoil",
+      "index": 117.269530968481
+    },
+    {
+      "quarter": "2022Q1",
+      "group": "manufacturing",
+      "index": 121.924554320948
+    },
+    {
+      "quarter": "2022Q1",
+      "group": "mining_quarrying",
+      "index": 112.100325448634
+    },
+    {
+      "quarter": "2022Q1",
+      "group": "water",
+      "index": 92.0924589177448
+    },
+    {
+      "quarter": "2022Q2",
+      "group": "electrical_energy",
+      "index": 124.365141409185
+    },
+    {
+      "quarter": "2022Q2",
+      "group": "general_nonoil",
+      "index": 124.898039036339
+    },
+    {
+      "quarter": "2022Q2",
+      "group": "manufacturing",
+      "index": 129.612902638923
+    },
+    {
+      "quarter": "2022Q2",
+      "group": "mining_quarrying",
+      "index": 130.973485784522
+    },
+    {
+      "quarter": "2022Q2",
+      "group": "water",
+      "index": 96.5143695727725
+    },
+    {
+      "quarter": "2022Q3",
+      "group": "electrical_energy",
+      "index": 123.432414719675
+    },
+    {
+      "quarter": "2022Q3",
+      "group": "general_nonoil",
+      "index": 120.625452257486
+    },
+    {
+      "quarter": "2022Q3",
+      "group": "manufacturing",
+      "index": 122.787480289463
+    },
+    {
+      "quarter": "2022Q3",
+      "group": "mining_quarrying",
+      "index": 139.042396326962
+    },
+    {
+      "quarter": "2022Q3",
+      "group": "water",
+      "index": 96.1017526321288
+    },
+    {
+      "quarter": "2022Q4",
+      "group": "electrical_energy",
+      "index": 94.6004053756926
+    },
+    {
+      "quarter": "2022Q4",
+      "group": "general_nonoil",
+      "index": 116.285340018089
+    },
+    {
+      "quarter": "2022Q4",
+      "group": "manufacturing",
+      "index": 121.1
+    },
+    {
+      "quarter": "2022Q4",
+      "group": "mining_quarrying",
+      "index": 126.987859995881
+    },
+    {
+      "quarter": "2022Q4",
+      "group": "water",
+      "index": 91.1270311655354
+    },
+    {
+      "quarter": "2023Q1",
+      "group": "electrical_energy",
+      "index": 97.2285436469208
+    },
+    {
+      "quarter": "2023Q1",
+      "group": "general_nonoil",
+      "index": 105.671415951666
+    },
+    {
+      "quarter": "2023Q1",
+      "group": "manufacturing",
+      "index": 112.224160414848
+    },
+    {
+      "quarter": "2023Q1",
+      "group": "mining_quarrying",
+      "index": 114.802714450385
+    },
+    {
+      "quarter": "2023Q1",
+      "group": "water",
+      "index": 91.0404138656198
+    },
+    {
+      "quarter": "2023Q2",
+      "group": "electrical_energy",
+      "index": 123.156498125223
+    },
+    {
+      "quarter": "2023Q2",
+      "group": "general_nonoil",
+      "index": 109.671951104519
+    },
+    {
+      "quarter": "2023Q2",
+      "group": "manufacturing",
+      "index": 107.635794474422
+    },
+    {
+      "quarter": "2023Q2",
+      "group": "mining_quarrying",
+      "index": 110.857176870559
+    },
+    {
+      "quarter": "2023Q2",
+      "group": "water",
+      "index": 95.4253153734021
+    },
+    {
+      "quarter": "2023Q3",
+      "group": "electrical_energy",
+      "index": 126.951208747943
+    },
+    {
+      "quarter": "2023Q3",
+      "group": "general_nonoil",
+      "index": 108.665166265249
+    },
+    {
+      "quarter": "2023Q3",
+      "group": "manufacturing",
+      "index": 111.076847062278
+    },
+    {
+      "quarter": "2023Q3",
+      "group": "mining_quarrying",
+      "index": 115.350544122783
+    },
+    {
+      "quarter": "2023Q3",
+      "group": "water",
+      "index": 98.0467344108269
+    },
+    {
+      "quarter": "2023Q4",
+      "group": "electrical_energy",
+      "index": 90.0335221475193
+    },
+    {
+      "quarter": "2023Q4",
+      "group": "general_nonoil",
+      "index": 103.027524692699
+    },
+    {
+      "quarter": "2023Q4",
+      "group": "manufacturing",
+      "index": 110.1
+    },
+    {
+      "quarter": "2023Q4",
+      "group": "mining_quarrying",
+      "index": 117.5
+    },
+    {
+      "quarter": "2023Q4",
+      "group": "water",
+      "index": 92.6799475242655
+    },
+    {
+      "quarter": "2024Q1",
+      "group": "electrical_energy",
+      "index": 97.7101428279597
+    },
+    {
+      "quarter": "2024Q1",
+      "group": "general_nonoil",
+      "index": 104.050496855999
+    },
+    {
+      "quarter": "2024Q1",
+      "group": "manufacturing",
+      "index": 109.259380929219
+    },
+    {
+      "quarter": "2024Q1",
+      "group": "mining_quarrying",
+      "index": 113.156661305355
+    },
+    {
+      "quarter": "2024Q1",
+      "group": "water",
+      "index": 96.1182514266283
+    },
+    {
+      "quarter": "2024Q2",
+      "group": "electrical_energy",
+      "index": 125.903951565852
+    },
+    {
+      "quarter": "2024Q2",
+      "group": "general_nonoil",
+      "index": 109.887358419566
+    },
+    {
+      "quarter": "2024Q2",
+      "group": "manufacturing",
+      "index": 108.225188198603
+    },
+    {
+      "quarter": "2024Q2",
+      "group": "mining_quarrying",
+      "index": 116.672734852907
+    },
+    {
+      "quarter": "2024Q2",
+      "group": "water",
+      "index": 100.663453427802
+    },
+    {
+      "quarter": "2024Q3",
+      "group": "electrical_energy",
+      "index": 118.045372854802
+    },
+    {
+      "quarter": "2024Q3",
+      "group": "general_nonoil",
+      "index": 107.985832082341
+    },
+    {
+      "quarter": "2024Q3",
+      "group": "manufacturing",
+      "index": 106.073050530247
+    },
+    {
+      "quarter": "2024Q3",
+      "group": "mining_quarrying",
+      "index": 120.303420986127
+    },
+    {
+      "quarter": "2024Q3",
+      "group": "water",
+      "index": 96.3663573943499
+    },
+    {
+      "quarter": "2024Q4",
+      "group": "electrical_energy",
+      "index": 85.352819320943
+    },
+    {
+      "quarter": "2024Q4",
+      "group": "general_nonoil",
+      "index": 101.363661291465
+    },
+    {
+      "quarter": "2024Q4",
+      "group": "manufacturing",
+      "index": 104.56025955524
+    },
+    {
+      "quarter": "2024Q4",
+      "group": "mining_quarrying",
+      "index": 120.363284075153
+    },
+    {
+      "quarter": "2024Q4",
+      "group": "water",
+      "index": 88.6411919542047
+    },
+    {
+      "quarter": "2025Q1",
+      "group": "electrical_energy",
+      "index": 104.361418446394
+    },
+    {
+      "quarter": "2025Q1",
+      "group": "general_nonoil",
+      "index": 105.557645008022
+    },
+    {
+      "quarter": "2025Q1",
+      "group": "manufacturing",
+      "index": 105.093756597912
+    },
+    {
+      "quarter": "2025Q1",
+      "group": "mining_quarrying",
+      "index": 123.303261985592
+    },
+    {
+      "quarter": "2025Q1",
+      "group": "water",
+      "index": 101.554258782104
+    },
+    {
+      "quarter": "2025Q2",
+      "group": "electrical_energy",
+      "index": 119.029534865728
+    },
+    {
+      "quarter": "2025Q2",
+      "group": "general_nonoil",
+      "index": 104.36301113301
+    },
+    {
+      "quarter": "2025Q2",
+      "group": "manufacturing",
+      "index": 99.2030294240621
+    },
+    {
+      "quarter": "2025Q2",
+      "group": "mining_quarrying",
+      "index": 118.106440500882
+    },
+    {
+      "quarter": "2025Q2",
+      "group": "water",
+      "index": 95.6461573180785
+    },
+    {
+      "quarter": "2025Q3",
+      "group": "electrical_energy",
+      "index": 122.130775433458
+    },
+    {
+      "quarter": "2025Q3",
+      "group": "general_nonoil",
+      "index": 106.598567273411
+    },
+    {
+      "quarter": "2025Q3",
+      "group": "manufacturing",
+      "index": 101.783916381685
+    },
+    {
+      "quarter": "2025Q3",
+      "group": "mining_quarrying",
+      "index": 113.925627622712
+    },
+    {
+      "quarter": "2025Q3",
+      "group": "water",
+      "index": 102.320927265137
+    },
+    {
+      "quarter": "2025Q4",
+      "group": "electrical_energy",
+      "index": 112.637240938375
+    },
+    {
+      "quarter": "2025Q4",
+      "group": "general_nonoil",
+      "index": 104.447236558875
+    },
+    {
+      "quarter": "2025Q4",
+      "group": "manufacturing",
+      "index": 100.09975687705
+    },
+    {
+      "quarter": "2025Q4",
+      "group": "mining_quarrying",
+      "index": 113.379663548126
+    },
+    {
+      "quarter": "2025Q4",
+      "group": "water",
+      "index": 112.824453580827
+    },
+    {
+      "quarter": "2026Q1",
+      "group": "electrical_energy",
+      "index": 104.310724459607
+    },
+    {
+      "quarter": "2026Q1",
+      "group": "general_nonoil",
+      "index": 108.820388005394
+    },
+    {
+      "quarter": "2026Q1",
+      "group": "manufacturing",
+      "index": 113.85989932529
+    },
+    {
+      "quarter": "2026Q1",
+      "group": "mining_quarrying",
+      "index": 109.362580912664
+    },
+    {
+      "quarter": "2026Q1",
+      "group": "water",
+      "index": 97.1557669322018
+    }
+  ]
+}

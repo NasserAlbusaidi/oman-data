@@ -1,0 +1,9 @@
+{
+  "id": "ppi",
+  "as_of": "2026Q1",
+  "fetched_at": "2026-08-05T04:14:33Z",
+  "source_name": "NCSI via data.gov.om (Producer Price Index Base Year 2018, dataset jhmydsg)",
+  "source_url": "https://data.gov.om/jhmydsg",
+  "license": "Open Government License - Sultanate of Oman",
+  "rows": 165
+}

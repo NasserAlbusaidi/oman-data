@@ -1,0 +1,53 @@
+id: ppi
+title_ar: "الرقم القياسي لأسعار المنتجين غير النفطية — ربع سنوي، حسب الأقسام، سنة الأساس ٢٠١٨ = ١٠٠"
+title_en: "Non-oil Producer Price Index — quarterly, by section, base year 2018 = 100"
+source_name: "NCSI via data.gov.om (Producer Price Index Base Year 2018, dataset jhmydsg)"
+source_url: "https://data.gov.om/jhmydsg"
+license: "Open Government License - Sultanate of Oman"
+cadence: quarterly
+columns:
+  - {name: quarter, dtype: str}
+  - {name: group, dtype: str}
+  - {name: index, dtype: float, min: 40, max: 250}
+notes: >
+  Quarterly Producer Price Index for the Sultanate of Oman's non-oil economy,
+  from NCSI's "Producer Price Index Base Year 2018" database on data.gov.om. It
+  measures the average change in the prices producers receive for non-oil goods
+  they make and sell, collected quarterly from producing companies. One row per
+  quarter and group: group "general_nonoil" is the all-items non-oil index, and
+  the other four are the sections beneath it — "mining_quarrying",
+  "manufacturing", "electrical_energy" and "water". The four sections are
+  exhaustive rather than a selection: the source's own basket weights for them
+  are 55.57, 37.372, 5.78 and 1.278, which sum to exactly 100 (read live
+  2026-08-05 from the same cube's "Weight" series, which is not part of the
+  committed raw snapshot). Base year 2018 = 100 — the cube is named for it, its
+  description repeats it, and its Weight series carries it as a unit. The data
+  agrees: each group's four 2018 quarters average within 1.14 index points of
+  100. That is checked arithmetically on every refresh, so a silent NCSI rebase
+  stops the pipeline rather than republishing these titles against a different
+  base.
+  Series start 2018Q1. All five run to the same quarter with no gaps —
+  165 rows over 33 quarters as published on 2026-08-05.
+  Cadence is quarterly and the publication lag is roughly one quarter. On
+  2026-08-05 the newest published quarter was 2026Q1: that quarter ended
+  2026-03-31 and the cube's own last-data-changed timestamp was 2026-07-09,
+  about 100 days later, while 2026Q2 had ended 36 days earlier and was not out.
+  The refresh workflow therefore polls monthly rather than quarterly, so a
+  release is picked up within about a month of appearing.
+  Values are index points, not percentages, despite the source declaring the
+  unit as "%" on every row and "percentage" in its Arabic indicator metadata.
+  That is source sloppiness: the numbers run from 67 to 140 and sit at 100 in
+  the base year, which is an index level and not a rate of change. The wrong
+  declaration is pinned exactly as it arrives rather than corrected, so a
+  change to it still stops the pipeline.
+  National totals only. The cube also publishes governorate-level estimates of
+  this index (Muscat and Dhofar both carry the full series), and the query pins
+  the region to Oman precisely because a drift onto one of them would look
+  entirely plausible. Out of scope alongside them: the 25 subgroup commodities
+  nested inside the four sections, the basket weights, and the source's own
+  "Inflation (%)" indicator — that one is the year-on-year change of exactly
+  the series published here, so it is derivable from these numbers, and it
+  starts four quarters later at 2019Q1. Same caveat as the tourism dataset
+  regarding the portal's public client_id. NCSI revises recent quarters as
+  survey returns are finalised, so the newest quarter should be read as
+  provisional.
