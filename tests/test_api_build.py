@@ -30,7 +30,7 @@ def make_repo(tmp_path: Path, fetched_at: str, cadence: str = "monthly") -> Path
         CFG_YAML.replace("cadence: monthly", f"cadence: {cadence}"), encoding="utf-8")
     cfg = DatasetConfig(
         id="cpi", title_ar="الرقم القياسي", title_en="CPI", source_name="NCSI",
-        source_url="https://data.gov.om/", license="OGL-Oman", cadence="monthly",
+        source_url="https://data.gov.om/", license="OGL-Oman", cadence=cadence,
         columns=(ColumnSpec("month", "str"), ColumnSpec("index", "float")),
     )
     df = pd.DataFrame({"month": ["2026-06"], "index": [104.2]})

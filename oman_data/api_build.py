@@ -18,8 +18,11 @@ from oman_data.schema import load_dataset_config
 # polls monthly, so in normal operation `fetched_at` is never more than ~31
 # days old and this never fires; 140 days is ~4 consecutive failed monthly runs,
 # which is long enough that a transient portal outage does not brand current
-# data as stale, and short enough that at most one quarter can go missing
-# unnoticed. (annual=420 is a year plus a two-month grace period — 1.15 cycles,
+# data as stale. Two releases can hide in that blind window, not one: releases
+# sit ~91 days apart on a moving date, so both land inside days 1..140 whenever
+# the first arrives within 49 days of the last successful fetch. One missed
+# quarter is the typical case, two is the worst.
+# (annual=420 is a year plus a two-month grace period — 1.15 cycles,
 # not 1.5 — because the annual workflow only polls four times a year and a
 # tighter window would flag on a couple of missed runs.)
 STALE_AFTER_DAYS = {"monthly": 45, "quarterly": 140, "annual": 420}
