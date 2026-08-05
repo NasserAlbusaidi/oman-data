@@ -98,6 +98,24 @@ def test_duplicate_indicator_fails_loudly(tmp_path):
         parse(out)
 
 
+def test_series_that_never_overlap_fail_loudly(tmp_path):
+    """Both series present and internally valid, but sharing no year: dropping
+    the years that lack either one then empties the frame, and the last guard
+    in ``parse`` has to catch it. Without it a zero-row table reaches
+    ``validate_table``, where "table is empty" is an error — but by then the
+    message no longer points at the source, and ``parse`` would have claimed a
+    successful read. (Found while binding the identical guard in the oil_gas
+    pipeline, which inherited it from this file.)"""
+    parse = _load_callable(Path("pipelines/electricity/parse.py"), "parse")
+
+    def move_production_to_the_2030s(row):
+        row["startDate"] = "2030-01-01T00:00:00"
+        row["endDate"] = "2051-01-01T00:00:00"  # 22 values, so the walk agrees
+
+    with pytest.raises(ValueError, match="unexpected layout"):
+        parse(doctored(tmp_path, move_production_to_the_2030s))
+
+
 def test_mangled_layout_fails_loudly(tmp_path):
     parse = _load_callable(Path("pipelines/electricity/parse.py"), "parse")
     bad = tmp_path / "mangled.json"

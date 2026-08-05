@@ -20,14 +20,21 @@ Source quirks pinned at discovery (2026-08-05, dataset OMOLGS2016):
   ``knoema.norm_name`` collapses the whitespace, so the keys below are the
   collapsed forms.
 * **The gas figure is a yearly total, not a daily rate**, unlike the two oil
-  volume series either side of it. Three things say so, none of them a guess:
-  the source names those two "Average daily ..." and this one "Total Production
-  of ..."; 1,908,026.7 million standard cubic feet in a single *day* would be a
-  physically absurd national output, whereas divided across 2023 it is ~5,230 a
-  day; and ~5,230 a day is exactly the scale the monthly series for this same
-  indicator now runs at — its 2026-05 value is 5,405.5, against an annual 2025
-  figure of 2,018,799.2, i.e. 5,531 a day (monthly figures read live
-  2026-08-05; they are not in the committed annual fixture). Hence
+  volume series either side of it. The source's own naming says so — it calls
+  those two "Average daily ..." and this one "Total Production of ..." — and
+  1,908,026.7 million standard cubic feet in a single *day* would be a
+  physically absurd national output. The arithmetic settles it: the monthly
+  series for this same indicator publishes monthly *totals* in MNCM, exactly as
+  its declared unit says, and those sum to the annual figures here within 0.2%
+  once converted at 1 MMscf = 0.0283168 MNCM — summed monthly against converted
+  annual, 2021 50,190.6 vs 50,287.7, 2022 52,061.8 vs 52,162.5, 2023 53,926.4
+  vs 54,029.2, 2024 56,526.7 vs 56,651.7 (monthly figures read live 2026-08-05,
+  so not visible in the committed annual fixture). **Do not** be tempted by the
+  near-coincidence that the recent monthly values (~5,400) sit close to the
+  annual figure divided by 365 (~5,230): that is an artifact of the conversion,
+  because a daily-MMscf rate becomes a monthly-MNCM total by a factor of
+  30.4 x 0.0283168 = 0.861. Reading the monthly series as MMscf/day misses the
+  annual figure by ~14% in every year checked. Hence
   ``gas_production_mn_scf`` (per year) against ``crude_production_kbbl_day``
   (per day).
 * The cube's indicator-level metadata is not trustworthy and is not used. It
@@ -54,7 +61,10 @@ not visible in the committed annual fixture). Monthly crude production runs
 2014-01 to 2026-06 under one declared unit, ``BBL(000)``, and switches regime
 mid-series with no declaration: it opens at 958,700.0 and closes at 1,145.734.
 Monthly gas does the same far more violently under ``MNCM``: 107,139,700,000.0
-in 2014-01 against 5,405.5 in 2026-05. Monthly exports only begin in 2023-01.
+in 2014-01 against 5,405.5 in 2026-05 — the early values fit raw cubic feet per
+month (107,139.7 MMscf against a 2014 monthly mean of 111,065.7 MMscf) and the
+late ones the declared MNCM per month, with nothing marking the switch.
+Monthly exports only begin in 2023-01.
 Only the monthly price series is clean. Annual is the honest cadence here.
 
 The guards themselves live in ``oman_data.knoema`` and are shared with the

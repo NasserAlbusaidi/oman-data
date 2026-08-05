@@ -210,7 +210,7 @@ def test_non_total_breakdown_on_an_unfiltered_dimension_fails_loudly(tmp_path):
         parser()(doctored(tmp_path, to_one_gas_use))
 
 
-def test_the_spelled_out_totals_are_recognised(tmp_path):
+def test_the_spelled_out_totals_are_recognised():
     """Two of this cube's aggregates are not named "Total" — "Total Refinery &
     Petroleum IndustriesCo" and "Total Gas Uses". If either fell out of the
     accepted set, every row would be rejected as a breakdown, so this pins the
@@ -260,6 +260,23 @@ def test_truncated_series_fails_loudly(tmp_path):
 
     with pytest.raises(ValueError, match="truncated or misaligned"):
         parser()(doctored(tmp_path, drop_leading))
+
+
+def test_series_that_never_overlap_fail_loudly(tmp_path):
+    """All four series present, each internally valid, but sharing no year:
+    ``dropna`` then empties the frame and the last guard in ``parse`` has to
+    catch it. Without that guard a zero-row table reaches ``validate_table``,
+    where "table is empty" is an error — but by then the message no longer
+    points at the cube, and ``parse`` would have claimed a successful read.
+    Reachable for real if NCSI ever re-bases this cube's oil series onto a
+    later start than the gas series' end."""
+    def move_gas_to_the_2030s(edited):
+        gas = row_named(edited["data"], "Natural  Gas")
+        gas["startDate"] = "2030-01-01T00:00:00"
+        gas["endDate"] = "2053-01-01T00:00:00"  # 24 values, so the walk agrees
+
+    with pytest.raises(ValueError, match="unexpected layout"):
+        parser()(doctored(tmp_path, move_gas_to_the_2030s))
 
 
 def test_mangled_layout_fails_loudly(tmp_path):

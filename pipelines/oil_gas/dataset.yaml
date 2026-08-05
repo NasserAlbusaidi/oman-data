@@ -25,13 +25,15 @@ notes: >
   settlement price of the contracts for the sale of Oman oil on the Dubai
   Mercantile Exchange. gas_production_mn_scf is "Total Production of Natural
   Gas" — which the source spells with doubled spaces on either side of
-  "Natural", a quirk preserved as the matching key in the pipeline but not
-  worth reproducing here — in million standard cubic feet, and it is a total
-  for the whole year, not a daily rate: the source names the two oil series
-  "Average daily ..." and this one "Total Production of ...", and 1,908,026.7
-  million standard cubic feet in a single day would be far beyond any national
-  output, while spread across 2023 it is about 5,230 a day — which is the scale
-  the source's own monthly series for this indicator now runs at.
+  "Natural"; the pipeline selects the series by member id and matches its name
+  with whitespace collapsed, so the odd spelling is recorded but not relied on
+  — in million standard cubic feet, and it is a total for the whole year, not a
+  daily rate: the source names the two oil series "Average daily ..." and this
+  one "Total Production of ...", 1,908,026.7 million standard cubic feet in a
+  single day would be far beyond any national output, and the source's own
+  monthly series for this indicator — which publishes monthly totals in million
+  cubic metres, and was read live on 2026-08-05 — sums to within 0.2% of these
+  annual figures once converted, in every complete year checked (2021-2024).
   Note that the cube's own indicator-level metadata
   contradicts itself on that unit, calling it "cubic meter" in English and
   cubic foot in Arabic; the series-level declaration "MNSCF" is the one checked
