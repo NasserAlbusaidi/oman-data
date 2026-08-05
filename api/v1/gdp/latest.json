@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "id": "gdp",
+    "as_of": "2024",
+    "fetched_at": "2026-08-05T03:06:54Z",
+    "source_name": "NCSI via data.gov.om (National Accounts, dataset zoangf)",
+    "source_url": "https://data.gov.om/zoangf",
+    "license": "Open Government License - Sultanate of Oman",
+    "rows": 29,
+    "title_ar": "الناتج المحلي الإجمالي بأسعار السوق — سنوي، بالأسعار الجارية والثابتة (سنة الأساس ٢٠١٨)",
+    "title_en": "GDP at market prices — annual, current and constant 2018 prices",
+    "cadence": "annual",
+    "stale": false,
+    "columns": [
+      {
+        "name": "year",
+        "dtype": "int",
+        "min": 2000,
+        "max": 2035
+      },
+      {
+        "name": "price_basis",
+        "dtype": "str",
+        "min": null,
+        "max": null
+      },
+      {
+        "name": "gdp_mn_omr",
+        "dtype": "float",
+        "min": 1000,
+        "max": 200000
+      }
+    ],
+    "notes": "Annual gross domestic product at market prices for the Sultanate of Oman in millions of Omani Riyals, from NCSI's National Accounts dataset on data.gov.om. One row per year and price basis: price_basis \"current\" is GDP valued at each year's own prices (the nominal figure), price_basis \"constant\" is the same aggregate valued at the prices of the base year, which strips out price change and leaves the volume movement. The base year is 2018 — the source's own dataset description says the Sultanate's SNA 2008 accounts \"adopted 2018 as a new base year for (SNA) in Oman instead of 2010\", and the data agrees: 2018 is the one year where the two bases are identical to the last decimal (35,184.0 million OMR either way). NCSI's earlier base-2010 national accounts are a separate database on the portal (OMNTAC2016) and are not mixed in here, so these figures are not comparable with that one. Both series start in 2010. Current prices run to 2024 (41,194.3 million OMR) but constant prices only to 2023, because NCSI has not yet published the constant-price estimate for 2024 — so 2024 has a single row rather than two. That raggedness is the reason for the long layout: the newest year is the headline number, and a wide year-per-row table would have had to drop it or fill it with a null. Values are millions of Omani Riyals exactly as published (declared unit \"Mn.R.O\", scale 1) — no scale factor is applied, and a change of either declaration raises rather than silently shifting every number. Cadence is annual on purpose: the source's own metadata for this indicator labels its frequency \"quarterly\", but the portal returns no quarterly and no monthly observations for it at the national total, so annual is what is actually published. National totals only — the source's GDP breakdowns by economic activity (52 members) and by institutional sector (8) are pinned to their \"Total\" members, and the other 38 national-accounts indicators in the same cube (GDP at basic and producers' prices, expenditure-side GDP, gross national income and disposable income, gross fixed capital formation, domestic and national saving, the GDP deflator, GDP per capita) are out of scope for v2. Same caveat as the tourism dataset regarding the portal's public client_id. NCSI revises recent years as the source returns are finalised, so the newest year should be read as provisional.\n"
+  },
+  "data": [
+    {
+      "year": 2010,
+      "price_basis": "constant",
+      "gdp_mn_omr": 26293.7156309943
+    },
+    {
+      "year": 2010,
+      "price_basis": "current",
+      "gdp_mn_omr": 24990.0193717838
+    },
+    {
+      "year": 2011,
+      "price_basis": "constant",
+      "gdp_mn_omr": 27054.766060048
+    },
+    {
+      "year": 2011,
+      "price_basis": "current",
+      "gdp_mn_omr": 29797.7556543731
+    },
+    {
+      "year": 2012,
+      "price_basis": "constant",
+      "gdp_mn_omr": 29452.7424086866
+    },
+    {
+      "year": 2012,
+      "price_basis": "current",
+      "gdp_mn_omr": 33608.681120581
+    },
+    {
+      "year": 2013,
+      "price_basis": "constant",
+      "gdp_mn_omr": 30992.3681412488
+    },
+    {
+      "year": 2013,
+      "price_basis": "current",
+      "gdp_mn_omr": 34580.4425294138
+    },
+    {
+      "year": 2014,
+      "price_basis": "constant",
+      "gdp_mn_omr": 31392.9
+    },
+    {
+      "year": 2014,
+      "price_basis": "current",
+      "gdp_mn_omr": 35642.8
+    },
+    {
+      "year": 2015,
+      "price_basis": "constant",
+      "gdp_mn_omr": 32967.9
+    },
+    {
+      "year": 2015,
+      "price_basis": "current",
+      "gdp_mn_omr": 30264.3
+    },
+    {
+      "year": 2016,
+      "price_basis": "constant",
+      "gdp_mn_omr": 34631.6
+    },
+    {
+      "year": 2016,
+      "price_basis": "current",
+      "gdp_mn_omr": 28887.0
+    },
+    {
+      "year": 2017,
+      "price_basis": "constant",
+      "gdp_mn_omr": 34736.9
+    },
+    {
+      "year": 2017,
+      "price_basis": "current",
+      "gdp_mn_omr": 31089.4
+    },
+    {
+      "year": 2018,
+      "price_basis": "constant",
+      "gdp_mn_omr": 35184.0
+    },
+    {
+      "year": 2018,
+      "price_basis": "current",
+      "gdp_mn_omr": 35184.0
+    },
+    {
+      "year": 2019,
+      "price_basis": "constant",
+      "gdp_mn_omr": 34786.9
+    },
+    {
+      "year": 2019,
+      "price_basis": "current",
+      "gdp_mn_omr": 33859.4
+    },
+    {
+      "year": 2020,
+      "price_basis": "constant",
+      "gdp_mn_omr": 33611.2
+    },
+    {
+      "year": 2020,
+      "price_basis": "current",
+      "gdp_mn_omr": 29187.2
+    },
+    {
+      "year": 2021,
+      "price_basis": "constant",
+      "gdp_mn_omr": 34479.2
+    },
+    {
+      "year": 2021,
+      "price_basis": "current",
+      "gdp_mn_omr": 33576.0
+    },
+    {
+      "year": 2022,
+      "price_basis": "constant",
+      "gdp_mn_omr": 37232.5
+    },
+    {
+      "year": 2022,
+      "price_basis": "current",
+      "gdp_mn_omr": 42238.4
+    },
+    {
+      "year": 2023,
+      "price_basis": "constant",
+      "gdp_mn_omr": 37674.5
+    },
+    {
+      "year": 2023,
+      "price_basis": "current",
+      "gdp_mn_omr": 40824.2
+    },
+    {
+      "year": 2024,
+      "price_basis": "current",
+      "gdp_mn_omr": 41194.3
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T20:26:47.759170+00:00",
+  "generated_at": "2026-08-05T03:06:54.060720+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -55,6 +55,17 @@
       "fetched_at": "2026-07-31T18:51:40Z",
       "stale": false,
       "rows": 384
+    },
+    {
+      "id": "gdp",
+      "title_ar": "الناتج المحلي الإجمالي بأسعار السوق — سنوي، بالأسعار الجارية والثابتة (سنة الأساس ٢٠١٨)",
+      "title_en": "GDP at market prices — annual, current and constant 2018 prices",
+      "source_name": "NCSI via data.gov.om (National Accounts, dataset zoangf)",
+      "cadence": "annual",
+      "as_of": "2024",
+      "fetched_at": "2026-08-05T03:06:54Z",
+      "stale": false,
+      "rows": 29
     },
     {
       "id": "population",
