@@ -24,9 +24,10 @@ columns:
 """
 
 
-def make_repo(tmp_path: Path, fetched_at: str) -> Path:
+def make_repo(tmp_path: Path, fetched_at: str, cadence: str = "monthly") -> Path:
     (tmp_path / "pipelines" / "cpi").mkdir(parents=True)
-    (tmp_path / "pipelines" / "cpi" / "dataset.yaml").write_text(CFG_YAML, encoding="utf-8")
+    (tmp_path / "pipelines" / "cpi" / "dataset.yaml").write_text(
+        CFG_YAML.replace("cadence: monthly", f"cadence: {cadence}"), encoding="utf-8")
     cfg = DatasetConfig(
         id="cpi", title_ar="الرقم القياسي", title_en="CPI", source_name="NCSI",
         source_url="https://data.gov.om/", license="OGL-Oman", cadence="monthly",
@@ -85,9 +86,28 @@ def test_unpublished_pipeline_skipped(tmp_path):
     ("annual", "2025-09-01T00:00:00Z", False),
     ("annual", "2025-01-01T00:00:00Z", True),
     ("static", "2020-01-01T00:00:00Z", False),
+    # quarterly's window is 140 days. NOW is 2026-07-31, so 2026-03-13 is
+    # exactly 140 days back (inside) and 2026-03-12 is 141 (outside) — the
+    # boundary itself, not a value comfortably either side of it.
+    ("quarterly", "2026-03-13T00:00:00Z", False),
+    ("quarterly", "2026-03-12T00:00:00Z", True),
 ])
 def test_is_stale(cadence, fetched, expect):
     assert is_stale(cadence, fetched, NOW) is expect
+
+
+def test_quarterly_cadence_reaches_the_published_catalog(tmp_path):
+    """The cadence has to survive the whole path: yaml -> config -> catalog ->
+    the JSON Schema the committed api/ tree is validated against."""
+    import jsonschema
+    repo = make_repo(tmp_path, "2026-07-15T00:00:00Z", cadence="quarterly")
+    build_api(repo, repo / "api", NOW)
+    catalog = json.loads((repo / "api" / "v1" / "datasets.json").read_text(encoding="utf-8"))
+    assert catalog["datasets"][0]["cadence"] == "quarterly"
+    assert catalog["datasets"][0]["stale"] is False
+    root = Path(__file__).resolve().parents[1]
+    schema = json.loads((root / "schemas" / "datasets.schema.json").read_text(encoding="utf-8"))
+    jsonschema.validate(catalog, schema)
 
 
 def test_output_matches_contract_schemas(tmp_path):

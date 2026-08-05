@@ -95,9 +95,22 @@ def test_dim_name_handles_both_member_shapes():
     (knoema.monthly_periods, "2002-01-01T00:00:00", 3, ["2002-01", "2002-02", "2002-03"]),
     (knoema.monthly_periods, "2025-11-01T00:00:00", 3, ["2025-11", "2025-12", "2026-01"]),
     (knoema.annual_periods, "2002-01-01T00:00:00", 3, [2002, 2003, 2004]),
+    (knoema.quarterly_periods, "2018-01-01T00:00:00", 5,
+     ["2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1"]),
+    (knoema.quarterly_periods, "2025-10-01T00:00:00", 3,
+     ["2025Q4", "2026Q1", "2026Q2"]),
 ])
 def test_periods(fn, start, n, expect):
     assert fn(start, n) == expect
+
+
+def test_quarterly_periods_span_the_whole_ppi_series():
+    """33 quarters from 2018Q1 is exactly 2018Q1..2026Q1 — the PPI series as
+    published on 2026-08-05. Off-by-one here would relabel every observation."""
+    labels = knoema.quarterly_periods("2018-01-01T00:00:00", 33)
+    assert labels[0] == "2018Q1"
+    assert labels[-1] == "2026Q1"
+    assert labels[4] == "2019Q1"
 
 
 # --- shared guards -------------------------------------------------------
@@ -208,6 +221,42 @@ def test_periods_for_monthly_happy_path():
     assert knoema.periods_for(row, "M") == ["2002-01", "2002-02", "2002-03"]
 
 
+def test_periods_for_quarterly_happy_path():
+    row = synth_row(frequency="Q", endDate="2002-07-01T00:00:00")
+    assert knoema.periods_for(row, "Q") == ["2002Q1", "2002Q2", "2002Q3"]
+
+
+def test_periods_for_quarterly_accepts_an_enddate_on_the_quarters_last_day():
+    """The portal declares the *first* day of the last quarter today. Comparing
+    through pd.Period rather than by slicing means a switch to the last day —
+    the same quarter either way — is not read as a misalignment."""
+    row = synth_row(frequency="Q", endDate="2002-09-30T00:00:00")
+    assert knoema.periods_for(row, "Q") == ["2002Q1", "2002Q2", "2002Q3"]
+
+
+def test_periods_for_quarterly_rejects_an_enddate_in_a_different_quarter():
+    """The exact trap a naive endDate check falls into.
+
+    The declared end "2002-10-01" is 2002Q4; the walk reaches 2002Q3. Both are
+    the same *year*, so a year-slice comparison would pass this, and neither
+    "2002-07" nor "2002-10" ever equals a "2002Qn" label, so a month-slice
+    comparison would reject the happy path above instead. Only converting the
+    declared date to a quarter label distinguishes the two cases.
+    """
+    row = synth_row(frequency="Q", endDate="2002-10-01T00:00:00")
+    with pytest.raises(knoema.KnoemaError, match="truncated or misaligned"):
+        knoema.periods_for(row, "Q", label="ppi general")
+
+
+def test_periods_for_quarterly_rejects_a_truncated_series():
+    """Losing leading observations shifts every quarter label; the row's own
+    endDate no longer matches the walk and must catch it."""
+    row = synth_row(frequency="Q", endDate="2002-07-01T00:00:00",
+                    values=[2.0, 3.0])
+    with pytest.raises(knoema.KnoemaError, match="truncated or misaligned"):
+        knoema.periods_for(row, "Q")
+
+
 def test_periods_for_rejects_a_frequency_mismatch():
     with pytest.raises(knoema.KnoemaError, match="frequency"):
         knoema.periods_for(synth_row(frequency="M"), "A", label="accidents")
@@ -233,8 +282,14 @@ def test_periods_for_missing_key_is_a_knoema_error(key):
 
 
 def test_periods_for_rejects_an_unsupported_frequency():
-    with pytest.raises(knoema.KnoemaError, match="[Qq]"):
-        knoema.periods_for(synth_row(frequency="Q"), "Q")
+    """M, Q and A are labelled; the portal's other frequencies are not.
+
+    This used to be asserted with "Q", which the PPI dataset made a supported
+    frequency — "W" keeps the guard bound rather than letting it quietly become
+    a test of nothing.
+    """
+    with pytest.raises(knoema.KnoemaError, match="only 'M', 'Q' and 'A'"):
+        knoema.periods_for(synth_row(frequency="W"), "W")
 
 
 def test_knoema_error_is_a_value_error():

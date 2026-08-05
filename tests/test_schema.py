@@ -39,6 +39,12 @@ def test_missing_field_raises(tmp_path, field):
     with pytest.raises(ConfigError):
         load_dataset_config(write(tmp_path, yaml.safe_dump(raw, allow_unicode=True)))
 
+@pytest.mark.parametrize("cadence", ["static", "monthly", "quarterly", "annual"])
+def test_every_valid_cadence_loads(tmp_path, cadence):
+    cfg = load_dataset_config(
+        write(tmp_path, VALID_YAML.replace("cadence: monthly", f"cadence: {cadence}")))
+    assert cfg.cadence == cadence
+
 def test_bad_cadence_raises(tmp_path):
     with pytest.raises(ConfigError):
         load_dataset_config(write(tmp_path, VALID_YAML.replace("monthly", "hourly")))

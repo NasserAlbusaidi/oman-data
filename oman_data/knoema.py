@@ -184,9 +184,9 @@ def periods_for(row: dict, frequency: str,
             f"{what} declares frequency {declared_freq!r}, expected "
             f"{frequency!r} — the period labels would be wrong"
         )
-    if frequency not in ("M", "A"):
+    if frequency not in ("M", "Q", "A"):
         raise KnoemaError(
-            f"{what} asks for frequency {frequency!r}; only 'M' and 'A' "
+            f"{what} asks for frequency {frequency!r}; only 'M', 'Q' and 'A' "
             f"periods are labelled here"
         )
     for key in ("values", "startDate", "endDate"):
@@ -198,6 +198,17 @@ def periods_for(row: dict, frequency: str,
     if frequency == "M":
         periods: list = monthly_periods(str(row["startDate"]), len(values))
         declared_end = str(row["endDate"])[:7]
+        walked_end = periods[-1]
+    elif frequency == "Q":
+        periods = quarterly_periods(str(row["startDate"]), len(values))
+        # Monthly and annual labels are prefixes of the declared endDate, so
+        # they compare by slicing. A quarterly label is not: the portal declares
+        # the *date* the last quarter starts ("2026-01-01" for 2026Q1), and
+        # slicing that gives "2026-01" or "2026", neither of which is "2026Q1".
+        # Converting the declared date through the same pd.Period the walk uses
+        # is what makes the two comparable — and it is robust to the portal
+        # switching to the quarter's last day, which lands in the same quarter.
+        declared_end = str(pd.Period(str(row["endDate"])[:10], freq="Q"))
         walked_end = periods[-1]
     else:
         periods = annual_periods(str(row["startDate"]), len(values))
@@ -214,6 +225,18 @@ def periods_for(row: dict, frequency: str,
 
 def monthly_periods(start_date: str, n: int) -> list[str]:
     start = pd.Period(start_date[:7], freq="M")
+    return [str(start + i) for i in range(n)]
+
+
+def quarterly_periods(start_date: str, n: int) -> list[str]:
+    """Quarter labels as pandas spells them: "2018Q1", "2018Q2", ...
+
+    The label format is ``str(pd.Period(..., freq="Q"))`` rather than anything
+    hand-rolled, so the labels the walk produces and the label the declared
+    endDate is converted to in ``periods_for`` come from one implementation and
+    cannot disagree about, say, a fiscal-year quarter convention.
+    """
+    start = pd.Period(start_date[:10], freq="Q")
     return [str(start + i) for i in range(n)]
 
 

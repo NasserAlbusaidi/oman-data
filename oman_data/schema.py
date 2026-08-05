@@ -10,7 +10,7 @@ class ConfigError(Exception):
     pass
 
 
-VALID_CADENCES = {"static", "monthly", "annual"}
+VALID_CADENCES = {"static", "monthly", "quarterly", "annual"}
 VALID_DTYPES = {"int", "float", "str"}
 
 _REQUIRED = [

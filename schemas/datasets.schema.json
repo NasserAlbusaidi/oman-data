@@ -14,7 +14,7 @@
           "title_ar": {"type": "string", "minLength": 1},
           "title_en": {"type": "string", "minLength": 1},
           "source_name": {"type": "string", "minLength": 1},
-          "cadence": {"enum": ["static", "monthly", "annual"]},
+          "cadence": {"enum": ["static", "monthly", "quarterly", "annual"]},
           "as_of": {"type": "string", "minLength": 1},
           "fetched_at": {"type": "string", "minLength": 1},
           "stale": {"type": "boolean"},
