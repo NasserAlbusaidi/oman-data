@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T03:23:31.868540+00:00",
+  "generated_at": "2026-08-05T03:41:47.232047+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -66,6 +66,17 @@
       "fetched_at": "2026-08-05T03:06:54Z",
       "stale": false,
       "rows": 29
+    },
+    {
+      "id": "oil_gas",
+      "title_ar": "النفط والغاز — المتوسط اليومي لإنتاج النفط الخام وصادراته، ومتوسط سعر النفط الخام، وإجمالي إنتاج الغاز الطبيعي (سنوي)",
+      "title_en": "Oil and gas — average daily crude oil production and exports, average crude oil price, and total natural gas production (annual)",
+      "source_name": "NCSI via data.gov.om (Oil and Gas, dataset OMOLGS2016)",
+      "cadence": "annual",
+      "as_of": "2023",
+      "fetched_at": "2026-08-05T03:35:09Z",
+      "stale": false,
+      "rows": 22
     },
     {
       "id": "population",

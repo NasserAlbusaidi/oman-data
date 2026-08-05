@@ -38,6 +38,10 @@ jobs:
         id: gdp
         continue-on-error: true
         run: python -m oman_data.run gdp
+      - name: Refresh oil_gas
+        id: oil_gas
+        continue-on-error: true
+        run: python -m oman_data.run oil_gas
       - name: Commit refreshed data
         run: |
           git config user.name "oman-data-bot"
@@ -72,6 +76,7 @@ jobs:
             electricity=${{ steps.electricity.outcome }}
             traffic_accidents=${{ steps.traffic_accidents.outcome }}
             gdp=${{ steps.gdp.outcome }}
+            oil_gas=${{ steps.oil_gas.outcome }}
         run: |
           echo "$OUTCOMES"
           echo "$OUTCOMES" | grep -q failure && exit 1 || exit 0
@@ -86,6 +91,7 @@ jobs:
             electricity=${{ steps.electricity.outcome }}
             traffic_accidents=${{ steps.traffic_accidents.outcome }}
             gdp=${{ steps.gdp.outcome }}
+            oil_gas=${{ steps.oil_gas.outcome }}
         run: |
           body="Outcomes: $OUTCOMES — run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} — successes were committed; failed datasets keep last-good data."
           open=$(gh issue list --state open --limit 100 --json number,title \

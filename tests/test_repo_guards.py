@@ -54,8 +54,8 @@ def defines_persist(parse_py: Path) -> bool:
     return False
 
 
-def test_at_least_ten_pipelines_exist():
-    assert len(all_configs()) >= 10
+def test_at_least_eleven_pipelines_exist():
+    assert len(all_configs()) >= 11
 
 
 def test_every_config_loads_and_is_bilingual():

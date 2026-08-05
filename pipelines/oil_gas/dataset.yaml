@@ -1,0 +1,63 @@
+id: oil_gas
+title_ar: "النفط والغاز — المتوسط اليومي لإنتاج النفط الخام وصادراته، ومتوسط سعر النفط الخام، وإجمالي إنتاج الغاز الطبيعي (سنوي)"
+title_en: "Oil and gas — average daily crude oil production and exports, average crude oil price, and total natural gas production (annual)"
+source_name: "NCSI via data.gov.om (Oil and Gas, dataset OMOLGS2016)"
+source_url: "https://data.gov.om/OMOLGS2016"
+license: "Open Government License - Sultanate of Oman"
+cadence: annual
+columns:
+  - {name: year, dtype: int, min: 2000, max: 2035}
+  - {name: crude_production_kbbl_day, dtype: float, min: 100, max: 5000}
+  - {name: crude_exports_kbbl_day, dtype: float, min: 100, max: 5000}
+  - {name: crude_price_usd_bbl, dtype: float, min: 1, max: 500}
+  - {name: gas_production_mn_scf, dtype: float, min: 100000, max: 10000000}
+notes: >
+  Annual headline oil and gas figures for the Sultanate of Oman, from NCSI's
+  Oil and Gas dataset on data.gov.om; the cube names its upstream source the
+  Ministry of Oil and Gas. Four columns in three different units, each exactly
+  as the source publishes it. crude_production_kbbl_day and
+  crude_exports_kbbl_day are the source's "Average daily production of crude
+  oil" and "Average Daily Exports of Crude Oil." (the trailing period is the
+  source's) — the average daily rate over the year, in thousands of barrels per
+  day, declared unit "(000) BBL" at scale 1; 1,048.7 for 2023 means about 1.05
+  million barrels a day. crude_price_usd_bbl is "Average Price of Crude Oil" in
+  US dollars per barrel, which the source defines as the average daily
+  settlement price of the contracts for the sale of Oman oil on the Dubai
+  Mercantile Exchange. gas_production_mn_scf is "Total Production of Natural
+  Gas" — which the source spells with doubled spaces on either side of
+  "Natural", a quirk preserved as the matching key in the pipeline but not
+  worth reproducing here — in million standard cubic feet, and it is a total
+  for the whole year, not a daily rate: the source names the two oil series
+  "Average daily ..." and this one "Total Production of ...", and 1,908,026.7
+  million standard cubic feet in a single day would be far beyond any national
+  output, while spread across 2023 it is about 5,230 a day — which is the scale
+  the source's own monthly series for this indicator now runs at.
+  Note that the cube's own indicator-level metadata
+  contradicts itself on that unit, calling it "cubic meter" in English and
+  cubic foot in Arabic; the series-level declaration "MNSCF" is the one checked
+  here, and the arithmetic above is what settles it. Every unit and scale
+  declaration is pinned per indicator, and a change raises rather than quietly
+  shifting a column, because the column names would then be lies. The table
+  runs 2002-2023. Natural gas is published further ahead than the oil series —
+  2024 (2,000,638.4) and 2025 (2,018,799.2) exist upstream — but years missing
+  any of the four series are dropped rather than published with gaps, so those
+  two years are not here; take them from the source if you need gas alone.
+  Cadence is annual on purpose rather than for want of a monthly feed: the
+  monthly series are unusable for three of these four columns. Monthly crude
+  production runs 2014-01 to 2026-06 under a single declared unit "BBL(000)"
+  and changes regime mid-series without declaring it, opening at 958,700 and
+  closing at 1,145.7; monthly gas does the same far more violently under
+  "MNCM", 107,139,700,000 in 2014-01 against 5,405.5 in 2026-05; monthly
+  exports only begin in 2023-01. Only the monthly price series is clean. Those
+  monthly figures were read live from the portal on 2026-08-05 and are not part
+  of the annual snapshot archived with this dataset. National headline series
+  only — the cube's other 39 indicators and its breakdowns by refinery,
+  petroleum product, oil-producing company, mineral type, gas use and export
+  destination are out of scope, and the six dimensions the query leaves
+  unfiltered are checked on every row to be on their aggregate member (which
+  this source names variously "Total", "Total Refinery & Petroleum
+  IndustriesCo" and "Total Gas Uses"), so a breakdown leaking in raises instead
+  of being published as the national figure. Same caveat as the tourism dataset
+  regarding the portal's public client_id. NCSI revises recent years as the
+  ministry's returns are finalised, so the newest year should be read as
+  provisional.

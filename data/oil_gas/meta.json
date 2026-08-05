@@ -1,0 +1,9 @@
+{
+  "id": "oil_gas",
+  "as_of": "2023",
+  "fetched_at": "2026-08-05T03:35:09Z",
+  "source_name": "NCSI via data.gov.om (Oil and Gas, dataset OMOLGS2016)",
+  "source_url": "https://data.gov.om/OMOLGS2016",
+  "license": "Open Government License - Sultanate of Oman",
+  "rows": 22
+}
