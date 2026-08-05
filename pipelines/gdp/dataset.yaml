@@ -33,9 +33,10 @@ notes: >
   Cadence is annual on purpose: the source's own metadata for this indicator
   labels its frequency "quarterly", but the portal returns no quarterly and no
   monthly observations for it at the national total, so annual is what is
-  actually published. National totals only — the source's GDP breakdowns by
-  economic activity (52 members) and by institutional sector (8) are pinned to
-  their "Total" members, and the other 38 national-accounts indicators in the
+  actually published. National totals only — the source's economic-activity and
+  institutional-sector dimensions (53 and 8 members respectively, "Total"
+  included in each) are pinned to those "Total" members, so no GDP breakdown by
+  activity or by sector is published here, and the other 38 indicators in the
   same cube (GDP at basic and producers' prices, expenditure-side GDP, gross
   national income and disposable income, gross fixed capital formation,
   domestic and national saving, the GDP deflator, GDP per capita) are out of

@@ -4,10 +4,12 @@ from pathlib import Path
 
 import pytest
 
-from oman_data.run import _load_callable
+from oman_data.run import _load_callable, _load_module
+from oman_data.schema import load_dataset_config
 
 FIXTURE_DIR = Path("tests/fixtures/gdp")
 PARSE_PY = Path("pipelines/gdp/parse.py")
+CONFIG_PATH = Path("pipelines/gdp/dataset.yaml")
 
 
 def fixture_path() -> Path:
@@ -66,16 +68,29 @@ def test_headline_figures_match_the_source():
 
 def test_base_year_2018_is_the_year_the_two_bases_agree():
     """The title claims "constant 2018 prices"; this is the arithmetic that
-    makes that claim checkable — a rebased series would move this year."""
-    df, _ = parser()(fixture_path())
+    makes that claim checkable — a rebased series would move this year.
+
+    The independent evidence is the pair of raw figures below; the sole-year
+    property is asserted through the parser's own ``agreeing_years``, which is
+    the same code path the runtime guard uses, so the two cannot drift apart.
+    """
+    module = _load_module(PARSE_PY)
+    df, _ = module.parse(fixture_path())
     by_key = {(int(r.year), r.price_basis): r.gdp_mn_omr for r in df.itertuples()}
-    assert by_key[(2018, "current")] == pytest.approx(by_key[(2018, "constant")])
-    agreeing = [
-        year for year in sorted({int(y) for y in df["year"]})
-        if (year, "constant") in by_key
-        and by_key[(year, "current")] == pytest.approx(by_key[(year, "constant")])
-    ]
-    assert agreeing == [2018]
+    assert by_key[(2018, "current")] == pytest.approx(35_184.0)
+    assert by_key[(2018, "constant")] == pytest.approx(35_184.0)
+    assert module.BASE_YEAR == 2018
+    assert module.agreeing_years(df) == [2018]
+
+
+def test_the_titles_name_the_base_year_the_parser_enforces():
+    """Whoever bumps BASE_YEAR after a rebase must fix both titles too — the
+    guard exists to protect a claim that lives in the published metadata."""
+    module = _load_module(PARSE_PY)
+    config = load_dataset_config(CONFIG_PATH)
+    assert str(module.BASE_YEAR) in config.title_en
+    arabic = str(module.BASE_YEAR).translate(str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩"))
+    assert arabic in config.title_ar
 
 
 def doctored(tmp_path: Path, mutate) -> Path:
@@ -153,13 +168,42 @@ def test_non_total_breakdown_fails_loudly(tmp_path):
 
 
 def test_non_oman_region_fails_loudly(tmp_path):
-    """This cube's regions dimension carries 78 members and no "Total"; only
-    "Oman" is the national figure."""
+    """This cube's regions dimension carries 78 members and no "Total" member
+    at all (verified live 2026-08-05); only "Oman" is the national figure."""
     def to_muscat(payload):
         payload["data"][0]["regions"] = {"key": 1000020, "name": "Muscat"}
 
     with pytest.raises(ValueError, match="regions"):
         parser()(doctored(tmp_path, to_muscat))
+
+
+def test_a_rebased_constant_series_fails_loudly_at_parse_time(tmp_path):
+    """The base-year claim has to hold at refresh time, not just against the
+    pinned fixture: CI runs ``oman_data.run gdp`` and no tests at all, so
+    without a runtime guard a rebased NCSI series would publish under the
+    "constant 2018 prices" title with every test still green."""
+    def rebase_to_2020(payload):
+        row = next(r for r in payload["data"]
+                   if r["price-type"]["name"] == "Constant Prices")
+        # 2020 current / 2020 constant — revalues the series so that 2020, not
+        # 2018, becomes the year the two bases agree
+        factor = 29187.2 / 33611.2
+        row["values"] = [value * factor for value in row["values"]]
+
+    with pytest.raises(ValueError, match="rebased"):
+        parser()(doctored(tmp_path, rebase_to_2020))
+
+
+def test_a_one_sided_base_year_revision_fails_loudly(tmp_path):
+    """The other way the claim dies: NCSI restates 2018 on one basis only, so
+    no year agrees at all and the title's base year is no longer evidenced."""
+    def revise_2018_current(payload):
+        row = next(r for r in payload["data"]
+                   if r["price-type"]["name"] == "Current Prices")
+        row["values"][2018 - 2010] = 35_500.0
+
+    with pytest.raises(ValueError, match=r"agree in years \[\]"):
+        parser()(doctored(tmp_path, revise_2018_current))
 
 
 def test_non_annual_frequency_fails_loudly(tmp_path):

@@ -3,10 +3,19 @@
 ``zoangf`` is a five-dimension cube (regions, indicators, price-type,
 economic-activity-of-non-petrol, institutional-sector) carrying 39 national-
 accounts indicators. The query pins four of the five: the indicator to "GDP at
-Market Prices" (1000010), the region to "Oman" (1000000 — this cube's regions
-dimension has no separate "Total" member), and both the economic-activity and
-institutional-sector dimensions to their "Total" members, which is what keeps
-52 activities and 8 sectors from crossing in.
+Market Prices" (1000010), the region to "Oman" (1000000), and both the
+economic-activity and institutional-sector dimensions to their "Total" members,
+which is what keeps 53 activities and 8 sectors from crossing in.
+
+Member counts here are whole-dimension counts as the portal's dimension
+endpoint returns them, verified live 2026-08-05: regions 78, indicators 39,
+price-type 3, economic-activity-of-non-petrol 53, institutional-sector 8. Two
+things to know before recounting them. The regions dimension has no "Total"
+member at all — "Oman" is the national one, which is why it, not a total, is
+what this query pins. And the activity dimension publishes the name
+"Telecommunications and Information service activities" twice, under keys
+1000300 and 1000310, so anything that keys members by name (including
+``knoema.dimension_members``) sees 52 rather than 53.
 
 ``price-type`` is deliberately left unfiltered: it is this dataset's fan-out
 dimension, and its two published members — "Current Prices" and "Constant
@@ -29,7 +38,7 @@ from oman_data import knoema
 DATASET = "zoangf"
 
 INDICATOR_GDP_MARKET_PRICES = 1000010
-REGION_OMAN = 1000000  # this cube's regions dimension has no separate "Total"
+REGION_OMAN = 1000000  # no "Total" region exists in this cube; see the docstring
 ACTIVITY_TOTAL = 1000000
 SECTOR_TOTAL = 1000000
 
