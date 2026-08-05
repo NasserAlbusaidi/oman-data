@@ -15,9 +15,16 @@ query pins two of the three and fans out over the third:
 * ``indicators`` -> "Index Value" (1000010). Four members. "Producer price
   indices" (1000000) is a structural parent that returns zero rows (verified
   live 2026-08-05). "Weight" (1000020) is the basket weight, constant through
-  the series, not a price. "Inflation (%)" (1000030) is the year-on-year change
-  of exactly the series published here — derivable from it, four quarters
-  shorter (2019Q1 rather than 2018Q1), and deliberately left upstream.
+  the series, not a price. "Inflation (%)" (1000030) is deliberately left
+  upstream and is four quarters shorter (2019Q1 rather than 2018Q1). It is the
+  year-on-year change of the index published here for the four *sections* —
+  exact to within 1e-12 across all 29 quarters of each — but **not** for the
+  general index, where it is instead the year-on-year change of the weighted
+  section aggregate and disagrees with this table's general series in every one
+  of the 29 quarters, by up to 20.31 points and with the opposite sign in the
+  two most recent (verified live 2026-08-05; the numbers and the mechanism are
+  pinned in dataset.yaml's notes). Shipping it beside the index would have
+  meant publishing two mutually inconsistent columns.
 * ``commodities`` is the fan-out dimension, restricted to five of its 30
   members: the general index and the four sections beneath it. The other 25 are
   subgroups nested inside those sections (divisions of manufacturing, and so
