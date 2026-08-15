@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T05:37:40.440049+00:00",
+  "generated_at": "2026-08-15T05:30:01.820176+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -96,7 +96,7 @@
       "source_name": "NCSI via data.gov.om (Producer Price Index Base Year 2018, dataset jhmydsg)",
       "cadence": "quarterly",
       "as_of": "2026Q1",
-      "fetched_at": "2026-08-05T04:14:33Z",
+      "fetched_at": "2026-08-15T05:30:01Z",
       "stale": false,
       "rows": 165
     },
