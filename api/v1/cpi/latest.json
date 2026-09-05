@@ -1,12 +1,12 @@
 {
   "meta": {
     "id": "cpi",
-    "as_of": "2026-05",
-    "fetched_at": "2026-08-05T05:35:31Z",
+    "as_of": "2026-07",
+    "fetched_at": "2026-09-05T07:09:21Z",
     "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Consumer Price Index",
     "source_url": "https://nsdp.ncsi.gov.om/ConsumerPriceIndex.xlsx",
     "license": "Open Government License - Sultanate of Oman",
-    "rows": 2093,
+    "rows": 2119,
     "title_ar": "الرقم القياسي لأسعار المستهلك حسب مجموعة الإنفاق",
     "title_en": "Consumer Price Index by expenditure group",
     "cadence": "monthly",
@@ -10498,6 +10498,136 @@
       "month": "2026-05",
       "group": "transport",
       "index": 114.1
+    },
+    {
+      "month": "2026-06",
+      "group": "alcoholic_beverages_tobacco_and_narcotics",
+      "index": 207.8
+    },
+    {
+      "month": "2026-06",
+      "group": "clothing_and_footwear",
+      "index": 100.9
+    },
+    {
+      "month": "2026-06",
+      "group": "communication",
+      "index": 97.4
+    },
+    {
+      "month": "2026-06",
+      "group": "education",
+      "index": 113.0
+    },
+    {
+      "month": "2026-06",
+      "group": "food_and_non_alcoholic_beverages",
+      "index": 121.3
+    },
+    {
+      "month": "2026-06",
+      "group": "furnishings_household_equipment_and_routine_household_maintenance",
+      "index": 113.2
+    },
+    {
+      "month": "2026-06",
+      "group": "general",
+      "index": 109.7
+    },
+    {
+      "month": "2026-06",
+      "group": "health",
+      "index": 109.8
+    },
+    {
+      "month": "2026-06",
+      "group": "housing_water_electricity_gas_and_other_fuels",
+      "index": 100.8
+    },
+    {
+      "month": "2026-06",
+      "group": "miscellaneous_goods_and_services",
+      "index": 127.2
+    },
+    {
+      "month": "2026-06",
+      "group": "recreation_and_culture",
+      "index": 107.9
+    },
+    {
+      "month": "2026-06",
+      "group": "restaurants_and_hotels",
+      "index": 114.8
+    },
+    {
+      "month": "2026-06",
+      "group": "transport",
+      "index": 110.7
+    },
+    {
+      "month": "2026-07",
+      "group": "alcoholic_beverages_tobacco_and_narcotics",
+      "index": 207.8
+    },
+    {
+      "month": "2026-07",
+      "group": "clothing_and_footwear",
+      "index": 100.9
+    },
+    {
+      "month": "2026-07",
+      "group": "communication",
+      "index": 97.4
+    },
+    {
+      "month": "2026-07",
+      "group": "education",
+      "index": 113.0
+    },
+    {
+      "month": "2026-07",
+      "group": "food_and_non_alcoholic_beverages",
+      "index": 123.4
+    },
+    {
+      "month": "2026-07",
+      "group": "furnishings_household_equipment_and_routine_household_maintenance",
+      "index": 113.3
+    },
+    {
+      "month": "2026-07",
+      "group": "general",
+      "index": 110.5
+    },
+    {
+      "month": "2026-07",
+      "group": "health",
+      "index": 109.8
+    },
+    {
+      "month": "2026-07",
+      "group": "housing_water_electricity_gas_and_other_fuels",
+      "index": 100.9
+    },
+    {
+      "month": "2026-07",
+      "group": "miscellaneous_goods_and_services",
+      "index": 126.0
+    },
+    {
+      "month": "2026-07",
+      "group": "recreation_and_culture",
+      "index": 107.9
+    },
+    {
+      "month": "2026-07",
+      "group": "restaurants_and_hotels",
+      "index": 115.1
+    },
+    {
+      "month": "2026-07",
+      "group": "transport",
+      "index": 113.1
     }
   ]
 }
