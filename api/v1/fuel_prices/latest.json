@@ -10,7 +10,7 @@
     "title_ar": "أسعار الوقود الشهرية — بنزين ٩١ و٩٥ والديزل",
     "title_en": "Monthly fuel prices — M91, M95 petrol and diesel",
     "cadence": "monthly",
-    "stale": false,
+    "stale": true,
     "columns": [
       {
         "name": "month",

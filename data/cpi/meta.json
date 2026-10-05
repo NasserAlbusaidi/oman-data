@@ -1,9 +1,9 @@
 {
   "id": "cpi",
-  "as_of": "2026-07",
-  "fetched_at": "2026-09-05T07:09:21Z",
+  "as_of": "2026-08",
+  "fetched_at": "2026-10-05T09:42:02Z",
   "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Consumer Price Index",
   "source_url": "https://nsdp.ncsi.gov.om/ConsumerPriceIndex.xlsx",
   "license": "Open Government License - Sultanate of Oman",
-  "rows": 2119
+  "rows": 2132
 }

@@ -1,12 +1,12 @@
 {
   "meta": {
     "id": "trade",
-    "as_of": "2026-04",
-    "fetched_at": "2026-09-05T07:11:28Z",
+    "as_of": "2026-07",
+    "fetched_at": "2026-10-05T09:44:08Z",
     "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Merchandise Trade",
     "source_url": "https://nsdp.ncsi.gov.om/MerchandiseTrade.xlsx",
     "license": "Open Government License - Sultanate of Oman",
-    "rows": 702,
+    "rows": 711,
     "title_ar": "التجارة الخارجية السلعية — الواردات والصادرات وإعادة التصدير",
     "title_en": "Merchandise foreign trade — imports, exports, re-exports",
     "cadence": "monthly",
@@ -3487,62 +3487,107 @@
     {
       "month": "2026-01",
       "flow": "exports",
-      "value_omr_mn": 1822.463816
+      "value_omr_mn": 1822.480553
     },
     {
       "month": "2026-01",
       "flow": "imports",
-      "value_omr_mn": 1491.073987
+      "value_omr_mn": 1481.487834
     },
     {
       "month": "2026-01",
       "flow": "re_exports",
-      "value_omr_mn": 109.626271
+      "value_omr_mn": 109.635836
     },
     {
       "month": "2026-02",
       "flow": "exports",
-      "value_omr_mn": 1678.476633
+      "value_omr_mn": 1678.4766330000002
     },
     {
       "month": "2026-02",
       "flow": "imports",
-      "value_omr_mn": 1338.197967
+      "value_omr_mn": 1354.599139
     },
     {
       "month": "2026-02",
       "flow": "re_exports",
-      "value_omr_mn": 132.62826799999996
+      "value_omr_mn": 132.628268
     },
     {
       "month": "2026-03",
       "flow": "exports",
-      "value_omr_mn": 1817.774677
+      "value_omr_mn": 1830.95866
     },
     {
       "month": "2026-03",
       "flow": "imports",
-      "value_omr_mn": 943.9720090000002
+      "value_omr_mn": 943.7954610000002
     },
     {
       "month": "2026-03",
       "flow": "re_exports",
-      "value_omr_mn": 123.762887
+      "value_omr_mn": 125.201973
     },
     {
       "month": "2026-04",
       "flow": "exports",
-      "value_omr_mn": 2306.1439170000003
+      "value_omr_mn": 2311.292735
     },
     {
       "month": "2026-04",
       "flow": "imports",
-      "value_omr_mn": 1761.133374
+      "value_omr_mn": 1796.327371
     },
     {
       "month": "2026-04",
       "flow": "re_exports",
-      "value_omr_mn": 403.77622800000006
+      "value_omr_mn": 206.440533
+    },
+    {
+      "month": "2026-05",
+      "flow": "exports",
+      "value_omr_mn": 2945.921325
+    },
+    {
+      "month": "2026-05",
+      "flow": "imports",
+      "value_omr_mn": 1619.7302649999997
+    },
+    {
+      "month": "2026-05",
+      "flow": "re_exports",
+      "value_omr_mn": 189.695805
+    },
+    {
+      "month": "2026-06",
+      "flow": "exports",
+      "value_omr_mn": 2647.24395
+    },
+    {
+      "month": "2026-06",
+      "flow": "imports",
+      "value_omr_mn": 1540.9689749999998
+    },
+    {
+      "month": "2026-06",
+      "flow": "re_exports",
+      "value_omr_mn": 209.59104
+    },
+    {
+      "month": "2026-07",
+      "flow": "exports",
+      "value_omr_mn": 2629.315069
+    },
+    {
+      "month": "2026-07",
+      "flow": "imports",
+      "value_omr_mn": 1671.64626
+    },
+    {
+      "month": "2026-07",
+      "flow": "re_exports",
+      "value_omr_mn": 166.87151699999998
     }
   ]
 }

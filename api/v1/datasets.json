@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T07:11:28.027215+00:00",
+  "generated_at": "2026-10-05T09:44:12.648595+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -29,10 +29,10 @@
       "title_en": "Consumer Price Index by expenditure group",
       "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Consumer Price Index",
       "cadence": "monthly",
-      "as_of": "2026-07",
-      "fetched_at": "2026-09-05T07:09:21Z",
+      "as_of": "2026-08",
+      "fetched_at": "2026-10-05T09:42:02Z",
       "stale": false,
-      "rows": 2119
+      "rows": 2132
     },
     {
       "id": "electricity",
@@ -53,7 +53,7 @@
       "cadence": "monthly",
       "as_of": "2026-07",
       "fetched_at": "2026-07-31T18:51:40Z",
-      "stale": false,
+      "stale": true,
       "rows": 384
     },
     {
@@ -107,7 +107,7 @@
       "source_name": "NCSI via data.gov.om (Tourism, dataset dedblxg)",
       "cadence": "monthly",
       "as_of": "2026-05",
-      "fetched_at": "2026-08-05T05:37:40Z",
+      "fetched_at": "2026-10-05T09:44:12Z",
       "stale": false,
       "rows": 161
     },
@@ -117,10 +117,10 @@
       "title_en": "Merchandise foreign trade — imports, exports, re-exports",
       "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Merchandise Trade",
       "cadence": "monthly",
-      "as_of": "2026-04",
-      "fetched_at": "2026-09-05T07:11:28Z",
+      "as_of": "2026-07",
+      "fetched_at": "2026-10-05T09:44:08Z",
       "stale": false,
-      "rows": 702
+      "rows": 711
     },
     {
       "id": "traffic_accidents",
