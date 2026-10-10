@@ -2,11 +2,11 @@
   "meta": {
     "id": "traffic_accidents",
     "as_of": "2025",
-    "fetched_at": "2026-07-31T19:39:02Z",
+    "fetched_at": "2026-10-10T10:31:35Z",
     "source_name": "Royal Oman Police data via NCSI on data.gov.om (Security & Safety, dataset gehye)",
     "source_url": "https://data.gov.om/gehye",
     "license": "Open Government License - Sultanate of Oman",
-    "rows": 67,
+    "rows": 71,
     "title_ar": "حوادث المرور — الحوادث والوفيات والإصابات سنويًا على مستوى السلطنة",
     "title_en": "Traffic accidents — annual national accidents, deaths and injuries",
     "cadence": "annual",
@@ -345,6 +345,11 @@
       "count": 532
     },
     {
+      "year": 2022,
+      "metric": "injuries",
+      "count": 2080
+    },
+    {
       "year": 2023,
       "metric": "accidents",
       "count": 2040
@@ -353,6 +358,11 @@
       "year": 2023,
       "metric": "deaths",
       "count": 595
+    },
+    {
+      "year": 2023,
+      "metric": "injuries",
+      "count": 2129
     },
     {
       "year": 2024,
@@ -365,9 +375,19 @@
       "count": 586
     },
     {
+      "year": 2024,
+      "metric": "injuries",
+      "count": 1936
+    },
+    {
       "year": 2025,
       "metric": "deaths",
       "count": 595
+    },
+    {
+      "year": 2025,
+      "metric": "injuries",
+      "count": 1597
     }
   ]
 }

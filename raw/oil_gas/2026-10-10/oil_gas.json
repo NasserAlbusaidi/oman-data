@@ -1,0 +1,814 @@
+{
+  "continuationToken": null,
+  "data": [
+    {
+      "region": {
+        "key": 1000000,
+        "name": "Oman",
+        "id": "1",
+        "regionid": null,
+        "iso": "",
+        "description": "",
+        "اسم": "عمان"
+      },
+      "indicator": {
+        "key": 1000010,
+        "name": "Average daily production of crude oil",
+        "id": "17273303",
+        "full-name": "Petroleum\\Average daily production of crude oil",
+        "description": "Average daily settlement price of the contracts for the sale of Oman oil in Dubai Mercantile Exchange Limited (DME).",
+        "unit": "BBL",
+        "short-name": null,
+        "short-description": null,
+        "frequencies": "Monthly- Annual ",
+        "methodology": "Oil production throughout the month or year/  Number of days in the month or year",
+        "source-name": "Ministry of Oil and Gas",
+        "source-link": null,
+        "اسم": "المتوسط اليومي لانتاج النفط الخام",
+        "الاسم-الكامل": "النفط\\المتوسط اليومي لانتاج النفط الخام",
+        "وصف": "المعدل اليومي لإنتاج النفط خلال أيام السنة (برميل/اليوم)",
+        "الوحدة": "برميل",
+        "منهجية-الاحتساب": "كمية النفط المنتجة خلال الشهر أو السنة / عدديام الشهر أو السنة",
+        "اسم-مصدر": "وزارة النفط والغاز",
+        "الدورية": "سنوي - شهري "
+      },
+      "oil-refineries-in-oman": {
+        "key": 1000000,
+        "name": "Total Refinery & Petroleum IndustriesCo",
+        "id": "17273663",
+        "اسم": "اجمالي المصافي والصناعات البترولية"
+      },
+      "type-of-petroleum-products": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17273693",
+        "اسم": "الاجمالي"
+      },
+      "oil-producing-companies": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274003",
+        "اسم": "الاجمالي"
+      },
+      "minerals-type": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274133",
+        "اسم": "الاجمالي"
+      },
+      "gas-uses-type": {
+        "key": 1000000,
+        "name": "Total Gas Uses",
+        "id": "17274293",
+        "اسم": "اجمالي استخدامات الغاز",
+        "اسم-2": null,
+        "اسم-2-2": null,
+        "اسم-2-2-2": null,
+        "اسم-2-2-2-2": null,
+        "اسم-2-2-2-2-2": null,
+        "اسم-2-2-2-2-2-2": null
+      },
+      "country": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274383",
+        "regionid": null,
+        "اسم": "الاجمالي"
+      },
+      "tsKey": 1000020,
+      "startDate": "2002-01-01T00:00:00",
+      "endDate": "2023-01-01T00:00:00",
+      "frequency": "A",
+      "unit": "(000) BBL",
+      "scale": 1,
+      "values": [
+        897.0,
+        819.0,
+        780.0,
+        774.0,
+        738.0,
+        710.0,
+        757.0,
+        812.5,
+        864.6,
+        884.9,
+        918.5,
+        941.9,
+        943.5,
+        981.1,
+        1004.3,
+        970.6,
+        978.4,
+        970.9,
+        950.7,
+        971.2,
+        1064.2,
+        1048.7
+      ]
+    },
+    {
+      "region": {
+        "key": 1000000,
+        "name": "Oman",
+        "id": "1",
+        "regionid": null,
+        "iso": "",
+        "description": "",
+        "اسم": "عمان"
+      },
+      "indicator": {
+        "key": 1000060,
+        "name": "Average Daily Exports of Crude Oil.",
+        "id": "17273353",
+        "full-name": "Petroleum\\Average Daily Exports of Crude Oil.",
+        "description": null,
+        "unit": "BBL",
+        "short-name": null,
+        "short-description": null,
+        "frequencies": null,
+        "methodology": null,
+        "source-name": null,
+        "source-link": null,
+        "اسم": "المتوسط اليومي لصادرات النفط الخام",
+        "الاسم-الكامل": "النفط\\المتوسط اليومي لصادرات النفط الخام",
+        "وصف": null,
+        "الوحدة": "برميل",
+        "منهجية-الاحتساب": null,
+        "اسم-مصدر": null,
+        "الدورية": null
+      },
+      "oil-refineries-in-oman": {
+        "key": 1000000,
+        "name": "Total Refinery & Petroleum IndustriesCo",
+        "id": "17273663",
+        "اسم": "اجمالي المصافي والصناعات البترولية"
+      },
+      "type-of-petroleum-products": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17273693",
+        "اسم": "الاجمالي"
+      },
+      "oil-producing-companies": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274003",
+        "اسم": "الاجمالي"
+      },
+      "minerals-type": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274133",
+        "اسم": "الاجمالي"
+      },
+      "gas-uses-type": {
+        "key": 1000000,
+        "name": "Total Gas Uses",
+        "id": "17274293",
+        "اسم": "اجمالي استخدامات الغاز",
+        "اسم-2": null,
+        "اسم-2-2": null,
+        "اسم-2-2-2": null,
+        "اسم-2-2-2-2": null,
+        "اسم-2-2-2-2-2": null,
+        "اسم-2-2-2-2-2-2": null
+      },
+      "country": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274383",
+        "regionid": null,
+        "اسم": "الاجمالي"
+      },
+      "tsKey": 1000380,
+      "startDate": "2002-01-01T00:00:00",
+      "endDate": "2023-01-01T00:00:00",
+      "frequency": "A",
+      "unit": "(000) BBL",
+      "scale": 1,
+      "values": [
+        838.0,
+        763.0,
+        722.0,
+        718.0,
+        638.0,
+        608.0,
+        594.0,
+        688.0,
+        745.0,
+        738.1,
+        764.5,
+        833.4,
+        800.34,
+        844.2,
+        879.6,
+        806.1,
+        792.6,
+        850.2,
+        784.3,
+        791.7,
+        871.2,
+        850.2
+      ]
+    },
+    {
+      "region": {
+        "key": 1000000,
+        "name": "Oman",
+        "id": "1",
+        "regionid": null,
+        "iso": "",
+        "description": "",
+        "اسم": "عمان"
+      },
+      "indicator": {
+        "key": 1000080,
+        "name": "Average Price of Crude Oil",
+        "id": "17273373",
+        "full-name": "Petroleum\\Average Price of Crude Oil",
+        "description": "Average daily settlement price of the contracts for the sale of Oman oil in Dubai Mercantile Exchange Limited (DME).",
+        "unit": "US$/BBL",
+        "short-name": null,
+        "short-description": null,
+        "frequencies": "Monthly- Annual ",
+        "methodology": "Total number of barrels of crude oil and condensates produced from all fields in the Sultanate during a certain period",
+        "source-name": "Ministry of Oil and Gas",
+        "source-link": null,
+        "اسم": "المتوسط لسعر النفط الخام",
+        "الاسم-الكامل": "النفط\\المتوسط لسعر النفط الخام",
+        "وصف": "هو متوسط سعر التسوية اليومية لعقود بيع نفط عمان   في بورصة دبي للطاقة.",
+        "الوحدة": "دولار/ برميل",
+        "منهجية-الاحتساب": "بيان يتم توفيره من وزارة النفط والغاز",
+        "اسم-مصدر": "وزارة النفط والغاز",
+        "الدورية": "سنوي -شهري"
+      },
+      "oil-refineries-in-oman": {
+        "key": 1000000,
+        "name": "Total Refinery & Petroleum IndustriesCo",
+        "id": "17273663",
+        "اسم": "اجمالي المصافي والصناعات البترولية"
+      },
+      "type-of-petroleum-products": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17273693",
+        "اسم": "الاجمالي"
+      },
+      "oil-producing-companies": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274003",
+        "اسم": "الاجمالي"
+      },
+      "minerals-type": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274133",
+        "اسم": "الاجمالي"
+      },
+      "gas-uses-type": {
+        "key": 1000000,
+        "name": "Total Gas Uses",
+        "id": "17274293",
+        "اسم": "اجمالي استخدامات الغاز",
+        "اسم-2": null,
+        "اسم-2-2": null,
+        "اسم-2-2-2": null,
+        "اسم-2-2-2-2": null,
+        "اسم-2-2-2-2-2": null,
+        "اسم-2-2-2-2-2-2": null
+      },
+      "country": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274383",
+        "regionid": null,
+        "اسم": "الاجمالي"
+      },
+      "tsKey": 1000630,
+      "startDate": "2002-01-01T00:00:00",
+      "endDate": "2023-01-01T00:00:00",
+      "frequency": "A",
+      "unit": "US$/bbl",
+      "scale": 1,
+      "values": [
+        24.0,
+        28.0,
+        34.0,
+        50.0,
+        62.0,
+        65.0,
+        101.0,
+        56.7,
+        76.6,
+        103.0,
+        109.6,
+        105.5,
+        103.2,
+        56.5,
+        40.1,
+        51.3,
+        69.7,
+        63.6,
+        46.0,
+        64.3,
+        95.4,
+        82.3
+      ]
+    },
+    {
+      "region": {
+        "key": 1000000,
+        "name": "Oman",
+        "id": "1",
+        "regionid": null,
+        "iso": "",
+        "description": "",
+        "اسم": "عمان"
+      },
+      "indicator": {
+        "key": 1000220,
+        "name": "Total Production of  Natural  Gas",
+        "id": "17273503",
+        "full-name": "Production of  Natural  Gas\\Total Production of  Natural  Gas",
+        "description": "Total natural gas both produced within the Sultanate of associated petroleum gas (APG) or in addition to imports",
+        "unit": "cubic meter",
+        "short-name": null,
+        "short-description": null,
+        "frequencies": "Monthly- Annual ",
+        "methodology": "Statement provided by Ministry of Oil and Gas",
+        "source-name": "Ministry of Oil and Gas",
+        "source-link": null,
+        "اسم": "اجمالي انتاج الغاز الطبيعي",
+        "الاسم-الكامل": "انتاج الغاز الطبيعي\\اجمالي انتاج الغاز الطبيعي",
+        "وصف": "هو إجمالي كمية الغاز الطبيعي سواء يتم انتاجها داخل السلطنة من غاز طبيعي مصاحب أو غير مصاحب بالإضافة إلى الإستيراد،",
+        "الوحدة": "قدم . مكعب",
+        "منهجية-الاحتساب": "بيان يتم توفيره من وزارة النفط والغاز",
+        "اسم-مصدر": "وزارة النفط والغاز",
+        "الدورية": null
+      },
+      "oil-refineries-in-oman": {
+        "key": 1000000,
+        "name": "Total Refinery & Petroleum IndustriesCo",
+        "id": "17273663",
+        "اسم": "اجمالي المصافي والصناعات البترولية"
+      },
+      "type-of-petroleum-products": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17273693",
+        "اسم": "الاجمالي"
+      },
+      "oil-producing-companies": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274003",
+        "اسم": "الاجمالي"
+      },
+      "minerals-type": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274133",
+        "اسم": "الاجمالي"
+      },
+      "gas-uses-type": {
+        "key": 1000000,
+        "name": "Total Gas Uses",
+        "id": "17274293",
+        "اسم": "اجمالي استخدامات الغاز",
+        "اسم-2": null,
+        "اسم-2-2": null,
+        "اسم-2-2-2": null,
+        "اسم-2-2-2-2": null,
+        "اسم-2-2-2-2-2": null,
+        "اسم-2-2-2-2-2-2": null
+      },
+      "country": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17274383",
+        "regionid": null,
+        "اسم": "الاجمالي"
+      },
+      "tsKey": 1002350,
+      "startDate": "2002-01-01T00:00:00",
+      "endDate": "2025-01-01T00:00:00",
+      "frequency": "A",
+      "unit": "MNSCF",
+      "scale": 1,
+      "values": [
+        789361.0,
+        852076.0,
+        852856.0,
+        917746.0,
+        1068888.0,
+        1070736.0,
+        1069630.0,
+        1097661.0,
+        1176803.0,
+        1228521.0,
+        1271731.0,
+        1383959.0,
+        1332788.0,
+        1408489.0,
+        1445381.5,
+        1447422.2,
+        1617735.4,
+        1647213.1,
+        1646459.1,
+        1775895.2,
+        1842105.3,
+        1908026.67888404,
+        2000638.4,
+        2018799.2
+      ]
+    }
+  ],
+  "dimensionFields": {
+    "region": [
+      {
+        "key": 3237570,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3237580,
+        "name": "regionid",
+        "displayName": "regionid",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3237590,
+        "name": "iso",
+        "displayName": "ISO",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3237600,
+        "name": "description",
+        "displayName": "Description",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3280170,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "indicator": [
+      {
+        "key": 3237620,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3237630,
+        "name": "full-name",
+        "displayName": "Full Name",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3237640,
+        "name": "description",
+        "displayName": "Description",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3237650,
+        "name": "unit",
+        "displayName": "Unit",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3237670,
+        "name": "short-name",
+        "displayName": "Short name",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3237680,
+        "name": "short-description",
+        "displayName": "Short description",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3237690,
+        "name": "frequencies",
+        "displayName": "Frequencies",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3237700,
+        "name": "methodology",
+        "displayName": "Methodology",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3237710,
+        "name": "source-name",
+        "displayName": "Source name",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3237720,
+        "name": "source-link",
+        "displayName": "Source link",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3280180,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3280190,
+        "name": "الاسم-الكامل",
+        "displayName": "الاسم الكامل",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3237630,
+        "isSystemField": false
+      },
+      {
+        "key": 3280200,
+        "name": "وصف",
+        "displayName": "وصف",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3237640,
+        "isSystemField": false
+      },
+      {
+        "key": 3280210,
+        "name": "الوحدة",
+        "displayName": "الوحدة",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3237650,
+        "isSystemField": false
+      },
+      {
+        "key": 3280220,
+        "name": "منهجية-الاحتساب",
+        "displayName": "منهجية الاحتساب",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3237700,
+        "isSystemField": false
+      },
+      {
+        "key": 3280230,
+        "name": "اسم-مصدر",
+        "displayName": "اسم مصدر",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3237710,
+        "isSystemField": false
+      },
+      {
+        "key": 3470840,
+        "name": "الدورية",
+        "displayName": "الدورية",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3237690,
+        "isSystemField": false
+      }
+    ],
+    "oil-refineries-in-oman": [
+      {
+        "key": 3237750,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3280240,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "type-of-petroleum-products": [
+      {
+        "key": 3237780,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3280250,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "oil-producing-companies": [
+      {
+        "key": 3237810,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3280260,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "minerals-type": [
+      {
+        "key": 3237840,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3280270,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "gas-uses-type": [
+      {
+        "key": 3237870,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3280280,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3545720,
+        "name": "اسم-2",
+        "displayName": "اسم_2",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3545730,
+        "name": "اسم-2-2",
+        "displayName": "اسم_2_2",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3545740,
+        "name": "اسم-2-2-2",
+        "displayName": "اسم_2_2_2",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3545750,
+        "name": "اسم-2-2-2-2",
+        "displayName": "اسم_2_2_2_2",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3545760,
+        "name": "اسم-2-2-2-2-2",
+        "displayName": "اسم_2_2_2_2_2",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3545770,
+        "name": "اسم-2-2-2-2-2-2",
+        "displayName": "اسم_2_2_2_2_2_2",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "country": [
+      {
+        "key": 3237900,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3237910,
+        "name": "regionid",
+        "displayName": "regionid",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3280290,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ]
+  }
+}

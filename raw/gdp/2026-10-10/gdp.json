@@ -1,0 +1,436 @@
+{
+  "continuationToken": null,
+  "data": [
+    {
+      "regions": {
+        "key": 1000000,
+        "name": "Oman",
+        "id": "1",
+        "regionid": "OM",
+        "iso": "OM",
+        "description": null,
+        "اسم": "عمان"
+      },
+      "indicators": {
+        "key": 1000010,
+        "name": "GDP at Market Prices",
+        "id": "200",
+        "full-name": "",
+        "description": "The total value of goods and services produced inside the country (total production) after extracting the value of the raw materials and other goods and services consumed during a specific production period (normally one year) and equals the (added value of all the producers inside the Sultanate).",
+        "unit": "Mn.R.O",
+        "short-name": "",
+        "short-description": "",
+        "frequencies": "quarterly",
+        "methodology": "= Value Added of all resident producers in different economic activities at current (constant) prices inside the Sultanate + net production and import taxes",
+        "source-name": "Government departments, financial and non-financial establishments, as well as non-profitable organisations",
+        "source-link": "",
+        "اسم": "الناتج المحلي بسعر السوق",
+        "الاسم-الكامل": "",
+        "وصف": "هوالقيمة الإجمالية للسلع والخدمات المنتجة داخل البلد (إجمالي الإنتاج) ناقصا قيمةالمواد الخام والسلع والخدمات الأخرى التي تم استهلاكها أثناء عملية الإنتاج(الإستهلاك الوسيط) خلال فترة محددة عادة ما تكون سنة واحدة ويساوي (القيمةالمضافة لكافة المنتجين المقيمين).</span>",
+        "الوحدة": "مليون ريال عماني",
+        "الدورية": "ربع سنوي",
+        "منهجية-الاحتساب": "= القيم المضافة لكافة المنتجين المقيمين لمختلف الأنشطة الإقتصادية بالأسعار الجارية (الثابتة) + الضرائب الصافية على الإنتاج والواردات.",
+        "اسم-مصدر": "جهات حكومية ومؤسسات مالية ومؤسسات غير مالية، والهيئات التي لا تهدف للربح وتخدم العائلات والأسر المعيشية."
+      },
+      "price-type": {
+        "key": 1000010,
+        "name": "Current Prices",
+        "id": "200",
+        "اسم": "الأسعار الجارية"
+      },
+      "economic-activity-of-non-petrol": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "100",
+        "اسم": "الاجمالي",
+        "ملاحظة": "",
+        "note": ""
+      },
+      "institutional-sector": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "100",
+        "اسم": "الاجمالي"
+      },
+      "tsKey": 1000250,
+      "startDate": "2010-01-01T00:00:00",
+      "endDate": "2024-01-01T00:00:00",
+      "frequency": "A",
+      "unit": "Mn.R.O",
+      "scale": 1,
+      "values": [
+        24990.0193717838,
+        29797.7556543731,
+        33608.681120581,
+        34580.4425294138,
+        35642.8,
+        30264.3,
+        28887.0,
+        31089.4,
+        35184.0,
+        33859.4,
+        29187.2,
+        33576.0,
+        42238.4,
+        40824.2,
+        41194.3
+      ]
+    },
+    {
+      "regions": {
+        "key": 1000000,
+        "name": "Oman",
+        "id": "1",
+        "regionid": "OM",
+        "iso": "OM",
+        "description": null,
+        "اسم": "عمان"
+      },
+      "indicators": {
+        "key": 1000010,
+        "name": "GDP at Market Prices",
+        "id": "200",
+        "full-name": "",
+        "description": "The total value of goods and services produced inside the country (total production) after extracting the value of the raw materials and other goods and services consumed during a specific production period (normally one year) and equals the (added value of all the producers inside the Sultanate).",
+        "unit": "Mn.R.O",
+        "short-name": "",
+        "short-description": "",
+        "frequencies": "quarterly",
+        "methodology": "= Value Added of all resident producers in different economic activities at current (constant) prices inside the Sultanate + net production and import taxes",
+        "source-name": "Government departments, financial and non-financial establishments, as well as non-profitable organisations",
+        "source-link": "",
+        "اسم": "الناتج المحلي بسعر السوق",
+        "الاسم-الكامل": "",
+        "وصف": "هوالقيمة الإجمالية للسلع والخدمات المنتجة داخل البلد (إجمالي الإنتاج) ناقصا قيمةالمواد الخام والسلع والخدمات الأخرى التي تم استهلاكها أثناء عملية الإنتاج(الإستهلاك الوسيط) خلال فترة محددة عادة ما تكون سنة واحدة ويساوي (القيمةالمضافة لكافة المنتجين المقيمين).</span>",
+        "الوحدة": "مليون ريال عماني",
+        "الدورية": "ربع سنوي",
+        "منهجية-الاحتساب": "= القيم المضافة لكافة المنتجين المقيمين لمختلف الأنشطة الإقتصادية بالأسعار الجارية (الثابتة) + الضرائب الصافية على الإنتاج والواردات.",
+        "اسم-مصدر": "جهات حكومية ومؤسسات مالية ومؤسسات غير مالية، والهيئات التي لا تهدف للربح وتخدم العائلات والأسر المعيشية."
+      },
+      "price-type": {
+        "key": 1000020,
+        "name": "Constant Prices",
+        "id": "300",
+        "اسم": "الأسعار الثابته"
+      },
+      "economic-activity-of-non-petrol": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "100",
+        "اسم": "الاجمالي",
+        "ملاحظة": "",
+        "note": ""
+      },
+      "institutional-sector": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "100",
+        "اسم": "الاجمالي"
+      },
+      "tsKey": 1000260,
+      "startDate": "2010-01-01T00:00:00",
+      "endDate": "2023-01-01T00:00:00",
+      "frequency": "A",
+      "unit": "Mn.R.O",
+      "scale": 1,
+      "values": [
+        26293.7156309943,
+        27054.766060048,
+        29452.7424086866,
+        30992.3681412488,
+        31392.9,
+        32967.9,
+        34631.6,
+        34736.9,
+        35184.0,
+        34786.9,
+        33611.2,
+        34479.2,
+        37232.5,
+        37674.5
+      ]
+    }
+  ],
+  "dimensionFields": {
+    "regions": [
+      {
+        "key": 3526180,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526190,
+        "name": "regionid",
+        "displayName": "RegionId",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526200,
+        "name": "iso",
+        "displayName": "ISO",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526210,
+        "name": "description",
+        "displayName": "Description",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526220,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "indicators": [
+      {
+        "key": 3526230,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526240,
+        "name": "full-name",
+        "displayName": "Full Name",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526250,
+        "name": "description",
+        "displayName": "Description",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3526260,
+        "name": "unit",
+        "displayName": "Unit",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3526270,
+        "name": "short-name",
+        "displayName": "Short name",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526280,
+        "name": "short-description",
+        "displayName": "Short description",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526290,
+        "name": "frequencies",
+        "displayName": "Frequencies",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3526300,
+        "name": "methodology",
+        "displayName": "Methodology",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3526310,
+        "name": "source-name",
+        "displayName": "Source name",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3526320,
+        "name": "source-link",
+        "displayName": "Source link",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526330,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3526340,
+        "name": "الاسم-الكامل",
+        "displayName": "الاسم الكامل",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3526240,
+        "isSystemField": true
+      },
+      {
+        "key": 3526350,
+        "name": "وصف",
+        "displayName": "وصف",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3526250,
+        "isSystemField": false
+      },
+      {
+        "key": 3526360,
+        "name": "الوحدة",
+        "displayName": "الوحدة",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3526260,
+        "isSystemField": false
+      },
+      {
+        "key": 3526370,
+        "name": "الدورية",
+        "displayName": "الدورية",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3526290,
+        "isSystemField": false
+      },
+      {
+        "key": 3526380,
+        "name": "منهجية-الاحتساب",
+        "displayName": "منهجية الاحتساب",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3526300,
+        "isSystemField": false
+      },
+      {
+        "key": 3526390,
+        "name": "اسم-مصدر",
+        "displayName": "اسم مصدر",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3526310,
+        "isSystemField": false
+      }
+    ],
+    "price-type": [
+      {
+        "key": 3526400,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526410,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "economic-activity-of-non-petrol": [
+      {
+        "key": 3526420,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526430,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3526440,
+        "name": "ملاحظة",
+        "displayName": "ملاحظة",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526450,
+        "name": "note",
+        "displayName": "Note",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      }
+    ],
+    "institutional-sector": [
+      {
+        "key": 3526460,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3526470,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ]
+  }
+}

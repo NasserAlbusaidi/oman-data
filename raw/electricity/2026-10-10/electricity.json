@@ -1,0 +1,420 @@
+{
+  "continuationToken": null,
+  "data": [
+    {
+      "region": {
+        "key": 1000000,
+        "name": "Oman",
+        "id": "1",
+        "regionid": "OM",
+        "iso": "OM",
+        "اسم": "عمان"
+      },
+      "indicator": {
+        "key": 1000010,
+        "name": "(Total production of electricity (GW/H)",
+        "id": "17283163",
+        "full-name": "Electricity production (GW/H)\\(Total production of electricity (GW/H",
+        "description": "Total electricity produced from all power plants in the Sultanate.",
+        "unit": "GW/H",
+        "short-name": null,
+        "short-description": null,
+        "frequency": "Monthly- Annual ",
+        "methodology": "Statement provided by the Electricity Regulatory Authority",
+        "source-name": "Electricity Regulatory Authority ",
+        "source-link": null,
+        "اسم": "إجمالي إنتاج الكهرباء (جيجاوات/ساعة)",
+        "الاسم-الكامل": "إنتاج الكهرباء (جيجاوات/ ساعة)\\إجمالي إنتاج الكهرباء (جيجاوات/ساعة)",
+        "الوحدة": "جيجاوات/ ساعة",
+        "الوصف": "هو إجمالي ما يتم انتاجه من كافة محطات توليد الكهرباء في السلطنة ",
+        "الدورية": "شهري - سنوي",
+        "منهجية-الاحتساب": "بيان يتم توفيره من هيئة تنظيم الكهرباء",
+        "اسم-المصدر": "هيئة تنظيم الكهرباء"
+      },
+      "station": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17292353",
+        "اسم": "الاجمالي"
+      },
+      "networks": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17285553",
+        "اسم": "الإجمالي"
+      },
+      "opwp-purchases": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17285703",
+        "اسم": "مجموع"
+      },
+      "tsKey": 1000150,
+      "startDate": "2004-01-01T00:00:00",
+      "endDate": "2025-01-01T00:00:00",
+      "frequency": "A",
+      "unit": "Gw/H",
+      "scale": 1,
+      "values": [
+        11499.3,
+        12648.3,
+        13664.5,
+        14630.3,
+        16049.4,
+        18445.3,
+        17634.5,
+        21870.9,
+        25017.3,
+        26238.1,
+        29128.0,
+        32189.0,
+        33600.0,
+        35672.58742116,
+        37191.8558501268,
+        37533.6246664072,
+        38321.5491027861,
+        40992.2744905302,
+        42510.6205677306,
+        44965.7384302603,
+        49131.9855890483,
+        50973.5
+      ]
+    },
+    {
+      "region": {
+        "key": 1000000,
+        "name": "Oman",
+        "id": "1",
+        "regionid": "OM",
+        "iso": "OM",
+        "اسم": "عمان"
+      },
+      "indicator": {
+        "key": 1000080,
+        "name": "Consm. of Electric Power (GW/H)",
+        "id": "17283253",
+        "full-name": "Electric Power (GW\\H)\\Consm. of Electric Power (GW\\H)",
+        "description": null,
+        "unit": "GW/H",
+        "short-name": null,
+        "short-description": null,
+        "frequency": null,
+        "methodology": null,
+        "source-name": null,
+        "source-link": null,
+        "اسم": "الطاقة الكهربائية المستهلكة (جيجاوات/ساعه)",
+        "الاسم-الكامل": "الطاقة الكهربائية (جيجاوات/ساعة)\\الطاقة الكهربائية المستهلكة (جيجاوات/ساعه)",
+        "الوحدة": "GW / H",
+        "الوصف": null,
+        "الدورية": null,
+        "منهجية-الاحتساب": null,
+        "اسم-المصدر": null
+      },
+      "station": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17292353",
+        "اسم": "الاجمالي"
+      },
+      "networks": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17285553",
+        "اسم": "الإجمالي"
+      },
+      "opwp-purchases": {
+        "key": 1000000,
+        "name": "Total",
+        "id": "17285703",
+        "اسم": "مجموع"
+      },
+      "tsKey": 1003480,
+      "startDate": "2002-01-01T00:00:00",
+      "endDate": "2025-01-01T00:00:00",
+      "frequency": "A",
+      "unit": "Gw/H",
+      "scale": 1,
+      "values": [
+        7743.0,
+        8059.0,
+        8825.0,
+        8402.0,
+        10495.0,
+        11193.0,
+        12850.0,
+        14483.0,
+        16133.0,
+        18512.0,
+        20958.2,
+        22790.7,
+        25172.1,
+        28912.0,
+        30359.0,
+        32349.0,
+        33547.4893617515,
+        33796.0432243984,
+        33156.0,
+        35661.164,
+        36178.6,
+        39296.0,
+        42156.3,
+        45033.1
+      ]
+    }
+  ],
+  "dimensionFields": {
+    "region": [
+      {
+        "key": 3233710,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3233720,
+        "name": "regionid",
+        "displayName": "regionid",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3233730,
+        "name": "iso",
+        "displayName": "ISO",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3281730,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "indicator": [
+      {
+        "key": 3233760,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3233770,
+        "name": "full-name",
+        "displayName": "Full Name",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3233780,
+        "name": "description",
+        "displayName": "Description",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3233800,
+        "name": "unit",
+        "displayName": "Unit",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3233810,
+        "name": "short-name",
+        "displayName": "Short name",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3233820,
+        "name": "short-description",
+        "displayName": "Short description",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3233830,
+        "name": "frequency",
+        "displayName": "Frequency",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3233840,
+        "name": "methodology",
+        "displayName": "Methodology",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3233850,
+        "name": "source-name",
+        "displayName": "Source name",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3233860,
+        "name": "source-link",
+        "displayName": "Source link",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3281740,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      },
+      {
+        "key": 3281750,
+        "name": "الاسم-الكامل",
+        "displayName": "الاسم الكامل",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3233770,
+        "isSystemField": true
+      },
+      {
+        "key": 3281760,
+        "name": "الوحدة",
+        "displayName": "الوحدة",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3233800,
+        "isSystemField": false
+      },
+      {
+        "key": 3468590,
+        "name": "الوصف",
+        "displayName": "الوصف",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3233780,
+        "isSystemField": false
+      },
+      {
+        "key": 3468600,
+        "name": "الدورية",
+        "displayName": "الدورية",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3233830,
+        "isSystemField": false
+      },
+      {
+        "key": 3468610,
+        "name": "منهجية-الاحتساب",
+        "displayName": "منهجية الاحتساب",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3233840,
+        "isSystemField": false
+      },
+      {
+        "key": 3493660,
+        "name": "اسم-المصدر",
+        "displayName": "اسم المصدر",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": 3233850,
+        "isSystemField": false
+      }
+    ],
+    "station": [
+      {
+        "key": 3233890,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3281770,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "networks": [
+      {
+        "key": 3233920,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3281780,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ],
+    "opwp-purchases": [
+      {
+        "key": 3233950,
+        "name": "id",
+        "displayName": "Id",
+        "type": 6,
+        "locale": null,
+        "baseKey": null,
+        "isSystemField": true
+      },
+      {
+        "key": 3281790,
+        "name": "اسم",
+        "displayName": "اسم",
+        "type": 6,
+        "locale": "ar-SA",
+        "baseKey": null,
+        "isSystemField": false
+      }
+    ]
+  }
+}
