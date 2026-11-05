@@ -2,7 +2,7 @@
   "meta": {
     "id": "cpi",
     "as_of": "2026-08",
-    "fetched_at": "2026-10-05T09:42:02Z",
+    "fetched_at": "2026-11-05T09:58:23Z",
     "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Consumer Price Index",
     "source_url": "https://nsdp.ncsi.gov.om/ConsumerPriceIndex.xlsx",
     "license": "Open Government License - Sultanate of Oman",
@@ -42,7 +42,7 @@
     {
       "month": "2013-01",
       "group": "clothing_and_footwear",
-      "index": 101.40280561122243
+      "index": 101.40280561122245
     },
     {
       "month": "2013-01",
@@ -57,7 +57,7 @@
     {
       "month": "2013-01",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 99.4134897360704
+      "index": 99.41348973607039
     },
     {
       "month": "2013-01",
@@ -67,17 +67,17 @@
     {
       "month": "2013-01",
       "group": "general",
-      "index": 95.08970727101035
+      "index": 95.08970727101037
     },
     {
       "month": "2013-01",
       "group": "health",
-      "index": 92.1875
+      "index": 92.18749999999999
     },
     {
       "month": "2013-01",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 95.32888465204957
+      "index": 95.32888465204955
     },
     {
       "month": "2013-01",
@@ -107,7 +107,7 @@
     {
       "month": "2013-02",
       "group": "clothing_and_footwear",
-      "index": 101.80360721442884
+      "index": 101.80360721442885
     },
     {
       "month": "2013-02",
@@ -132,17 +132,17 @@
     {
       "month": "2013-02",
       "group": "general",
-      "index": 95.08970727101035
+      "index": 95.08970727101037
     },
     {
       "month": "2013-02",
       "group": "health",
-      "index": 92.1875
+      "index": 92.18749999999999
     },
     {
       "month": "2013-02",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 95.32888465204957
+      "index": 95.32888465204955
     },
     {
       "month": "2013-02",
@@ -172,7 +172,7 @@
     {
       "month": "2013-03",
       "group": "clothing_and_footwear",
-      "index": 102.10420841683369
+      "index": 102.10420841683367
     },
     {
       "month": "2013-03",
@@ -202,12 +202,12 @@
     {
       "month": "2013-03",
       "group": "health",
-      "index": 92.1875
+      "index": 92.18749999999999
     },
     {
       "month": "2013-03",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 95.32888465204957
+      "index": 95.32888465204955
     },
     {
       "month": "2013-03",
@@ -262,17 +262,17 @@
     {
       "month": "2013-04",
       "group": "general",
-      "index": 94.71199244570349
+      "index": 94.71199244570347
     },
     {
       "month": "2013-04",
       "group": "health",
-      "index": 93.19852941176472
+      "index": 93.19852941176471
     },
     {
       "month": "2013-04",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 95.32888465204957
+      "index": 95.32888465204955
     },
     {
       "month": "2013-04",
@@ -282,7 +282,7 @@
     {
       "month": "2013-04",
       "group": "recreation_and_culture",
-      "index": 100.20325203252033
+      "index": 100.20325203252031
     },
     {
       "month": "2013-04",
@@ -302,7 +302,7 @@
     {
       "month": "2013-05",
       "group": "clothing_and_footwear",
-      "index": 102.20440881763528
+      "index": 102.20440881763527
     },
     {
       "month": "2013-05",
@@ -332,12 +332,12 @@
     {
       "month": "2013-05",
       "group": "health",
-      "index": 93.19852941176472
+      "index": 93.19852941176471
     },
     {
       "month": "2013-05",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 95.32888465204957
+      "index": 95.32888465204955
     },
     {
       "month": "2013-05",
@@ -382,7 +382,7 @@
     {
       "month": "2013-06",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 99.4134897360704
+      "index": 99.41348973607039
     },
     {
       "month": "2013-06",
@@ -392,22 +392,22 @@
     {
       "month": "2013-06",
       "group": "general",
-      "index": 95.18413597733708
+      "index": 95.18413597733709
     },
     {
       "month": "2013-06",
       "group": "health",
-      "index": 93.19852941176472
+      "index": 93.19852941176471
     },
     {
       "month": "2013-06",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 95.32888465204957
+      "index": 95.32888465204955
     },
     {
       "month": "2013-06",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.27891156462584
+      "index": 97.27891156462583
     },
     {
       "month": "2013-06",
@@ -457,12 +457,12 @@
     {
       "month": "2013-07",
       "group": "general",
-      "index": 95.93956562795088
+      "index": 95.93956562795087
     },
     {
       "month": "2013-07",
       "group": "health",
-      "index": 93.47426470588236
+      "index": 93.47426470588235
     },
     {
       "month": "2013-07",
@@ -477,12 +477,12 @@
     {
       "month": "2013-07",
       "group": "recreation_and_culture",
-      "index": 99.89837398373984
+      "index": 99.89837398373983
     },
     {
       "month": "2013-07",
       "group": "restaurants_and_hotels",
-      "index": 97.8702807357212
+      "index": 97.87028073572121
     },
     {
       "month": "2013-07",
@@ -527,12 +527,12 @@
     {
       "month": "2013-08",
       "group": "health",
-      "index": 93.47426470588236
+      "index": 93.47426470588235
     },
     {
       "month": "2013-08",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.09151572926596
+      "index": 96.09151572926595
     },
     {
       "month": "2013-08",
@@ -542,12 +542,12 @@
     {
       "month": "2013-08",
       "group": "recreation_and_culture",
-      "index": 99.89837398373984
+      "index": 99.89837398373983
     },
     {
       "month": "2013-08",
       "group": "restaurants_and_hotels",
-      "index": 98.06389157792836
+      "index": 98.06389157792837
     },
     {
       "month": "2013-08",
@@ -592,7 +592,7 @@
     {
       "month": "2013-09",
       "group": "health",
-      "index": 93.47426470588236
+      "index": 93.47426470588235
     },
     {
       "month": "2013-09",
@@ -602,7 +602,7 @@
     {
       "month": "2013-09",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.37609329446065
+      "index": 97.37609329446063
     },
     {
       "month": "2013-09",
@@ -612,7 +612,7 @@
     {
       "month": "2013-09",
       "group": "restaurants_and_hotels",
-      "index": 97.9670861568248
+      "index": 97.96708615682479
     },
     {
       "month": "2013-09",
@@ -627,7 +627,7 @@
     {
       "month": "2013-10",
       "group": "clothing_and_footwear",
-      "index": 102.20440881763528
+      "index": 102.20440881763527
     },
     {
       "month": "2013-10",
@@ -662,12 +662,12 @@
     {
       "month": "2013-10",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.66348903717824
+      "index": 96.66348903717825
     },
     {
       "month": "2013-10",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.37609329446065
+      "index": 97.37609329446063
     },
     {
       "month": "2013-10",
@@ -692,7 +692,7 @@
     {
       "month": "2013-11",
       "group": "clothing_and_footwear",
-      "index": 102.20440881763528
+      "index": 102.20440881763527
     },
     {
       "month": "2013-11",
@@ -712,12 +712,12 @@
     {
       "month": "2013-11",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 90.7651715039578
+      "index": 90.76517150395779
     },
     {
       "month": "2013-11",
       "group": "general",
-      "index": 95.93956562795088
+      "index": 95.93956562795087
     },
     {
       "month": "2013-11",
@@ -732,7 +732,7 @@
     {
       "month": "2013-11",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.27891156462584
+      "index": 97.27891156462583
     },
     {
       "month": "2013-11",
@@ -757,12 +757,12 @@
     {
       "month": "2013-12",
       "group": "clothing_and_footwear",
-      "index": 102.10420841683369
+      "index": 102.10420841683367
     },
     {
       "month": "2013-12",
       "group": "communication",
-      "index": 98.84696016771488
+      "index": 98.84696016771487
     },
     {
       "month": "2013-12",
@@ -777,12 +777,12 @@
     {
       "month": "2013-12",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 90.85312225153912
+      "index": 90.85312225153913
     },
     {
       "month": "2013-12",
       "group": "general",
-      "index": 96.0339943342776
+      "index": 96.03399433427761
     },
     {
       "month": "2013-12",
@@ -792,17 +792,17 @@
     {
       "month": "2013-12",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.66348903717824
+      "index": 96.66348903717825
     },
     {
       "month": "2013-12",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.27891156462584
+      "index": 97.27891156462583
     },
     {
       "month": "2013-12",
       "group": "recreation_and_culture",
-      "index": 100.20325203252033
+      "index": 100.20325203252031
     },
     {
       "month": "2013-12",
@@ -822,12 +822,12 @@
     {
       "month": "2014-01",
       "group": "clothing_and_footwear",
-      "index": 102.30460921843688
+      "index": 102.30460921843687
     },
     {
       "month": "2014-01",
       "group": "communication",
-      "index": 98.84696016771488
+      "index": 98.84696016771487
     },
     {
       "month": "2014-01",
@@ -837,12 +837,12 @@
     {
       "month": "2014-01",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 103.22580645161293
+      "index": 103.22580645161291
     },
     {
       "month": "2014-01",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 90.67722075637644
+      "index": 90.67722075637643
     },
     {
       "month": "2014-01",
@@ -852,12 +852,12 @@
     {
       "month": "2014-01",
       "group": "health",
-      "index": 95.40441176470588
+      "index": 95.40441176470587
     },
     {
       "month": "2014-01",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.66348903717824
+      "index": 96.66348903717825
     },
     {
       "month": "2014-01",
@@ -872,7 +872,7 @@
     {
       "month": "2014-01",
       "group": "restaurants_and_hotels",
-      "index": 98.74152952565343
+      "index": 98.74152952565345
     },
     {
       "month": "2014-01",
@@ -892,7 +892,7 @@
     {
       "month": "2014-02",
       "group": "communication",
-      "index": 98.84696016771488
+      "index": 98.84696016771487
     },
     {
       "month": "2014-02",
@@ -902,27 +902,27 @@
     {
       "month": "2014-02",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 101.46627565982403
+      "index": 101.46627565982405
     },
     {
       "month": "2014-02",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 90.58927000879508
+      "index": 90.58927000879507
     },
     {
       "month": "2014-02",
       "group": "general",
-      "index": 95.65627950897073
+      "index": 95.65627950897071
     },
     {
       "month": "2014-02",
       "group": "health",
-      "index": 95.40441176470588
+      "index": 95.40441176470587
     },
     {
       "month": "2014-02",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.66348903717824
+      "index": 96.66348903717825
     },
     {
       "month": "2014-02",
@@ -937,7 +937,7 @@
     {
       "month": "2014-02",
       "group": "restaurants_and_hotels",
-      "index": 98.74152952565343
+      "index": 98.74152952565345
     },
     {
       "month": "2014-02",
@@ -957,7 +957,7 @@
     {
       "month": "2014-03",
       "group": "communication",
-      "index": 98.84696016771488
+      "index": 98.84696016771487
     },
     {
       "month": "2014-03",
@@ -967,27 +967,27 @@
     {
       "month": "2014-03",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 101.17302052785924
+      "index": 101.17302052785925
     },
     {
       "month": "2014-03",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 90.67722075637644
+      "index": 90.67722075637643
     },
     {
       "month": "2014-03",
       "group": "general",
-      "index": 95.65627950897073
+      "index": 95.65627950897071
     },
     {
       "month": "2014-03",
       "group": "health",
-      "index": 95.40441176470588
+      "index": 95.40441176470587
     },
     {
       "month": "2014-03",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.66348903717824
+      "index": 96.66348903717825
     },
     {
       "month": "2014-03",
@@ -1002,7 +1002,7 @@
     {
       "month": "2014-03",
       "group": "restaurants_and_hotels",
-      "index": 98.74152952565343
+      "index": 98.74152952565345
     },
     {
       "month": "2014-03",
@@ -1017,12 +1017,12 @@
     {
       "month": "2014-04",
       "group": "clothing_and_footwear",
-      "index": 102.30460921843688
+      "index": 102.30460921843687
     },
     {
       "month": "2014-04",
       "group": "communication",
-      "index": 103.77358490566036
+      "index": 103.77358490566037
     },
     {
       "month": "2014-04",
@@ -1032,7 +1032,7 @@
     {
       "month": "2014-04",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 100.48875855327468
+      "index": 100.48875855327469
     },
     {
       "month": "2014-04",
@@ -1052,7 +1052,7 @@
     {
       "month": "2014-04",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.85414680648236
+      "index": 96.85414680648235
     },
     {
       "month": "2014-04",
@@ -1082,12 +1082,12 @@
     {
       "month": "2014-05",
       "group": "clothing_and_footwear",
-      "index": 102.20440881763528
+      "index": 102.20440881763527
     },
     {
       "month": "2014-05",
       "group": "communication",
-      "index": 103.77358490566036
+      "index": 103.77358490566037
     },
     {
       "month": "2014-05",
@@ -1097,7 +1097,7 @@
     {
       "month": "2014-05",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 101.17302052785924
+      "index": 101.17302052785925
     },
     {
       "month": "2014-05",
@@ -1107,7 +1107,7 @@
     {
       "month": "2014-05",
       "group": "general",
-      "index": 96.41170915958448
+      "index": 96.41170915958449
     },
     {
       "month": "2014-05",
@@ -1132,7 +1132,7 @@
     {
       "month": "2014-05",
       "group": "restaurants_and_hotels",
-      "index": 98.74152952565343
+      "index": 98.74152952565345
     },
     {
       "month": "2014-05",
@@ -1147,12 +1147,12 @@
     {
       "month": "2014-06",
       "group": "clothing_and_footwear",
-      "index": 102.20440881763528
+      "index": 102.20440881763527
     },
     {
       "month": "2014-06",
       "group": "communication",
-      "index": 103.77358490566036
+      "index": 103.77358490566037
     },
     {
       "month": "2014-06",
@@ -1197,7 +1197,7 @@
     {
       "month": "2014-06",
       "group": "restaurants_and_hotels",
-      "index": 98.64472410454988
+      "index": 98.64472410454987
     },
     {
       "month": "2014-06",
@@ -1212,7 +1212,7 @@
     {
       "month": "2014-07",
       "group": "clothing_and_footwear",
-      "index": 102.30460921843688
+      "index": 102.30460921843687
     },
     {
       "month": "2014-07",
@@ -1262,7 +1262,7 @@
     {
       "month": "2014-07",
       "group": "restaurants_and_hotels",
-      "index": 98.74152952565343
+      "index": 98.74152952565345
     },
     {
       "month": "2014-07",
@@ -1302,7 +1302,7 @@
     {
       "month": "2014-08",
       "group": "general",
-      "index": 96.7894239848914
+      "index": 96.78942398489139
     },
     {
       "month": "2014-08",
@@ -1377,7 +1377,7 @@
     {
       "month": "2014-09",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.85414680648236
+      "index": 96.85414680648235
     },
     {
       "month": "2014-09",
@@ -1392,7 +1392,7 @@
     {
       "month": "2014-09",
       "group": "restaurants_and_hotels",
-      "index": 98.9351403678606
+      "index": 98.93514036786061
     },
     {
       "month": "2014-09",
@@ -1427,12 +1427,12 @@
     {
       "month": "2014-10",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 96.39401934916448
+      "index": 96.39401934916447
     },
     {
       "month": "2014-10",
       "group": "general",
-      "index": 96.7894239848914
+      "index": 96.78942398489139
     },
     {
       "month": "2014-10",
@@ -1442,7 +1442,7 @@
     {
       "month": "2014-10",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.85414680648236
+      "index": 96.85414680648235
     },
     {
       "month": "2014-10",
@@ -1492,12 +1492,12 @@
     {
       "month": "2014-11",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 96.39401934916448
+      "index": 96.39401934916447
     },
     {
       "month": "2014-11",
       "group": "general",
-      "index": 96.88385269121812
+      "index": 96.88385269121811
     },
     {
       "month": "2014-11",
@@ -1507,7 +1507,7 @@
     {
       "month": "2014-11",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 96.85414680648236
+      "index": 96.85414680648235
     },
     {
       "month": "2014-11",
@@ -1562,7 +1562,7 @@
     {
       "month": "2014-12",
       "group": "general",
-      "index": 96.7894239848914
+      "index": 96.78942398489139
     },
     {
       "month": "2014-12",
@@ -1617,7 +1617,7 @@
     {
       "month": "2015-01",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 101.66177908113391
+      "index": 101.66177908113393
     },
     {
       "month": "2015-01",
@@ -1632,7 +1632,7 @@
     {
       "month": "2015-01",
       "group": "health",
-      "index": 100.9191176470588
+      "index": 100.91911764705881
     },
     {
       "month": "2015-01",
@@ -1682,7 +1682,7 @@
     {
       "month": "2015-02",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 100.78201368523948
+      "index": 100.78201368523949
     },
     {
       "month": "2015-02",
@@ -1692,12 +1692,12 @@
     {
       "month": "2015-02",
       "group": "general",
-      "index": 96.41170915958448
+      "index": 96.41170915958449
     },
     {
       "month": "2015-02",
       "group": "health",
-      "index": 100.9191176470588
+      "index": 100.91911764705881
     },
     {
       "month": "2015-02",
@@ -1747,7 +1747,7 @@
     {
       "month": "2015-03",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 100.2932551319648
+      "index": 100.29325513196481
     },
     {
       "month": "2015-03",
@@ -1762,7 +1762,7 @@
     {
       "month": "2015-03",
       "group": "health",
-      "index": 100.9191176470588
+      "index": 100.91911764705881
     },
     {
       "month": "2015-03",
@@ -1772,7 +1772,7 @@
     {
       "month": "2015-03",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.37609329446065
+      "index": 97.37609329446063
     },
     {
       "month": "2015-03",
@@ -1797,7 +1797,7 @@
     {
       "month": "2015-04",
       "group": "clothing_and_footwear",
-      "index": 100.90180360721445
+      "index": 100.90180360721443
     },
     {
       "month": "2015-04",
@@ -1822,12 +1822,12 @@
     {
       "month": "2015-04",
       "group": "general",
-      "index": 96.0339943342776
+      "index": 96.03399433427761
     },
     {
       "month": "2015-04",
       "group": "health",
-      "index": 101.01102941176472
+      "index": 101.01102941176471
     },
     {
       "month": "2015-04",
@@ -1862,7 +1862,7 @@
     {
       "month": "2015-05",
       "group": "clothing_and_footwear",
-      "index": 100.60120240480964
+      "index": 100.60120240480963
     },
     {
       "month": "2015-05",
@@ -1887,12 +1887,12 @@
     {
       "month": "2015-05",
       "group": "general",
-      "index": 96.0339943342776
+      "index": 96.03399433427761
     },
     {
       "month": "2015-05",
       "group": "health",
-      "index": 101.01102941176472
+      "index": 101.01102941176471
     },
     {
       "month": "2015-05",
@@ -1927,7 +1927,7 @@
     {
       "month": "2015-06",
       "group": "clothing_and_footwear",
-      "index": 100.501002004008
+      "index": 100.50100200400801
     },
     {
       "month": "2015-06",
@@ -1942,22 +1942,22 @@
     {
       "month": "2015-06",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 101.46627565982403
+      "index": 101.46627565982405
     },
     {
       "month": "2015-06",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 96.48197009674584
+      "index": 96.48197009674583
     },
     {
       "month": "2015-06",
       "group": "general",
-      "index": 96.50613786591124
+      "index": 96.50613786591123
     },
     {
       "month": "2015-06",
       "group": "health",
-      "index": 101.01102941176472
+      "index": 101.01102941176471
     },
     {
       "month": "2015-06",
@@ -1967,7 +1967,7 @@
     {
       "month": "2015-06",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.37609329446065
+      "index": 97.37609329446063
     },
     {
       "month": "2015-06",
@@ -1992,7 +1992,7 @@
     {
       "month": "2015-07",
       "group": "clothing_and_footwear",
-      "index": 100.2004008016032
+      "index": 100.20040080160321
     },
     {
       "month": "2015-07",
@@ -2017,12 +2017,12 @@
     {
       "month": "2015-07",
       "group": "general",
-      "index": 96.97828139754483
+      "index": 96.97828139754485
     },
     {
       "month": "2015-07",
       "group": "health",
-      "index": 101.5625
+      "index": 101.56249999999999
     },
     {
       "month": "2015-07",
@@ -2032,7 +2032,7 @@
     {
       "month": "2015-07",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.37609329446065
+      "index": 97.37609329446063
     },
     {
       "month": "2015-07",
@@ -2042,7 +2042,7 @@
     {
       "month": "2015-07",
       "group": "restaurants_and_hotels",
-      "index": 99.51597289448208
+      "index": 99.51597289448209
     },
     {
       "month": "2015-07",
@@ -2077,17 +2077,17 @@
     {
       "month": "2015-08",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 96.48197009674584
+      "index": 96.48197009674583
     },
     {
       "month": "2015-08",
       "group": "general",
-      "index": 96.88385269121812
+      "index": 96.88385269121811
     },
     {
       "month": "2015-08",
       "group": "health",
-      "index": 101.5625
+      "index": 101.56249999999999
     },
     {
       "month": "2015-08",
@@ -2097,7 +2097,7 @@
     {
       "month": "2015-08",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.27891156462584
+      "index": 97.27891156462583
     },
     {
       "month": "2015-08",
@@ -2122,7 +2122,7 @@
     {
       "month": "2015-09",
       "group": "clothing_and_footwear",
-      "index": 100.60120240480964
+      "index": 100.60120240480963
     },
     {
       "month": "2015-09",
@@ -2152,7 +2152,7 @@
     {
       "month": "2015-09",
       "group": "health",
-      "index": 101.5625
+      "index": 101.56249999999999
     },
     {
       "month": "2015-09",
@@ -2162,7 +2162,7 @@
     {
       "month": "2015-09",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.27891156462584
+      "index": 97.27891156462583
     },
     {
       "month": "2015-09",
@@ -2192,7 +2192,7 @@
     {
       "month": "2015-10",
       "group": "communication",
-      "index": 100.41928721174004
+      "index": 100.41928721174003
     },
     {
       "month": "2015-10",
@@ -2207,12 +2207,12 @@
     {
       "month": "2015-10",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 96.56992084432716
+      "index": 96.56992084432717
     },
     {
       "month": "2015-10",
       "group": "general",
-      "index": 96.41170915958448
+      "index": 96.41170915958449
     },
     {
       "month": "2015-10",
@@ -2222,12 +2222,12 @@
     {
       "month": "2015-10",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 97.42612011439464
+      "index": 97.42612011439465
     },
     {
       "month": "2015-10",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.27891156462584
+      "index": 97.27891156462583
     },
     {
       "month": "2015-10",
@@ -2257,7 +2257,7 @@
     {
       "month": "2015-11",
       "group": "communication",
-      "index": 100.41928721174004
+      "index": 100.41928721174003
     },
     {
       "month": "2015-11",
@@ -2267,7 +2267,7 @@
     {
       "month": "2015-11",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 101.46627565982403
+      "index": 101.46627565982405
     },
     {
       "month": "2015-11",
@@ -2287,7 +2287,7 @@
     {
       "month": "2015-11",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 97.42612011439464
+      "index": 97.42612011439465
     },
     {
       "month": "2015-11",
@@ -2317,7 +2317,7 @@
     {
       "month": "2015-12",
       "group": "clothing_and_footwear",
-      "index": 101.00200400801604
+      "index": 101.00200400801603
     },
     {
       "month": "2015-12",
@@ -2352,17 +2352,17 @@
     {
       "month": "2015-12",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 97.42612011439464
+      "index": 97.42612011439465
     },
     {
       "month": "2015-12",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.27891156462584
+      "index": 97.27891156462583
     },
     {
       "month": "2015-12",
       "group": "recreation_and_culture",
-      "index": 100.20325203252033
+      "index": 100.20325203252031
     },
     {
       "month": "2015-12",
@@ -2397,7 +2397,7 @@
     {
       "month": "2016-01",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 100.78201368523948
+      "index": 100.78201368523949
     },
     {
       "month": "2016-01",
@@ -2407,7 +2407,7 @@
     {
       "month": "2016-01",
       "group": "general",
-      "index": 96.7894239848914
+      "index": 96.78942398489139
     },
     {
       "month": "2016-01",
@@ -2417,7 +2417,7 @@
     {
       "month": "2016-01",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 97.42612011439464
+      "index": 97.42612011439465
     },
     {
       "month": "2016-01",
@@ -2427,7 +2427,7 @@
     {
       "month": "2016-01",
       "group": "recreation_and_culture",
-      "index": 100.20325203252033
+      "index": 100.20325203252031
     },
     {
       "month": "2016-01",
@@ -2462,12 +2462,12 @@
     {
       "month": "2016-02",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 99.4134897360704
+      "index": 99.41348973607039
     },
     {
       "month": "2016-02",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 96.65787159190852
+      "index": 96.65787159190853
     },
     {
       "month": "2016-02",
@@ -2487,7 +2487,7 @@
     {
       "month": "2016-02",
       "group": "miscellaneous_goods_and_services",
-      "index": 97.37609329446065
+      "index": 97.37609329446063
     },
     {
       "month": "2016-02",
@@ -2527,7 +2527,7 @@
     {
       "month": "2016-03",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 98.92473118279572
+      "index": 98.92473118279571
     },
     {
       "month": "2016-03",
@@ -2537,7 +2537,7 @@
     {
       "month": "2016-03",
       "group": "general",
-      "index": 96.41170915958448
+      "index": 96.41170915958449
     },
     {
       "month": "2016-03",
@@ -2597,7 +2597,7 @@
     {
       "month": "2016-04",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 96.48197009674584
+      "index": 96.48197009674583
     },
     {
       "month": "2016-04",
@@ -2607,7 +2607,7 @@
     {
       "month": "2016-04",
       "group": "health",
-      "index": 102.4816176470588
+      "index": 102.48161764705881
     },
     {
       "month": "2016-04",
@@ -2642,7 +2642,7 @@
     {
       "month": "2016-05",
       "group": "clothing_and_footwear",
-      "index": 101.00200400801604
+      "index": 101.00200400801603
     },
     {
       "month": "2016-05",
@@ -2672,7 +2672,7 @@
     {
       "month": "2016-05",
       "group": "health",
-      "index": 102.4816176470588
+      "index": 102.48161764705881
     },
     {
       "month": "2016-05",
@@ -2707,7 +2707,7 @@
     {
       "month": "2016-06",
       "group": "clothing_and_footwear",
-      "index": 100.1002004008016
+      "index": 100.10020040080161
     },
     {
       "month": "2016-06",
@@ -2722,12 +2722,12 @@
     {
       "month": "2016-06",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 99.80449657869012
+      "index": 99.80449657869013
     },
     {
       "month": "2016-06",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 96.56992084432716
+      "index": 96.56992084432717
     },
     {
       "month": "2016-06",
@@ -2737,7 +2737,7 @@
     {
       "month": "2016-06",
       "group": "health",
-      "index": 102.4816176470588
+      "index": 102.48161764705881
     },
     {
       "month": "2016-06",
@@ -2762,7 +2762,7 @@
     {
       "month": "2016-06",
       "group": "transport",
-      "index": 94.44444444444444
+      "index": 94.44444444444443
     },
     {
       "month": "2016-07",
@@ -2772,7 +2772,7 @@
     {
       "month": "2016-07",
       "group": "clothing_and_footwear",
-      "index": 100.501002004008
+      "index": 100.50100200400801
     },
     {
       "month": "2016-07",
@@ -2792,7 +2792,7 @@
     {
       "month": "2016-07",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 96.56992084432716
+      "index": 96.56992084432717
     },
     {
       "month": "2016-07",
@@ -2802,7 +2802,7 @@
     {
       "month": "2016-07",
       "group": "health",
-      "index": 102.4816176470588
+      "index": 102.48161764705881
     },
     {
       "month": "2016-07",
@@ -2817,7 +2817,7 @@
     {
       "month": "2016-07",
       "group": "recreation_and_culture",
-      "index": 99.89837398373984
+      "index": 99.89837398373983
     },
     {
       "month": "2016-07",
@@ -2867,7 +2867,7 @@
     {
       "month": "2016-08",
       "group": "health",
-      "index": 102.4816176470588
+      "index": 102.48161764705881
     },
     {
       "month": "2016-08",
@@ -2882,12 +2882,12 @@
     {
       "month": "2016-08",
       "group": "recreation_and_culture",
-      "index": 99.89837398373984
+      "index": 99.89837398373983
     },
     {
       "month": "2016-08",
       "group": "restaurants_and_hotels",
-      "index": 99.90319457889645
+      "index": 99.90319457889643
     },
     {
       "month": "2016-08",
@@ -2902,7 +2902,7 @@
     {
       "month": "2016-09",
       "group": "clothing_and_footwear",
-      "index": 100.2004008016032
+      "index": 100.20040080160321
     },
     {
       "month": "2016-09",
@@ -2917,7 +2917,7 @@
     {
       "month": "2016-09",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 101.17302052785924
+      "index": 101.17302052785925
     },
     {
       "month": "2016-09",
@@ -2927,12 +2927,12 @@
     {
       "month": "2016-09",
       "group": "general",
-      "index": 97.82813975448536
+      "index": 97.82813975448535
     },
     {
       "month": "2016-09",
       "group": "health",
-      "index": 102.4816176470588
+      "index": 102.48161764705881
     },
     {
       "month": "2016-09",
@@ -2952,22 +2952,22 @@
     {
       "month": "2016-09",
       "group": "restaurants_and_hotels",
-      "index": 99.51597289448208
+      "index": 99.51597289448209
     },
     {
       "month": "2016-09",
       "group": "transport",
-      "index": 92.1875
+      "index": 92.18749999999999
     },
     {
       "month": "2016-10",
       "group": "alcoholic_beverages_tobacco_and_narcotics",
-      "index": 98.25757575757576
+      "index": 98.25757575757575
     },
     {
       "month": "2016-10",
       "group": "clothing_and_footwear",
-      "index": 100.60120240480964
+      "index": 100.60120240480963
     },
     {
       "month": "2016-10",
@@ -2987,7 +2987,7 @@
     {
       "month": "2016-10",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 97.44942832014073
+      "index": 97.44942832014071
     },
     {
       "month": "2016-10",
@@ -2997,7 +2997,7 @@
     {
       "month": "2016-10",
       "group": "health",
-      "index": 102.4816176470588
+      "index": 102.48161764705881
     },
     {
       "month": "2016-10",
@@ -3017,12 +3017,12 @@
     {
       "month": "2016-10",
       "group": "restaurants_and_hotels",
-      "index": 99.51597289448208
+      "index": 99.51597289448209
     },
     {
       "month": "2016-10",
       "group": "transport",
-      "index": 94.44444444444444
+      "index": 94.44444444444443
     },
     {
       "month": "2016-11",
@@ -3032,7 +3032,7 @@
     {
       "month": "2016-11",
       "group": "clothing_and_footwear",
-      "index": 100.1002004008016
+      "index": 100.10020040080161
     },
     {
       "month": "2016-11",
@@ -3062,7 +3062,7 @@
     {
       "month": "2016-11",
       "group": "health",
-      "index": 102.4816176470588
+      "index": 102.48161764705881
     },
     {
       "month": "2016-11",
@@ -3087,7 +3087,7 @@
     {
       "month": "2016-11",
       "group": "transport",
-      "index": 94.96527777777776
+      "index": 94.96527777777777
     },
     {
       "month": "2016-12",
@@ -3097,7 +3097,7 @@
     {
       "month": "2016-12",
       "group": "clothing_and_footwear",
-      "index": 100.60120240480964
+      "index": 100.60120240480963
     },
     {
       "month": "2016-12",
@@ -3122,12 +3122,12 @@
     {
       "month": "2016-12",
       "group": "general",
-      "index": 97.73371104815864
+      "index": 97.73371104815863
     },
     {
       "month": "2016-12",
       "group": "health",
-      "index": 102.4816176470588
+      "index": 102.48161764705881
     },
     {
       "month": "2016-12",
@@ -3162,7 +3162,7 @@
     {
       "month": "2017-01",
       "group": "clothing_and_footwear",
-      "index": 100.501002004008
+      "index": 100.50100200400801
     },
     {
       "month": "2017-01",
@@ -3177,12 +3177,12 @@
     {
       "month": "2017-01",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 98.72922776148584
+      "index": 98.72922776148583
     },
     {
       "month": "2017-01",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 98.32893579595428
+      "index": 98.32893579595427
     },
     {
       "month": "2017-01",
@@ -3212,17 +3212,17 @@
     {
       "month": "2017-01",
       "group": "restaurants_and_hotels",
-      "index": 99.70958373668928
+      "index": 99.70958373668927
     },
     {
       "month": "2017-01",
       "group": "transport",
-      "index": 95.83333333333331
+      "index": 95.83333333333333
     },
     {
       "month": "2017-02",
       "group": "alcoholic_beverages_tobacco_and_narcotics",
-      "index": 99.46969696969695
+      "index": 99.46969696969697
     },
     {
       "month": "2017-02",
@@ -3247,7 +3247,7 @@
     {
       "month": "2017-02",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 98.50483729111696
+      "index": 98.50483729111697
     },
     {
       "month": "2017-02",
@@ -3262,7 +3262,7 @@
     {
       "month": "2017-02",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 99.52335557673976
+      "index": 99.52335557673975
     },
     {
       "month": "2017-02",
@@ -3277,12 +3277,12 @@
     {
       "month": "2017-02",
       "group": "restaurants_and_hotels",
-      "index": 99.70958373668928
+      "index": 99.70958373668927
     },
     {
       "month": "2017-02",
       "group": "transport",
-      "index": 97.39583333333331
+      "index": 97.39583333333333
     },
     {
       "month": "2017-03",
@@ -3312,12 +3312,12 @@
     {
       "month": "2017-03",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 98.50483729111696
+      "index": 98.50483729111697
     },
     {
       "month": "2017-03",
       "group": "general",
-      "index": 99.15014164305948
+      "index": 99.15014164305947
     },
     {
       "month": "2017-03",
@@ -3372,7 +3372,7 @@
     {
       "month": "2017-04",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 99.1202346041056
+      "index": 99.12023460410559
     },
     {
       "month": "2017-04",
@@ -3382,12 +3382,12 @@
     {
       "month": "2017-04",
       "group": "general",
-      "index": 98.86685552407933
+      "index": 98.86685552407931
     },
     {
       "month": "2017-04",
       "group": "health",
-      "index": 102.94117647058825
+      "index": 102.94117647058823
     },
     {
       "month": "2017-04",
@@ -3452,7 +3452,7 @@
     {
       "month": "2017-05",
       "group": "health",
-      "index": 102.94117647058825
+      "index": 102.94117647058823
     },
     {
       "month": "2017-05",
@@ -3467,7 +3467,7 @@
     {
       "month": "2017-05",
       "group": "recreation_and_culture",
-      "index": 100.20325203252033
+      "index": 100.20325203252031
     },
     {
       "month": "2017-05",
@@ -3512,12 +3512,12 @@
     {
       "month": "2017-06",
       "group": "general",
-      "index": 98.86685552407933
+      "index": 98.86685552407931
     },
     {
       "month": "2017-06",
       "group": "health",
-      "index": 102.94117647058825
+      "index": 102.94117647058823
     },
     {
       "month": "2017-06",
@@ -3532,17 +3532,17 @@
     {
       "month": "2017-06",
       "group": "recreation_and_culture",
-      "index": 100.20325203252033
+      "index": 100.20325203252031
     },
     {
       "month": "2017-06",
       "group": "restaurants_and_hotels",
-      "index": 99.51597289448208
+      "index": 99.51597289448209
     },
     {
       "month": "2017-06",
       "group": "transport",
-      "index": 95.05208333333331
+      "index": 95.05208333333333
     },
     {
       "month": "2017-07",
@@ -3572,7 +3572,7 @@
     {
       "month": "2017-07",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 100.43975373790676
+      "index": 100.43975373790677
     },
     {
       "month": "2017-07",
@@ -3582,7 +3582,7 @@
     {
       "month": "2017-07",
       "group": "health",
-      "index": 102.94117647058825
+      "index": 102.94117647058823
     },
     {
       "month": "2017-07",
@@ -3597,22 +3597,22 @@
     {
       "month": "2017-07",
       "group": "recreation_and_culture",
-      "index": 100.20325203252033
+      "index": 100.20325203252031
     },
     {
       "month": "2017-07",
       "group": "restaurants_and_hotels",
-      "index": 99.90319457889645
+      "index": 99.90319457889643
     },
     {
       "month": "2017-07",
       "group": "transport",
-      "index": 93.75
+      "index": 93.74999999999999
     },
     {
       "month": "2017-08",
       "group": "alcoholic_beverages_tobacco_and_narcotics",
-      "index": 102.04545454545452
+      "index": 102.04545454545453
     },
     {
       "month": "2017-08",
@@ -3627,7 +3627,7 @@
     {
       "month": "2017-08",
       "group": "education",
-      "index": 100.54988216810683
+      "index": 100.54988216810685
     },
     {
       "month": "2017-08",
@@ -3642,7 +3642,7 @@
     {
       "month": "2017-08",
       "group": "general",
-      "index": 99.15014164305948
+      "index": 99.15014164305947
     },
     {
       "month": "2017-08",
@@ -3657,7 +3657,7 @@
     {
       "month": "2017-08",
       "group": "miscellaneous_goods_and_services",
-      "index": 98.63945578231292
+      "index": 98.63945578231291
     },
     {
       "month": "2017-08",
@@ -3672,7 +3672,7 @@
     {
       "month": "2017-08",
       "group": "transport",
-      "index": 94.44444444444444
+      "index": 94.44444444444443
     },
     {
       "month": "2017-09",
@@ -3682,12 +3682,12 @@
     {
       "month": "2017-09",
       "group": "clothing_and_footwear",
-      "index": 100.501002004008
+      "index": 100.50100200400801
     },
     {
       "month": "2017-09",
       "group": "communication",
-      "index": 100.20964360587
+      "index": 100.20964360587001
     },
     {
       "month": "2017-09",
@@ -3702,7 +3702,7 @@
     {
       "month": "2017-09",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 100.43975373790676
+      "index": 100.43975373790677
     },
     {
       "month": "2017-09",
@@ -3712,7 +3712,7 @@
     {
       "month": "2017-09",
       "group": "health",
-      "index": 102.94117647058825
+      "index": 102.94117647058823
     },
     {
       "month": "2017-09",
@@ -3722,7 +3722,7 @@
     {
       "month": "2017-09",
       "group": "miscellaneous_goods_and_services",
-      "index": 99.12536443148689
+      "index": 99.12536443148687
     },
     {
       "month": "2017-09",
@@ -3737,7 +3737,7 @@
     {
       "month": "2017-09",
       "group": "transport",
-      "index": 95.13888888888889
+      "index": 95.13888888888887
     },
     {
       "month": "2017-10",
@@ -3747,27 +3747,27 @@
     {
       "month": "2017-10",
       "group": "clothing_and_footwear",
-      "index": 100.501002004008
+      "index": 100.50100200400801
     },
     {
       "month": "2017-10",
       "group": "communication",
-      "index": 100.20964360587
+      "index": 100.20964360587001
     },
     {
       "month": "2017-10",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2017-10",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 102.1505376344086
+      "index": 102.15053763440861
     },
     {
       "month": "2017-10",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 100.3518029903254
+      "index": 100.35180299032541
     },
     {
       "month": "2017-10",
@@ -3777,12 +3777,12 @@
     {
       "month": "2017-10",
       "group": "health",
-      "index": 102.84926470588236
+      "index": 102.84926470588235
     },
     {
       "month": "2017-10",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 99.52335557673976
+      "index": 99.52335557673975
     },
     {
       "month": "2017-10",
@@ -3802,7 +3802,7 @@
     {
       "month": "2017-10",
       "group": "transport",
-      "index": 96.09375
+      "index": 96.09374999999999
     },
     {
       "month": "2017-11",
@@ -3817,12 +3817,12 @@
     {
       "month": "2017-11",
       "group": "communication",
-      "index": 100.20964360587
+      "index": 100.20964360587001
     },
     {
       "month": "2017-11",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2017-11",
@@ -3832,7 +3832,7 @@
     {
       "month": "2017-11",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 100.43975373790676
+      "index": 100.43975373790677
     },
     {
       "month": "2017-11",
@@ -3842,12 +3842,12 @@
     {
       "month": "2017-11",
       "group": "health",
-      "index": 102.84926470588236
+      "index": 102.84926470588235
     },
     {
       "month": "2017-11",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 99.52335557673976
+      "index": 99.52335557673975
     },
     {
       "month": "2017-11",
@@ -3867,7 +3867,7 @@
     {
       "month": "2017-11",
       "group": "transport",
-      "index": 95.83333333333331
+      "index": 95.83333333333333
     },
     {
       "month": "2017-12",
@@ -3882,12 +3882,12 @@
     {
       "month": "2017-12",
       "group": "communication",
-      "index": 100.20964360587
+      "index": 100.20964360587001
     },
     {
       "month": "2017-12",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2017-12",
@@ -3897,7 +3897,7 @@
     {
       "month": "2017-12",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 100.3518029903254
+      "index": 100.35180299032541
     },
     {
       "month": "2017-12",
@@ -3907,12 +3907,12 @@
     {
       "month": "2017-12",
       "group": "health",
-      "index": 102.84926470588236
+      "index": 102.84926470588235
     },
     {
       "month": "2017-12",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 99.52335557673976
+      "index": 99.52335557673975
     },
     {
       "month": "2017-12",
@@ -3927,12 +3927,12 @@
     {
       "month": "2017-12",
       "group": "restaurants_and_hotels",
-      "index": 99.70958373668928
+      "index": 99.70958373668927
     },
     {
       "month": "2017-12",
       "group": "transport",
-      "index": 96.52777777777776
+      "index": 96.52777777777777
     },
     {
       "month": "2018-01",
@@ -3947,12 +3947,12 @@
     {
       "month": "2018-01",
       "group": "communication",
-      "index": 100.20964360587
+      "index": 100.20964360587001
     },
     {
       "month": "2018-01",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2018-01",
@@ -3982,7 +3982,7 @@
     {
       "month": "2018-01",
       "group": "miscellaneous_goods_and_services",
-      "index": 99.7084548104956
+      "index": 99.70845481049561
     },
     {
       "month": "2018-01",
@@ -3992,7 +3992,7 @@
     {
       "month": "2018-01",
       "group": "restaurants_and_hotels",
-      "index": 99.70958373668928
+      "index": 99.70958373668927
     },
     {
       "month": "2018-01",
@@ -4012,17 +4012,17 @@
     {
       "month": "2018-02",
       "group": "communication",
-      "index": 100.20964360587
+      "index": 100.20964360587001
     },
     {
       "month": "2018-02",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2018-02",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 98.92473118279572
+      "index": 98.92473118279571
     },
     {
       "month": "2018-02",
@@ -4037,7 +4037,7 @@
     {
       "month": "2018-02",
       "group": "health",
-      "index": 99.72426470588236
+      "index": 99.72426470588235
     },
     {
       "month": "2018-02",
@@ -4047,7 +4047,7 @@
     {
       "month": "2018-02",
       "group": "miscellaneous_goods_and_services",
-      "index": 99.8056365403304
+      "index": 99.80563654033041
     },
     {
       "month": "2018-02",
@@ -4057,12 +4057,12 @@
     {
       "month": "2018-02",
       "group": "restaurants_and_hotels",
-      "index": 99.70958373668928
+      "index": 99.70958373668927
     },
     {
       "month": "2018-02",
       "group": "transport",
-      "index": 99.5659722222222
+      "index": 99.56597222222221
     },
     {
       "month": "2018-03",
@@ -4077,12 +4077,12 @@
     {
       "month": "2018-03",
       "group": "communication",
-      "index": 100.20964360587
+      "index": 100.20964360587001
     },
     {
       "month": "2018-03",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2018-03",
@@ -4092,7 +4092,7 @@
     {
       "month": "2018-03",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 100.3518029903254
+      "index": 100.35180299032541
     },
     {
       "month": "2018-03",
@@ -4102,17 +4102,17 @@
     {
       "month": "2018-03",
       "group": "health",
-      "index": 99.72426470588236
+      "index": 99.72426470588235
     },
     {
       "month": "2018-03",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 100.0
+      "index": 99.99999999999999
     },
     {
       "month": "2018-03",
       "group": "miscellaneous_goods_and_services",
-      "index": 99.7084548104956
+      "index": 99.70845481049561
     },
     {
       "month": "2018-03",
@@ -4122,12 +4122,12 @@
     {
       "month": "2018-03",
       "group": "restaurants_and_hotels",
-      "index": 99.70958373668928
+      "index": 99.70958373668927
     },
     {
       "month": "2018-03",
       "group": "transport",
-      "index": 98.95833333333331
+      "index": 98.95833333333333
     },
     {
       "month": "2018-04",
@@ -4137,27 +4137,27 @@
     {
       "month": "2018-04",
       "group": "clothing_and_footwear",
-      "index": 100.2004008016032
+      "index": 100.20040080160321
     },
     {
       "month": "2018-04",
       "group": "communication",
-      "index": 100.20964360587
+      "index": 100.20964360587001
     },
     {
       "month": "2018-04",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2018-04",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 98.43597262952105
+      "index": 98.43597262952103
     },
     {
       "month": "2018-04",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 100.61565523306948
+      "index": 100.61565523306949
     },
     {
       "month": "2018-04",
@@ -4167,7 +4167,7 @@
     {
       "month": "2018-04",
       "group": "health",
-      "index": 99.72426470588236
+      "index": 99.72426470588235
     },
     {
       "month": "2018-04",
@@ -4177,7 +4177,7 @@
     {
       "month": "2018-04",
       "group": "miscellaneous_goods_and_services",
-      "index": 99.8056365403304
+      "index": 99.80563654033041
     },
     {
       "month": "2018-04",
@@ -4187,12 +4187,12 @@
     {
       "month": "2018-04",
       "group": "restaurants_and_hotels",
-      "index": 99.90319457889645
+      "index": 99.90319457889643
     },
     {
       "month": "2018-04",
       "group": "transport",
-      "index": 99.04513888888889
+      "index": 99.04513888888887
     },
     {
       "month": "2018-05",
@@ -4207,12 +4207,12 @@
     {
       "month": "2018-05",
       "group": "communication",
-      "index": 100.20964360587
+      "index": 100.20964360587001
     },
     {
       "month": "2018-05",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2018-05",
@@ -4232,7 +4232,7 @@
     {
       "month": "2018-05",
       "group": "health",
-      "index": 99.72426470588236
+      "index": 99.72426470588235
     },
     {
       "month": "2018-05",
@@ -4277,7 +4277,7 @@
     {
       "month": "2018-06",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2018-06",
@@ -4287,7 +4287,7 @@
     {
       "month": "2018-06",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 100.08795074758136
+      "index": 100.08795074758135
     },
     {
       "month": "2018-06",
@@ -4297,7 +4297,7 @@
     {
       "month": "2018-06",
       "group": "health",
-      "index": 99.72426470588236
+      "index": 99.72426470588235
     },
     {
       "month": "2018-06",
@@ -4307,12 +4307,12 @@
     {
       "month": "2018-06",
       "group": "miscellaneous_goods_and_services",
-      "index": 99.7084548104956
+      "index": 99.70845481049561
     },
     {
       "month": "2018-06",
       "group": "recreation_and_culture",
-      "index": 99.89837398373984
+      "index": 99.89837398373983
     },
     {
       "month": "2018-06",
@@ -4322,7 +4322,7 @@
     {
       "month": "2018-06",
       "group": "transport",
-      "index": 100.78125
+      "index": 100.78124999999999
     },
     {
       "month": "2018-07",
@@ -4342,7 +4342,7 @@
     {
       "month": "2018-07",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2018-07",
@@ -4362,7 +4362,7 @@
     {
       "month": "2018-07",
       "group": "health",
-      "index": 99.72426470588236
+      "index": 99.72426470588235
     },
     {
       "month": "2018-07",
@@ -4377,7 +4377,7 @@
     {
       "month": "2018-07",
       "group": "recreation_and_culture",
-      "index": 99.89837398373984
+      "index": 99.89837398373983
     },
     {
       "month": "2018-07",
@@ -4387,7 +4387,7 @@
     {
       "month": "2018-07",
       "group": "transport",
-      "index": 100.43402777777776
+      "index": 100.43402777777777
     },
     {
       "month": "2018-08",
@@ -4407,7 +4407,7 @@
     {
       "month": "2018-08",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2018-08",
@@ -4427,7 +4427,7 @@
     {
       "month": "2018-08",
       "group": "health",
-      "index": 99.72426470588236
+      "index": 99.72426470588235
     },
     {
       "month": "2018-08",
@@ -4437,7 +4437,7 @@
     {
       "month": "2018-08",
       "group": "miscellaneous_goods_and_services",
-      "index": 99.8056365403304
+      "index": 99.80563654033041
     },
     {
       "month": "2018-08",
@@ -4472,7 +4472,7 @@
     {
       "month": "2018-09",
       "group": "education",
-      "index": 99.528672427337
+      "index": 99.52867242733701
     },
     {
       "month": "2018-09",
@@ -4492,17 +4492,17 @@
     {
       "month": "2018-09",
       "group": "health",
-      "index": 99.72426470588236
+      "index": 99.72426470588235
     },
     {
       "month": "2018-09",
       "group": "housing_water_electricity_gas_and_other_fuels",
-      "index": 100.0
+      "index": 99.99999999999999
     },
     {
       "month": "2018-09",
       "group": "miscellaneous_goods_and_services",
-      "index": 100.0
+      "index": 99.99999999999999
     },
     {
       "month": "2018-09",
@@ -4527,7 +4527,7 @@
     {
       "month": "2018-10",
       "group": "clothing_and_footwear",
-      "index": 100.1002004008016
+      "index": 100.10020040080161
     },
     {
       "month": "2018-10",
@@ -4552,12 +4552,12 @@
     {
       "month": "2018-10",
       "group": "general",
-      "index": 100.56657223796032
+      "index": 100.56657223796033
     },
     {
       "month": "2018-10",
       "group": "health",
-      "index": 99.26470588235291
+      "index": 99.26470588235293
     },
     {
       "month": "2018-10",
@@ -4582,7 +4582,7 @@
     {
       "month": "2018-10",
       "group": "transport",
-      "index": 101.38888888888889
+      "index": 101.38888888888887
     },
     {
       "month": "2018-11",
@@ -4592,7 +4592,7 @@
     {
       "month": "2018-11",
       "group": "clothing_and_footwear",
-      "index": 100.501002004008
+      "index": 100.50100200400801
     },
     {
       "month": "2018-11",
@@ -4607,7 +4607,7 @@
     {
       "month": "2018-11",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 100.78201368523948
+      "index": 100.78201368523949
     },
     {
       "month": "2018-11",
@@ -4622,7 +4622,7 @@
     {
       "month": "2018-11",
       "group": "health",
-      "index": 99.26470588235291
+      "index": 99.26470588235293
     },
     {
       "month": "2018-11",
@@ -4662,7 +4662,7 @@
     {
       "month": "2018-12",
       "group": "communication",
-      "index": 99.79035639412996
+      "index": 99.79035639412997
     },
     {
       "month": "2018-12",
@@ -4672,12 +4672,12 @@
     {
       "month": "2018-12",
       "group": "food_and_non_alcoholic_beverages",
-      "index": 100.78201368523948
+      "index": 100.78201368523949
     },
     {
       "month": "2018-12",
       "group": "furnishings_household_equipment_and_routine_household_maintenance",
-      "index": 99.56024626209324
+      "index": 99.56024626209323
     },
     {
       "month": "2018-12",
@@ -4687,7 +4687,7 @@
     {
       "month": "2018-12",
       "group": "health",
-      "index": 99.26470588235291
+      "index": 99.26470588235293
     },
     {
       "month": "2018-12",
@@ -4697,7 +4697,7 @@
     {
       "month": "2018-12",
       "group": "miscellaneous_goods_and_services",
-      "index": 100.77745383867833
+      "index": 100.77745383867831
     },
     {
       "month": "2018-12",
@@ -4712,7 +4712,7 @@
     {
       "month": "2018-12",
       "group": "transport",
-      "index": 99.82638888888889
+      "index": 99.82638888888887
     },
     {
       "month": "2019-01",

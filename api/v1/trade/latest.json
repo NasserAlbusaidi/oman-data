@@ -2,7 +2,7 @@
   "meta": {
     "id": "trade",
     "as_of": "2026-07",
-    "fetched_at": "2026-10-05T09:44:08Z",
+    "fetched_at": "2026-11-05T10:00:28Z",
     "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Merchandise Trade",
     "source_url": "https://nsdp.ncsi.gov.om/MerchandiseTrade.xlsx",
     "license": "Open Government License - Sultanate of Oman",
@@ -2167,7 +2167,7 @@
     {
       "month": "2018-09",
       "flow": "exports",
-      "value_omr_mn": 1356.22817
+      "value_omr_mn": 1356.2281699999999
     },
     {
       "month": "2018-09",
@@ -2237,7 +2237,7 @@
     {
       "month": "2019-01",
       "flow": "re_exports",
-      "value_omr_mn": 117.89332199999996
+      "value_omr_mn": 117.89332199999997
     },
     {
       "month": "2019-02",
@@ -2252,7 +2252,7 @@
     {
       "month": "2019-02",
       "flow": "re_exports",
-      "value_omr_mn": 115.814773
+      "value_omr_mn": 115.81477299999999
     },
     {
       "month": "2019-03",
@@ -2302,7 +2302,7 @@
     {
       "month": "2019-06",
       "flow": "exports",
-      "value_omr_mn": 1267.32622
+      "value_omr_mn": 1267.3262200000001
     },
     {
       "month": "2019-06",
@@ -2342,7 +2342,7 @@
     {
       "month": "2019-08",
       "flow": "re_exports",
-      "value_omr_mn": 108.435511
+      "value_omr_mn": 108.43551099999999
     },
     {
       "month": "2019-09",
@@ -2357,7 +2357,7 @@
     {
       "month": "2019-09",
       "flow": "re_exports",
-      "value_omr_mn": 107.604663
+      "value_omr_mn": 107.60466299999999
     },
     {
       "month": "2019-10",
@@ -2422,7 +2422,7 @@
     {
       "month": "2020-02",
       "flow": "exports",
-      "value_omr_mn": 1272.767473
+      "value_omr_mn": 1272.7674729999999
     },
     {
       "month": "2020-02",
@@ -2502,7 +2502,7 @@
     {
       "month": "2020-07",
       "flow": "imports",
-      "value_omr_mn": 952.711925
+      "value_omr_mn": 952.7119250000001
     },
     {
       "month": "2020-07",
@@ -2537,7 +2537,7 @@
     {
       "month": "2020-09",
       "flow": "re_exports",
-      "value_omr_mn": 203.97196899999997
+      "value_omr_mn": 203.97196899999994
     },
     {
       "month": "2020-10",
@@ -2567,7 +2567,7 @@
     {
       "month": "2020-11",
       "flow": "re_exports",
-      "value_omr_mn": 186.145311
+      "value_omr_mn": 186.14531100000002
     },
     {
       "month": "2020-12",
@@ -2577,7 +2577,7 @@
     {
       "month": "2020-12",
       "flow": "imports",
-      "value_omr_mn": 994.090944
+      "value_omr_mn": 994.0909440000001
     },
     {
       "month": "2020-12",
@@ -2587,7 +2587,7 @@
     {
       "month": "2021-01",
       "flow": "exports",
-      "value_omr_mn": 1167.912185
+      "value_omr_mn": 1167.9121850000001
     },
     {
       "month": "2021-01",
@@ -2597,7 +2597,7 @@
     {
       "month": "2021-01",
       "flow": "re_exports",
-      "value_omr_mn": 112.48009
+      "value_omr_mn": 112.48008999999999
     },
     {
       "month": "2021-02",
@@ -2622,7 +2622,7 @@
     {
       "month": "2021-03",
       "flow": "imports",
-      "value_omr_mn": 1170.945341
+      "value_omr_mn": 1170.9453409999999
     },
     {
       "month": "2021-03",
@@ -2637,7 +2637,7 @@
     {
       "month": "2021-04",
       "flow": "imports",
-      "value_omr_mn": 964.374415
+      "value_omr_mn": 964.3744149999999
     },
     {
       "month": "2021-04",
@@ -2672,7 +2672,7 @@
     {
       "month": "2021-06",
       "flow": "re_exports",
-      "value_omr_mn": 122.303724
+      "value_omr_mn": 122.30372399999999
     },
     {
       "month": "2021-07",
@@ -2697,7 +2697,7 @@
     {
       "month": "2021-08",
       "flow": "imports",
-      "value_omr_mn": 1004.668512
+      "value_omr_mn": 1004.6685120000001
     },
     {
       "month": "2021-08",
@@ -2722,7 +2722,7 @@
     {
       "month": "2021-10",
       "flow": "exports",
-      "value_omr_mn": 1437.384999
+      "value_omr_mn": 1437.3849989999999
     },
     {
       "month": "2021-10",
@@ -2737,12 +2737,12 @@
     {
       "month": "2021-11",
       "flow": "exports",
-      "value_omr_mn": 1512.316927
+      "value_omr_mn": 1512.3169269999999
     },
     {
       "month": "2021-11",
       "flow": "imports",
-      "value_omr_mn": 965.511835
+      "value_omr_mn": 965.5118350000001
     },
     {
       "month": "2021-11",
@@ -2797,7 +2797,7 @@
     {
       "month": "2022-03",
       "flow": "exports",
-      "value_omr_mn": 1967.205782
+      "value_omr_mn": 1967.2057820000002
     },
     {
       "month": "2022-03",
@@ -2812,7 +2812,7 @@
     {
       "month": "2022-04",
       "flow": "exports",
-      "value_omr_mn": 2044.343174
+      "value_omr_mn": 2044.3431739999996
     },
     {
       "month": "2022-04",
@@ -2847,7 +2847,7 @@
     {
       "month": "2022-06",
       "flow": "imports",
-      "value_omr_mn": 1539.6828319999995
+      "value_omr_mn": 1539.6828319999997
     },
     {
       "month": "2022-06",
@@ -2857,12 +2857,12 @@
     {
       "month": "2022-07",
       "flow": "exports",
-      "value_omr_mn": 2286.421158
+      "value_omr_mn": 2286.4211579999997
     },
     {
       "month": "2022-07",
       "flow": "imports",
-      "value_omr_mn": 1213.3056309999995
+      "value_omr_mn": 1213.3056309999997
     },
     {
       "month": "2022-07",
@@ -2877,7 +2877,7 @@
     {
       "month": "2022-08",
       "flow": "imports",
-      "value_omr_mn": 1401.140229
+      "value_omr_mn": 1401.1402289999999
     },
     {
       "month": "2022-08",
@@ -2922,7 +2922,7 @@
     {
       "month": "2022-11",
       "flow": "imports",
-      "value_omr_mn": 1088.7549890000005
+      "value_omr_mn": 1088.7549890000003
     },
     {
       "month": "2022-11",
@@ -2957,12 +2957,12 @@
     {
       "month": "2023-01",
       "flow": "re_exports",
-      "value_omr_mn": 111.20522899999996
+      "value_omr_mn": 111.20522899999997
     },
     {
       "month": "2023-02",
       "flow": "exports",
-      "value_omr_mn": 1684.052323
+      "value_omr_mn": 1684.0523230000001
     },
     {
       "month": "2023-02",
@@ -2977,7 +2977,7 @@
     {
       "month": "2023-03",
       "flow": "exports",
-      "value_omr_mn": 1858.120963
+      "value_omr_mn": 1858.1209629999998
     },
     {
       "month": "2023-03",
@@ -2997,12 +2997,12 @@
     {
       "month": "2023-04",
       "flow": "imports",
-      "value_omr_mn": 1227.129276
+      "value_omr_mn": 1227.1292760000001
     },
     {
       "month": "2023-04",
       "flow": "re_exports",
-      "value_omr_mn": 115.843071
+      "value_omr_mn": 115.84307100000001
     },
     {
       "month": "2023-05",
@@ -3017,7 +3017,7 @@
     {
       "month": "2023-05",
       "flow": "re_exports",
-      "value_omr_mn": 189.430286
+      "value_omr_mn": 189.43028599999997
     },
     {
       "month": "2023-06",
@@ -3027,7 +3027,7 @@
     {
       "month": "2023-06",
       "flow": "imports",
-      "value_omr_mn": 992.021754
+      "value_omr_mn": 992.0217539999999
     },
     {
       "month": "2023-06",
@@ -3037,7 +3037,7 @@
     {
       "month": "2023-07",
       "flow": "exports",
-      "value_omr_mn": 1793.914525
+      "value_omr_mn": 1793.9145250000001
     },
     {
       "month": "2023-07",
@@ -3047,17 +3047,17 @@
     {
       "month": "2023-07",
       "flow": "re_exports",
-      "value_omr_mn": 110.22941
+      "value_omr_mn": 110.22940999999999
     },
     {
       "month": "2023-08",
       "flow": "exports",
-      "value_omr_mn": 1896.755616
+      "value_omr_mn": 1896.7556160000001
     },
     {
       "month": "2023-08",
       "flow": "imports",
-      "value_omr_mn": 1291.4036559999995
+      "value_omr_mn": 1291.4036559999997
     },
     {
       "month": "2023-08",
@@ -3087,7 +3087,7 @@
     {
       "month": "2023-10",
       "flow": "imports",
-      "value_omr_mn": 1369.8934369999995
+      "value_omr_mn": 1369.8934369999997
     },
     {
       "month": "2023-10",
@@ -3107,7 +3107,7 @@
     {
       "month": "2023-11",
       "flow": "re_exports",
-      "value_omr_mn": 111.141728
+      "value_omr_mn": 111.14172799999999
     },
     {
       "month": "2023-12",
@@ -3132,17 +3132,17 @@
     {
       "month": "2024-01",
       "flow": "imports",
-      "value_omr_mn": 1425.1036400000005
+      "value_omr_mn": 1425.1036400000003
     },
     {
       "month": "2024-01",
       "flow": "re_exports",
-      "value_omr_mn": 101.50951
+      "value_omr_mn": 101.50950999999999
     },
     {
       "month": "2024-02",
       "flow": "exports",
-      "value_omr_mn": 2015.246788
+      "value_omr_mn": 2015.2467880000002
     },
     {
       "month": "2024-02",
@@ -3167,7 +3167,7 @@
     {
       "month": "2024-03",
       "flow": "re_exports",
-      "value_omr_mn": 192.467902
+      "value_omr_mn": 192.46790199999998
     },
     {
       "month": "2024-04",
@@ -3177,12 +3177,12 @@
     {
       "month": "2024-04",
       "flow": "imports",
-      "value_omr_mn": 1299.122489
+      "value_omr_mn": 1299.1224889999999
     },
     {
       "month": "2024-04",
       "flow": "re_exports",
-      "value_omr_mn": 122.57177700000004
+      "value_omr_mn": 122.57177700000003
     },
     {
       "month": "2024-05",
@@ -3222,7 +3222,7 @@
     {
       "month": "2024-07",
       "flow": "imports",
-      "value_omr_mn": 1403.8073090000005
+      "value_omr_mn": 1403.8073090000003
     },
     {
       "month": "2024-07",
@@ -3242,7 +3242,7 @@
     {
       "month": "2024-08",
       "flow": "re_exports",
-      "value_omr_mn": 131.99343599999995
+      "value_omr_mn": 131.99343599999997
     },
     {
       "month": "2024-09",
@@ -3252,7 +3252,7 @@
     {
       "month": "2024-09",
       "flow": "imports",
-      "value_omr_mn": 1382.6884130000003
+      "value_omr_mn": 1382.6884130000005
     },
     {
       "month": "2024-09",
@@ -3277,7 +3277,7 @@
     {
       "month": "2024-11",
       "flow": "exports",
-      "value_omr_mn": 1973.376287
+      "value_omr_mn": 1973.3762869999998
     },
     {
       "month": "2024-11",
@@ -3292,7 +3292,7 @@
     {
       "month": "2024-12",
       "flow": "exports",
-      "value_omr_mn": 2032.344325
+      "value_omr_mn": 2032.3443249999998
     },
     {
       "month": "2024-12",
@@ -3312,22 +3312,22 @@
     {
       "month": "2025-01",
       "flow": "imports",
-      "value_omr_mn": 1419.446922
+      "value_omr_mn": 1419.4469219999999
     },
     {
       "month": "2025-01",
       "flow": "re_exports",
-      "value_omr_mn": 99.817602
+      "value_omr_mn": 99.81760200000001
     },
     {
       "month": "2025-02",
       "flow": "exports",
-      "value_omr_mn": 1713.418442
+      "value_omr_mn": 1713.4184420000001
     },
     {
       "month": "2025-02",
       "flow": "imports",
-      "value_omr_mn": 1288.0544629999995
+      "value_omr_mn": 1288.0544629999997
     },
     {
       "month": "2025-02",
@@ -3342,7 +3342,7 @@
     {
       "month": "2025-03",
       "flow": "imports",
-      "value_omr_mn": 1586.856353
+      "value_omr_mn": 1586.8563530000001
     },
     {
       "month": "2025-03",
@@ -3467,7 +3467,7 @@
     {
       "month": "2025-11",
       "flow": "re_exports",
-      "value_omr_mn": 197.06004
+      "value_omr_mn": 197.06003999999996
     },
     {
       "month": "2025-12",
@@ -3477,17 +3477,17 @@
     {
       "month": "2025-12",
       "flow": "imports",
-      "value_omr_mn": 1519.54669
+      "value_omr_mn": 1519.5466900000001
     },
     {
       "month": "2025-12",
       "flow": "re_exports",
-      "value_omr_mn": 225.969001
+      "value_omr_mn": 225.96900100000002
     },
     {
       "month": "2026-01",
       "flow": "exports",
-      "value_omr_mn": 1822.480553
+      "value_omr_mn": 1822.4805529999999
     },
     {
       "month": "2026-01",
@@ -3537,7 +3537,7 @@
     {
       "month": "2026-04",
       "flow": "imports",
-      "value_omr_mn": 1796.327371
+      "value_omr_mn": 1796.3273709999999
     },
     {
       "month": "2026-04",
@@ -3557,12 +3557,12 @@
     {
       "month": "2026-05",
       "flow": "re_exports",
-      "value_omr_mn": 189.695805
+      "value_omr_mn": 189.69580499999998
     },
     {
       "month": "2026-06",
       "flow": "exports",
-      "value_omr_mn": 2647.24395
+      "value_omr_mn": 2647.2439499999996
     },
     {
       "month": "2026-06",
@@ -3577,7 +3577,7 @@
     {
       "month": "2026-07",
       "flow": "exports",
-      "value_omr_mn": 2629.315069
+      "value_omr_mn": 2629.3150689999998
     },
     {
       "month": "2026-07",

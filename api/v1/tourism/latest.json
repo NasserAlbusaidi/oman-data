@@ -2,7 +2,7 @@
   "meta": {
     "id": "tourism",
     "as_of": "2026-05",
-    "fetched_at": "2026-10-05T09:44:12Z",
+    "fetched_at": "2026-11-05T10:00:31Z",
     "source_name": "NCSI via data.gov.om (Tourism, dataset dedblxg)",
     "source_url": "https://data.gov.om/dedblxg",
     "license": "Open Government License - Sultanate of Oman",
@@ -80,7 +80,7 @@
       "month": "2012-07",
       "guests": 125627,
       "occupancy_pct": 37.0,
-      "revenue_omr_mn": 9.325423
+      "revenue_omr_mn": 9.325422999999999
     },
     {
       "month": "2012-08",
@@ -164,13 +164,13 @@
       "month": "2014-09",
       "guests": 181250,
       "occupancy_pct": 50.0,
-      "revenue_omr_mn": 15.582024
+      "revenue_omr_mn": 15.582023999999999
     },
     {
       "month": "2014-10",
       "guests": 234705,
       "occupancy_pct": 56.0,
-      "revenue_omr_mn": 21.895714
+      "revenue_omr_mn": 21.895713999999998
     },
     {
       "month": "2014-11",
@@ -188,13 +188,13 @@
       "month": "2015-01",
       "guests": 116711,
       "occupancy_pct": 64.1160811992455,
-      "revenue_omr_mn": 18.416764082510294
+      "revenue_omr_mn": 18.416764082510298
     },
     {
       "month": "2015-02",
       "guests": 108751,
       "occupancy_pct": 69.9954517030546,
-      "revenue_omr_mn": 19.096222778321295
+      "revenue_omr_mn": 19.096222778321298
     },
     {
       "month": "2015-03",
@@ -284,7 +284,7 @@
       "month": "2016-05",
       "guests": 128978,
       "occupancy_pct": 53.4266766269753,
-      "revenue_omr_mn": 13.9010898559024
+      "revenue_omr_mn": 13.901089855902399
     },
     {
       "month": "2016-06",
@@ -308,7 +308,7 @@
       "month": "2016-09",
       "guests": 154523,
       "occupancy_pct": 55.269323342006,
-      "revenue_omr_mn": 14.2925487642652
+      "revenue_omr_mn": 14.292548764265199
     },
     {
       "month": "2016-10",
@@ -350,7 +350,7 @@
       "month": "2017-04",
       "guests": 154162,
       "occupancy_pct": 65.9486845394788,
-      "revenue_omr_mn": 20.1868982078852
+      "revenue_omr_mn": 20.186898207885196
     },
     {
       "month": "2017-05",
@@ -422,7 +422,7 @@
       "month": "2018-04",
       "guests": 134351,
       "occupancy_pct": 64.0457096245059,
-      "revenue_omr_mn": 20.4980896083422
+      "revenue_omr_mn": 20.498089608342198
     },
     {
       "month": "2018-05",
@@ -440,13 +440,13 @@
       "month": "2018-07",
       "guests": 98609,
       "occupancy_pct": 44.2404483402113,
-      "revenue_omr_mn": 11.3892686390299
+      "revenue_omr_mn": 11.389268639029899
     },
     {
       "month": "2018-08",
       "guests": 122106,
       "occupancy_pct": 48.4757545972494,
-      "revenue_omr_mn": 13.8824037461646
+      "revenue_omr_mn": 13.882403746164599
     },
     {
       "month": "2018-09",
@@ -470,7 +470,7 @@
       "month": "2018-12",
       "guests": 150096,
       "occupancy_pct": 64.2952199505489,
-      "revenue_omr_mn": 25.699853678182095
+      "revenue_omr_mn": 25.699853678182098
     },
     {
       "month": "2019-01",
@@ -572,7 +572,7 @@
       "month": "2020-05",
       "guests": 6849,
       "occupancy_pct": 9.66144228229286,
-      "revenue_omr_mn": 0.9088652969147788
+      "revenue_omr_mn": 0.9088652969147789
     },
     {
       "month": "2020-06",
@@ -632,7 +632,7 @@
       "month": "2021-03",
       "guests": 239853,
       "occupancy_pct": 39.7188834142911,
-      "revenue_omr_mn": 10.2687578952183
+      "revenue_omr_mn": 10.268757895218299
     },
     {
       "month": "2021-04",
@@ -662,7 +662,7 @@
       "month": "2021-08",
       "guests": 201301,
       "occupancy_pct": 35.0600980711928,
-      "revenue_omr_mn": 10.3905751208293
+      "revenue_omr_mn": 10.390575120829299
     },
     {
       "month": "2021-09",
@@ -692,13 +692,13 @@
       "month": "2022-01",
       "guests": 105043,
       "occupancy_pct": 40.7266455401294,
-      "revenue_omr_mn": 13.7824175060426
+      "revenue_omr_mn": 13.782417506042599
     },
     {
       "month": "2022-02",
       "guests": 155407,
       "occupancy_pct": 48.4418882205093,
-      "revenue_omr_mn": 15.6464923085336
+      "revenue_omr_mn": 15.646492308533599
     },
     {
       "month": "2022-03",
@@ -722,7 +722,7 @@
       "month": "2022-06",
       "guests": 110907,
       "occupancy_pct": 38.4326102196122,
-      "revenue_omr_mn": 10.3006918965704
+      "revenue_omr_mn": 10.300691896570399
     },
     {
       "month": "2022-07",
@@ -734,7 +734,7 @@
       "month": "2022-08",
       "guests": 141080,
       "occupancy_pct": 43.2000979316473,
-      "revenue_omr_mn": 13.6931503975711
+      "revenue_omr_mn": 13.693150397571099
     },
     {
       "month": "2022-09",
@@ -788,7 +788,7 @@
       "month": "2023-05",
       "guests": 135274,
       "occupancy_pct": 41.2954257298579,
-      "revenue_omr_mn": 14.2809186173692
+      "revenue_omr_mn": 14.280918617369199
     },
     {
       "month": "2023-06",
@@ -812,7 +812,7 @@
       "month": "2023-09",
       "guests": 153291,
       "occupancy_pct": 45.6088905888103,
-      "revenue_omr_mn": 15.2666505052279
+      "revenue_omr_mn": 15.266650505227899
     },
     {
       "month": "2023-10",
@@ -842,7 +842,7 @@
       "month": "2024-02",
       "guests": 224371,
       "occupancy_pct": 64.9832114149842,
-      "revenue_omr_mn": 27.6331548268376
+      "revenue_omr_mn": 27.633154826837597
     },
     {
       "month": "2024-03",
@@ -854,13 +854,13 @@
       "month": "2024-04",
       "guests": 169787,
       "occupancy_pct": 49.3182687689765,
-      "revenue_omr_mn": 21.289835534015
+      "revenue_omr_mn": 21.289835534014998
     },
     {
       "month": "2024-05",
       "guests": 145677,
       "occupancy_pct": 40.562435396838,
-      "revenue_omr_mn": 15.2850927069498
+      "revenue_omr_mn": 15.285092706949799
     },
     {
       "month": "2024-06",
@@ -914,7 +914,7 @@
       "month": "2025-02",
       "guests": 227550,
       "occupancy_pct": 73.0806991994306,
-      "revenue_omr_mn": 30.53271529223
+      "revenue_omr_mn": 30.532715292229998
     },
     {
       "month": "2025-03",
@@ -962,7 +962,7 @@
       "month": "2025-10",
       "guests": 210041,
       "occupancy_pct": 61.6394960239213,
-      "revenue_omr_mn": 28.8267859875662
+      "revenue_omr_mn": 28.826785987566197
     },
     {
       "month": "2025-11",

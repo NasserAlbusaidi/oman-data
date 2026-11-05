@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T10:31:39.543355+00:00",
+  "generated_at": "2026-11-05T10:00:31.411589+00:00",
   "datasets": [
     {
       "id": "admin_geography",
@@ -30,7 +30,7 @@
       "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Consumer Price Index",
       "cadence": "monthly",
       "as_of": "2026-08",
-      "fetched_at": "2026-10-05T09:42:02Z",
+      "fetched_at": "2026-11-05T09:58:23Z",
       "stale": false,
       "rows": 2132
     },
@@ -107,7 +107,7 @@
       "source_name": "NCSI via data.gov.om (Tourism, dataset dedblxg)",
       "cadence": "monthly",
       "as_of": "2026-05",
-      "fetched_at": "2026-10-05T09:44:12Z",
+      "fetched_at": "2026-11-05T10:00:31Z",
       "stale": false,
       "rows": 161
     },
@@ -118,7 +118,7 @@
       "source_name": "NCSI — National Summary Data Page (IMF e-GDDS), Merchandise Trade",
       "cadence": "monthly",
       "as_of": "2026-07",
-      "fetched_at": "2026-10-05T09:44:08Z",
+      "fetched_at": "2026-11-05T10:00:28Z",
       "stale": false,
       "rows": 711
     },
